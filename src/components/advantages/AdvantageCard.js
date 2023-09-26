@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-const AdvantageCard = ({ title, description, borderLess, image, imageWidth, imageHeight, color }) => {
+const AdvantageCard = ({ title, description, borderLess,  image2 , image, imageWidth, imageHeight, color }) => {
 
   return (
     <div className={`rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:min-h-[571px] h-full z-0 ${color ? color : "default"}-box`}>
@@ -11,8 +11,9 @@ const AdvantageCard = ({ title, description, borderLess, image, imageWidth, imag
           <p className='text-gray-800 text-2xl font-light' dangerouslySetInnerHTML={{ __html: description }}></p>
         </div>
         <div className={`lg:absolute bottom-0 mt-6 lg:mt-0 -mb-8 lg:mb-0 ${borderLess ? 'lg:order-1 bottom-0 right-0 lg:me-0 -me-8' : 'lg:order-2 right-16 '}`}>
-          <Image src={image} width={imageWidth} height={imageHeight} title={title} alt={title} className='mx-auto' />
+          <Image src={image} width={imageWidth} height={imageHeight} title={title} alt={title} className={`mx-auto ${image2 && 'seondImg'}`} />
         </div>
+        {/* {image2 && <Image src={image2} alt='' className='absolute right-7 bottom-0 w-[430px] object-cover'/>} For Second Image */}
       </div>
     </div>
   )

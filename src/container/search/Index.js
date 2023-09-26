@@ -7,7 +7,9 @@ import Testimonials from "@/components/testimonials/Index";
 import React from "react";
 
 import webImage from "../../../public/assets/images/web.png";
-import iPhoneImage from "../../../public/assets/images/iphone14.png";
+import SecondPhone from "../../../public/assets/images/mobilephone.png";
+import iPhoneImage from "../../../public/assets/images/updatephone.png";
+import iPhoneImage2 from "../../../public/assets/images/searchiphone.png";
 import FAQ from "@/components/FAQ/Index";
 import Comparison from "@/components/search/comparison/Index";
 
@@ -35,7 +37,8 @@ const SearchView = () => {
                     title="Uncensored"
                     description="OSO believes in <span class='font-medium'>free speech</span> and <span class='font-medium'>unrestricted access to knowledge,</span> ensuring you receive in-depth and unfiltered answers."
                     borderLess={false}
-                    image={iPhoneImage}
+                    image={iPhoneImage2}
+                    image2={SecondPhone}
                     imageWidth="357"
                     imageHeight="507"
                     color="electric-blue"

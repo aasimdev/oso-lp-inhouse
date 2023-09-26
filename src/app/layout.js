@@ -35,7 +35,7 @@ function RootLayoutContent({ children }) {
           );
         },
       });
-    }, 3000);
+    }, 1500);
     return () => clearTimeout(timer);
   }, []);
   const { showSidebar } = useMenu("");

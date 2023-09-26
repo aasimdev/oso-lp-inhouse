@@ -8,8 +8,8 @@ import React from "react";
 
 import webImage from "../../../public/assets/images/web.png";
 import SecondPhone from "../../../public/assets/images/mobilephone.png";
-import iPhoneImage from "../../../public/assets/images/updatephone.png";
-import iPhoneImage2 from "../../../public/assets/images/searchiphone.png";
+import UpdatePhone from "../../../public/assets/images/updatePhones.png"
+import UpdatePhone2 from "../../../public/assets/images/updatePhone-2.png"
 import FAQ from "@/components/FAQ/Index";
 import Comparison from "@/components/search/comparison/Index";
 
@@ -37,7 +37,7 @@ const SearchView = () => {
                     title="Uncensored"
                     description="OSO believes in <span class='font-medium'>free speech</span> and <span class='font-medium'>unrestricted access to knowledge,</span> ensuring you receive in-depth and unfiltered answers."
                     borderLess={false}
-                    image={iPhoneImage2}
+                    image={UpdatePhone}
                     image2={SecondPhone}
                     imageWidth="357"
                     imageHeight="507"
@@ -47,7 +47,7 @@ const SearchView = () => {
                     title="Secure"
                     description="With OSO, there's <span class='font-medium'>no need to venture into potentially harmful sites</span> since the searching is done for you."
                     borderLess={false}
-                    image={iPhoneImage}
+                    image={UpdatePhone2}
                     imageWidth="357"
                     imageHeight="507"
                     color="vivid-blue"

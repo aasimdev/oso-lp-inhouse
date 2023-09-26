@@ -82,8 +82,8 @@ const Comparison = () => {
 
       ScrollTrigger.create({
         trigger: comparison.current,
-        start: "top+=150px",
-        end: "25%",
+        start: "top+=200px",
+        end: "33%",
         scrub: 1,
         toggleActions: "play reverse play reverse",
         onToggle: ({ isActive }) => {
@@ -92,7 +92,7 @@ const Comparison = () => {
       });
       ScrollTrigger.create({
         trigger: comparison.current,
-        start: "top+=300px",
+        start: "top+=500px",
         end: "bottom-=45%",
         scrub: 1,
         toggleActions: "play reverse play reverse",
@@ -182,7 +182,7 @@ const Comparison = () => {
       </div>
       <div className="md:pt-24 pt-8 flex flex-col gap-7">
         <div className="md:flex md:flex-nowrap flex-wrap justify-between">
-          <div className="w-full md:w-[346px] md:my-28 flex flex-col gap-16 md:gap-24 flex-grow-0 flex-shrink-0 basis-auto">
+          <div className="w-full md:w-[346px] md:my-28 flex flex-col gap-16 md:gap-10 flex-grow-0 flex-shrink-0 basis-auto">
             <div className="flex flex-col gap-2">
               <h4
                 className={`text-[32px] font-medium leading-tight  ${

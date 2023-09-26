@@ -56,7 +56,7 @@ function RootLayoutContent({ children }) {
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
           }}
         />
-        ;<div className="loader">{!loading && <Loader />}</div>
+        <div className="loader">{!loading && <Loader />}</div>
         <div className="content">
           {loading && (
             <>

@@ -180,7 +180,7 @@ const Comparison = () => {
           How people are using OSO Search
         </h3>
       </div>
-      <div className="md:pt-24 pt-8 flex flex-col gap-7">
+      <div className="md:pt-24  flex flex-col gap-7">
         <div className="md:flex md:flex-nowrap flex-wrap justify-between">
           <div className="w-full md:w-[346px] md:my-28 flex flex-col gap-16 md:gap-10 flex-grow-0 flex-shrink-0 basis-auto">
             <div className="flex flex-col gap-2">
@@ -252,7 +252,7 @@ const Comparison = () => {
                   width={303}
                   height={616}
                   alt="OSO"
-                  className="m-auto"
+                  className="m-auto mt-4"
                 />
                 <Image
                   src={images[1]}
@@ -260,7 +260,7 @@ const Comparison = () => {
                   width={303}
                   height={619}
                   alt="ChatGtp"
-                  className=" m-auto"
+                  className="m-auto mt-4"
                 />
               </Slide>
             )}
@@ -297,7 +297,7 @@ const Comparison = () => {
                   width={303}
                   height={616}
                   alt="OSO"
-                  className="m-auto"
+                  className="m-auto mt-4"
                 />
                 <Image
                   src={images[3]}
@@ -364,7 +364,7 @@ const Comparison = () => {
             </div>
           )}
           {!!isMobile && (
-            <div className="flex flex-col gap-2 mt-24">
+            <div className="flex flex-col gap-2 my-16 ">
               <h4
                 className="text-[32px] font-medium leading-tight sm:text-black"
                 ref={(el) => (revealedDeepchat.current[0] = el)}
@@ -380,6 +380,32 @@ const Comparison = () => {
               </p>
             </div>
           )}
+                    {!isDesktop && (
+              <Slide
+                arrows={false}
+                slidesToScroll={1}
+                slidesToShow={1}
+                indicators={true}
+                autoplay={false}
+              >
+                <Image
+                  src={images[0]}
+                  ref={imageOSORef}
+                  width={303}
+                  height={616}
+                  alt="OSO"
+                  className="m-auto mt-4"
+                />
+                <Image
+                  src={images[1]}
+                  ref={imageChatGPTRef}
+                  width={303}
+                  height={619}
+                  alt="ChatGtp"
+                  className="m-auto mt-4"
+                />
+              </Slide>
+            )}
         </div>
         {isDesktop && (
           <div className="flex justify-center items-center pt-24">

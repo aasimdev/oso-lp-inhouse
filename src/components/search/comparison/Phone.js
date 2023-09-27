@@ -7,7 +7,7 @@ const Phone = ({ title, obj }) => {
                 {title}
             </p>
             <div className="relative ">
-                <video playsInline preload="none" muted autoPlay loop loading="lazy" className='max-w-xs'>
+                <video playsInline preload="none" muted autoPlay loop loading="lazy" className='max-w-full sm:max-w-xs'>
                     <source src={obj} type="video/mp4" />
                 </video>
 

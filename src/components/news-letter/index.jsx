@@ -16,7 +16,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
       {!showMessage && (
         <form
           onSubmit={form?.handleSubmit}
-          className="text-center md:flex justify-center space-y-3 md:space-y-0 md:space-x-3"
+          className="text-center md:flex justify-center space-y-2 md:space-y-0 md:space-x-3"
         >
           <div>
             <input

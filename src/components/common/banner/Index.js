@@ -24,7 +24,7 @@ const Banner = ({ title, description }) => {
                         <NewsLetter arrowIcon label="Join Waitlist"/>
                     </div>
 
-                    <div className="mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">
+                    <div className="mt-6 md:mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">
                         <CheckListItem title="Uncensored" />
                         <CheckListItem title="Up-to-date" />
                         <CheckListItem title="No credit card required" />

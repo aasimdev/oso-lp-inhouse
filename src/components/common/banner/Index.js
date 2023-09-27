@@ -19,15 +19,15 @@ const Banner = ({ title, description }) => {
                         </p>
                     </div>
 
-                    <div className="flex justify-center items-center pt-8 md:pt-6">
+                    <div className="md:flex justify-center items-center pt-8 md:pt-6">
                      
                         <NewsLetter arrowIcon label="Join Waitlist"/>
                     </div>
 
                     <div className="mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">
                         <CheckListItem title="Uncensored" />
-                        <CheckListItem title="up-to-date" />
-                        <CheckListItem title="no credit card required" />
+                        <CheckListItem title="Up-to-date" />
+                        <CheckListItem title="No credit card required" />
                     </div>
 
                     <Video />

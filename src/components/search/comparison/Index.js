@@ -193,9 +193,9 @@ const Comparison = () => {
           How people are using OSO Search
         </h3>
       </div>
-      <div className="md:pt-24  flex flex-col gap-7">
+      <div className="md:pt-24  flex flex-col ">
         <div className="md:flex md:flex-nowrap flex-wrap justify-between">
-          <div className="w-full md:w-[346px] md:my-[52px] flex flex-col gap-16 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto">
+          <div className="w-full md:w-[346px] md:mt-[52px] flex flex-col gap-16 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto">
 
             {/* Stay Updated */}
             <ComparisonContent
@@ -275,7 +275,7 @@ const Comparison = () => {
           )}
         </div>
         
-          <div className="flex justify-center items-center pt-14">
+          <div className="md:flex justify-center items-center pt-[100px]">
             <NewsLetter label="Join Waitlist" arrowIcon={true} />
           </div>
         

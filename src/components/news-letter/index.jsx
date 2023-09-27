@@ -16,11 +16,11 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
       {!showMessage && (
         <form
           onSubmit={form?.handleSubmit}
-          className="md:flex justify-center space-y-3 md:space-y-0 md:space-x-3"
+          className="text-center md:flex justify-center space-y-3 md:space-y-0 md:space-x-3"
         >
           <div>
             <input
-              className={`email-width py-[26px]   w-[298px] bg-white appearance-none border border-[#454F5B] placeholder:text-[#637381] rounded-lg px-4 text-black leading-tight focus:outline-none focus:border-purple ${className}`}
+              className={`email-width py-[26px] w-[352px] bg-white appearance-none border border-[#454F5B] placeholder:text-[#637381] rounded-lg px-4 text-black leading-tight focus:outline-none focus:border-purple ${className}`}
               placeholder="Enter your email"
               required
               name="email"

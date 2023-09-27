@@ -6,6 +6,7 @@ import Button from "@/components/common/Button";
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import NewsLetter from "@/components/news-letter";
 
 const Comparison = () => {
   const revealed = useRef([]);
@@ -172,11 +173,11 @@ const Comparison = () => {
 
   return (
     <section
-      className="px-6 mx-auto max-w-6xl overflow-hidden"
+      className="md:px-6 px-3 mx-auto max-w-6xl overflow-hidden"
       ref={comparison}
     >
       <div className="py-16 md:text-center text-start">
-        <h3 className="md:text-5xl text-[40px] leading-tight font-bold text-black md:leading-[80px]">
+        <h3 className="md:text-5xl text-[40px] leading-tight font-bold text-black md:leading-[80px] md:px-0 px-3">
           How people are using OSO Search
         </h3>
       </div>
@@ -185,7 +186,7 @@ const Comparison = () => {
           <div className="w-full md:w-[346px] md:my-[52px] flex flex-col gap-16 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto">
             <div className="flex flex-col gap-2">
               <h4
-                className={`text-[32px] font-medium leading-tight  ${
+                className={`md:px-0 px-3 text-[32px] font-medium leading-tight  ${
                   !isMobile ? "sm:text-[#CCCCCC]" : "!text-black"
                 }`}
                 ref={(el) => (revealed.current[0] = el)}
@@ -193,7 +194,7 @@ const Comparison = () => {
                 Stay Updated
               </h4>
               <p
-                className={`text-2xl leading-8 font-light  ${
+                className={`md:px-0 px-3 text-2xl leading-8 font-light  ${
                   !isMobile ? "sm:text-[#CCCCCC]" : "!text-black"
                 }`}
                 ref={(el) => (revealed.current[1] = el)}
@@ -274,7 +275,7 @@ const Comparison = () => {
                 </>
               </Slide>
             )}
-            <div className="flex flex-col gap-2">
+            <div className="md:px-0 px-3 flex flex-col gap-2">
               <h4
                 className={`text-[32px] font-medium leading-tight ${
                   !isMobile ? "sm:text-[#CCCCCC]" : "!text-black"
@@ -332,7 +333,7 @@ const Comparison = () => {
             {!isMobile && (
               <div className="flex flex-col gap-2">
                 <h4
-                  className="text-[32px] font-medium leading-tight sm:text-[#CCCCCC]"
+                  className="md:px-0 px-3 text-[32px] font-medium leading-tight sm:text-[#CCCCCC]"
                   ref={(el) => (revealedDeepchat.current[0] = el)}
                 >
                   Deep Dive Reviews
@@ -384,9 +385,9 @@ const Comparison = () => {
             </div>
           )}
           {!!isMobile && (
-            <div className="flex flex-col gap-2 my-16 ">
+            <div className="md:px-0 px-3 flex flex-col gap-2 my-16 ">
               <h4
-                className="text-[32px] font-medium leading-tight sm:text-black"
+                className=" text-[32px] font-medium leading-tight sm:text-black"
                 ref={(el) => (revealedDeepchat.current[0] = el)}
               >
                 Deep Dive Reviews
@@ -437,16 +438,11 @@ const Comparison = () => {
             </Slide>
           )}
         </div>
-        {isDesktop && (
+        
           <div className="flex justify-center items-center pt-14">
-            <Button
-              label="Join Waitlist"
-              arrowIcon={true}
-              link="https://eijfn1o56i0.typeform.com/to/szT5l8hI?typeform-source=oso.ai"
-              target="_blank"
-            />
+            <NewsLetter label="Join Waitlist" arrowIcon={true} />
           </div>
-        )}
+        
       </div>
     </section>
   );

@@ -28,9 +28,9 @@ const Banner = ({ title, description }) => {
                     </div>
 
                     <div className="mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">
-                        <CheckListItem title="Fully Uncensored" />
-                        <CheckListItem title="7-day trial" />
-                        <CheckListItem title="Customised Plug-ins" />
+                        <CheckListItem title="Uncensored" />
+                        <CheckListItem title="up-to-date" />
+                        <CheckListItem title="no credit card required" />
                     </div>
 
                     <Video />

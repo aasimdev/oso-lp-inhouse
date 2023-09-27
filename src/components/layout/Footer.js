@@ -22,7 +22,7 @@ const Footer = () => {
                         </div>
                         <div className='flex md:flex-nowrap flex-wrap gap-4'>
                             <a href='https://eijfn1o56i0.typeform.com/to/Iq1Hv1Nz' target='_blank' className='white-btn'>
-                                Join Waitlists
+                                Join Waitlist
                             </a>
                         </div>
                     </div>

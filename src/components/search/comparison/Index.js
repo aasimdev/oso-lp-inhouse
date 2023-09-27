@@ -182,7 +182,7 @@ const Comparison = () => {
       </div>
       <div className="md:pt-24  flex flex-col gap-7">
         <div className="md:flex md:flex-nowrap flex-wrap justify-between">
-          <div className="w-full md:w-[346px] md:my-28 flex flex-col gap-16 md:gap-10 flex-grow-0 flex-shrink-0 basis-auto">
+          <div className="w-full md:w-[346px] md:my-[52px] flex flex-col gap-16 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto">
             <div className="flex flex-col gap-2">
               <h4
                 className={`text-[32px] font-medium leading-tight  ${
@@ -198,8 +198,8 @@ const Comparison = () => {
                 }`}
                 ref={(el) => (revealed.current[1] = el)}
               >
-                There’s no need to venture into potentially harmful sites since
-                the searching is done for you.
+                Get instant news updates like the recent Maui Fires. Watch OSO
+                gather real-time information from diverse sources.
               </p>
             </div>
             {/* {!isDesktop && (
@@ -246,22 +246,32 @@ const Comparison = () => {
                 indicators={true}
                 autoplay={false}
               >
-                <Image
-                  src={images[0]}
-                  ref={imageOSORef}
-                  width={303}
-                  height={616}
-                  alt="OSO"
-                  className="m-auto mt-4"
-                />
-                <Image
-                  src={images[1]}
-                  ref={imageChatGPTRef}
-                  width={303}
-                  height={619}
-                  alt="ChatGtp"
-                  className="m-auto mt-4"
-                />
+                <>
+                  <p className="text-center text-[21px] font-medium text-black">
+                    OSO
+                  </p>
+                  <Image
+                    src={images[0]}
+                    ref={imageOSORef}
+                    width={303}
+                    height={616}
+                    alt="OSO"
+                    className="m-auto mt-4 w-full"
+                  />
+                </>
+                <>
+                  <p className="text-center text-[21px] font-medium text-black">
+                    ChatGpt
+                  </p>
+                  <Image
+                    src={images[1]}
+                    ref={imageChatGPTRef}
+                    width={303}
+                    height={619}
+                    alt="ChatGtp"
+                    className="m-auto mt-4 w-full"
+                  />
+                </>
               </Slide>
             )}
             <div className="flex flex-col gap-2">
@@ -279,8 +289,8 @@ const Comparison = () => {
                 }`}
                 ref={(el) => (revealedchat.current[1] = el)}
               >
-                Wondering about the Grand Prix in Las Vegas? from dates to
-                ticket pricing and seat recommendations.
+                Wondering about the Grand Prix in Las Vegas? From dates to
+                ticket pricing and seat recommendations, see OSO fetch it all.
               </p>
             </div>
             {!isDesktop && (
@@ -291,22 +301,32 @@ const Comparison = () => {
                 indicators={true}
                 autoplay={false}
               >
-                <Image
-                  src={images[2]}
-                  ref={imageOSORef}
-                  width={303}
-                  height={616}
-                  alt="OSO"
-                  className="m-auto mt-4"
-                />
-                <Image
-                  src={images[3]}
-                  ref={imageChatGPTRef}
-                  width={303}
-                  height={619}
-                  alt="ChatGtp"
-                  className=" m-auto"
-                />
+                <>
+                  <p className="text-center text-[21px] font-medium text-black">
+                    OSO
+                  </p>
+                  <Image
+                    src={images[2]}
+                    ref={imageOSORef}
+                    width={303}
+                    height={616}
+                    alt="OSO"
+                    className="w-full m-auto mt-4"
+                  />
+                </>
+                <>
+                  <p className="text-center text-[21px] font-medium text-black">
+                    ChatGpt
+                  </p>
+                  <Image
+                    src={images[3]}
+                    ref={imageChatGPTRef}
+                    width={303}
+                    height={619}
+                    alt="ChatGtp"
+                    className="w-full m-auto"
+                  />
+                </>
               </Slide>
             )}
             {!isMobile && (
@@ -321,8 +341,8 @@ const Comparison = () => {
                   className="text-2xl leading-8 font-light sm:text-[#CCCCCC]"
                   ref={(el) => (revealedDeepchat.current[1] = el)}
                 >
-                  Wondering about the Grand Prix in Las Vegas? from dates to
-                  ticket pricing and seat recommendations.
+                  Looking for the best restaurant experience? Observe how OSO
+                  evaluates atmosphere, culinary highlights, and more
                 </p>
               </div>
             )}
@@ -375,40 +395,50 @@ const Comparison = () => {
                 className="text-2xl leading-8 font-light sm:text-black"
                 ref={(el) => (revealedDeepchat.current[1] = el)}
               >
-                Wondering about the Grand Prix in Las Vegas? from dates to
-                ticket pricing and seat recommendations.
+                Looking for the best restaurant experience? Observe how OSO
+                evaluates atmosphere, culinary highlights, and more
               </p>
             </div>
           )}
-                    {!isDesktop && (
-              <Slide
-                arrows={false}
-                slidesToScroll={1}
-                slidesToShow={1}
-                indicators={true}
-                autoplay={false}
-              >
+          {!isDesktop && (
+            <Slide
+              arrows={false}
+              slidesToScroll={1}
+              slidesToShow={1}
+              indicators={true}
+              autoplay={false}
+            >
+              <>
+                <p className="text-center text-[21px] font-medium text-black">
+                  OSO
+                </p>
                 <Image
                   src={images[0]}
                   ref={imageOSORef}
                   width={303}
                   height={616}
                   alt="OSO"
-                  className="m-auto mt-4"
+                  className="m-auto mt-4 w-full"
                 />
+              </>
+              <>
+                <p className="text-center text-[21px] font-medium text-black">
+                  ChatGpt
+                </p>
                 <Image
                   src={images[1]}
                   ref={imageChatGPTRef}
                   width={303}
                   height={619}
                   alt="ChatGtp"
-                  className="m-auto mt-4"
+                  className="m-auto mt-4 w-full"
                 />
-              </Slide>
-            )}
+              </>
+            </Slide>
+          )}
         </div>
         {isDesktop && (
-          <div className="flex justify-center items-center pt-24">
+          <div className="flex justify-center items-center pt-14">
             <Button
               label="Join Waitlist"
               arrowIcon={true}

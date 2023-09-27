@@ -1,5 +1,4 @@
 "use client";
-import Video from "@/components/Video";
 import AdvantageCard from "@/components/advantages/AdvantageCard";
 import Advantages from "@/components/advantages/Index";
 import Banner from "@/components/common/banner/Index";

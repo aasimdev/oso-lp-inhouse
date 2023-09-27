@@ -215,9 +215,8 @@ const Comparison = () => {
 
             {/* Plan your event */}
             <ComparisonContent
-              title="Plan your event & travel"
-              description="  Wondering about the Grand Prix in Las Vegas? From dates to
-                ticket pricing and seat recommendations, see OSO fetch it all."
+              title="Plan Your Events"
+              description="Wondering about the Grand Prix in Las Vegas? From dates to ticket pricing and seat recommendations, see OSO fetch it all."
               isMobile={isMobile}
             />
 
@@ -254,24 +253,25 @@ const Comparison = () => {
           )}
 
 
+
+
+
+
+          {/* Mobile Views */}
+
           {/* Mobile under deep reviews */}
-          {!isDesktop && (
+          {!isDesktop && <>
             <ComparisonContent
               title="Deep Dive Reviews"
               description="Looking for the best restaurant experience? Observe how OSO
           evaluates atmosphere, culinary highlights, and more"
               isMobile={isMobile}
             />
-          )}
-
-
-          {/* Under Deep Review Mobile */}
-          {!isDesktop && (
             <Slide  {...settings}>
               <Phone title="OSO" obj={"/assets/video/under-deep-review-oso.mp4"} />
               <Phone title="GPT" obj={"/assets/video/under-deep-review-gpt.mp4"} />
             </Slide>
-          )}
+          </>}
         </div>
 
         <div className="flex justify-center items-center pt-14">

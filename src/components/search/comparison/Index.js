@@ -209,7 +209,7 @@ const Comparison = () => {
             {!isDesktop && (
               <Slide  {...settings}>
                 <Phone title="OSO" obj={"/assets/video/stay-update-oso.mp4"} />
-                <Phone title="GPT" obj={"/assets/video/stay-update-gpt.mp4"} />
+                <Phone title="ChatGPT" obj={"/assets/video/stay-update-gpt.mp4"} />
               </Slide>
             )}
 
@@ -226,7 +226,7 @@ const Comparison = () => {
             {!isDesktop && (
               <Slide  {...settings}>
                 <Phone title="OSO" obj={"/assets/video/plan-your-event-oso.mp4"} />
-                <Phone title="GPT" obj={"/assets/video/plan-your-event-gpt.mp4"} />
+                <Phone title="ChatGPT" obj={"/assets/video/plan-your-event-gpt.mp4"} />
               </Slide>
             )}
 
@@ -249,36 +249,33 @@ const Comparison = () => {
               ref={phoneB}
             >
               <Phone title="OSO" obj={"/assets/video/stay-update-oso.mp4"} />
-              <Phone title="GPT" obj={"/assets/video/stay-update-gpt.mp4"} />
+              <Phone title="ChatGPT" obj={"/assets/video/stay-update-gpt.mp4"} />
             </div>
           )}
 
 
 
-
-
-
           {/* Mobile Views */}
-
-          {/* Mobile under deep reviews */}
           {!isDesktop && <>
+
             <ComparisonContent
               title="Deep Dive Reviews"
               description="Looking for the best restaurant experience? Observe how OSO
           evaluates atmosphere, culinary highlights, and more"
               isMobile={isMobile}
             />
+
             <Slide  {...settings}>
               <Phone title="OSO" obj={"/assets/video/under-deep-review-oso.mp4"} />
-              <Phone title="GPT" obj={"/assets/video/under-deep-review-gpt.mp4"} />
+              <Phone title="ChatGPT" obj={"/assets/video/under-deep-review-gpt.mp4"} />
             </Slide>
           </>}
         </div>
-        
-          <div className="flex justify-center items-center pt-14">
-            <NewsLetter label="Join Waitlist" arrowIcon={true} />
-          </div>
-        
+
+        <div className="flex justify-center items-center pt-14">
+          <NewsLetter label="Join Waitlist" arrowIcon={true} />
+        </div>
+
       </div>
     </section>
   );

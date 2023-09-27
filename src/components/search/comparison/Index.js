@@ -6,6 +6,7 @@ import Button from "@/components/common/Button";
 import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import NewsLetter from "@/components/news-letter";
 import Phone from "./Phone";
 import ComparisonContent from "./Content";
 
@@ -184,11 +185,11 @@ const Comparison = () => {
 
   return (
     <section
-      className="px-6 mx-auto max-w-6xl overflow-hidden"
+      className="md:px-6 px-3 mx-auto max-w-6xl overflow-hidden"
       ref={comparison}
     >
       <div className="py-16 md:text-center text-start">
-        <h3 className="md:text-5xl text-[40px] leading-tight font-bold text-black md:leading-[80px]">
+        <h3 className="md:text-5xl text-[40px] leading-tight font-bold text-black md:leading-[80px] md:px-0 px-3">
           How people are using OSO Search
         </h3>
       </div>
@@ -273,15 +274,11 @@ const Comparison = () => {
             </Slide>
           </>}
         </div>
-
-        <div className="flex justify-center items-center pt-14">
-          <Button
-            label="Join Waitlist"
-            arrowIcon={true}
-            link="https://eijfn1o56i0.typeform.com/to/szT5l8hI?typeform-source=oso.ai"
-            target="_blank"
-          />
-        </div>
+        
+          <div className="flex justify-center items-center pt-14">
+            <NewsLetter label="Join Waitlist" arrowIcon={true} />
+          </div>
+        
       </div>
     </section>
   );

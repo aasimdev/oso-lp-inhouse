@@ -18,6 +18,7 @@ import Ciaran from "../../../public/assets/images/man.jpeg";
 import Michael from "../../../public/assets/images/face.png";
 import Steve from "../../../public/assets/images/steveA.png";
 import Manu from "../../../public/assets/images/manu.jpg";
+import NewsLetter from "../news-letter";
 
 const testimonialData = [
   {
@@ -154,12 +155,13 @@ const Testimonials = () => {
       </div>
 
       <div className="px-6 mt-14 md:mt-12 mb-8 mx-auto max-w-6xl text-center">
-        <Button
+        {/* <Button
           label="Join Waitlist"
           arrowIcon={true}
           link="https://eijfn1o56i0.typeform.com/to/szT5l8hI?typeform-source=oso.ai"
           target="_blank"
-        />
+        /> */}
+        <NewsLetter label={`Join Waitlist`} arrowIcon/>
       </div>
     </section>
   );

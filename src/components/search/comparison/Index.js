@@ -7,6 +7,9 @@ import { useMediaQuery } from "react-responsive";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import NewsLetter from "@/components/news-letter";
+import Phone from "./Phone";
+import ComparisonContent from "./Content";
+
 
 const Comparison = () => {
   const revealed = useRef([]);
@@ -49,127 +52,136 @@ const Comparison = () => {
     }
   }, []);
 
-  useEffect(() => {
-    const revealedElements = revealed.current;
-    const revealedChatElements = revealedchat.current;
-    const revealedDeepChatElements = revealedDeepchat.current;
 
-    // Text Animation Toggle
-    const textToggle = (active, target) => {
-      if (active) {
-        gsap.to(target, {
-          color: "black",
-          duration: 0.4,
-        });
-      } else {
-        gsap.to(target, {
-          color: "#cccccc",
-          duration: 0.4,
-        });
-      }
-    };
+  const settings = {
+    arrows: false,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    indicators: true,
+    autoplay: false
+  }
 
-    if (!isMobile) {
-      ScrollTrigger.create({
-        trigger: comparison.current,
-        start: "top-=150px",
-        end: "15%",
-        scrub: 1,
-        toggleActions: "play reverse play reverse",
-        onToggle: ({ isActive }) => {
-          textToggle(isActive, revealedElements);
-        },
-      });
+  // useEffect(() => {
+  //   const revealedElements = revealed.current;
+  //   const revealedChatElements = revealedchat.current;
+  //   const revealedDeepChatElements = revealedDeepchat.current;
 
-      ScrollTrigger.create({
-        trigger: comparison.current,
-        start: "top+=200px",
-        end: "33%",
-        scrub: 1,
-        toggleActions: "play reverse play reverse",
-        onToggle: ({ isActive }) => {
-          textToggle(isActive, revealedChatElements);
-        },
-      });
-      ScrollTrigger.create({
-        trigger: comparison.current,
-        start: "top+=500px",
-        end: "bottom-=45%",
-        scrub: 1,
-        toggleActions: "play reverse play reverse",
-        onToggle: ({ isActive }) => {
-          textToggle(isActive, revealedDeepChatElements);
-        },
-      });
+  //   // Text Animation Toggle
+  //   const textToggle = (active, target) => {
+  //     if (active) {
+  //       gsap.to(target, {
+  //         color: "black",
+  //         duration: 0.4,
+  //       });
+  //     } else {
+  //       gsap.to(target, {
+  //         color: "#cccccc",
+  //         duration: 0.4,
+  //       });
+  //     }
+  //   };
 
-      gsap.to(imageOSORef.current, {
-        scrollTrigger: {
-          trigger: comparison.current,
-          start: "top-=150px",
-          end: "15%",
-          toggleActions: "play reverse play reverse",
-          onToggle: ({ isActive }) => {
-            if (isActive) {
-              setCurrentIndex(1);
-            } else {
-              setCurrentIndex(0);
-            }
-          },
-        },
-      });
+  //   if (!isMobile) {
+  //     ScrollTrigger.create({
+  //       trigger: comparison.current,
+  //       start: "top-=150px",
+  //       end: "15%",
+  //       scrub: 1,
+  //       toggleActions: "play reverse play reverse",
+  //       onToggle: ({ isActive }) => {
+  //         textToggle(isActive, revealedElements);
+  //       },
+  //     });
 
-      gsap.to(imageChatGPTRef.current, {
-        scrollTrigger: {
-          trigger: comparison.current,
-          start: "top+=150px",
-          end: "bottom-=40%",
-          toggleActions: "play reverse play reverse",
-          onToggle: ({ isActive }) => {
-            if (isActive) {
-              setCurrentChatIndex(3);
-            } else {
-              setCurrentChatIndex(2);
-            }
-          },
-        },
-      });
-    } else {
-      //   const container = mobileRef.current;
-      //   const containerB = phoneB.current;
-      //   let phones = gsap.utils.toArray(".panel");
-      //   let phonesB = gsap.utils.toArray(".panelB");
-      //   gsap.to(phones, {
-      //     xPercent: -100 * (phones.length - 1),
-      //     ease: "none",
-      //     scrollTrigger: {
-      //       trigger: container,
-      //       pin: true,
-      //       scrub: 1,
-      //       snap: 1 / (phones.length - 1),
-      //       start: "top-=11%",
-      //       end: "bottom",
-      //       pinSpacing: 2,
-      //     },
-      //   });
-      //   gsap.to(phonesB, {
-      //     xPercent: -100 * (phonesB.length - 1),
-      //     ease: "none",
-      //     scrollTrigger: {
-      //       trigger: containerB,
-      //       pin: true,
-      //       scrub: 1,
-      //       snap: 1 / (phonesB.length - 1),
-      //       start: "top-=11%",
-      //     },
-      //   });
-    }
+  //     ScrollTrigger.create({
+  //       trigger: comparison.current,
+  //       start: "top+=200px",
+  //       end: "33%",
+  //       scrub: 1,
+  //       toggleActions: "play reverse play reverse",
+  //       onToggle: ({ isActive }) => {
+  //         textToggle(isActive, revealedChatElements);
+  //       },
+  //     });
+  //     ScrollTrigger.create({
+  //       trigger: comparison.current,
+  //       start: "top+=500px",
+  //       end: "bottom-=45%",
+  //       scrub: 1,
+  //       toggleActions: "play reverse play reverse",
+  //       onToggle: ({ isActive }) => {
+  //         textToggle(isActive, revealedDeepChatElements);
+  //       },
+  //     });
 
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => {
-        trigger.kill();
-      });
-    };
-  }, [isMobile]);
+  //     gsap.to(imageOSORef.current, {
+  //       scrollTrigger: {
+  //         trigger: comparison.current,
+  //         start: "top-=150px",
+  //         end: "15%",
+  //         toggleActions: "play reverse play reverse",
+  //         onToggle: ({ isActive }) => {
+  //           if (isActive) {
+  //             setCurrentIndex(1);
+  //           } else {
+  //             setCurrentIndex(0);
+  //           }
+  //         },
+  //       },
+  //     });
+
+  //     gsap.to(imageChatGPTRef.current, {
+  //       scrollTrigger: {
+  //         trigger: comparison.current,
+  //         start: "top+=150px",
+  //         end: "bottom-=40%",
+  //         toggleActions: "play reverse play reverse",
+  //         onToggle: ({ isActive }) => {
+  //           if (isActive) {
+  //             setCurrentChatIndex(3);
+  //           } else {
+  //             setCurrentChatIndex(2);
+  //           }
+  //         },
+  //       },
+  //     });
+  //   } else {
+  //     //   const container = mobileRef.current;
+  //     //   const containerB = phoneB.current;
+  //     //   let phones = gsap.utils.toArray(".panel");
+  //     //   let phonesB = gsap.utils.toArray(".panelB");
+  //     //   gsap.to(phones, {
+  //     //     xPercent: -100 * (phones.length - 1),
+  //     //     ease: "none",
+  //     //     scrollTrigger: {
+  //     //       trigger: container,
+  //     //       pin: true,
+  //     //       scrub: 1,
+  //     //       snap: 1 / (phones.length - 1),
+  //     //       start: "top-=11%",
+  //     //       end: "bottom",
+  //     //       pinSpacing: 2,
+  //     //     },
+  //     //   });
+  //     //   gsap.to(phonesB, {
+  //     //     xPercent: -100 * (phonesB.length - 1),
+  //     //     ease: "none",
+  //     //     scrollTrigger: {
+  //     //       trigger: containerB,
+  //     //       pin: true,
+  //     //       scrub: 1,
+  //     //       snap: 1 / (phonesB.length - 1),
+  //     //       start: "top-=11%",
+  //     //     },
+  //     //   });
+  //   }
+
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach((trigger) => {
+  //       trigger.kill();
+  //     });
+  //   };
+  // }, [isMobile]);
 
   return (
     <section
@@ -184,257 +196,81 @@ const Comparison = () => {
       <div className="md:pt-24  flex flex-col gap-7">
         <div className="md:flex md:flex-nowrap flex-wrap justify-between">
           <div className="w-full md:w-[346px] md:my-[52px] flex flex-col gap-16 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto">
-            <div className="flex flex-col gap-2">
-              <h4
-                className={`md:px-0 px-3 text-[32px] font-medium leading-tight  ${
-                  !isMobile ? "sm:text-[#CCCCCC]" : "!text-black"
-                }`}
-                ref={(el) => (revealed.current[0] = el)}
-              >
-                Stay Updated
-              </h4>
-              <p
-                className={`md:px-0 px-3 text-2xl leading-8 font-light  ${
-                  !isMobile ? "sm:text-[#CCCCCC]" : "!text-black"
-                }`}
-                ref={(el) => (revealed.current[1] = el)}
-              >
-                Get instant news updates like the recent Maui Fires. Watch OSO
-                gather real-time information from diverse sources.
-              </p>
-            </div>
-            {/* {!isDesktop && (
-              <div
-                className="flex flex-nowrap w-[200%] md:w-full gap-8 md:justify-end md:gap-4"
-                ref={mobileRef}
-              >
-                <div className="flex flex-col gap-6 panel">
-                  <p className="text-center text-[21px] font-medium text-black">
-                    OSO{" "}
-                  </p>
-                  <div className="relative ">
-                    <Image
-                      src={images[0]}
-                      ref={imageOSORef}
-                      width={303}
-                      height={616}
-                      alt="OSO"
-                    />
-                  </div>
-                </div>
 
-                <div className="flex flex-col gap-6 panel">
-                  <p className="text-center text-[21px] font-medium text-black">
-                    {" "}
-                    ChatGpt
-                  </p>
-                  <Image
-                    src={images[1]}
-                    ref={imageChatGPTRef}
-                    width={303}
-                    height={619}
-                    alt="ChatGtp"
-                  />
-                </div>
-              </div>
-            )} */}
+            {/* Stay Updated */}
+            <ComparisonContent
+              title=" Stay Updated"
+              description="  Get instant news updates like the recent Maui Fires. Watch OSO
+              gather real-time information from diverse sources."
+              isMobile={isMobile}
+            />
 
+            {/* Stay Updated Mobile */}
             {!isDesktop && (
-              <Slide
-                arrows={false}
-                slidesToScroll={1}
-                slidesToShow={1}
-                indicators={true}
-                autoplay={false}
-              >
-                <>
-                  <p className="text-center text-[21px] font-medium text-black">
-                    OSO
-                  </p>
-                  <Image
-                    src={images[0]}
-                    ref={imageOSORef}
-                    width={303}
-                    height={616}
-                    alt="OSO"
-                    className="m-auto mt-4 w-full"
-                  />
-                </>
-                <>
-                  <p className="text-center text-[21px] font-medium text-black">
-                    ChatGpt
-                  </p>
-                  <Image
-                    src={images[1]}
-                    ref={imageChatGPTRef}
-                    width={303}
-                    height={619}
-                    alt="ChatGtp"
-                    className="m-auto mt-4 w-full"
-                  />
-                </>
+              <Slide  {...settings}>
+                <Phone title="OSO" obj={"/assets/video/stay-update-oso.mp4"} />
+                <Phone title="GPT" obj={"/assets/video/stay-update-gpt.mp4"} />
               </Slide>
             )}
-            <div className="md:px-0 px-3 flex flex-col gap-2">
-              <h4
-                className={`text-[32px] font-medium leading-tight ${
-                  !isMobile ? "sm:text-[#CCCCCC]" : "!text-black"
-                }  `}
-                ref={(el) => (revealedchat.current[0] = el)}
-              >
-                Plan your event & travel
-              </h4>
-              <p
-                className={`text-2xl leading-8 font-light  ${
-                  !isMobile ? "sm:text-[#CCCCCC]" : "!text-black"
-                }`}
-                ref={(el) => (revealedchat.current[1] = el)}
-              >
-                Wondering about the Grand Prix in Las Vegas? From dates to
-                ticket pricing and seat recommendations, see OSO fetch it all.
-              </p>
-            </div>
+
+
+            {/* Plan your event */}
+            <ComparisonContent
+              title="Plan your event & travel"
+              description="  Wondering about the Grand Prix in Las Vegas? From dates to
+                ticket pricing and seat recommendations, see OSO fetch it all."
+              isMobile={isMobile}
+            />
+
+
+            {/* Plan your event mobile*/}
             {!isDesktop && (
-              <Slide
-                arrows={false}
-                slidesToScroll={1}
-                slidesToShow={1}
-                indicators={true}
-                autoplay={false}
-              >
-                <>
-                  <p className="text-center text-[21px] font-medium text-black">
-                    OSO
-                  </p>
-                  <Image
-                    src={images[2]}
-                    ref={imageOSORef}
-                    width={303}
-                    height={616}
-                    alt="OSO"
-                    className="w-full m-auto mt-4"
-                  />
-                </>
-                <>
-                  <p className="text-center text-[21px] font-medium text-black">
-                    ChatGpt
-                  </p>
-                  <Image
-                    src={images[3]}
-                    ref={imageChatGPTRef}
-                    width={303}
-                    height={619}
-                    alt="ChatGtp"
-                    className="w-full m-auto"
-                  />
-                </>
+              <Slide  {...settings}>
+                <Phone title="OSO" obj={"/assets/video/plan-your-event-oso.mp4"} />
+                <Phone title="GPT" obj={"/assets/video/plan-your-event-gpt.mp4"} />
               </Slide>
             )}
+
+
             {!isMobile && (
-              <div className="flex flex-col gap-2">
-                <h4
-                  className="md:px-0 px-3 text-[32px] font-medium leading-tight sm:text-[#CCCCCC]"
-                  ref={(el) => (revealedDeepchat.current[0] = el)}
-                >
-                  Deep Dive Reviews
-                </h4>
-                <p
-                  className="text-2xl leading-8 font-light sm:text-[#CCCCCC]"
-                  ref={(el) => (revealedDeepchat.current[1] = el)}
-                >
-                  Looking for the best restaurant experience? Observe how OSO
-                  evaluates atmosphere, culinary highlights, and more
-                </p>
-              </div>
+              <ComparisonContent
+                title="Deep Dive Reviews"
+                description="Looking for the best restaurant experience? Observe how OSO
+               evaluates atmosphere, culinary highlights, and more"
+                isMobile={isMobile}
+              />
             )}
           </div>
 
+
+          {/* Desktop phones */}
           {!isMobile && (
             <div
               className="flex flex-nowrap w-[200%] md:w-full gap-8 md:justify-end md:gap-4 md:mt-0 mt-16"
               ref={phoneB}
             >
-              <div className="flex flex-col gap-6 panelB">
-                <p className="text-center text-[21px] font-medium text-black">
-                  OSO{" "}
-                </p>
-                <div className="relative ">
-                  <Image
-                    src={images[currentIndex]}
-                    ref={imageOSORef}
-                    width={303}
-                    height={616}
-                    alt="OSO"
-                  />
-                </div>
-              </div>
+              <Phone title="OSO" obj={"/assets/video/stay-update-oso.mp4"} />
+              <Phone title="GPT" obj={"/assets/video/stay-update-gpt.mp4"} />
+            </div>
+          )}
 
-              <div className="flex flex-col gap-6 panelB">
-                <p className="text-center text-[21px] font-medium text-black">
-                  {" "}
-                  ChatGpt
-                </p>
-                <Image
-                  src={images[currentChatIndex]}
-                  ref={imageChatGPTRef}
-                  width={303}
-                  height={619}
-                  alt="ChatGtp"
-                />
-              </div>
-            </div>
-          )}
-          {!!isMobile && (
-            <div className="md:px-0 px-3 flex flex-col gap-2 my-16 ">
-              <h4
-                className=" text-[32px] font-medium leading-tight sm:text-black"
-                ref={(el) => (revealedDeepchat.current[0] = el)}
-              >
-                Deep Dive Reviews
-              </h4>
-              <p
-                className="text-2xl leading-8 font-light sm:text-black"
-                ref={(el) => (revealedDeepchat.current[1] = el)}
-              >
-                Looking for the best restaurant experience? Observe how OSO
-                evaluates atmosphere, culinary highlights, and more
-              </p>
-            </div>
-          )}
+
+          {/* Mobile under deep reviews */}
           {!isDesktop && (
-            <Slide
-              arrows={false}
-              slidesToScroll={1}
-              slidesToShow={1}
-              indicators={true}
-              autoplay={false}
-            >
-              <>
-                <p className="text-center text-[21px] font-medium text-black">
-                  OSO
-                </p>
-                <Image
-                  src={images[0]}
-                  ref={imageOSORef}
-                  width={303}
-                  height={616}
-                  alt="OSO"
-                  className="m-auto mt-4 w-full"
-                />
-              </>
-              <>
-                <p className="text-center text-[21px] font-medium text-black">
-                  ChatGpt
-                </p>
-                <Image
-                  src={images[1]}
-                  ref={imageChatGPTRef}
-                  width={303}
-                  height={619}
-                  alt="ChatGtp"
-                  className="m-auto mt-4 w-full"
-                />
-              </>
+            <ComparisonContent
+              title="Deep Dive Reviews"
+              description="Looking for the best restaurant experience? Observe how OSO
+          evaluates atmosphere, culinary highlights, and more"
+              isMobile={isMobile}
+            />
+          )}
+
+
+          {/* Under Deep Review Mobile */}
+          {!isDesktop && (
+            <Slide  {...settings}>
+              <Phone title="OSO" obj={"/assets/video/under-deep-review-oso.mp4"} />
+              <Phone title="GPT" obj={"/assets/video/under-deep-review-gpt.mp4"} />
             </Slide>
           )}
         </div>

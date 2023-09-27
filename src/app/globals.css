@@ -198,3 +198,9 @@ html {
   width: 25px !important;
   height: 25px !important;
 }
+@media screen and (min-width: 300px) and (max-width: 539px) {
+  .email-width{
+    width: 100%;
+  }
+  
+}

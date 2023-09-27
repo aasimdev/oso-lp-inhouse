@@ -2,6 +2,7 @@ import React from 'react'
 import CheckListItem from './CheckListItem'
 import Button from '../Button'
 import Video from '@/components/Video'
+import NewsLetter from '@/components/news-letter'
 
 const Banner = ({ title, description }) => {
     return (
@@ -19,12 +20,8 @@ const Banner = ({ title, description }) => {
                     </div>
 
                     <div className="flex justify-center items-center pt-8 md:pt-6">
-                        <Button
-                            label="Join Waitlist"
-                            arrowIcon={true}
-                            link="https://eijfn1o56i0.typeform.com/to/szT5l8hI?typeform-source=oso.ai"
-                            target="_blank"
-                        />
+                     
+                        <NewsLetter arrowIcon label="Join Waitlist"/>
                     </div>
 
                     <div className="mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">

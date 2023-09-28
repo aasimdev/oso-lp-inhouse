@@ -10,9 +10,9 @@ import ComparisonContent from "./Content";
 
 
 const Comparison = () => {
-  const comparison = useRef();
+  const container = useRef();
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
-  const [isMobile, setIsMobile] = useState(false); // Default to false initially
+  const [isMobile, setIsMobile] = useState(false);
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +33,48 @@ const Comparison = () => {
   }, []);
 
 
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const images = gsap.utils.toArray('.phoneWrap');
+      const rightElements = gsap.utils.toArray('.contentWrap');
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: container.current,
+          start: '+=0',
+          end: '+=300%',
+          pin: true,
+          scrub: true,
+          markers: true,
+          // pinSpacing: 3
+        },
+      });
+
+      images.forEach((img, i) => {
+        if (images[i + 1]) {
+          tl.to(img,
+            {
+              opacity: 0,
+            }, '+=0.5')
+            .to(images[i + 1], {
+              opacity: 1
+            }, '<')
+            .to(
+              rightElements,
+              {
+                // yPercent: -(100 * (i + 1)),
+                ease: 'none'
+              },
+              '<'
+            );
+        }
+      });
+      tl.to({}, {}, '+=0.5');
+    }, container);
+    return () => ctx.revert();
+  }, []);
+
+
   const settings = {
     arrows: false,
     slidesToScroll: 1,
@@ -44,17 +86,16 @@ const Comparison = () => {
 
   return (
     <section
-      className="px-6 mx-auto max-w-6xl overflow-hidden"
-      ref={comparison}
+      className="px-6 mx-auto max-w-6xl"
     >
       <div className="py-16 md:text-center text-start">
         <h3 className="md:text-5xl text-[40px] leading-tight font-bold text-black md:leading-[80px]">
           How people are using OSO Search
         </h3>
       </div>
-      <div className="md:pt-24  flex flex-col ">
+      <div className="md:pt-24  flex flex-col  h-screen" >
         <div className="md:flex md:flex-nowrap flex-wrap justify-between">
-          <div className="w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto mb-12 sm:mb-0">
+          <div className="contentWrap h-screen w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto mb-12 sm:mb-0">
 
             {/* Stay Updated */}
             <ComparisonContent
@@ -107,11 +148,27 @@ const Comparison = () => {
 
           {/* Desktop phones */}
           {!isMobile && (
-            <div
-              className="flex flex-nowrap w-[200%] md:w-full gap-8 md:justify-end md:gap-4 md:mt-0 mt-16"
-            >
-              <Phone title="OSO" obj={"/assets/video/stay-update-oso.mp4"} />
-              <Phone title="ChatGPT" obj={"/assets/video/stay-update-gpt.mp4"} />
+            <div className="h-screen relative overflow-hidden w-full flex ">
+              <div className="w-full h-full relative overflow-hidden">
+                <div
+                  className="phoneWrap flex flex-nowrap w-[200%] md:w-full gap-8 md:justify-end md:gap-4 md:mt-0 mt-16 opacity-100 absolute left-0 top-0 right-0 bottom-0"
+                >
+                  <Phone title="OSO" obj={"/assets/video/stay-update-oso.mp4"} />
+                  <Phone title="ChatGPT" obj={"/assets/video/stay-update-gpt.mp4"} />
+                </div>
+                <div
+                  className="phoneWrap flex flex-nowrap w-[200%] md:w-full gap-8 md:justify-end md:gap-4 md:mt-0 mt-16 opacity-0 absolute left-0 top-0 right-0 bottom-0"
+                >
+                  <Phone title="OSO" obj={"/assets/video/plan-your-event-oso.mp4"} />
+                  <Phone title="ChatGPT" obj={"/assets/video/plan-your-event-gpt.mp4"} />
+                </div>
+                <div
+                  className="phoneWrap flex flex-nowrap w-[200%] md:w-full gap-8 md:justify-end md:gap-4 md:mt-0 mt-16 opacity-0 absolute left-0 top-0 right-0 bottom-0"
+                >
+                  <Phone title="OSO" obj={"/assets/video/under-deep-review-oso.mp4"} />
+                  <Phone title="ChatGPT" obj={"/assets/video/under-deep-review-gpt.mp4"} />
+                </div>
+              </div>
             </div>
           )}
 
@@ -138,7 +195,6 @@ const Comparison = () => {
         <div className="md:flex justify-center items-center pb-6 sm:pb-0 pt-20 sm:pt-[100px]">
           <NewsLetter label="Join Waitlist" arrowIcon={true} />
         </div>
-
       </div>
     </section>
   );

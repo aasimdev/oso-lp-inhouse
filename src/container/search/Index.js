@@ -8,7 +8,7 @@ import React from "react";
 import webImage from "../../../public/assets/images/updated.png";
 import SecondPhone from "../../../public/assets/images/mobilephone.png";
 import UpdatePhone from "../../../public/assets/images/updatePhones.png"
-import UpdatePhone2 from "../../../public/assets/images/updatePhone-2.png"
+import UpdatePhone2 from "../../../public/assets/images/updatephone-2.png"
 
 import FAQ from "@/components/FAQ/Index";
 import Comparison from "@/components/search/comparison/Index";

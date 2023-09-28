@@ -45,7 +45,7 @@ const Comparison = () => {
           end: '+=300%',
           pin: true,
           scrub: true,
-          markers: true,
+          markers: false,
           // pinSpacing: 3
         },
       });
@@ -93,9 +93,9 @@ const Comparison = () => {
           How people are using OSO Search
         </h3>
       </div>
-      <div className="md:pt-24  flex flex-col  md:h-screen" >
+      <div className="md:pt-24  flex flex-col" >
         <div className="md:flex md:flex-nowrap flex-wrap justify-between">
-          <div className="contentWrap md:h-screen w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto mb-12 sm:mb-0">
+          <div className="contentWrap w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto mb-12 sm:mb-0">
 
             {/* Stay Updated */}
             <ComparisonContent
@@ -148,7 +148,7 @@ const Comparison = () => {
 
           {/* Desktop phones */}
           {!isMobile && (
-            <div className="h-screen relative overflow-hidden w-full flex ">
+            <div className=" relative overflow-hidden w-full flex ">
               <div className="w-full h-full relative overflow-hidden">
                 <div
                   className="phoneWrap flex flex-nowrap w-[200%] md:w-full gap-8 md:justify-end md:gap-4 md:mt-0 mt-16 opacity-100 absolute left-0 top-0 right-0 bottom-0"

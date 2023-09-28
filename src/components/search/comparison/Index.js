@@ -93,9 +93,9 @@ const Comparison = () => {
           How people are using OSO Search
         </h3>
       </div>
-      <div className="md:pt-24  flex flex-col  h-screen" >
+      <div className="md:pt-24  flex flex-col  md:h-screen" >
         <div className="md:flex md:flex-nowrap flex-wrap justify-between">
-          <div className="contentWrap h-screen w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto mb-12 sm:mb-0">
+          <div className="contentWrap md:h-screen w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto mb-12 sm:mb-0">
 
             {/* Stay Updated */}
             <ComparisonContent

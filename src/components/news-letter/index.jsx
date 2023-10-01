@@ -20,7 +20,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
         >
           <div>
             <input
-              className={`email-width py-[26px] w-[352px] bg-white appearance-none border border-[#454F5B] placeholder:text-[#637381] rounded-lg px-4 text-black leading-tight focus:outline-none focus:border-purple ${className}`}
+              className={`email-width py-[26px] w-[352px] bg-white appearance-none border border-gray-900 placeholder:text-gray-100 rounded-lg px-4 text-black leading-tight focus:outline-none focus:border-purple ${className}`}
               placeholder="Enter your email"
               required
               name="email"
@@ -54,7 +54,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
       )}
       {!!showMessage && (
         <>
-          <div className="text-[#212B36] text-center">
+          <div className="text-gray-800 text-center">
             <p className={` text-2xl `}>Congrats!</p>
             <p className="mt-2">
              You will soon be among the first to experience the power

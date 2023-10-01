@@ -27,7 +27,7 @@ const Question = ({ question, answer, isOpen, toggleAccordion }) => {
         </span>
       </button>
       <div
-        className={`overflow-hidden transition-max-height duration-300 ${isOpen ? 'max-h-screen' : 'max-h-0'}`}
+        className={`overflow-hidden overflow-y-auto transition-max-height duration-300 ${isOpen ? 'max-h-screen' : 'max-h-0'}`}
       >
         <div
           className="block w-full pt-6 text-gray-700 antialiased pb-0"

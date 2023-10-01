@@ -25,7 +25,7 @@ const Video = () => {
     return (
         <div className="mt-8 md:mt-6 mx-auto max-w-[902px] rounded-lg md:rounded-2xl overflow-hidden text-center h-video relative">
 
-            <div className={`w-full h-full bg-black absolute left-0 top-0 right-0 bottom-0 overflow-hidden z-0 transition-all duration-300 ${preLoad ? "opacity-0" : "opacity-100"}`} />
+            <div className={`w-full bg-black absolute left-0 top-0 right-0 bottom-0 overflow-hidden -z-10 transition-all duration-300 h-[507px] ${preLoad ? "opacity-0" : "opacity-100"}`} />
 
             <video playsInline preload="none" muted autoPlay loop controls={!handler} className={`aspect-auto object-cover transition-all duration-300 z-10 ${preLoad ? "opacity-100" : "opacity-0"}`} loading="lazy" ref={videoRef}>
                 <source src={'/assets/video/search.mp4'} type="video/mp4" />

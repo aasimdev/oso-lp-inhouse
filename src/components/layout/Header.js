@@ -10,6 +10,7 @@ import Link from "next/link";
 const Header = () => {
   const { showSidebar, navigationHandler } = useMenu("");
   const [showMessage, setShowMessage] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [hform, setHForm] = useState(false);
   const router = useRouter();
 
@@ -23,21 +24,7 @@ const Header = () => {
   });
 
   async function addWaitlistContact(email) {
-    // const res = await fetch("https://oso619.api-us1.com/api/3/contacts/", {
-    //   method: "POST",
-    //   body: JSON.stringify({
-    //     contact: {
-    //       email,
-    //     },
-    //   }),
-    //   headers: {
-    //     "Api-Token":
-    //       "9fe85628947279951896a28720b67f53aaf259408bc773d62a249eb6fe7297435d2ad791",
-    //     "Content-Type": "application/json",
-    //     "Allow-Cross-Origin": "*",
-    //   },
-    // });
-
+    setIsLoading(true);
     const res = await fetch("api/create-contact", {
       method: "POST",
       body: JSON.stringify({
@@ -47,6 +34,7 @@ const Header = () => {
     const data = await res.json();
     if (data.status === "success") {
       // setShowMessage(true);
+      setIsLoading(false);
       setHForm(false);
       form.setValues({ email: "" });
       router.push("/thank-you?email=" + email);
@@ -57,7 +45,11 @@ const Header = () => {
     <>
       <header className="px-6 py-4 mx-auto max-w-6xl">
         <nav className="flex justify-between items-center md:flex-nowrap flex-wrap">
+<<<<<<< HEAD
           <Link href="/search">
+=======
+          <Link href="/">
+>>>>>>> 47b89eeda4d9849cddaea390ed41a5d3d2d53ec1
             <Image
               src={"/assets/logo/oso.png"}
               alt="logo"
@@ -84,10 +76,16 @@ const Header = () => {
                 )}
                 <button
                   type={hform ? "submit" : "button"}
-                  className="!py-[11px] !px-[23.25px] !text-base !w-auto theme-btn"
+                  className="!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn"
                   onClick={() => setHForm(true)}
                 >
-                  Join Waitlist
+                  {!isLoading ? "Join Waitlist" :
+                    <svg class="animate-spin h-6 w-6 text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                  }
+
+
                 </button>
               </form>
             )}

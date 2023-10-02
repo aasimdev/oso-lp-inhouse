@@ -1,3 +1,5 @@
+"use client";
+
 import { useFormik } from "formik";
 import React, { useState } from "react";
 
@@ -8,9 +10,27 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
       email: "",
     },
     onSubmit: (values) => {
-      setShowMessage(true);
+      addWaitlistContact(values.email);
     },
   });
+
+
+  async function addWaitlistContact(email){
+    
+    const res = await fetch("api/create-contact", {
+      method: "POST",
+      body: JSON.stringify({
+        email,
+      }),
+    });
+    const data = await res.json();
+    if(data.status==="success"){
+      setShowMessage(true);
+    }
+
+  }
+
+
   return (
     <>
       {!showMessage && (

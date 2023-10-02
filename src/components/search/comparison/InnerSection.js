@@ -42,7 +42,7 @@ const InnerSection = () => {
           // start: 'top',
           end: "+=300%",
           pin: true,
-          scrub: true,
+          //   scrub: true,
           // markers: true,
         },
       });

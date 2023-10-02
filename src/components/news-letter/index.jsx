@@ -7,6 +7,7 @@ import React, { useState } from "react";
 const NewsLetter = ({ className, label, arrowIcon }) => {
   const [showMessage, setShowMessage] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+
   const router = useRouter();
   const form = useFormik({
     initialValues: {
@@ -17,11 +18,9 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
     },
   });
 
-
   async function addWaitlistContact(email) {
     setIsLoading(true);
     const res = await fetch("api/create-contact", {
-
       method: "POST",
       body: JSON.stringify({
         email,
@@ -34,7 +33,6 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
       router.push("/thank-you?email=" + email);
     }
   }
-
 
   return (
     <>
@@ -59,22 +57,36 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
             type="submit"
             className={` theme-btn ${className ? className : null}`}
           >
-            
-            <span>{label}</span>
+            <span>{isLoading ? "Please wait" : label}</span>
 
-            {arrowIcon && (
+            {isLoading ? (
               <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
+                class="animate-spin h-6 w-6 text-purple-400"
                 xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
               >
                 <path
-                  d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
-                  fill="white"
-                />
+                  class="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                ></path>
               </svg>
+            ) : (
+              arrowIcon && (
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+                    fill="white"
+                  />
+                </svg>
+              )
             )}
           </button>
         </form>
@@ -84,8 +96,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
           <div className="text-gray-800 text-center">
             <p className={` text-2xl `}>Congrats!</p>
             <p className="mt-2">
-              You will soon be among the first to experience the power
-              of OSO.
+              You will soon be among the first to experience the power of OSO.
             </p>
           </div>
         </>

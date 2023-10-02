@@ -38,7 +38,7 @@ const InnerSection = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: container.current,
-          start: "top+=335px",
+          start: "top top",
           // start: 'top',
           end: "+=300%",
           pin: true,
@@ -70,7 +70,7 @@ const InnerSection = () => {
 
   return (
     <div
-      className="flex flex-col md:justify-center md:h-screen !top-0"
+      className="flex flex-col md:justify-center md:h-screen !top-0 "
       ref={container}
     >
       <div className="md:flex md:flex-nowrap flex-wrap justify-between">

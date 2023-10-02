@@ -5,6 +5,7 @@ import Menu from "../common/navigation/Menu";
 import { useMenu } from "@/context/MenuContext";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Header = () => {
   const { showSidebar, navigationHandler } = useMenu("");
@@ -56,7 +57,7 @@ const Header = () => {
     <>
       <header className="px-6 py-4 mx-auto max-w-6xl">
         <nav className="flex justify-between items-center md:flex-nowrap flex-wrap">
-          <a href="#">
+          <Link href="/search">
             <Image
               src={"/assets/logo/oso.png"}
               alt="logo"
@@ -64,7 +65,7 @@ const Header = () => {
               height={80}
               className="w-10 sm:w-14"
             />
-          </a>
+          </Link>
           <div className="hidden sm:flex items-center gap-6">
             {!showMessage && (
               <form onSubmit={form?.handleSubmit} className="flex gap-2">

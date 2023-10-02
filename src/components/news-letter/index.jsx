@@ -1,10 +1,12 @@
 "use client";
 
 import { useFormik } from "formik";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 const NewsLetter = ({ className, label, arrowIcon }) => {
   const [showMessage, setShowMessage] = useState(false);
+  const router = useRouter();
   const form = useFormik({
     initialValues: {
       email: "",
@@ -15,8 +17,8 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
   });
 
 
-  async function addWaitlistContact(email){
-    
+  async function addWaitlistContact(email) {
+
     const res = await fetch("api/create-contact", {
       method: "POST",
       body: JSON.stringify({
@@ -24,9 +26,9 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
       }),
     });
     const data = await res.json();
-    if(data.status==="success"){
+    if (data.status === "success") {
       // setShowMessage(true);
-      router.push("/thank-you");
+      router.push("/thank-you?email=" + email);
     }
 
   }
@@ -78,7 +80,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
           <div className="text-gray-800 text-center">
             <p className={` text-2xl `}>Congrats!</p>
             <p className="mt-2">
-             You will soon be among the first to experience the power
+              You will soon be among the first to experience the power
               of OSO.
             </p>
           </div>

@@ -32,12 +32,12 @@ const Page = ({ searchParams }) => {
                 phone_number: null  });`,
         }}
       />
-      <main style={{ minHeight: "50vh" }}>
+      <section className="min-h-[50vh] flex items-center justify-center">
         <h2 className="text-2xl font-semibold text-center mt-12">
           Congrats! You will soon be among the first to experience the power of
           OSO.
         </h2>
-      </main>
+      </section>
     </>
   );
 };

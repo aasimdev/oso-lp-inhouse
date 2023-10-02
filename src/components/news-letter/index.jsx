@@ -57,7 +57,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
             type="submit"
             className={` theme-btn ${className ? className : null}`}
           >
-            <span>{isLoading ? "Please wait" : label}</span>
+            {!isLoading && <span>{label}</span>}
 
             {isLoading ? (
               <svg

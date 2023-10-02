@@ -3,10 +3,10 @@
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 
 const NewsLetter = ({ className, label, arrowIcon }) => {
   const [showMessage, setShowMessage] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
   const form = useFormik({
     initialValues: {
@@ -18,9 +18,10 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
   });
 
 
-  async function addWaitlistContact(email){
-    const router = useRouter();
+  async function addWaitlistContact(email) {
+    setIsLoading(true);
     const res = await fetch("api/create-contact", {
+
       method: "POST",
       body: JSON.stringify({
         email,
@@ -29,7 +30,8 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
     const data = await res.json();
     if (data.status === "success") {
       // setShowMessage(true);
-      router.push("/thank-you?email="+email);
+      setIsLoading(false);
+      router.push("/thank-you?email=" + email);
     }
   }
 
@@ -57,7 +59,9 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
             type="submit"
             className={` theme-btn ${className ? className : null}`}
           >
+            
             <span>{label}</span>
+
             {arrowIcon && (
               <svg
                 width="24"

@@ -46,6 +46,8 @@ const Header = () => {
     const data = await res.json();
     if (data.status === "success") {
       // setShowMessage(true);
+      setHForm(false);
+      form.setValues({ email: "" });
       router.push("/thank-you?email=" + email);
     }
   }

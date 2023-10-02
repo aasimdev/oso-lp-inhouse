@@ -25,10 +25,11 @@ const Page = ({ searchParams }) => {
         id="twitter-conversion-tracking"
         strategy="lazyOnload"
         dangerouslySetInnerHTML={{
-          __html: `twq('event', 'tw-ogmtw-ogmtz', { conversion_id: null,
-                (e.g. order id '1a2b3c') email_address: ${email}, 
-                phone_number: null // 
-                phone number in E164 standard });`,
+          __html: `twq('event', 'tw-ogmtw-ogmtz', { 
+            conversion_id: null,
+                (e.g. order id '1a2b3c') 
+                email_address: ${email}, 
+                phone_number: null  });`,
         }}
       />
       <main style={{ minHeight: "50vh" }}>

@@ -45,11 +45,7 @@ const Header = () => {
     <>
       <header className="px-6 py-4 mx-auto max-w-6xl">
         <nav className="flex justify-between items-center md:flex-nowrap flex-wrap">
-<<<<<<< HEAD
           <Link href="/search">
-=======
-          <Link href="/">
->>>>>>> 47b89eeda4d9849cddaea390ed41a5d3d2d53ec1
             <Image
               src={"/assets/logo/oso.png"}
               alt="logo"
@@ -79,13 +75,22 @@ const Header = () => {
                   className="!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn"
                   onClick={() => setHForm(true)}
                 >
-                  {!isLoading ? "Join Waitlist" :
-                    <svg class="animate-spin h-6 w-6 text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  {!isLoading ? (
+                    "Join Waitlist"
+                  ) : (
+                    <svg
+                      class="animate-spin h-6 w-6 text-purple-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        class="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
                     </svg>
-                  }
-
-
+                  )}
                 </button>
               </form>
             )}

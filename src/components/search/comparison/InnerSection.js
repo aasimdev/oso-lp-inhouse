@@ -37,13 +37,13 @@ const InnerSection = () => {
 
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: container.current,
+          trigger: "#animation-container",
           start: "top top",
           // start: 'top',
           end: "+=300%",
           pin: true,
-          //   scrub: true,
-          // markers: true,
+          scrub: true,
+          markers: true,
         },
       });
 
@@ -70,16 +70,17 @@ const InnerSection = () => {
 
   return (
     <div
-      className="flex flex-col md:justify-center md:h-screen !top-0 "
-      ref={container}
+      id="animation-container"
+      className="flex flex-col md:justify-center md:h-screen top-0"
+      //   ref={container}
     >
-      <div className="md:flex md:flex-nowrap flex-wrap justify-between">
+      <div className="md:flex md:flex-nowrap flex-wrap justify-between ">
         <div className="contentWrap w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto mb-12 sm:mb-0">
           {/* Stay Updated */}
           <div className="text-block opacity-100">
             <ComparisonContent
               title=" Stay Updated"
-              description="  Get instant news updates like the recent Maui Fires. Watch OSO
+              description="WWGet instant news updates like the recent Maui FiresSS. Watch OSO
           gather real-time information from diverse sources."
               isMobile={isMobile}
             />
@@ -89,8 +90,12 @@ const InnerSection = () => {
           {!isDesktop && (
             <div className="-mx-6 sm:mx-0">
               <Slide {...settings}>
-                <Phone title="OSO" obj="869795820" />
-                <Phone title="ChatGPT" obj="869795832" />
+                <div className="each-slide-effect">
+                  <Phone title="OSO" obj="869795820" />
+                </div>
+                <div className="each-slide-effect">
+                  <Phone title="ChatGPT" obj="869795832" />
+                </div>
               </Slide>
             </div>
           )}
@@ -130,15 +135,15 @@ const InnerSection = () => {
         {!isMobile && (
           <div className="right-elemetns relative overflow-hidden w-full flex ">
             <div className="w-full h-full relative overflow-hidden">
-              <div className="phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 opacity-100 absolute left-0 top-0 right-0 bottom-0 gap-5">
+              <div className="phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 opacity-100 absolute left-0 top-0 right-0 bottom-0">
                 <Phone title="OSO" obj="869795820" />
                 <Phone title="ChatGPT" obj="869795832" />
               </div>
-              <div className="phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 opacity-0 absolute left-0 top-0 right-0 bottom-0 gap-5">
+              <div className="phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 opacity-0 absolute left-0 top-0 right-0 bottom-0">
                 <Phone title="OSO" obj="869795741" />
                 <Phone title="ChatGPT" obj="869795758" />
               </div>
-              <div className="phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 opacity-0 absolute left-0 top-0 right-0 bottom-0 gap-5">
+              <div className="phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 opacity-0 absolute left-0 top-0 right-0 bottom-0">
                 <Phone title="OSO" obj="869795782" />
                 <Phone title="ChatGPT" obj="869795803" />
               </div>

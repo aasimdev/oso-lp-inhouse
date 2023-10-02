@@ -25,7 +25,8 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
     });
     const data = await res.json();
     if(data.status==="success"){
-      setShowMessage(true);
+      // setShowMessage(true);
+      router.push("/thank-you");
     }
 
   }

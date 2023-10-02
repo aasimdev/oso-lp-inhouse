@@ -4,11 +4,13 @@ import React, { useEffect, useState } from "react";
 import Menu from "../common/navigation/Menu";
 import { useMenu } from "@/context/MenuContext";
 import { useFormik } from "formik";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const { showSidebar, navigationHandler } = useMenu("");
   const [showMessage, setShowMessage] = useState(false);
   const [hform, setHForm] = useState(false);
+  const router = useRouter();
 
   const form = useFormik({
     initialValues: {
@@ -43,7 +45,8 @@ const Header = () => {
     });
     const data = await res.json();
     if (data.status === "success") {
-      setShowMessage(true);
+      // setShowMessage(true);
+      router.push("/thank-you?email=" + email);
     }
   }
 

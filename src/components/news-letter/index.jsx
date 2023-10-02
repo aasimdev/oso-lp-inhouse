@@ -1,11 +1,13 @@
 "use client";
 
 import { useFormik } from "formik";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const NewsLetter = ({ className, label, arrowIcon }) => {
   const [showMessage, setShowMessage] = useState(false);
+  const router = useRouter();
   const form = useFormik({
     initialValues: {
       email: "",
@@ -25,7 +27,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
       }),
     });
     const data = await res.json();
-    if(data.status==="success"){
+    if (data.status === "success") {
       // setShowMessage(true);
       router.push("/thank-you?email="+email);
     }
@@ -78,7 +80,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
           <div className="text-gray-800 text-center">
             <p className={` text-2xl `}>Congrats!</p>
             <p className="mt-2">
-             You will soon be among the first to experience the power
+              You will soon be among the first to experience the power
               of OSO.
             </p>
           </div>

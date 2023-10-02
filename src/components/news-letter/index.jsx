@@ -3,6 +3,7 @@
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const NewsLetter = ({ className, label, arrowIcon }) => {
   const [showMessage, setShowMessage] = useState(false);
@@ -17,8 +18,8 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
   });
 
 
-  async function addWaitlistContact(email) {
-
+  async function addWaitlistContact(email){
+    const router = useRouter();
     const res = await fetch("api/create-contact", {
       method: "POST",
       body: JSON.stringify({
@@ -28,9 +29,8 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
     const data = await res.json();
     if (data.status === "success") {
       // setShowMessage(true);
-      router.push("/thank-you?email=" + email);
+      router.push("/thank-you?email="+email);
     }
-
   }
 
 

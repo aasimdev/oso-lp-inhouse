@@ -2,7 +2,7 @@ import React from "react";
 
 function Page() {
   return (
-    <div>
+    <div className="max-w-4xl">
       <h1>Privacy Policy</h1>
       <p>
         This Privacy Policy sets forth the principles and rules of data

@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Menu from "../common/navigation/Menu";
 import { useMenu } from "@/context/MenuContext";
 import { useFormik } from "formik";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 const Header = () => {
@@ -12,7 +12,10 @@ const Header = () => {
   const [showMessage, setShowMessage] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [hform, setHForm] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+  const header = useRef();
 
   const form = useFormik({
     initialValues: {
@@ -41,10 +44,25 @@ const Header = () => {
     }
   }
 
+  useEffect(() => {
+    const height = header.current.clientHeight;
+    const handleScroll = () => {
+      if (window.scrollY > height) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header className="px-6 py-4 mx-auto max-w-6xl ">
-        <nav className="flex justify-between items-center md:flex-nowrap flex-wrap">
+      <header className={`bg-white z-30 transition-shadow duration-300 ${pathname === "/dmca-policy" ? "sticky top-0" : pathname === "/privacy-policy" ? "sticky top-0" : pathname === "/terms-of-service" ? "sticky top-0" : null} ${isScrolled ? "shadow-[0px_8px_16px_rgba(145,_158,_171,_0.16)]" : null}`} ref={header}>
+        <nav className="flex justify-between items-center md:flex-nowrap flex-wrap px-6 py-4 mx-auto max-w-6xl">
           <Link href="/search">
             <Image
               src={"/assets/logo/oso.png"}

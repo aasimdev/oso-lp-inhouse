@@ -210,7 +210,7 @@ function Page() {
       <p className="font-light text-2xl leading-8">
         From time to time, we may send email or messages to customers about the
         latest news, new products and services, changes to the Service and other
-        relevant information about us and our business. The customer's email
+        relevant information about us and our business. The customer&apos;s email
         address or other contact will be added to the mailing list unless the
         customer opts out of receiving marketing communications. If the user
         provides us with a specific consent to contact them with other marketing
@@ -312,10 +312,10 @@ function Page() {
         The Service uses instant messaging applications or other interface for
         accessing the Service. Therefore, in order to access the Service, data
         must be exchanged between the interface service provider and our
-        servers. We do not have access to a user's contacts or other messages
+        servers. We do not have access to a user&apos;s contacts or other messages
         not addressed to our Service unless they provide us with specific
         permission. Use of the instant messaging service or other third-party
-        interface service is subject to the third-party provider's terms and
+        interface service is subject to the third-party provider&apos;s terms and
         conditions and privacy policy. The User must maintain access to the
         Instant Messaging Service or other interface service in order to
         properly use the Service.
@@ -358,7 +358,7 @@ function Page() {
         is in control of which plugins they use and if they choose to use a
         plugin, we will interpret that action as consent to share the necessary
         data with the provider. We recommend that the user checks the plugin
-        provider's website for relevant information about the plugin and the
+        provider&apos;s website for relevant information about the plugin and the
         data it collects and processes.
       </p>
 
@@ -394,7 +394,7 @@ function Page() {
         its users. For example, cookies are used to handle login to the user
         account and to store session information. The storage of such cookies is
         necessary to provide the service, and therefore does not require the
-        user's consent to be stored on the user's device. In addition to
+        user&apos;s consent to be stored on the user&apos;s device. In addition to
         technical cookies, we might use technologies to collect data relating to
         our advertisement and website usage using cookies or similar
         technologies. In that case we collect user consent with storing and
@@ -454,7 +454,7 @@ function Page() {
         While providing the Service for third-party integration we are generally
         not in direct contact with the end user, but the third-party service
         generally acts as an interface to the Service, aggregating the end
-        user's messages. Otherwise, the information about how the data is
+        user&apos;s messages. Otherwise, the information about how the data is
         processed to provide the services to our end users applies, including
         the information about disclosing the data to third parties. These third
         parties act as our sub-processors.

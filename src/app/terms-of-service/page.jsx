@@ -2,7 +2,7 @@ import React from "react";
 
 function Page() {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col space-y-6 text-[#212B36] py-24 lg:px-0 px-6">
+    <div className="flex flex-col space-y-6 text-[#212B36] py-24 lg:px-24 px-6">
       <h1 className="text-black font-extrabold text-5xl leading-[64px]">
         Terms of Service
       </h1>
@@ -1001,7 +1001,10 @@ function Page() {
 
       <p className="font-light text-2xl leading-8">
         23.1. If you have any questions or concerns regarding these Terms or our
-        Privacy Policy, please contact us at privacy@oso.ai.
+        Privacy Policy, please contact us at{" "}
+        <a href="mailto:privacy@oso.ai" className="text-[#8E33FF]">
+          privacy@oso.ai.
+        </a>
       </p>
       <p className="font-light text-2xl leading-8">
         23.2. Any communication relating to the Services or the agreement based

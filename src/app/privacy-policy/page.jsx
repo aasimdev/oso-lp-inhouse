@@ -2,27 +2,33 @@ import React from "react";
 
 function Page() {
   return (
-    <div className="max-w-7xl mx-auto flex flex-col space-y-6 text-[#212B36] py-24 lg:px-0 px-6">
+    <div className="flex flex-col space-y-6 text-[#212B36] py-24 lg:px-24 px-6">
       <h1 className="text-black font-extrabold text-5xl leading-[64px]">
         Privacy Policy
       </h1>
+
       <p className="font-light text-2xl leading-8">
         This Privacy Policy sets forth the principles and rules of data
         processing related to the W4 Labs Service (“Service”) and
-        https://w4labs.io/ website (“Website”) and aims to provide the users
-        with information about processing of their data while using the Service
-        and the Website.
+        <a href="#" className="text-[#8E33FF]">
+          https://w4labs.io/
+        </a>{" "}
+        website (“Website”) and aims to provide the users with information about
+        processing of their data while using the Service and the Website.
       </p>
       <h2 className="font-semibold text-2xl leading-8">1. Summary</h2>
       <p className="font-light text-2xl leading-8">
         The Service is provided and the Website is operated by the company W4
-        Labs https://w4labs.io/: (”W4 Labs”, “we”, “us”, or “our”) that is
-        responsible for the compliance of related data processing. In the terms
-        of various regulations we are referred to as the controller. We might
-        collect and process your data including personally identifiable
-        information on various occasions and typically while using the Website
-        or while using the Service. The data is processed for the following
-        purposes:
+        Labs{" "}
+        <a href="#" className="text-[#8E33FF]">
+          https://w4labs.io/
+        </a>
+        : (”W4 Labs”, “we”, “us”, or “our”) that is responsible for the
+        compliance of related data processing. In the terms of various
+        regulations we are referred to as the controller. We might collect and
+        process your data including personally identifiable information on
+        various occasions and typically while using the Website or while using
+        the Service. The data is processed for the following purposes:
       </p>
       <ul className="list-disc list-inside text-2xl font-light">
         <li>Website analytics,</li>
@@ -73,7 +79,7 @@ function Page() {
       <h2 className="font-semibold text-2xl leading-8">
         2. Purposes of Processing in Detail
       </h2>
-      <h3 className="font-normal text-2xl">2.1 Website Analytics</h3>
+      <h3 className="font-normal text-2xl leading-8">2.1 Website Analytics</h3>
       <p className="font-light text-2xl leading-8">
         The Website uses website analytics service for gathering aggregated
         statistical data about usage of the Website. We use this data to improve
@@ -86,7 +92,7 @@ function Page() {
         Website and manage our marketing strategy. Usage of cookies and similar
         technologies is subject to consent from the user.
       </p>
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         2.2 Maintaining Customer Relationships and Subscriptions
       </h3>
       <p className="font-light text-2xl leading-8">
@@ -102,7 +108,7 @@ function Page() {
         data collected may be archived for the duration of the contract and for
         3 years after the expiry of the contract.
       </p>
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         2.3 Providing the Service to Customers
       </h3>
       <p className="font-light text-2xl leading-8">
@@ -121,7 +127,7 @@ function Page() {
         unless the user provides opt-in for the communication.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         2.4 Distribution of user developed plug-ins
       </h3>
       <p className="font-light text-2xl leading-8">
@@ -136,7 +142,7 @@ function Page() {
         accordance with the Terms of Service.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         2.5 Advertising and personalization
       </h3>
 
@@ -150,7 +156,9 @@ function Page() {
         optional and is based on your freely given consent.
       </p>
 
-      <h3 className="font-normal text-2xl">2.6 Providing Customer Support</h3>
+      <h3 className="font-normal text-2xl leading-8">
+        2.6 Providing Customer Support
+      </h3>
       <p className="font-light text-2xl leading-8">
         We provide customer support services accessible via channels provided on
         the product website. In order to process customer support requests, we
@@ -166,7 +174,7 @@ function Page() {
         termination of that contract.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         2.7 Maintaining Security and Uninterrupted Operation of the Service
       </h3>
       <p className="font-light text-2xl leading-8">
@@ -179,7 +187,9 @@ function Page() {
         archived for several days.
       </p>
 
-      <h3 className="font-normal text-2xl">2.8 Marketing Communication</h3>
+      <h3 className="font-normal text-2xl leading-8">
+        2.8 Marketing Communication
+      </h3>
       <p className="font-light text-2xl leading-8">
         From time to time, we may send email or messages to customers about the
         latest news, new products and services, changes to the Service and other
@@ -197,7 +207,9 @@ function Page() {
         communication, they can withdraw such consent anytime.
       </p>
 
-      <h3 className="font-normal text-2xl">2.9 Other Communication</h3>
+      <h3 className="font-normal text-2xl leading-8">
+        2.9 Other Communication
+      </h3>
       <p className="font-light text-2xl leading-8">
         If someone contacts us using the contact details we publish, we will
         contact them to respond to their request. In order to do this, we
@@ -208,7 +220,7 @@ function Page() {
         communication and in any case no longer than 1 year after the
         communication has ended.
       </p>
-      <h3 className="font-normal text-2xl">2.10 Legal Compliance</h3>
+      <h3 className="font-normal text-2xl leading-8">2.10 Legal Compliance</h3>
       <p className="font-light text-2xl leading-8">
         As a company, we have certain legal obligations to collect, process and
         archive certain data, such as data about our customer relationships,
@@ -217,7 +229,7 @@ function Page() {
         may be retained for the relevant legal retention periods, which can be
         up to 10 years and under certain conditions even longer.
       </p>
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         2.11 Protection of Business Interests, Processing of Claims and
         Complaints
       </h3>
@@ -268,7 +280,7 @@ function Page() {
         <li>contractors (e.g., customer support operators).</li>
       </ul>
 
-      <h3 className="font-normal text-2xl">3.1 Interface Services</h3>
+      <h3 className="font-normal text-2xl leading-8">3.1 Interface Services</h3>
       <p className="font-light text-2xl leading-8">
         The Service uses instant messaging applications or other interface for
         accessing the Service. Therefore, in order to access the Service, data
@@ -281,7 +293,7 @@ function Page() {
         Instant Messaging Service or other interface service in order to
         properly use the Service.
       </p>
-      <h3 className="font-normal text-2xl">3.2 AI Services</h3>
+      <h3 className="font-normal text-2xl leading-8">3.2 AI Services</h3>
       <p className="font-light text-2xl leading-8">
         The Service uses third-party AI models to process messages and generate
         appropriate responses. Therefore, we must disclose the content of the
@@ -293,7 +305,7 @@ function Page() {
         information about third parties.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         3.3 Feature Enabling Third-party Services
       </h3>
 
@@ -305,7 +317,9 @@ function Page() {
         providers and, where appropriate, we will anonymize such information or
         use pseudonyms.
       </p>
-      <h3 className="font-normal text-2xl">3.4 Third-party Plugins</h3>
+      <h3 className="font-normal text-2xl leading-8">
+        3.4 Third-party Plugins
+      </h3>
 
       <p className="font-light text-2xl leading-8">
         The Service allows third parties to create plugins to enhance and extend
@@ -323,7 +337,9 @@ function Page() {
 
       <h2 className="font-semibold text-2xl leading-8">4. Cookies</h2>
 
-      <h3 className="font-normal text-2xl">4.1 What are Cookies in General</h3>
+      <h3 className="font-normal text-2xl leading-8">
+        4.1 What are Cookies in General
+      </h3>
 
       <p className="font-light text-2xl leading-8">
         Cookies are small text files stored on your browser. They are used by
@@ -331,10 +347,19 @@ function Page() {
         perform certain functions. Because of their central role in improving or
         enabling usability or website processes, disabling cookies may prevent
         users from using certain features of the website. To learn more about
-        cookies, visit https://allaboutcookies.org/, or the related Wikipedia
-        page.
+        cookies, visit{" "}
+        <a
+          href="https://allaboutcookies.org/"
+          target="_blank"
+          className="text-[#8E33FF]"
+        >
+          https://allaboutcookies.org/
+        </a>
+        , or the related Wikipedia page.
       </p>
-      <h3 className="font-normal text-2xl">4.2 Cookies used by the Website</h3>
+      <h3 className="font-normal text-2xl leading-8">
+        4.2 Cookies used by the Website
+      </h3>
 
       <p className="font-light text-2xl leading-8">
         The Website uses certain cookies that are necessary for the proper
@@ -348,7 +373,7 @@ function Page() {
         technologies. In that case we collect user consent with storing and
         using cookies or similar technologies.
       </p>
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         4.3 Choices of the User about Cookies
       </h3>
 
@@ -391,7 +416,7 @@ function Page() {
         described below.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         5.1 Provision of Service for Third-party Integration
       </h3>
 
@@ -405,7 +430,7 @@ function Page() {
         parties act as our sub-processors.
       </p>
 
-      <h3 className="font-normal text-2xl">5.2 Customer Support</h3>
+      <h3 className="font-normal text-2xl leading-8">5.2 Customer Support</h3>
 
       <p className="font-light text-2xl leading-8">
         While providing the Service for third-party integration we generally do
@@ -414,7 +439,7 @@ function Page() {
         resolving end user issues.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         5.3 Cooperation with the Provider
       </h3>
 
@@ -425,7 +450,7 @@ function Page() {
         archive the data only where necessary.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         5.4 Responsibilities of the Third-party Service Provider
       </h3>
 
@@ -465,14 +490,16 @@ function Page() {
         information in order to comply with their request.
       </p>
 
-      <h3 className="font-normal text-2xl">8.1 Right of Access</h3>
+      <h3 className="font-normal text-2xl leading-8">8.1 Right of Access</h3>
       <p className="font-light text-2xl leading-8">
         In relation to the processing of personal data, the data subject has the
         right to obtain, upon request, information about the processing and a
         copy of the data processed about them.
       </p>
 
-      <h3 className="font-normal text-2xl">8.2 Right to Rectification</h3>
+      <h3 className="font-normal text-2xl leading-8">
+        8.2 Right to Rectification
+      </h3>
       <p className="font-light text-2xl leading-8">
         If the data subject has reason to believe that their personal data is
         inaccurate, out of date or incorrect in any way, they have the right to
@@ -480,7 +507,7 @@ function Page() {
         date and correct information is provided.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         8.3 Right to Restriction of Processing
       </h3>
       <p className="font-light text-2xl leading-8">
@@ -495,7 +522,7 @@ function Page() {
         informed of the termination of such restriction.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         8.4 Right to Erasure (Right to be Forgotten)
       </h3>
       <p className="font-light text-2xl leading-8">
@@ -508,7 +535,7 @@ function Page() {
         may not be erased before the end of the legal retention period.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         8.5 Right to Object to Processing
       </h3>
       <p className="font-light text-2xl leading-8">
@@ -519,14 +546,16 @@ function Page() {
         basis of the assessment, the processing will either cease or the
         objection will be rejected.
       </p>
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         8.6 Right to Withdraw Consent to Processing
       </h3>
       <p className="font-light text-2xl leading-8">
         Where personal data is processed on the basis of consent, such consent
         may be withdrawn at any time.
       </p>
-      <h3 className="font-normal text-2xl">8.7 Right to Data Portability</h3>
+      <h3 className="font-normal text-2xl leading-8">
+        8.7 Right to Data Portability
+      </h3>
       <p className="font-light text-2xl leading-8">
         Where the processing of personal data provided by the data subject is
         based on consent or on a contract and is carried out wholly by automated
@@ -534,7 +563,7 @@ function Page() {
         format, the data subject shall have the right to obtain their personal
         data in a structured machine-readable format.
       </p>
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         8.8 Right to Lodge a Complaint with Supervisory Authority
       </h3>
       <p className="font-light text-2xl leading-8">
@@ -551,7 +580,7 @@ function Page() {
         Act applies than the following special terms apply to them.
       </p>
 
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         9.1 Categories of Collected Personal Information and Purposes of
         Processing
       </h3>
@@ -560,7 +589,7 @@ function Page() {
         are described in detail in Section 2 of this Privacy Policy.
       </p>
 
-      <h3 className="font-normal text-2xl">9.2 Additional Rights</h3>
+      <h3 className="font-normal text-2xl leading-8">9.2 Additional Rights</h3>
 
       <p className="font-light text-2xl leading-8">
         {" "}
@@ -604,7 +633,7 @@ function Page() {
       </ul>
 
       <h2 className="font-semibold text-2xl leading-8">10. Final Provisions</h2>
-      <h3 className="font-normal text-2xl">
+      <h3 className="font-normal text-2xl leading-8">
         10.1 Changes to the Privacy Policy
       </h3>
       <p className="font-light text-2xl leading-8">
@@ -615,12 +644,12 @@ function Page() {
         changes take effect.
       </p>
 
-      <h3 className="font-normal text-2xl">10.2 Contact Details</h3>
+      <h3 className="font-normal text-2xl leading-8">10.2 Contact Details</h3>
       <p className="font-light text-2xl leading-8">
         If you have any questions about privacy and personal data processing or
         you wish to exercise your rights, please contact us at privacy@oso.ai
       </p>
-      <h3 className="font-normal text-2xl">10.3 Effective Date</h3>
+      <h3 className="font-normal text-2xl leading-8">10.3 Effective Date</h3>
       <p className="font-light text-2xl leading-8">
         This Privacy Policy shall be effective from September 1, 2023
       </p>

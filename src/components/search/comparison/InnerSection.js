@@ -162,7 +162,7 @@ const InnerSection = () => {
       evaluates atmosphere, culinary highlights, and more"
               isMobile={isMobile}
             />
-            <div className="-mx-6 sm:mx-0 mt-12 sm:mt-0">
+            <div className=" sm:mx-0 mt-12 sm:mt-0">
               <Slide {...settings}>
                 <Phone title="OSO" obj="869795782" />
                 <Phone title="ChatGPT" obj="869795803" />

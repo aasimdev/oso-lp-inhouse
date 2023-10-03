@@ -27,7 +27,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
       }),
     });
     const data = await res.json();
-    if (data.status === "success") {
+    if (res.status == 200) {
       // setShowMessage(true);
       setIsLoading(false);
       router.push("/thank-you?email=" + email);

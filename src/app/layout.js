@@ -17,27 +17,27 @@ export default function RootLayout({ children }) {
 }
 
 function RootLayoutContent({ children }) {
-  const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     // Use GSAP to animate the loader out
-  //     gsap.to(".loader", {
-  //       duration: 0.5, // Animation duration
-  //       opacity: 0, // Fade out opacity
-  //       scale: 0.5, // Zoom out to 50% of original size
-  //       onComplete: () => {
-  //         setLoading(true); // Set loading to true after the animation completes
-  //         // Use GSAP to animate the content in
-  //         gsap.fromTo(
-  //           ".content",
-  //           { opacity: 0 },
-  //           { duration: 0.5, opacity: 1 }
-  //         );
-  //       },
-  //     });
-  //   }, 1500);
-  //   return () => clearTimeout(timer);
-  // }, []);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      // Use GSAP to animate the loader out
+      gsap.to(".loader", {
+        duration: 0.5, // Animation duration
+        opacity: 0, // Fade out opacity
+        scale: 0.5, // Zoom out to 50% of original size
+        onComplete: () => {
+          setLoading(true); // Set loading to true after the animation completes
+          // Use GSAP to animate the content in
+          gsap.fromTo(
+            ".content",
+            { opacity: 0 },
+            { duration: 0.5, opacity: 1 }
+          );
+        },
+      });
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, []);
   const { showSidebar } = useMenu("");
   return (
     <html lang="en">

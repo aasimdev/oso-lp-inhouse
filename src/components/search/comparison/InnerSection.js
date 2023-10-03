@@ -44,7 +44,7 @@ const InnerSection = () => {
             end: "+=300%",
             pin: true,
             scrub: true,
-            markers: true,
+            // markers: true,
           },
         });
 

@@ -71,7 +71,7 @@ const Footer = () => {
               className="flex md:flex-nowrap flex-wrap gap-4"
             >
               <button
-                className="white-btn"
+                className="white-btn !py-[11px] !px-[23.25px] !text-base !w-[137px]"
                 type="submit"
                 onClick={handleJoinWaitlistClick}
               >

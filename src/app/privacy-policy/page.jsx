@@ -40,7 +40,7 @@ function Page() {
           </li>
         </ul>
         The data is processed either on the basis of contractual relationships
-        between us and our customers, users' consent, legal obligations and
+        between us and our customers, users consent, legal obligations and
         legitimate interests. The purposes of the processing and the legal basis
         are set out in detail in the text following this summary. The Service is
         a custom AI layer integrated into messaging apps and other interface

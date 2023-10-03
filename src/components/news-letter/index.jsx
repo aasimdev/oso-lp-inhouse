@@ -20,13 +20,13 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
 
   async function addWaitlistContact(email) {
     setIsLoading(true);
-    const res = await fetch("api/create-contact", {
+    const res = await fetch("/api/create-contact", {
       method: "POST",
       body: JSON.stringify({
         email,
       }),
     });
-    const data = await res.json();
+
     if (res.status == 200) {
       // setShowMessage(true);
       setIsLoading(false);

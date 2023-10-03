@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import InnerSection from "./InnerSection";
 import NewsLetter from "@/components/news-letter";

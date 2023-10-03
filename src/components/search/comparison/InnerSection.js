@@ -30,34 +30,36 @@ const InnerSection = () => {
   }, []);
 
   useEffect(() => {
-    ScrollTrigger.refresh();
-    if (isDesktop) {
-      const textBlocks = gsap.utils.toArray(".text-block");
-      const rightElements = gsap.utils.toArray(".phoneWrap");
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+      if (isDesktop) {
+        const textBlocks = gsap.utils.toArray(".text-block");
+        const rightElements = gsap.utils.toArray(".phoneWrap");
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#animation-container",
-          start: "top top",
-          // start: 'top',
-          end: "+=300%",
-          pin: true,
-          scrub: true,
-          // markers: true,
-        },
-      });
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#animation-container",
+            start: "top top",
+            // start: 'top',
+            end: "+=300%",
+            pin: true,
+            scrub: true,
+            markers: true,
+          },
+        });
 
-      rightElements.forEach((img, i) => {
-        if (rightElements[i + 1]) {
-          tl.to(img, { opacity: 0, translateY: 40 }, "+=0.5")
-            .to(rightElements[i + 1], { opacity: 1, translateY: 0 }, "<")
-            .to(textBlocks, { yPercent: "-18%", opacity: 0.2 }, "<")
-            .to(textBlocks[i + 1], { yPercent: "18%", opacity: 1 }, "<");
-        }
-      });
-      tl.to({}, {}, "+=0.5");
-    }
-  }, []);
+        rightElements.forEach((img, i) => {
+          if (rightElements[i + 1]) {
+            tl.to(img, { opacity: 0, translateY: 40 }, "+=0.5")
+              .to(rightElements[i + 1], { opacity: 1, translateY: 0 }, "<")
+              .to(textBlocks, { yPercent: "-18%", opacity: 0.2 }, "<")
+              .to(textBlocks[i + 1], { yPercent: "18%", opacity: 1 }, "<");
+          }
+        });
+        tl.to({}, {}, "+=0.5");
+      }
+    }, 500);
+  }, [isDesktop]);
 
   const settings = {
     arrows: false,
@@ -71,16 +73,16 @@ const InnerSection = () => {
   return (
     <div
       id="animation-container"
-      className="flex flex-col md:justify-center md:h-screen top-0"
+      className="flex flex-col md:justify-center md:h-screen top-0 bg-white"
       //   ref={container}
     >
-      <div className="md:flex md:flex-nowrap flex-wrap justify-between ">
+      <div className="md:flex md:flex-nowrap flex-wrap justify-between">
         <div className="contentWrap w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto mb-12 sm:mb-0">
           {/* Stay Updated */}
           <div className="text-block opacity-100">
             <ComparisonContent
               title=" Stay Updated"
-              description="WWGet instant news updates like the recent Maui FiresSS. Watch OSO
+              description="Get instant news updates like the recent Maui FiresSS. Watch OSO
           gather real-time information from diverse sources."
               isMobile={isMobile}
             />

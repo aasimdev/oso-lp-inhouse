@@ -2,7 +2,7 @@ import React from "react";
 
 function Page() {
   return (
-    <div className="flex flex-col space-y-6 text-[#212B36] py-24 lg:px-24 px-6">
+    <div className="flex flex-col space-y-6 text-[#212B36] py-24 max-w-6xl px-6 mx-auto">
       <h1 className="text-black font-extrabold text-5xl leading-[64px]">
         Terms of Service
       </h1>
@@ -18,7 +18,7 @@ function Page() {
         these Terms at any time. Continued use of the Service by the user
         constitutes acceptance of any amended Terms.
       </p>
-      <h2 className="font-semibold text-2xl leading-8">1. Service</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">1. Service</h2>
       <p className="font-light text-2xl leading-8">
         1.1. The Service is a software-as-a-service solution provided by W4 Labs
         enabling the user to access and use its features including AI powered
@@ -57,7 +57,7 @@ function Page() {
         changes to, expansion of, or discontinuation of the Service API.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         2. Eligibility and Registration
       </h2>
       <p className="font-light text-2xl leading-8">
@@ -108,7 +108,7 @@ function Page() {
         other service in connection with his/her telecommunication service.{" "}
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         3. Fees, Paid Plans, and Trial Period
       </h2>
       <p className="font-light text-2xl leading-8">
@@ -168,7 +168,7 @@ function Page() {
         appropriate authorities, if applicable.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">4. User Conduct</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">4. User Conduct</h2>
       <p className="font-light text-2xl leading-8">
         4.1. User agrees to use the Service responsibly and in compliance with
         these Terms, as well as any applicable laws, regulations, and the terms
@@ -212,7 +212,7 @@ function Page() {
         Service or its market position.
       </span>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         5. API Access and Usage
       </h2>
 
@@ -264,7 +264,7 @@ function Page() {
         of the API, including, but not limited to, all privacy laws and
         regulations.
       </p>
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         6. Using Plug-ins and Plug-in Store
       </h2>
       <p className="font-light text-2xl leading-8">
@@ -370,7 +370,9 @@ function Page() {
         Service or the limitation of certain features.{" "}
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">7. Developer Terms</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
+        7. Developer Terms
+      </h2>
       <p className="font-light text-2xl leading-8">
         7.1. W4 Labs may provide the user with the ability to develop their own
         plug-ins that interact with the Service through the API to enhance the
@@ -507,7 +509,7 @@ function Page() {
         sanctions under applicable law in relation to their plug-in.{" "}
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">8. AI Terms</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">8. AI Terms</h2>
 
       <p className="font-light text-2xl leading-8">
         8.1. W4 Labs may provide the user with access to features that are
@@ -564,7 +566,7 @@ function Page() {
         8.5.4. generate spam, disinformation and other illegal content.{" "}
       </span>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         9. Third-Party Services
       </h2>
       <p className="font-light text-2xl leading-8">
@@ -615,7 +617,7 @@ function Page() {
         Services.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         10. Service Availability and Maintenance
       </h2>
       <p className="font-light text-2xl leading-8">
@@ -643,7 +645,7 @@ function Page() {
         a prorated refund, calculated based on the duration of the
         unavailability.
       </p>
-      <h2 className="font-semibold text-2xl leading-8">11. License</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">11. License</h2>
       <p className="font-light text-2xl leading-8">
         11.1. Subject to the user's compliance with these Terms, the W4 LABS
         hereby grants the user a limited, non-exclusive, non-transferable,
@@ -687,7 +689,7 @@ function Page() {
         applicable laws.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         12. Protection of Personal Data
       </h2>
 
@@ -706,7 +708,9 @@ function Page() {
         review the terms and privacy policies of the Third-Party Services.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">13. W4 LABS Website</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
+        13. W4 LABS Website
+      </h2>
       <p className="font-light text-2xl leading-8">
         13.1. The user acknowledges and agrees that his/her access to and use of
         the W4 LABS Service website (“Website”) is subject to these Terms, as
@@ -730,7 +734,7 @@ function Page() {
         circumventing access controls, or transmitting malicious software.{" "}
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         14. Response to DMCA Requests
       </h2>
       <p className="font-light text-2xl leading-8">
@@ -750,7 +754,7 @@ function Page() {
         the content.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         15. Limitation of Liability
       </h2>
 
@@ -806,7 +810,9 @@ function Page() {
         use and must always verify any output of the Service.{" "}
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">16. Indemnification</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
+        16. Indemnification
+      </h2>
 
       <p className="font-light text-2xl leading-8">
         16.1. The user agrees to indemnify and hold harmless the W4 LABS, its
@@ -819,7 +825,7 @@ function Page() {
         privacy, or rights of publicity.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         17. Termination of Service
       </h2>
 
@@ -862,7 +868,7 @@ function Page() {
         prepaid fees or charges relating to the unused portion of the Service.{" "}
       </span>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         18. Governing Law and Dispute Resolution
       </h2>
 
@@ -887,7 +893,7 @@ function Page() {
         resolution proceeding.{" "}
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">19. Amendments</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">19. Amendments</h2>
 
       <p className="font-light text-2xl leading-8">
         19.1. The W4 LABS reserves the right, at its sole discretion, to modify,
@@ -904,7 +910,7 @@ function Page() {
         updated Terms, he/she must discontinue his/her use of the Service.{" "}
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         20. Severability and Waiver
       </h2>
 
@@ -925,7 +931,7 @@ function Page() {
         right, power, or remedy.{" "}
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         21. Assignment and Transfer
       </h2>
 
@@ -952,7 +958,7 @@ function Page() {
         assigns, heirs, and legal representatives.{" "}
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         22. Entire Agreement and Relationship
       </h2>
 
@@ -963,7 +969,7 @@ function Page() {
         resolving end user issues.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         5.3 Cooperation with the Provider
       </h2>
 
@@ -997,7 +1003,7 @@ function Page() {
         services or services of a virtual asset service provider.{" "}
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">23. Contact</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">23. Contact</h2>
 
       <p className="font-light text-2xl leading-8">
         23.1. If you have any questions or concerns regarding these Terms or our

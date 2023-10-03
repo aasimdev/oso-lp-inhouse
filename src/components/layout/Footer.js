@@ -5,6 +5,7 @@ import SocialIcons from "../common/SocialIcons";
 import Newsletter from "../common/Newsletter";
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Footer = () => {
   const [showInput, setShowInput] = useState(false);
@@ -116,11 +117,17 @@ const Footer = () => {
           <p className="text-gray-100 text-sm md:mt-0 mt-6">
             © 2023 W4 Labs Inc.{" "}
           </p>
-          {/* <div className='flex gap-8 items-center'>
-                        <a href='#' className='text-gray-500 text-sm'>Tutorials </a>
-                        <a href='#' className='text-gray-500 text-sm'>Affiliates </a>
-                        <a href='#' className='text-gray-500 text-sm'>Contact </a>
-                    </div> */}
+          <div className="flex items-center space-x-8">
+            <Link href="/dmca-policy" className="text-gray-500 text-sm">
+              DMCA Policy
+            </Link>
+            <Link href="/terms-of-service" className="text-gray-500 text-sm">
+              Terms of Service
+            </Link>
+            <Link href="/privacy-policy" className="text-gray-500 text-sm">
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

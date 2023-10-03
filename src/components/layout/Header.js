@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="px-6 py-4 mx-auto max-w-6xl">
+      <header className="px-6 py-4 mx-auto max-w-6xl ">
         <nav className="flex justify-between items-center md:flex-nowrap flex-wrap">
           <Link href="/search">
             <Image

@@ -1,8 +1,19 @@
 import React from "react";
 
+function CustomBulletPoint({ children }) {
+  return (
+    <li>
+      <div className="flex items-start">
+        <span className="text-3xl text-black px-3">•</span>
+        <p>{children}</p>
+      </div>
+    </li>
+  );
+}
+
 function Page() {
   return (
-    <div className="flex flex-col space-y-6 text-[#212B36] py-24 lg:px-24 px-6">
+    <div className="flex flex-col space-y-6 text-[#212B36] py-24 max-w-6xl px-6 mx-auto ">
       <h1 className="text-black font-extrabold text-5xl leading-[64px]">
         Privacy Policy
       </h1>
@@ -16,7 +27,7 @@ function Page() {
         website (“Website”) and aims to provide the users with information about
         processing of their data while using the Service and the Website.
       </p>
-      <h2 className="font-semibold text-2xl leading-8">1. Summary</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">1. Summary</h2>
       <p className="font-light text-2xl leading-8">
         The Service is provided and the Website is operated by the company W4
         Labs{" "}
@@ -30,22 +41,28 @@ function Page() {
         various occasions and typically while using the Website or while using
         the Service. The data is processed for the following purposes:
       </p>
-      <ul className="list-disc list-inside text-2xl font-light">
-        <li>Website analytics,</li>
-        <li>Maintaining customer relationships and subscriptions,</li>
-        <li>Providing the Service to customers,</li>
-        <li>Distributing user developed plug-ins,</li>
-        <li>Personalized advertising,</li>
-        <li>Providing customer support,</li>
-        <li>
+      <ul className=" text-2xl font-light">
+        <CustomBulletPoint>Website analytics,</CustomBulletPoint>
+        <CustomBulletPoint>
+          Maintaining customer relationships and subscriptions,
+        </CustomBulletPoint>
+        <CustomBulletPoint>
+          Providing the Service to customers,
+        </CustomBulletPoint>
+        <CustomBulletPoint>
+          Distributing user developed plug-ins,
+        </CustomBulletPoint>
+        <CustomBulletPoint>Personalized advertising,</CustomBulletPoint>
+        <CustomBulletPoint>Providing customer support,</CustomBulletPoint>
+        <CustomBulletPoint>
           Maintaining security and uninterrupted operation of the Service,
-          Marketing communication,
-        </li>
-        <li>Other communication,</li>
-        <li>Legal compliance,</li>
-        <li>
+          Marketing communication
+        </CustomBulletPoint>
+        <CustomBulletPoint>Other communication,</CustomBulletPoint>
+        <CustomBulletPoint> Legal compliance,</CustomBulletPoint>
+        <CustomBulletPoint>
           Protecting of business interests, processing of claims and complaints.
-        </li>
+        </CustomBulletPoint>
       </ul>
       <p className="font-light text-2xl leading-8">
         The data is processed either on the basis of contractual relationships
@@ -76,7 +93,7 @@ function Page() {
         data portability and (8) the right to lodge a complaint with a
         supervisory authority if they are from EEA.
       </p>
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         2. Purposes of Processing in Detail
       </h2>
       <h3 className="font-normal text-2xl leading-8">2.1 Website Analytics</h3>
@@ -245,7 +262,9 @@ function Page() {
         or, in some cases, for the duration of the statute of limitations.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">3. Transfers of Data</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
+        3. Transfers of Data
+      </h2>
 
       <p className="font-light text-2xl leading-8">
         {" "}
@@ -264,20 +283,28 @@ function Page() {
         In general, we employ the following categories of processors:
       </p>
 
-      <ul className="list-disc list-inside text-2xl font-light">
-        <li>accounting, tax and legal advisers;</li>
-        <li>
-          IT infrastructure services (cloud computing, webhosting, e-mailing
-          service etc.);
-        </li>
-        <li>payment service providers;</li>
-        <li>interface services,</li>
-        <li>AI service providers,</li>
-        <li>feature enabling third-party services,</li>
-        <li>third-party plugin service providers,</li>
-        <li>web analytics services;</li>
-        <li>customer service;</li>
-        <li>contractors (e.g., customer support operators).</li>
+      <ul className=" text-2xl font-light">
+        <CustomBulletPoint>
+          accounting, tax and legal advisers;
+        </CustomBulletPoint>
+        <CustomBulletPoint>
+          IT infrastructure services (cloud computing, webhosting,
+          e-maiCustomBulletPointng service etc.);
+        </CustomBulletPoint>
+        <CustomBulletPoint>payment service providers;</CustomBulletPoint>
+        <CustomBulletPoint>interface services,</CustomBulletPoint>
+        <CustomBulletPoint>AI service providers,</CustomBulletPoint>
+        <CustomBulletPoint>
+          feature enabCustomBulletPointng third-party services,
+        </CustomBulletPoint>
+        <CustomBulletPoint>
+          third-party plugin service providers,
+        </CustomBulletPoint>
+        <CustomBulletPoint>web analytics services;</CustomBulletPoint>
+        <CustomBulletPoint>customer service;</CustomBulletPoint>
+        <CustomBulletPoint>
+          contractors (e.g., customer support operators).
+        </CustomBulletPoint>
       </ul>
 
       <h3 className="font-normal text-2xl leading-8">3.1 Interface Services</h3>
@@ -335,7 +362,7 @@ function Page() {
         data it collects and processes.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">4. Cookies</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">4. Cookies</h2>
 
       <h3 className="font-normal text-2xl leading-8">
         4.1 What are Cookies in General
@@ -388,12 +415,11 @@ function Page() {
         the website in order to maximize their privacy.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         5. Third-party Integrations Using W4 Labs Service
       </h2>
 
       <p className="font-light text-2xl leading-8">
-        {" "}
         Where a third party integrates its product with the Service, we collect
         and process data on behalf of that third party as a processor under a
         data processing contract subject to the relevant legislation. In this
@@ -401,14 +427,18 @@ function Page() {
         permitted under the contract, which will generally include:
       </p>
 
-      <ul className="list-disc list-inside text-2xl font-light">
-        <li>Provision of the Service,</li>
-        <li>Customer support,</li>
-        <li>Cooperation with the provider,</li>
-        <li>Legal compliance,</li>
-        <li>
+      <ul className=" text-2xl font-light">
+        <CustomBulletPoint>Provision of the Service, </CustomBulletPoint>
+
+        <CustomBulletPoint>Customer support, </CustomBulletPoint>
+
+        <CustomBulletPoint>Cooperation with the provider, </CustomBulletPoint>
+
+        <CustomBulletPoint>Legal compliance, </CustomBulletPoint>
+
+        <CustomBulletPoint>
           Protection of Business Interests, Processing of Claims and Complaints.
-        </li>
+        </CustomBulletPoint>
       </ul>
 
       <p className="font-light text-2xl leading-8">
@@ -462,7 +492,7 @@ function Page() {
         processing and obtaining any necessary consents.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
         6. Automated Processing
       </h2>
 
@@ -474,7 +504,7 @@ function Page() {
         the provided contacts and we will ensure that our staff or associates
         review the case manually and notify you of the outcome.
       </p>
-      <h2 className="font-semibold text-2xl leading-8">7. Children</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">7. Children</h2>
 
       <p className="font-light text-2xl leading-8">
         The Service is not available to children under the age of thirteen (16).
@@ -482,7 +512,9 @@ function Page() {
         permission and consent of a parent or legal guardian to use the Service.
       </p>
 
-      <h2 className="font-semibold text-2xl leading-8">8. Advice on Rights</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
+        8. Advice on Rights
+      </h2>
 
       <p className="font-light text-2xl leading-8">
         We may need to verify the identity of the user when they make a request
@@ -573,7 +605,9 @@ function Page() {
         authority in their country of habitual residence, place of work or the
         place where the alleged breach occurred.
       </p>
-      <h2 className="font-semibold text-2xl leading-8">9. California Users</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
+        9. California Users
+      </h2>
 
       <p className="font-light text-2xl leading-8">
         If the user is from California and the California Consumer Protection
@@ -595,44 +629,48 @@ function Page() {
         {" "}
         California users may exercise the following additional rights:
       </p>
-      <ul className="list-disc list-inside text-2xl font-light">
-        <li>
-          right to know California users can request disclosure of: (1) the
-          categories and/or specific pieces of personal information we have
+      <ul className=" text-2xl font-light">
+        <CustomBulletPoint>
+          <u>right to know</u> - California users can request disclosure of: (1)
+          the categories and/or specific pieces of personal information we have
           collected about them, (2) the categories of sources for that personal
           information, (3) the purposes for which we use that information, (4)
           the categories of third parties with whom we disclose the information,
           and (5) the categories of information that we sell or disclose to
           third parties. The request can be made up to twice a year, free of
           charge,
-        </li>
-        <li>
-          right to delete - California users can request we delete personal
-          information we collected from them and tell our service providers to
-          do the same, subject to certain exceptions (such as if we are legally
-          required to keep the information),
-        </li>
-        <li>
-          right to opt-out of sale or sharing - California users may request
-          that we stop selling or sharing their personal information, including
-          via a user-enabled global privacy control. We cannot sell or share
-          their personal information after we receive the opt-out request unless
-          they later authorize us to do so again,
-        </li>
-        <li>
-          right to correct - California users may ask us to correct inaccurate
-          information that we have about them,
-        </li>
-        <li>
-          right to limit use and disclosure of sensitive personal information -
-          California users can direct us to only use their sensitive personal
+        </CustomBulletPoint>
+        <CustomBulletPoint>
+          <u>right to delete</u> - California users can request we delete
+          personal information we collected from them and tell our service
+          providers to do the same, subject to certain exceptions (such as if we
+          are legally required to keep the information),
+        </CustomBulletPoint>
+        <CustomBulletPoint>
+          <u>right to opt-out of sale or sharing</u> - California users may
+          request that we stop selling or sharing their personal information,
+          including via a user-enabled global privacy control. We cannot sell or
+          share their personal information after we receive the opt-out request
+          unless they later authorize us to do so again,
+        </CustomBulletPoint>
+        <CustomBulletPoint>
+          <u>right to correct</u> - California users may ask us to correct
+          inaccurate information that we have about them,
+        </CustomBulletPoint>
+        <CustomBulletPoint>
+          <u>
+            right to limit use and disclosure of sensitive personal information
+          </u>
+          - California users can direct us to only use their sensitive personal
           information (for example, social security number, financial account
           information, precise geolocation data, or genetic data) for limited
           purposes, such as providing them with the services they requested.
-        </li>
+        </CustomBulletPoint>
       </ul>
 
-      <h2 className="font-semibold text-2xl leading-8">10. Final Provisions</h2>
+      <h2 className="pl-1 font-semibold text-2xl leading-8">
+        10. Final Provisions
+      </h2>
       <h3 className="font-normal text-2xl leading-8">
         10.1 Changes to the Privacy Policy
       </h3>

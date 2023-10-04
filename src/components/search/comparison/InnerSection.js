@@ -50,10 +50,31 @@ const InnerSection = () => {
 
         rightElements.forEach((img, i) => {
           if (rightElements[i + 1]) {
-            tl.to(img, { opacity: 0, translateY: 40 }, "+=0.5")
-              .to(rightElements[i + 1], { opacity: 1, translateY: 0 }, "<")
-              .to(textBlocks, { yPercent: "-18%", opacity: 0.2 }, "<")
-              .to(textBlocks[i + 1], { yPercent: "18%", opacity: 1 }, "<");
+            tl.to(
+              img,
+              {
+                opacity: 0,
+                // translateY: 40
+              },
+              "+=0.5"
+            )
+              .to(rightElements[i + 1], { opacity: 1 }, "<")
+              .to(
+                textBlocks,
+                {
+                  yPercent: "-18%",
+                  opacity: 0.2,
+                },
+                "<"
+              )
+              .to(
+                textBlocks[i + 1],
+                {
+                  yPercent: "18%",
+                  opacity: 1,
+                },
+                "<"
+              );
           }
         });
         tl.to({}, {}, "+=0.5");

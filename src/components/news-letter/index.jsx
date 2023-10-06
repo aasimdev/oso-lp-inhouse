@@ -32,7 +32,6 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
     console.log(res);
     if (res.status == 200) {
       // setShowMessage(true);
-      console.log(res);
       setIsLoading(false);
       router.push("/thank-you?email=" + email);
     }

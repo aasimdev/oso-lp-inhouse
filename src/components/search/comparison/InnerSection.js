@@ -12,6 +12,11 @@ const InnerSection = () => {
   const container = useRef();
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
   const [isMobile, setIsMobile] = useState(false);
+  const [divVisibility, setDivVisibility] = useState({
+    stay: true,
+    plan: false,
+    deep: false,
+  });
 
   gsap.registerPlugin(ScrollTrigger);
 
@@ -29,58 +34,67 @@ const InnerSection = () => {
     }
   }, []);
 
-  useEffect(() => {
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-      if (isDesktop) {
-        const textBlocks = gsap.utils.toArray(".text-block");
-        const rightElements = gsap.utils.toArray(".phoneWrap");
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     ScrollTrigger.refresh();
+  //     if (isDesktop) {
+  //       const textBlocks = gsap.utils.toArray(".text-block");
+  //       const rightElements = gsap.utils.toArray(".phoneWrap");
 
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#animation-container",
-            start: "top top",
-            // start: 'top',
-            end: "+=300%",
-            pin: true,
-            scrub: true,
-            // markers: true,
-          },
-        });
+  //       const tl = gsap.timeline({
+  //         scrollTrigger: {
+  //           trigger: "#animation-container",
+  //           start: "top top",
+  //           // start: 'top',
+  //           end: "+=300%",
+  //           pin: true,
+  //           scrub: true,
+  //           // markers: true,
+  //         },
+  //       });
 
-        rightElements.forEach((img, i) => {
-          if (rightElements[i + 1]) {
-            tl.to(
-              img,
-              {
-                opacity: 0,
-                // translateY: 40
-              },
-              "+=0.5"
-            )
-              .to(rightElements[i + 1], { opacity: 1 }, "<")
-              .to(
-                textBlocks,
-                {
-                  yPercent: "-18%",
-                  opacity: 0.2,
-                },
-                "<"
-              )
-              .to(
-                textBlocks[i + 1],
-                {
-                  yPercent: "18%",
-                  opacity: 1,
-                },
-                "<"
-              );
-          }
-        });
-        tl.to({}, {}, "+=0.5");
-      }
-    }, 500);
-  }, [isDesktop]);
+  //       rightElements.forEach((img, i) => {
+  //         if (rightElements[i + 1]) {
+  //           tl.to(
+  //             img,
+  //             {
+  //               opacity: 0,
+  //               // translateY: 40
+  //             },
+  //             "+=0.5"
+  //           )
+  //             .to(rightElements[i + 1], { opacity: 1 }, "<")
+  //             .to(
+  //               textBlocks,
+  //               {
+  //                 yPercent: "-18%",
+  //                 opacity: 0.2,
+  //               },
+  //               "<"
+  //             )
+  //             .to(
+  //               textBlocks[i + 1],
+  //               {
+  //                 yPercent: "18%",
+  //                 opacity: 1,
+  //               },
+  //               "<"
+  //             );
+  //         }
+  //       });
+  //       tl.to({}, {}, "+=0.5");
+  //     }
+  //   }, 500);
+  // }, [isDesktop]);
+
+
+  const toggleHandler = (target) => {
+    setDivVisibility((prevVisibility) => ({
+      stay: target === 'stay' ? !prevVisibility.stay : false,
+      plan: target === 'plan' ? !prevVisibility.plan : false,
+      deep: target === 'deep' ? !prevVisibility.deep : false,
+    }));
+  };
 
   const settings = {
     arrows: false,
@@ -94,16 +108,16 @@ const InnerSection = () => {
   return (
     <div
       id="animation-container"
-      className="flex flex-col md:justify-center md:h-screen top-0 bg-white"
-      //   ref={container}
+      className="flex flex-col md:justify-center top-0 bg-white pt-8 md:pt-24"
+    //   ref={container}
     >
       <div className="md:flex md:flex-nowrap flex-wrap justify-between">
         <div className="contentWrap w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto mb-12 sm:mb-0">
           {/* Stay Updated */}
-          <div className="text-block opacity-100">
+          <div className={`text-block opacity-100 cursor-pointer ${divVisibility.stay ? "md:opacity-100" : "md:opacity-20"}`} onClick={() => toggleHandler('stay')}>
             <ComparisonContent
               title=" Stay Updated"
-              description="Get instant news updates like the recent Maui FiresSS. Watch OSO
+              description="Get instant news updates like the recent Maui Fires. Watch OSO
           gather real-time information from diverse sources."
               isMobile={isMobile}
             />
@@ -124,7 +138,7 @@ const InnerSection = () => {
           )}
 
           {/* Plan your event */}
-          <div className="text-block md:opacity-20">
+          <div className={`text-block cursor-pointer ${divVisibility.plan ? "md:opacity-100" : "md:opacity-20"}`} onClick={() => toggleHandler('plan')}>
             <ComparisonContent
               title="Plan Your Events"
               description="Wondering about the Grand Prix in Las Vegas? From dates to ticket pricing and seat recommendations, see OSO fetch it all."
@@ -143,7 +157,7 @@ const InnerSection = () => {
           )}
 
           {!isMobile && (
-            <div className="text-block md:opacity-20">
+            <div className={`text-block cursor-pointer ${divVisibility.deep ? "md:opacity-100" : "md:opacity-20"}`} onClick={() => toggleHandler('deep')}>
               <ComparisonContent
                 title="Deep Dive Reviews"
                 description="Looking for the best restaurant experience? Observe how OSO
@@ -158,15 +172,16 @@ const InnerSection = () => {
         {!isMobile && (
           <div className="right-elemetns relative overflow-hidden w-full flex ">
             <div className="w-full h-full relative overflow-hidden">
-              <div className="phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 opacity-100 absolute left-0 top-0 right-0 bottom-0">
+
+              <div className={`phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 absolute left-0 top-0 right-0 bottom-0 opacity-0 transition-opacity duration-300 ease-in-out ${divVisibility.stay ? "opacity-100" : ""}`}>
                 <Phone title="OSO" obj="869795820" />
                 <Phone title="ChatGPT" obj="869795832" />
               </div>
-              <div className="phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 opacity-0 absolute left-0 top-0 right-0 bottom-0">
+              <div className={`phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 absolute left-0 top-0 right-0 bottom-0 opacity-0 transition-opacity duration-300 ease-in-out ${divVisibility.plan ? "opacity-100" : ""}`}>
                 <Phone title="OSO" obj="869795741" />
                 <Phone title="ChatGPT" obj="869795758" />
               </div>
-              <div className="phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 opacity-0 absolute left-0 top-0 right-0 bottom-0">
+              <div className={`phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 absolute left-0 top-0 right-0 bottom-0 opacity-0 transition-opacity duration-300 ease-in-out ${divVisibility.deep ? "opacity-100" : ""}`}>
                 <Phone title="OSO" obj="869795782" />
                 <Phone title="ChatGPT" obj="869795803" />
               </div>

@@ -1,4 +1,5 @@
 "use client";
+
 import { useFormik } from "formik";
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
@@ -8,6 +9,9 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
+
+
+  
   const form = useFormik({
     initialValues: {
       email: "",
@@ -28,6 +32,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
 
     if (res.status == 200) {
       // setShowMessage(true);
+      console.log(res);
       setIsLoading(false);
       router.push("/thank-you?email=" + email);
     }

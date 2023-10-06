@@ -1,6 +1,4 @@
 import React from "react";
-import Hero from "./components/Hero";
-import SeenOn from "./components/SeenOn";
 
 export const metadata = {
   title: "OSO Search",
@@ -9,10 +7,5 @@ export const metadata = {
 };
 
 export default function Homepage() {
-  return (
-    <main>
-      <Hero />
-      <SeenOn />
-    </main>
-  );
+  return <p>Working...</p>;
 }

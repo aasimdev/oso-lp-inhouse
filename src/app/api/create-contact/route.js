@@ -41,7 +41,8 @@ export async function POST(req) {
       }
     );
 
-    return NextResponse.json({ status: "success" }, { status: 200 });
+    // return NextResponse.json({ status: "success" }, { status: 200 });
+    return console.log(res);
   } catch (error) {
     return NextResponse.json({ status: "error" }, { status: 400 });
   }

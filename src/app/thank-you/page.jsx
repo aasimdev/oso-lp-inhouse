@@ -1,8 +1,12 @@
-"use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Script from "next/script";
+import Link from "next/link";
 
-const Page = ({ searchParams }) => {
+export const metadata = {
+  title: "Thank you"
+};
+
+export default function Page({ searchParams }) {
   const { email } = searchParams;
 
   return (
@@ -33,13 +37,15 @@ const Page = ({ searchParams }) => {
         }}
       />
       <section className="min-h-[50vh] flex items-center justify-center">
-        <h2 className="text-2xl font-semibold text-center mt-12">
-          Congrats! You will soon be among the first to experience the power of
-          OSO.
-        </h2>
+        <div className="flex flex-col gap-4 justify-center text-center">
+          <h1 className="text-3xl font-semibold text-center leading-relaxed">
+            Congrats! <span className="block text-2xl"> You will soon be among the first to experience the power of
+            OSO. </span>
+          </h1>
+          <Link href="/" className="!py-[11px] !px-[12.25px] !text-base !w-[137px] theme-btn mx-auto">Back to home</Link>
+        </div>
+
       </section>
     </>
   );
 };
-
-export default Page;

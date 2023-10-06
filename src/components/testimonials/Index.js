@@ -24,7 +24,7 @@ const testimonialData = [
   {
     name: "Jason K.",
     description:
-      "I stopped using chatGPT bc it never gives me answers I want. I use OSO daily bc it's real time and uncensored giving me exactly what I need.",
+      "I stopped using chatGPT because it never gives me answers I want. I use OSO daily because it's real-time and uncensored giving me exactly what I need.",
     image: Jason,
   },
   {

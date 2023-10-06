@@ -30,7 +30,7 @@ const FAQ = () => {
         {
             id: 4,
             question: "How do I get started?",
-            answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from web, android, or iPhones.</p>`
+            answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`
         }
     ];
     const [openAccordionId, setOpenAccordionId] = useState(null);

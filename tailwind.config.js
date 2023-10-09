@@ -31,7 +31,7 @@ module.exports = withMT({
       'warning-light': "#FFD666",
       'blue-100': "#CAFDF5",
       'blue-200': "#00C6EA",
-      'teal-100': "#08D4D4"
+      'teal-100': "#08D4D4",
     },
     fontFamily: {
       primary: ['Roboto', 'sans-serif'],

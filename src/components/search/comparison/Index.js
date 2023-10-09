@@ -12,7 +12,7 @@ const Comparison = () => {
           </h3>
         </div>
         <InnerSection />
-        <div className="md:flex justify-center items-center pb-6 sm:pb-0 pt-20 sm:pt-[100px]">
+        <div className="md:flex justify-center items-center pb-6 sm:pb-0 pt-20 sm:pt-[100px] flex-col">
           <NewsLetter label="Join Waitlist" arrowIcon={true} />
         </div>
       </div>

@@ -6,6 +6,7 @@ import { useMenu } from "@/context/MenuContext";
 import { useFormik } from "formik";
 import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const Header = () => {
   const { showSidebar, navigationHandler } = useMenu("");
@@ -13,25 +14,49 @@ const Header = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [hform, setHForm] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
   const router = useRouter();
   const pathname = usePathname();
   const header = useRef();
 
+  const openFormHandler = () => {
+    setShowMessage(false);
+    setErrorMessage(false);
+    setHForm(true);
+  }
+
   const form = useFormik({
     initialValues: {
       email: "",
+      honeypot: "",
     },
-    onSubmit: (data) => {
-      addWaitlistContact(data.email);
+    onSubmit: async (data) => {
+
+      if (data.honeypot !== "") {
+        console.error("Bot detected!");
+        return
+      }
+
+      const token = await executeRecaptcha();
+
+      if (token) {
+        addWaitlistContact(data.email, token)
+      } else {
+        console.error("reCAPTCHA verification failed")
+      }
     },
   });
 
-  async function addWaitlistContact(email) {
+  async function addWaitlistContact(email, token) {
     setIsLoading(true);
     const res = await fetch("/api/create-contact", {
       method: "POST",
       body: JSON.stringify({
         email,
+        token
       }),
     });
 
@@ -41,6 +66,19 @@ const Header = () => {
       setHForm(false);
       form.setValues({ email: "" });
       router.push("/thank-you?email=" + email);
+
+    } else if (res.status === 422) {
+      setIsLoading(false);
+      setHForm(false);
+      setShowMessage(true);
+
+      form.setValues({ email: "" });
+
+    } else {
+      setIsLoading(false);
+      setHForm(false);
+      setErrorMessage(true);
+      form.values.email = "";
     }
   }
 
@@ -73,9 +111,19 @@ const Header = () => {
             />
           </Link>
           <div className="hidden sm:flex items-center gap-6">
-            {!showMessage && (
-              <form onSubmit={form?.handleSubmit} className="flex gap-2">
-                {hform && (
+
+            <form onSubmit={form?.handleSubmit} className="flex gap-2 items-center">
+              {hform && (
+                <>
+                  <input
+                    type='text'
+                    name='honeypot'
+                    id='honeypot'
+                    className='hidden absolute w-0 h-0 overflow-hidden'
+                    tabIndex='-1'
+                    onChange={form?.handleChange}
+                    value={form?.values.honeypot}
+                  />
                   <input
                     type="email"
                     required
@@ -87,37 +135,44 @@ const Header = () => {
                     onBlur={form?.handleBlur}
                     value={form?.values.email}
                   />
-                )}
-                <button
-                  type={hform ? "submit" : "button"}
-                  className="!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn"
-                  onClick={() => setHForm(true)}
-                >
-                  {!isLoading ? (
-                    "Join Waitlist"
-                  ) : (
-                    <svg
-                      class="animate-spin h-6 w-6 text-purple-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      ></path>
-                    </svg>
-                  )}
-                </button>
-              </form>
-            )}
+                </>
 
-            {!!showMessage && (
-              <p className="text-gray-800 text-base">
-                Congrats! You will soon be among the first to experience the
-                power of OSO.
-              </p>
-            )}
+              )}
+
+              {showMessage && (
+                <p className="text-gray-800 text-base">
+                  Your email is already on the waitlist
+                </p>
+              )}
+              {errorMessage && (
+                <p className="text-gray-800 text-base">
+                  Something is wrong, please try again
+                </p>
+              )}
+
+              <button
+                type={hform ? "submit" : "button"}
+                className="!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn"
+                onClick={openFormHandler}
+              >
+                {!isLoading ? (
+                  "Join Waitlist"
+                ) : (
+                  <svg
+                    class="animate-spin h-6 w-6 text-purple-400"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                )}
+              </button>
+            </form>
+
 
             {/* {showSidebar ? (
                             <button className="icon-btn w-12 h-12 flex items-center justify-center" onClick={navigationHandler}>

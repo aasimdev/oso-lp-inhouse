@@ -19,8 +19,7 @@ const Banner = ({ title, description }) => {
                         </p>
                     </div>
 
-                    <div className="md:flex justify-center items-center pt-8 md:pt-6">
-                     
+                    <div className="md:flex justify-center items-center pt-8 md:pt-6 flex-col">
                         <NewsLetter arrowIcon label="Join Waitlist"/>
                     </div>
 

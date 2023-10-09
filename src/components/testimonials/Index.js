@@ -155,12 +155,6 @@ const Testimonials = () => {
       </div>
 
       <div className="px-6 mt-12 mb-6 md:mb-8 mx-auto max-w-6xl text-center">
-        {/* <Button
-          label="Join Waitlist"
-          arrowIcon={true}
-          link="https://eijfn1o56i0.typeform.com/to/szT5l8hI?typeform-source=oso.ai"
-          target="_blank"
-        /> */}
         <NewsLetter label={`Join Waitlist`} arrowIcon/>
       </div>
     </section>

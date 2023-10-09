@@ -19,7 +19,7 @@ const FAQ = () => {
         {
             id: 2,
             question: "How is OSO Search different from other AI",
-            answer: `<p class="text-2xl leading-9 font-light text-gray-900">While most AI applications rely on chatGPT or existing AI solutions that have severe limitations, OSO has created its own AI technology that provides a more robust and useful user experience.</p>`
+            answer: `<p class="text-2xl leading-9 font-light text-gray-900">While most AI applications rely on ChatGPT or existing AI solutions that have severe limitations, OSO has created its own AI technology that provides a more robust and useful user experience.</p>`
         },
         {
             id: 3,

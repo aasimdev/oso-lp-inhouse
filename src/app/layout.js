@@ -7,12 +7,23 @@ import Script from "next/script";
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 import Loader from "@/components/loader";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 export default function RootLayout({ children }) {
   return (
-    <MenuProvider>
-      <RootLayoutContent>{children}</RootLayoutContent>
-    </MenuProvider>
+    <GoogleReCaptchaProvider
+      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+      scriptProps={{
+        async: false,
+        defer: true,
+        appendTo: "body",
+        nonce: undefined,
+      }}
+    >
+      <MenuProvider>
+        <RootLayoutContent>{children}</RootLayoutContent>
+      </MenuProvider>
+    </GoogleReCaptchaProvider>
   );
 }
 

@@ -1,6 +1,6 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from "next/server"
 
-const WAITLIST_ID = "2";
+const WAITLIST_ID = "2"
 
 async function verifyRecaptcha(token) {
   const secretKey = process.env.RECAPTCHA_SECRET_KEY
@@ -12,11 +12,9 @@ async function verifyRecaptcha(token) {
   return data.success
 }
 
-
 export async function POST(req) {
-  const { email, token } = await req.json();
+  const { email, token } = await req.json()
   try {
-
     // const isRecaptchaValid = await verifyRecaptcha(token)
 
     // if (!isRecaptchaValid) {
@@ -41,10 +39,18 @@ export async function POST(req) {
           "Allow-Cross-Origin": "*",
         },
       }
-    );
-    const data = await res.json();
-    if (res.status === 422 && data.errors && data.errors[0].code === "duplicate") {
-      return NextResponse.json({ status: "already_exists", error: data.errors[0].title }, { status: 422 });
+    )
+    const data = await res.json()
+    console.log(data)
+    if (
+      res.status === 422 &&
+      data.errors &&
+      data.errors[0].code === "duplicate"
+    ) {
+      return NextResponse.json(
+        { status: "already_exists", error: data.errors[0].title },
+        { status: 422 }
+      )
     }
     const res2 = await fetch(
       `${process.env.ACTIVE_CAMPAIGN_URL}/api/3/contactLists/`,
@@ -63,10 +69,10 @@ export async function POST(req) {
           "Allow-Cross-Origin": "*",
         },
       }
-    );
+    )
 
-    return NextResponse.json({ status: "success" }, { status: 200 });
+    return NextResponse.json({ status: "success" }, { status: 200 })
   } catch (error) {
-    return NextResponse.json({ status: "error" }, { status: 500 });
+    return NextResponse.json({ status: "error" }, { status: 500 })
   }
 }

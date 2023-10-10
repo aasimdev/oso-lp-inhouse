@@ -1,6 +1,6 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from "next/server"
 
-const WAITLIST_ID = "2";
+const WAITLIST_ID = "2"
 
 async function verifyRecaptcha(token) {
   const secretKey = process.env.RECAPTCHA_SECRET_KEY
@@ -12,19 +12,17 @@ async function verifyRecaptcha(token) {
   return data.success
 }
 
-
 export async function POST(req) {
-  const { email, token } = await req.json();
+  const { email, token, ac_tag_id } = await req.json()
   try {
+    // const isRecaptchaValid = await verifyRecaptcha(token)
 
-    const isRecaptchaValid = await verifyRecaptcha(token)
-
-    if (!isRecaptchaValid) {
-      return NextResponse.json(
-        { status: "error", message: "reCAPTCHA verification failed" },
-        { status: 400 }
-      )
-    }
+    // if (!isRecaptchaValid) {
+    //   return NextResponse.json(
+    //     { status: "error", message: "reCAPTCHA verification failed" },
+    //     { status: 400 }
+    //   )
+    // }
 
     const res = await fetch(
       `${process.env.ACTIVE_CAMPAIGN_URL}/api/3/contacts/`,
@@ -41,11 +39,40 @@ export async function POST(req) {
           "Allow-Cross-Origin": "*",
         },
       }
-    );
-    const data = await res.json();
-    if (res.status === 422 && data.errors && data.errors[0].code === "duplicate") {
-      return NextResponse.json({ status: "already_exists", error: data.errors[0].title }, { status: 422 });
+    )
+    const data = await res.json()
+
+    if (
+      res.status === 422 &&
+      data.errors &&
+      data.errors[0].code === "duplicate"
+    ) {
+      return NextResponse.json(
+        { status: "already_exists", error: data.errors[0].title },
+        { status: 422 }
+      )
     }
+    if (ac_tag_id !== "") {
+      const contactTagsRes = await fetch(
+        `${process.env.ACTIVE_CAMPAIGN_URL}api/3/contactTags`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            contactTag: {
+              contact: data.contact.id,
+              tag: ac_tag_id,
+            },
+          }),
+          headers: {
+            "Api-Token": process.env.ACTIVE_CAMPAIGN_API_TOKEN,
+            "Content-Type": "application/json",
+            "Allow-Cross-Origin": "*",
+          },
+        }
+      )
+      const data = await contactTagsRes.json()
+    }
+
     const res2 = await fetch(
       `${process.env.ACTIVE_CAMPAIGN_URL}/api/3/contactLists/`,
       {
@@ -63,10 +90,10 @@ export async function POST(req) {
           "Allow-Cross-Origin": "*",
         },
       }
-    );
+    )
 
-    return NextResponse.json({ status: "success" }, { status: 200 });
+    return NextResponse.json({ status: "success" }, { status: 200 })
   } catch (error) {
-    return NextResponse.json({ status: "error" }, { status: 500 });
+    return NextResponse.json({ status: "error" }, { status: 500 })
   }
 }

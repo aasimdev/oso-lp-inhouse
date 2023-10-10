@@ -1,20 +1,26 @@
 import React from "react"
-
-export const SeenOnCard = ({ color }) => {
+import Typewriter from "typewriter-effect"
+export const SeenOnCard = ({ className }) => {
   return (
-    <div className={`bg-[${color}] w-[532px] h-[571px] px-16`}>
+    <div className={`${className} w-[532px] h-[571px] px-16`}>
       <h2 className='text-[32px] mt-16 '>OSO Search</h2>
       <p className='text-2xl font-light'>
         Delivers a{" "}
         <strong className='text-2xl font-medium'>comprehensive result.</strong>
       </p>
-      <p className='text-[40px] font-normal mt-16 h-[250px]'>
-        Where is the best sushi restaurant in Prague? 🍣{" "}
-        <span className='text-[#006C9C] font-light'>|</span>
-      </p>
-      <div className='flex justify-end items-center mt-4'>
-        <p className='pr-4'>Lean more</p>
+      <div className='text-[40px] font-normal mt-16 h-[250px]'>
+        <Typewriter
+          options={{
+            strings: ["Where is the best sushi restaurant in Prague? 🍣"],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      </div>
+      <div className='flex justify-end  items-center mt-4 '>
+        <p className='pr-4 cursor-pointer'>Lean more</p>
         <svg
+          className='cursor-pointer'
           width='33'
           height='32'
           viewBox='0 0 33 32'

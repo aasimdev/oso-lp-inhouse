@@ -17,14 +17,14 @@ export async function POST(req) {
   const { email, token } = await req.json();
   try {
 
-    const isRecaptchaValid = await verifyRecaptcha(token)
+    // const isRecaptchaValid = await verifyRecaptcha(token)
 
-    if (!isRecaptchaValid) {
-      return NextResponse.json(
-        { status: "error", message: "reCAPTCHA verification failed" },
-        { status: 400 }
-      )
-    }
+    // if (!isRecaptchaValid) {
+    //   return NextResponse.json(
+    //     { status: "error", message: "reCAPTCHA verification failed" },
+    //     { status: 400 }
+    //   )
+    // }
 
     const res = await fetch(
       `${process.env.ACTIVE_CAMPAIGN_URL}/api/3/contacts/`,

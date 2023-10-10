@@ -4,7 +4,7 @@ import Image from "next/image"
 import SocialIcons from "../common/SocialIcons"
 import Newsletter from "../common/Newsletter"
 import { useFormik } from "formik"
-import { useRouter, useSearchParams } from "next/navigation"
+import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
@@ -16,8 +16,12 @@ const Footer = () => {
 
   const { executeRecaptcha } = useGoogleReCaptcha()
   const router = useRouter()
+  const pathname = usePathname()
   const searchParams = useSearchParams()
   const ac_tag_id = searchParams.get("ac_tag_id") || ""
+
+
+
   const form = useFormik({
     initialValues: {
       email: "",
@@ -80,11 +84,13 @@ const Footer = () => {
 
   return (
     <footer className='bg-black pb-8 pt-44 md:mt-40 mt-40  relative'>
-      <div className='absolute w-full top-0 -translate-y-1/2'>
-        <div className='px-6 mx-auto max-w-6xl'>
-          <CallToAction />
+      {pathname !== "/thank-you" &&
+        <div className='absolute w-full top-0 -translate-y-1/2'>
+          <div className='px-6 mx-auto max-w-6xl'>
+            <CallToAction />
+          </div>
         </div>
-      </div>
+      }
       <div className='px-6 mx-auto md:max-w-6xl w-full'>
         <div className='md:grid md:grid-cols-2'>
           <div className='space-y-8'>

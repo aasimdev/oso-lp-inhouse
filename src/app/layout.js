@@ -8,6 +8,7 @@ import { useEffect, useState } from "react"
 import gsap from "gsap"
 import Loader from "@/components/loader"
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
+import Image from "next/image"
 
 export default function RootLayout({ children }) {
   return (
@@ -50,10 +51,10 @@ function RootLayoutContent({ children }) {
     <html lang='en'>
       <head>
         {/* <-- Global site tag (gtag.js) - Google Analytics --> */}
-        <script
+          <Script
           async
           src='https://www.googletagmanager.com/gtag/js?id=AW-11336429150'
-        ></script>
+        ></Script>
         <Script
           id='google-ads-tag'
           strategy='lazyOnload'
@@ -84,9 +85,10 @@ function RootLayoutContent({ children }) {
           }}
         />
         <noscript>
-          <img
+          <Image
             height='1'
             width='1'
+            alt="facebook"
             style={{ display: "none" }}
             src='https://www.facebook.com/tr?id=1321535528493263&ev=PageView&noscript=1'
           />
@@ -127,15 +129,18 @@ function RootLayoutContent({ children }) {
           async
           src='https://www.googletagmanager.com/gtag/js?id=G-V2Y9R8B57Y'
         ></Script>
-        <Script id='google-analytics'>
-          {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-    
-          gtag('config', 'G-V2Y9R8B57Y');
-        `}
-        </Script>
+
+        <Script
+          strategy='lazyOnload'
+          id='google-analytics'
+          dangerouslySetInnerHTML={{
+            __html: ` window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+      
+            gtag('config', 'G-V2Y9R8B57Y');`,
+          }}
+        />
       </head>
       <body className={`${showSidebar ? "overflow-hidden md:pr-[17px]" : ""}`}>
         <Script

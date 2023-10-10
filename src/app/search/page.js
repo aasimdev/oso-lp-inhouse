@@ -14,16 +14,6 @@ const DynamicSearchView = dynamic(() => import("@/container/search/Index"), {
 
 export default function page() {
     return <>
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-V2Y9R8B57Y"></Script>
-        <Script id="google-analytics">
-            {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-    
-          gtag('config', 'G-V2Y9R8B57Y');
-        `}
-        </Script>
         <DynamicSearchView />
     </>
 }

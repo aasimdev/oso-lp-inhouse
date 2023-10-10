@@ -106,17 +106,15 @@ const Header = () => {
   return (
     <>
       <header
-        className={`bg-white z-30 transition-shadow duration-300 ${
-          pathname === "/dmca-policy"
+        className={`bg-white z-30 transition-shadow duration-300 ${pathname === "/dmca-policy"
             ? "sticky top-0"
             : pathname === "/privacy-policy"
-            ? "sticky top-0"
-            : pathname === "/terms-of-service"
-            ? "sticky top-0"
-            : null
-        } ${
-          isScrolled ? "shadow-[0px_8px_16px_rgba(145,_158,_171,_0.16)]" : null
-        }`}
+              ? "sticky top-0"
+              : pathname === "/terms-of-service"
+                ? "sticky top-0"
+                : null
+          } ${isScrolled ? "shadow-[0px_8px_16px_rgba(145,_158,_171,_0.16)]" : null
+          }`}
         ref={header}
       >
         <nav className='flex justify-between items-center md:flex-nowrap flex-wrap px-6 py-4 mx-auto max-w-6xl'>
@@ -129,71 +127,72 @@ const Header = () => {
               className='w-10 sm:w-14'
             />
           </Link>
-          <div className='hidden sm:flex items-center gap-6'>
-            <form
-              onSubmit={form?.handleSubmit}
-              className='flex gap-2 items-center'
-            >
-              {hform && (
-                <>
-                  <input
-                    type='text'
-                    name='honeypot'
-                    id='honeypot'
-                    className='hidden absolute w-0 h-0 overflow-hidden'
-                    tabIndex='-1'
-                    onChange={form?.handleChange}
-                    value={form?.values.honeypot}
-                  />
-                  <input
-                    type='email'
-                    required
-                    name='email'
-                    id='email'
-                    className='py-4 px-6 h-12 text-base text-black rounded-lg border border-purple w-[300px] placeholder:text-gray-100 focus:outline-none'
-                    placeholder='Enter your email'
-                    onChange={form?.handleChange}
-                    onBlur={form?.handleBlur}
-                    value={form?.values.email}
-                  />
-                </>
-              )}
-
-              {showMessage && (
-                <p className='text-gray-800 text-base'>
-                  Your email is already on the waitlist
-                </p>
-              )}
-              {errorMessage && (
-                <p className='text-gray-800 text-base'>
-                  Something is wrong, please try again
-                </p>
-              )}
-
-              <button
-                type={hform ? "submit" : "button"}
-                className='!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn'
-                onClick={openFormHandler}
+          {pathname !== "/thank-you" &&
+            <div className='hidden sm:flex items-center gap-6'>
+              <form
+                onSubmit={form?.handleSubmit}
+                className='flex gap-2 items-center'
               >
-                {!isLoading ? (
-                  "Join Waitlist"
-                ) : (
-                  <svg
-                    class='animate-spin h-6 w-6 text-purple-400'
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                  >
-                    <path
-                      fill='currentColor'
-                      d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
-                    ></path>
-                  </svg>
+                {hform && (
+                  <>
+                    <input
+                      type='text'
+                      name='honeypot'
+                      id='honeypot'
+                      className='hidden absolute w-0 h-0 overflow-hidden'
+                      tabIndex='-1'
+                      onChange={form?.handleChange}
+                      value={form?.values.honeypot}
+                    />
+                    <input
+                      type='email'
+                      required
+                      name='email'
+                      id='email'
+                      className='py-4 px-6 h-12 text-base text-black rounded-lg border border-purple w-[300px] placeholder:text-gray-100 focus:outline-none'
+                      placeholder='Enter your email'
+                      onChange={form?.handleChange}
+                      onBlur={form?.handleBlur}
+                      value={form?.values.email}
+                    />
+                  </>
                 )}
-              </button>
-            </form>
 
-            {/* {showSidebar ? (
+                {showMessage && (
+                  <p className='text-gray-800 text-base'>
+                    Your email is already on the waitlist
+                  </p>
+                )}
+                {errorMessage && (
+                  <p className='text-gray-800 text-base'>
+                    Something is wrong, please try again
+                  </p>
+                )}
+
+                <button
+                  type={hform ? "submit" : "button"}
+                  className='!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn'
+                  onClick={openFormHandler}
+                >
+                  {!isLoading ? (
+                    "Join Waitlist"
+                  ) : (
+                    <svg
+                      class='animate-spin h-6 w-6 text-purple-400'
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        fill='currentColor'
+                        d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+                      ></path>
+                    </svg>
+                  )}
+                </button>
+              </form>
+
+              {/* {showSidebar ? (
                             <button className="icon-btn w-12 h-12 flex items-center justify-center" onClick={navigationHandler}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" fill="black" />
@@ -206,7 +205,8 @@ const Header = () => {
                                 </svg>
                             </button>
                         )} */}
-          </div>
+            </div>
+          }
         </nav>
       </header>
       {showSidebar && <Menu isOpen={showSidebar} onClose={navigationHandler} />}

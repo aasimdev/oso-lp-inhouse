@@ -36,13 +36,31 @@ export default function Page({ searchParams }) {
                 phone_number: null  });`,
         }}
       />
-      <section className="min-h-[50vh] flex items-center justify-center">
-        <div className="flex flex-col gap-4 justify-center text-center">
-          <h1 className="text-3xl font-semibold text-center leading-relaxed">
-            Congrats! <span className="block text-2xl"> You will soon be among the first to experience the power of
-            OSO. </span>
+      <section className="bg-gradient-to-b from-purple-400 flex items-center justify-center pt-28 md:pt-40 px-6 md:px-0">
+        <div className="flex flex-col justify-center md:text-center max-w-[532px]">
+          <h1 className="text-3xl font-black md:text-center mb-2 md:mb-4">
+            Congrats!
           </h1>
-          <Link href="/" className="!py-[11px] !px-[12.25px] !text-base !w-[137px] theme-btn mx-auto">Back to home</Link>
+          <p className="text-gray-800 text-2xl font-light">You will soon be among the first to experience the power of OSO. <br />
+            In the mean-time, we invite you to test the iOS app and provide feedback to influence OSO&apos;s future.</p>
+          <div className="mt-8 md:mt-16 flex flex-col-reverse md:flex-row gap-2 md:gap-6">
+            <Link href="/" className="theme-btn mx-auto !bg-white !text-purple !border-2">Back to home</Link>
+            <Link href="https://l.oso.ai/OSOIOSBeta" target="_blank" className="theme-btn mx-auto">
+              <span>Join Testflight</span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+                  fill="white"
+                />
+              </svg></Link>
+          </div>
+
         </div>
 
       </section>

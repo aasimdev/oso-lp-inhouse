@@ -215,7 +215,7 @@ function SeenOn({}) {
               <div className='md:w-[617px] rounded-[20px] bg-black'>
                 <p className='p-4 text-xl font-normal text-white'>
                   Ultimately, whether Putin is considered a great leader or not
-                  depends on one's perspective and the specific criteria used to
+                  depends on one&apos;s perspective and the specific criteria used to
                   assess leadership.{" "}
                 </p>
               </div>
@@ -262,7 +262,7 @@ function SeenOn({}) {
                 />
                 <div className='w-[500px] rounded-[20px] bg-black'>
                   <p className='p-4 text-xl font-normal text-white'>
-                    📝 Report on Apple's iPhone 15 Camera Improvements and
+                    📝 Report on Apple&apos;s iPhone 15 Camera Improvements and
                     Flagship Features
                     <br />
                     <br />

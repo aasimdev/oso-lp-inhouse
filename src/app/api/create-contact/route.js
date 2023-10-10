@@ -15,15 +15,18 @@ async function verifyRecaptcha(token) {
 export async function POST(req) {
   const { email, token, ac_tag_id } = await req.json()
   try {
-    // const isRecaptchaValid = await verifyRecaptcha(token)
 
-    // if (!isRecaptchaValid) {
-    //   return NextResponse.json(
-    //     { status: "error", message: "reCAPTCHA verification failed" },
-    //     { status: 400 }
-    //   )
-    // }
+    const isRecaptchaValid = await verifyRecaptcha(token)
 
+    if (!isRecaptchaValid) {
+      return NextResponse.json(
+        { status: "error", message: "reCAPTCHA verification failed" },
+        { status: 400 }
+      )
+    }
+
+
+    // Setup New Newsletter
     const res = await fetch(
       `${process.env.ACTIVE_CAMPAIGN_URL}/api/3/contacts/`,
       {
@@ -52,6 +55,9 @@ export async function POST(req) {
         { status: 422 }
       )
     }
+
+
+    // set Tag ID
     if (ac_tag_id !== "") {
       const contactTagsRes = await fetch(
         `${process.env.ACTIVE_CAMPAIGN_URL}api/3/contactTags`,
@@ -73,6 +79,8 @@ export async function POST(req) {
       const data = await contactTagsRes.json()
     }
 
+
+    // Set List
     const res2 = await fetch(
       `${process.env.ACTIVE_CAMPAIGN_URL}/api/3/contactLists/`,
       {
@@ -91,6 +99,7 @@ export async function POST(req) {
         },
       }
     )
+
 
     return NextResponse.json({ status: "success" }, { status: 200 })
   } catch (error) {

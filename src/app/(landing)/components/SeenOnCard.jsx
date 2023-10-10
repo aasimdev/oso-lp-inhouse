@@ -2,8 +2,8 @@ import React from "react"
 import Typewriter from "typewriter-effect"
 export const SeenOnCard = ({ className, learnMore }) => {
   return (
-    <div className={`${className} w-[532px] h-[571px] px-16 rounded-2xl`}>
-      <h2 className='text-[32px] mt-16 '>OSO Search</h2>
+    <div className={`${className} w-full md:w-[532px] h-[571px] px-8 lg:px-16 rounded-2xl`}>
+      <h2 className='text-[32px] pt-16 font-semibold'>OSO Search</h2>
       <p className='text-2xl font-light'>
         Delivers a{" "}
         <strong className='text-2xl font-medium'>comprehensive result.</strong>

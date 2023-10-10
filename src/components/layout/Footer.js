@@ -4,7 +4,7 @@ import Image from "next/image"
 import SocialIcons from "../common/SocialIcons"
 import Newsletter from "../common/Newsletter"
 import { useFormik } from "formik"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
@@ -16,7 +16,8 @@ const Footer = () => {
 
   const { executeRecaptcha } = useGoogleReCaptcha()
   const router = useRouter()
-
+  const searchParams = useSearchParams()
+  const ac_tag_id = searchParams.get("ac_tag_id") || ""
   const form = useFormik({
     initialValues: {
       email: "",
@@ -31,20 +32,21 @@ const Footer = () => {
       const token = await executeRecaptcha()
 
       if (token) {
-        handleCreateContact(data.email, token)
+        handleCreateContact(data.email, token, ac_tag_id)
       } else {
         console.error("reCAPTCHA verification failed")
       }
     },
   })
 
-  async function handleCreateContact(email, token) {
+  async function handleCreateContact(email, token, ac_tag_id) {
     setIsLoading(true)
     const res = await fetch("/api/create-contact", {
       method: "POST",
       body: JSON.stringify({
         email,
         token,
+        ac_tag_id,
       }),
     })
 

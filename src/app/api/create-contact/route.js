@@ -13,7 +13,7 @@ async function verifyRecaptcha(token) {
 }
 
 export async function POST(req) {
-  const { email, token } = await req.json()
+  const { email, token, ac_tag_id } = await req.json()
   try {
     // const isRecaptchaValid = await verifyRecaptcha(token)
 
@@ -41,7 +41,7 @@ export async function POST(req) {
       }
     )
     const data = await res.json()
-    console.log(data)
+
     if (
       res.status === 422 &&
       data.errors &&
@@ -52,6 +52,27 @@ export async function POST(req) {
         { status: 422 }
       )
     }
+    if (ac_tag_id !== "") {
+      const contactTagsRes = await fetch(
+        `${process.env.ACTIVE_CAMPAIGN_URL}api/3/contactTags`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            contactTag: {
+              contact: data.contact.id,
+              tag: ac_tag_id,
+            },
+          }),
+          headers: {
+            "Api-Token": process.env.ACTIVE_CAMPAIGN_API_TOKEN,
+            "Content-Type": "application/json",
+            "Allow-Cross-Origin": "*",
+          },
+        }
+      )
+      const data = await contactTagsRes.json()
+    }
+
     const res2 = await fetch(
       `${process.env.ACTIVE_CAMPAIGN_URL}/api/3/contactLists/`,
       {

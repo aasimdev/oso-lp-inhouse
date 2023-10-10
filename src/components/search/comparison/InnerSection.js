@@ -156,11 +156,16 @@ const InnerSection = () => {
           </div>
 
           {/* Plan your event mobile*/}
+
           {!isDesktop && (
-            <div className='-mx-6 sm:mx-0'>
+            <div className='sm:mx-0'>
               <Slide {...settings}>
-                <Phone title='OSO' obj='869795741' />
-                <Phone title='ChatGPT' obj='869795758' />
+                <div className='each-slide-effect'>
+                  <Phone title='OSO' obj='869795741' />
+                </div>
+                <div className='each-slide-effect'>
+                  <Phone title='ChatGPT' obj='869795758' />
+                </div>
               </Slide>
             </div>
           )}

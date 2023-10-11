@@ -10,6 +10,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
   const [errorMessage, setErrorMessage] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const honeypotRef = useRef(null)
+  
   const { executeRecaptcha } = useGoogleReCaptcha()
   const searchParams = useSearchParams()
   const ac_tag_id = searchParams.get("ac_tag_id") || ""
@@ -81,6 +82,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
           className='hidden absolute w-0 h-0 overflow-hidden'
           type='text'
           tabIndex='-1'
+          value=""
           ref={honeypotRef}
           autoComplete='off'
         />

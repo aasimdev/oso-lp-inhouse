@@ -53,7 +53,6 @@ const Header = () => {
       }
     },
   })
-  console.log(form?.values.honeypot)
   async function addWaitlistContact(email, token, ac_tag_id) {
     setIsLoading(true)
     const res = await fetch("/api/create-contact", {

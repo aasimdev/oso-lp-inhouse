@@ -12,6 +12,7 @@ import {
 } from "next/navigation"
 import Link from "next/link"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
+import { detectDevice } from "../DeviceDetector/DeviceDetector"
 
 const Header = () => {
   const { showSidebar, navigationHandler } = useMenu("")
@@ -20,6 +21,7 @@ const Header = () => {
   const [hform, setHForm] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [errorMessage, setErrorMessage] = useState(false)
+  const [userDevice, setUserDevice] = useState("Unknown")
   const honeypotRef = useRef(null)
   const { executeRecaptcha } = useGoogleReCaptcha()
   const searchParams = useSearchParams()
@@ -28,7 +30,8 @@ const Header = () => {
   const ac_tag_id = searchParams.get("ac_tag_id") || ""
 
   const header = useRef()
- 
+  const formId = "headerFormId"
+  const userLang = "eng"
   const openFormHandler = () => {
     setShowMessage(false)
     setErrorMessage(false)
@@ -47,15 +50,28 @@ const Header = () => {
       const token = await executeRecaptcha()
 
       if (token) {
-        addWaitlistContact(data.email, token, ac_tag_id)
+        addWaitlistContact(
+          data.email,
+          token,
+          ac_tag_id,
+          formId,
+          userLang,
+          userDevice
+        )
       } else {
         console.error("reCAPTCHA verification failed")
       }
     },
   })
 
-  
-  async function addWaitlistContact(email, token, ac_tag_id) {
+  async function addWaitlistContact(
+    email,
+    token,
+    ac_tag_id,
+    formId,
+    userLang,
+    userDevice
+  ) {
     setIsLoading(true)
     const res = await fetch("/api/create-contact", {
       method: "POST",
@@ -63,6 +79,9 @@ const Header = () => {
         email,
         token,
         ac_tag_id,
+        formId,
+        userLang,
+        userDevice,
       }),
     })
 
@@ -101,7 +120,10 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
-
+  useEffect(() => {
+    const detectedDevice = detectDevice()
+    setUserDevice(detectedDevice)
+  }, [])
   return (
     <>
       <header
@@ -140,7 +162,7 @@ const Header = () => {
                       className='hidden absolute w-0 h-0 overflow-hidden'
                       type='text'
                       tabIndex='-1'
-                      value=""
+                      value=''
                       ref={honeypotRef}
                       autoComplete='off'
                     />

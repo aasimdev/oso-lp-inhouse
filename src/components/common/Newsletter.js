@@ -1,15 +1,19 @@
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { useFormik } from "formik"
 import { useRouter, useSearchParams } from "next/navigation"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
+import { detectDevice } from "../DeviceDetector/DeviceDetector"
 
-const Newsletter = () => {
+const Newsletter = ({formId}) => {
   const [showMessage, setShowMessage] = useState(false)
   const [errorMessage, setErrorMessage] = useState(false)
+  const [userDevice, setUserDevice] = useState("Unknown")
   const honeypotRef = useRef(null)
+
   const { executeRecaptcha } = useGoogleReCaptcha()
   const router = useRouter()
   const searchParams = useSearchParams()
+  const userLang = "eng"
   const ac_tag_id = searchParams.get("ac_tag_id") || ""
   const form = useFormik({
     initialValues: {
@@ -23,7 +27,7 @@ const Newsletter = () => {
       const token = await executeRecaptcha()
 
       if (token) {
-        handleCreateContact(data.email, token, ac_tag_id)
+        handleCreateContact(data.email, token, ac_tag_id, userDevice, userLang,formId)
       } else {
         console.error("reCAPTCHA verification failed")
       }
@@ -31,13 +35,23 @@ const Newsletter = () => {
     },
   })
 
-  async function handleCreateContact(email, token, ac_tag_id) {
+  async function handleCreateContact(
+    email,
+    token,
+    ac_tag_id,
+    userDevice,
+    userLang,
+    formId
+  ) {
     const res = await fetch("/api/create-contact", {
       method: "POST",
       body: JSON.stringify({
         email,
         token,
         ac_tag_id,
+        userDevice,
+        userLang,
+        formId
       }),
     })
 
@@ -52,7 +66,10 @@ const Newsletter = () => {
       form.setValues({ email: "" })
     }
   }
-
+  useEffect(() => {
+    const detectedDevice = detectDevice()
+    setUserDevice(detectedDevice)
+  }, [])
   return (
     <>
       <p className='text-base font-light text-gray-500 md:mt-0 mt-8'>
@@ -69,11 +86,12 @@ const Newsletter = () => {
             placeholder='Enter your email'
             className='transition-all duration-200 py-4 px-6 input-text font-normal border-gray-900 border h-16 w-full text-base outline-none text-white bg-transparent placeholder-gray-100 rounded-lg peer'
           />
+        
           <input
             className='hidden absolute w-0 h-0 overflow-hidden'
             type='text'
             tabIndex='-1'
-            value=""
+            value=''
             ref={honeypotRef}
             autoComplete='off'
           />

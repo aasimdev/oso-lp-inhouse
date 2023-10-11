@@ -20,6 +20,7 @@ import Chat from "./Chat"
 import Feed from "./Feed"
 import SearchAndOtherForMobile from "./SearchAndOthers/SearchAndOtherForMobile"
 import SearchAndOtherForLaptop from "./SearchAndOthers/SearchAndOtherForLaptop"
+import FAQ from "@/components/FAQ/Index"
 const testimonialData = [
   {
     name: "Jason K.",
@@ -163,6 +164,7 @@ function SeenOn({}) {
             ))}
         </Swiper>
       </div>
+      <FAQ />
     </>
   )
 }

@@ -2,20 +2,21 @@
 
 import { useFormik } from "formik"
 import { useRouter, useSearchParams } from "next/navigation"
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
+import { detectDevice } from "../DeviceDetector/DeviceDetector"
 
-const NewsLetter = ({ className, label, arrowIcon }) => {
+const NewsLetter = ({ className, label, arrowIcon, formId }) => {
   const [showMessage, setShowMessage] = useState(false)
   const [errorMessage, setErrorMessage] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const honeypotRef = useRef(null)
-  
+  const [userDevice, setUserDevice] = useState("Unknown")
   const { executeRecaptcha } = useGoogleReCaptcha()
   const searchParams = useSearchParams()
   const ac_tag_id = searchParams.get("ac_tag_id") || ""
   const router = useRouter()
-
+  const userLang = "eng"
   const form = useFormik({
     initialValues: {
       email: "",
@@ -29,7 +30,14 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
       const token = await executeRecaptcha()
 
       if (token) {
-        addWaitlistContact(values.email, token, ac_tag_id)
+        addWaitlistContact(
+          values.email,
+          token,
+          ac_tag_id,
+          userDevice,
+          userLang,
+          formId
+        )
       } else {
         console.error("reCAPTCHA verification failed")
       }
@@ -37,7 +45,14 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
     },
   })
 
-  async function addWaitlistContact(email, token, ac_tag_id) {
+  async function addWaitlistContact(
+    email,
+    token,
+    ac_tag_id,
+    userDevice,
+    userLang,
+    formId
+  ) {
     setIsLoading(true)
     const res = await fetch("/api/create-contact", {
       method: "POST",
@@ -45,6 +60,9 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
         email,
         token,
         ac_tag_id,
+        userLang,
+        userDevice,
+        formId,
       }),
     })
 
@@ -61,7 +79,10 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
       form.values.email = ""
     }
   }
-
+  useEffect(() => {
+    const detectedDevice = detectDevice()
+    setUserDevice(detectedDevice)
+  }, [])
   return (
     <>
       <form
@@ -82,7 +103,7 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
           className='hidden absolute w-0 h-0 overflow-hidden'
           type='text'
           tabIndex='-1'
-          value=""
+          value=''
           ref={honeypotRef}
           autoComplete='off'
         />

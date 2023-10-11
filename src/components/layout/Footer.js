@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import CallToAction from "../CallToAction"
 import Image from "next/image"
 import SocialIcons from "../common/SocialIcons"
@@ -7,6 +7,7 @@ import { useFormik } from "formik"
 import { usePathname, useRouter, useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
+import { detectDevice } from "../DeviceDetector/DeviceDetector"
 
 const Footer = () => {
   const [showInput, setShowInput] = useState(false)
@@ -14,12 +15,14 @@ const Footer = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState(false)
   const { executeRecaptcha } = useGoogleReCaptcha()
+  const [userDevice, setUserDevice] = useState("Unknown")
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const ac_tag_id = searchParams.get("ac_tag_id") || ""
   const honeypotRef = useRef(null)
-
+  const formId = "footerFormId"
+  const userLang = "eng"
   const form = useFormik({
     initialValues: {
       email: "",
@@ -32,14 +35,28 @@ const Footer = () => {
       const token = await executeRecaptcha()
 
       if (token) {
-        handleCreateContact(data.email, token, ac_tag_id)
+        handleCreateContact(
+          data.email,
+          token,
+          ac_tag_id,
+          formId,
+          userLang,
+          userDevice
+        )
       } else {
         console.error("reCAPTCHA verification failed")
       }
     },
   })
 
-  async function handleCreateContact(email, token, ac_tag_id) {
+  async function handleCreateContact(
+    email,
+    token,
+    ac_tag_id,
+    formId,
+    userLang,
+    userDevice
+  ) {
     setIsLoading(true)
     const res = await fetch("/api/create-contact", {
       method: "POST",
@@ -47,6 +64,9 @@ const Footer = () => {
         email,
         token,
         ac_tag_id,
+        formId,
+        userLang,
+        userDevice,
       }),
     })
 
@@ -77,7 +97,10 @@ const Footer = () => {
     }
     // handleCreateContact(form.values.email);
   }
-
+  useEffect(() => {
+    const detectedDevice = detectDevice()
+    setUserDevice(detectedDevice)
+  }, [])
   return (
     <footer className='bg-black pb-8 pt-44 md:mt-40 mt-40  relative'>
       {pathname !== "/thank-you" && (
@@ -143,7 +166,7 @@ const Footer = () => {
                     className='hidden absolute w-0 h-0 overflow-hidden'
                     type='text'
                     tabIndex='-1'
-                    value=""
+                    value=''
                     ref={honeypotRef}
                     autoComplete='off'
                   />
@@ -163,7 +186,7 @@ const Footer = () => {
             </form>
           </div>
           <div className='lg:w-[433px] w-full ml-auto'>
-            <Newsletter />
+            <Newsletter formId={"FooterNewsletterForm"} />
             <SocialIcons />
           </div>
         </div>

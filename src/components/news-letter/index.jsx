@@ -2,14 +2,14 @@
 
 import { useFormik } from "formik"
 import { useRouter, useSearchParams } from "next/navigation"
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 
 const NewsLetter = ({ className, label, arrowIcon }) => {
   const [showMessage, setShowMessage] = useState(false)
   const [errorMessage, setErrorMessage] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
-
+  const honeypotRef = useRef(null)
   const { executeRecaptcha } = useGoogleReCaptcha()
   const searchParams = useSearchParams()
   const ac_tag_id = searchParams.get("ac_tag_id") || ""
@@ -18,10 +18,9 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
   const form = useFormik({
     initialValues: {
       email: "",
-      honeypot: "",
     },
     onSubmit: async (values) => {
-      if (values.honeypot !== "") {
+      if (honeypotRef.current.value) {
         console.error("Bot detected!")
         return
       }
@@ -79,13 +78,11 @@ const NewsLetter = ({ className, label, arrowIcon }) => {
           value={form?.values.email}
         />
         <input
-          type='text'
-          name='honeypot'
-          id='honeypot'
           className='hidden absolute w-0 h-0 overflow-hidden'
+          type='text'
           tabIndex='-1'
-          onChange={form?.handleChange}
-          value={form?.values.honeypot}
+          ref={honeypotRef}
+          autoComplete='off'
         />
         <button
           type='submit'

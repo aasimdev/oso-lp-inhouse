@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import CallToAction from "../CallToAction"
 import Image from "next/image"
 import SocialIcons from "../common/SocialIcons"
@@ -13,26 +13,22 @@ const Footer = () => {
   const [showMessage, setShowMessage] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState(false)
-
   const { executeRecaptcha } = useGoogleReCaptcha()
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const ac_tag_id = searchParams.get("ac_tag_id") || ""
-
-
+  const honeypotRef = useRef(null)
 
   const form = useFormik({
     initialValues: {
       email: "",
-      honeypot: "",
     },
     onSubmit: async (data) => {
-      if (data.honeypot !== "") {
+      if (honeypotRef.current.value) {
         console.error("Bot detected!")
         return
       }
-
       const token = await executeRecaptcha()
 
       if (token) {
@@ -84,13 +80,13 @@ const Footer = () => {
 
   return (
     <footer className='bg-black pb-8 pt-44 md:mt-40 mt-40  relative'>
-      {pathname !== "/thank-you" &&
+      {pathname !== "/thank-you" && (
         <div className='absolute w-full top-0 -translate-y-1/2'>
           <div className='px-6 mx-auto max-w-6xl'>
             <CallToAction />
           </div>
         </div>
-      }
+      )}
       <div className='px-6 mx-auto md:max-w-6xl w-full'>
         <div className='md:grid md:grid-cols-2'>
           <div className='space-y-8'>
@@ -144,13 +140,11 @@ const Footer = () => {
                     value={form?.values.email}
                   />
                   <input
-                    type='text'
-                    name='honeypot'
-                    id='honeypot'
                     className='hidden absolute w-0 h-0 overflow-hidden'
+                    type='text'
                     tabIndex='-1'
-                    onChange={form?.handleChange}
-                    value={form?.values.honeypot}
+                    ref={honeypotRef}
+                    autoComplete='off'
                   />
                 </>
               )}

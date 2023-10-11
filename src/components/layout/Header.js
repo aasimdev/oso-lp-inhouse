@@ -20,7 +20,7 @@ const Header = () => {
   const [hform, setHForm] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [errorMessage, setErrorMessage] = useState(false)
-
+  const honeypotRef = useRef(null)
   const { executeRecaptcha } = useGoogleReCaptcha()
   const searchParams = useSearchParams()
   const router = useRouter()
@@ -28,7 +28,7 @@ const Header = () => {
   const ac_tag_id = searchParams.get("ac_tag_id") || ""
 
   const header = useRef()
-
+ 
   const openFormHandler = () => {
     setShowMessage(false)
     setErrorMessage(false)
@@ -38,14 +38,12 @@ const Header = () => {
   const form = useFormik({
     initialValues: {
       email: "",
-      honeypot: "",
     },
     onSubmit: async (data) => {
-      if (data.honeypot !== "") {
+      if (honeypotRef.current.value) {
         console.error("Bot detected!")
         return
       }
-
       const token = await executeRecaptcha()
 
       if (token) {
@@ -55,7 +53,7 @@ const Header = () => {
       }
     },
   })
-
+  console.log(form?.values.honeypot)
   async function addWaitlistContact(email, token, ac_tag_id) {
     setIsLoading(true)
     const res = await fetch("/api/create-contact", {
@@ -106,15 +104,17 @@ const Header = () => {
   return (
     <>
       <header
-        className={`bg-white z-30 transition-shadow duration-300 ${pathname === "/dmca-policy"
+        className={`bg-white z-30 transition-shadow duration-300 ${
+          pathname === "/dmca-policy"
             ? "sticky top-0"
             : pathname === "/privacy-policy"
-              ? "sticky top-0"
-              : pathname === "/terms-of-service"
-                ? "sticky top-0"
-                : null
-          } ${isScrolled ? "shadow-[0px_8px_16px_rgba(145,_158,_171,_0.16)]" : null
-          }`}
+            ? "sticky top-0"
+            : pathname === "/terms-of-service"
+            ? "sticky top-0"
+            : null
+        } ${
+          isScrolled ? "shadow-[0px_8px_16px_rgba(145,_158,_171,_0.16)]" : null
+        }`}
         ref={header}
       >
         <nav className='flex justify-between items-center md:flex-nowrap flex-wrap px-6 py-4 mx-auto max-w-6xl'>
@@ -127,7 +127,7 @@ const Header = () => {
               className='w-10 sm:w-14'
             />
           </Link>
-          {pathname !== "/thank-you" &&
+          {pathname !== "/thank-you" && (
             <div className='hidden sm:flex items-center gap-6'>
               <form
                 onSubmit={form?.handleSubmit}
@@ -136,13 +136,11 @@ const Header = () => {
                 {hform && (
                   <>
                     <input
-                      type='text'
-                      name='honeypot'
-                      id='honeypot'
                       className='hidden absolute w-0 h-0 overflow-hidden'
+                      type='text'
                       tabIndex='-1'
-                      onChange={form?.handleChange}
-                      value={form?.values.honeypot}
+                      ref={honeypotRef}
+                      autoComplete='off'
                     />
                     <input
                       type='email'
@@ -206,7 +204,7 @@ const Header = () => {
                             </button>
                         )} */}
             </div>
-          }
+          )}
         </nav>
       </header>
       {showSidebar && <Menu isOpen={showSidebar} onClose={navigationHandler} />}

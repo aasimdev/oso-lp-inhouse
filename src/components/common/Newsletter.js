@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import { useFormik } from "formik"
 import { useRouter, useSearchParams } from "next/navigation"
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
@@ -6,7 +6,7 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
 const Newsletter = () => {
   const [showMessage, setShowMessage] = useState(false)
   const [errorMessage, setErrorMessage] = useState(false)
-
+  const honeypotRef = useRef(null)
   const { executeRecaptcha } = useGoogleReCaptcha()
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -14,14 +14,12 @@ const Newsletter = () => {
   const form = useFormik({
     initialValues: {
       email: "",
-      honeypot: "",
     },
     onSubmit: async (data) => {
-      if (data.honeypot !== "") {
+      if (honeypotRef.current.value) {
         console.error("Bot detected!")
         return
       }
-
       const token = await executeRecaptcha()
 
       if (token) {
@@ -72,13 +70,11 @@ const Newsletter = () => {
             className='transition-all duration-200 py-4 px-6 input-text font-normal border-gray-900 border h-16 w-full text-base outline-none text-white bg-transparent placeholder-gray-100 rounded-lg peer'
           />
           <input
-            type='text'
-            name='honeypot'
-            id='honeypot'
             className='hidden absolute w-0 h-0 overflow-hidden'
+            type='text'
             tabIndex='-1'
-            onChange={form?.handleChange}
-            value={form?.values.honeypot}
+            ref={honeypotRef}
+            autoComplete='off'
           />
           <button
             disabled={!form?.values.email}

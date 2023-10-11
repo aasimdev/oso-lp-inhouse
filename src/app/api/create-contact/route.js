@@ -41,28 +41,27 @@ export async function POST(req) {
         },
       }
     )
-    const data = await res.json()
+    const contactRes = await res.json()
 
     if (
       res.status === 422 &&
-      data.errors &&
-      data.errors[0].code === "duplicate"
+      contactRes.errors &&
+      contactRes.errors[0].code === "duplicate"
     ) {
       return NextResponse.json(
-        { status: "already_exists", error: data.errors[0].title },
+        { status: "already_exists", error: contactRes.errors[0].title },
         { status: 422 }
       )
     }
 
-    // set Tag ID
     if (ac_tag_id !== "") {
       const contactTagsRes = await fetch(
-        `${process.env.ACTIVE_CAMPAIGN_URL}api/3/contactTags`,
+        `${process.env.ACTIVE_CAMPAIGN_URL}/api/3/contactTags/`,
         {
           method: "POST",
           body: JSON.stringify({
             contactTag: {
-              contact: data.contact.id,
+              contact: contactRes.contact.id,
               tag: ac_tag_id,
             },
           }),
@@ -73,7 +72,7 @@ export async function POST(req) {
           },
         }
       )
-      const data = await contactTagsRes.json()
+      const contactTagRes = await contactTagsRes.json()
     }
 
     // Set List
@@ -83,7 +82,7 @@ export async function POST(req) {
         method: "POST",
         body: JSON.stringify({
           contactList: {
-            contact: data.contact.id,
+            contact: contactRes.contact.id,
             list: WAITLIST_ID,
             status: "1",
           },
@@ -98,6 +97,7 @@ export async function POST(req) {
 
     return NextResponse.json({ status: "success" }, { status: 200 })
   } catch (error) {
+    console.log(error)
     return NextResponse.json({ status: "error" }, { status: 500 })
   }
 }

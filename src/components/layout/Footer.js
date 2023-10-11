@@ -143,6 +143,7 @@ const Footer = () => {
                     className='hidden absolute w-0 h-0 overflow-hidden'
                     type='text'
                     tabIndex='-1'
+                    value=""
                     ref={honeypotRef}
                     autoComplete='off'
                   />

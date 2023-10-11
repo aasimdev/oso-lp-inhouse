@@ -53,6 +53,8 @@ const Header = () => {
       }
     },
   })
+
+  
   async function addWaitlistContact(email, token, ac_tag_id) {
     setIsLoading(true)
     const res = await fetch("/api/create-contact", {
@@ -138,6 +140,7 @@ const Header = () => {
                       className='hidden absolute w-0 h-0 overflow-hidden'
                       type='text'
                       tabIndex='-1'
+                      value=""
                       ref={honeypotRef}
                       autoComplete='off'
                     />

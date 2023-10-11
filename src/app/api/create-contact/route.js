@@ -13,7 +13,9 @@ async function verifyRecaptcha(token) {
 }
 
 export async function POST(req) {
-  const { email, token, ac_tag_id } = await req.json()
+  const { email, token, ac_tag_id, formId, userLang, userDevice } =
+    await req.json()
+
   try {
     const isRecaptchaValid = await verifyRecaptcha(token)
 
@@ -32,6 +34,20 @@ export async function POST(req) {
         body: JSON.stringify({
           contact: {
             email,
+            fieldValues: [
+              {
+                field: "1",
+                value: formId,
+              },
+              {
+                field: "2",
+                value: userLang,
+              },
+              {
+                field: "3",
+                value: userDevice,
+              },
+            ],
           },
         }),
         headers: {
@@ -97,7 +113,6 @@ export async function POST(req) {
 
     return NextResponse.json({ status: "success" }, { status: 200 })
   } catch (error) {
-    console.log(error)
     return NextResponse.json({ status: "error" }, { status: 500 })
   }
 }

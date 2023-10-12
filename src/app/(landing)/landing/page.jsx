@@ -1,8 +1,8 @@
 import React from "react"
 import SeenOn from "../components/SeenOn"
 
-const SeeOnPage = () => {
+const LandingPage = () => {
   return <SeenOn />
 }
 
-export default SeeOnPage
+export default LandingPage

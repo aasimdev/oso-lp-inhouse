@@ -135,8 +135,6 @@ const Header = () => {
             : pathname === "/terms-of-service"
             ? "sticky top-0"
             : null
-        } ${
-          isScrolled ? "shadow-[0px_8px_16px_rgba(145,_158,_171,_0.16)]" : null
         }`}
         ref={header}
       >

@@ -13,7 +13,7 @@ const Chat = () => {
           </p>
         </div>
         <div>
-          <div className='hidden md:flex justify-end items-center cursor-pointer'>
+          <a className='hidden md:flex justify-end items-center transform translate-x-0 transition-transform duration-100 ease-in-out hover:translate-x-2'>
             <p className='pr-4'>Lean more</p>
             <svg
               width='33'
@@ -28,7 +28,7 @@ const Chat = () => {
                 fill='black'
               />
             </svg>
-          </div>
+          </a>
         </div>
       </div>
       <div className='flex gap-4 md:gap-[52.59px] items-center  mt-8 md:mt-[88px]'>

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import React from "react"
 
 const Feed = () => {
@@ -9,21 +10,21 @@ const Feed = () => {
       <div className='flex flex-col lg:flex-row justify-between'>
         <div className={`flex gap-4 md:gap-6 flex-col  lg:order-1`}>
           <h5 className='text-black lg:text-5xl text-3xl font-bold max-w-md'>
-            Chat
+            Feed
           </h5>
           <p className='text-2xl font-light mt-2 max-w-md'>
             <strong className='text-2xl font-medium'>Summarize</strong> your
             custom news, then inquire with specific questions
           </p>
 
-          <div className='flex items-start gap-2 mt-6 ml-[18px]'>
+          <div className='absolute md:static flex items-start gap-2 mt-60 md:mt-6 ml-3 md:ml-[18px]'>
             <Image
               src='/assets/icons/oso-logo-black.svg'
               alt='Example SVG'
               width={24}
               height={34}
             />
-            <div className='w-[500px] rounded-[20px] bg-black'>
+            <div className='w-[79%] md:w-[500px] rounded-[20px] bg-black'>
               <p className='hidden md:block p-4 text-xl font-normal text-white'>
                 📝 Report on Apple&apos;s iPhone 15 Camera Improvements and
                 Flagship Features
@@ -42,18 +43,21 @@ const Feed = () => {
                 <br />
                 📸 Smart Camera Improvements in iPhone 15 ...
                 <br />
-                ...
               </p>
             </div>
           </div>
         </div>
 
         <div
-          className={`lg:absolute  lg:-bottom-3 mt-6 lg:mt-0 -mb-8 lg:mb-0  ${"lg:order-2 right-16"}`}
+          className={`md:absolute bottom-0 md:-bottom-3 mt-32 md:mt-0 -mb-8 lg:mb-0  lg:order-2 right-16`}
         >
-          <div className='absolute bottom-4 right-7 lg:-top-[70px]  lg:right-0'>
-            <div className='flex justify-end items-center cursor-pointer'>
-              <p className='pr-4'>Lean more</p>
+          <div className='absolute bottom-4 right-7 md:-top-[160px]  md:right-0 '>
+            <a
+              href='#'
+              target='_blank'
+              className='flex justify-end items-center transform translate-x-0 transition-transform duration-100 ease-in-out hover:translate-x-2'
+            >
+              <p className='pr-4 '>Learsn more</p>
               <svg
                 width='33'
                 height='32'
@@ -67,12 +71,12 @@ const Feed = () => {
                   fill='black'
                 />
               </svg>
-            </div>
+            </a>
           </div>
           <Image
             src='/assets/images/feed-phone.png'
             alt='Example SVG'
-            width={316.8}
+            width={250.8}
             height={653.895}
             // title={title}
             // alt={title}

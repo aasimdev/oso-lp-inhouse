@@ -48,7 +48,7 @@ const SearchAndOtherForLaptop = () => {
         answerForOso={
           <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
             <p className='text-2xl font-medium '>
-              don't have access to real-time information or current restaurant
+              don&apos;t have access to real-time information or current restaurant
               reviews, as my knowledge was last updated in September 2021.
               However, I can suggest some popular sushi places in Prague as of
               my last update

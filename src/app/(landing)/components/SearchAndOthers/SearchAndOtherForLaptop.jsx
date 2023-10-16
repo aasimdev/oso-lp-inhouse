@@ -1,19 +1,58 @@
-import React from "react"
+import React, { useState } from "react"
 import { SeenOnCard } from "../SeenOnCard"
+import Typewriter from "typewriter-effect"
 
 const SearchAndOtherForLaptop = () => {
+  const [stringTypeOut, setStringTypeOut] = useState(false);
+
+
   return (
-    <div className='hidden lg:flex flex-row justify-between'>
-      <SeenOnCard
-        className={
-          "bg-gradient-to-b from-[#ffffff00] to-[#8CDCD0] hover:from-[#ffffff00] hover:to-[#58C2B1]"
-        }
-        title={"OSO Search"}
-        learnMore={
-          <>
-            <p className='pr-4 cursor-pointer'>Lean more</p>
+    <div className='hidden lg:flex flex-row gap-6 justify-between'>
+
+      <div
+        className={`bg-blue-100 w-full px-8 lg:p-16 rounded-2xl group relative overflow-hidden transition-all duration-300`}
+      >
+        <div className="bg-gradient-to-b from-[#73b2a800] to-[#8CDCD0] group-hover:from-[#73b2a800] group-hover:to-[#58C2B1] absolute left-0 top-0 right-0 bottom-0 w-full h-full transition-all duration-300 hover:transition-all hover:duration-300" />
+        <div className="relative z-10">
+          <h2 className='text-[32px] font-semibold mb-2'>OSO Search</h2>
+          <p className='text-2xl font-light'>
+            Delivers a{" "}
+            <span className='font-medium'>comprehensive result.</span>
+          </p>
+          <div className="h-64">
+            {stringTypeOut ? (
+              <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
+                <p className='text-2xl font-medium '>
+                  🌍Top Sushi Places in Prague
+                </p>
+                <br />
+                <br />
+                <p className='text-2xl font-medium '>
+                  Yami Sushi House: A popular sushi spot praised for its exquisite
+                  sushi...
+                </p>
+              </div>
+            ) : (
+              <div
+                className={`text-[40px] h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${stringTypeOut ? "bg-black" : "default"
+                  } ${stringTypeOut ? "text-white" : "default"}`}
+              >
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString("Where is the best sushi restaurant in Prague? 🍣")
+                      .callFunction(() => {
+                        setStringTypeOut(true)
+                      })
+                      .stop()
+                  }}
+                />
+              </div>
+            )}
+          </div>
+          <a className='flex justify-end items-center mt-4 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2' href="#">
+            <p className='pr-4'>Lean more</p>
             <svg
-              className='cursor-pointer'
               width='33'
               height='32'
               viewBox='0 0 33 32'
@@ -26,36 +65,52 @@ const SearchAndOtherForLaptop = () => {
                 fill='black'
               />
             </svg>
-          </>
-        }
-        answerForOso={
-          <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
-            <p className='text-2xl font-medium '>
-              🌍Top Sushi Places in Prague
-            </p>
-            <br />
-            <br />
-            <p className='text-2xl font-medium '>
-              Yami Sushi House: A popular sushi spot praised for its exquisite
-              sushi...
-            </p>
+          </a>
+        </div>
+      </div>
+
+
+      <div
+        className={`bg-blue-100 w-full px-8 lg:p-16 rounded-2xl group relative overflow-hidden`}
+      >
+        <div className="bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] absolute left-0 top-0 right-0 bottom-0 w-full h-full" />
+        <div className="relative z-10">
+          <h2 className='text-[32px] font-semibold mb-2'>Others</h2>
+          <p className='text-2xl font-light'>
+            Delivers a{" "}
+            <span className='font-medium'>general out-dated result.</span>
+          </p>
+          <div className="h-64">
+            {stringTypeOut ? (
+              <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
+                <p className='text-2xl font-medium '>
+                  don&apos;t have access to real-time information or current restaurant
+                  reviews, as my knowledge was last updated in September 2021.
+                  However, I can suggest some popular sushi places in Prague as of
+                  my last update
+                </p>
+              </div>
+            ) : (
+              <div
+                className={`text-[40px] h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${stringTypeOut ? "bg-black" : "default"
+                  } ${stringTypeOut ? "text-white" : "default"}`}
+              >
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString("Where is the best sushi restaurant in Prague? 🍣")
+                      .callFunction(() => {
+                        setStringTypeOut(true)
+                      })
+                      .stop()
+                  }}
+                />
+              </div>
+            )}
           </div>
-        }
-      />
-      <SeenOnCard
-        title={"Others "}
-        className={"gradient-seen-on-gray"}
-        answerForOso={
-          <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
-            <p className='text-2xl font-medium '>
-              don&apos;t have access to real-time information or current restaurant
-              reviews, as my knowledge was last updated in September 2021.
-              However, I can suggest some popular sushi places in Prague as of
-              my last update
-            </p>
-          </div>
-        }
-      />
+
+        </div>
+      </div>
     </div>
   )
 }

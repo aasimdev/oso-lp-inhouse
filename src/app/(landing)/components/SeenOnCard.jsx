@@ -1,14 +1,18 @@
 import React, { useState } from "react"
 import Typewriter from "typewriter-effect"
-export const SeenOnCard = ({ className, learnMore, title, answerForOso, bgColor }) => {
+export const SeenOnCard = ({
+  className,
+  learnMore,
+  title,
+  answerForOso,
+  bgColor,
+}) => {
   const [stringTypeOut, setStringTypeOut] = useState(false)
 
   return (
-    <div
-      className={`${className} w-full md:w-[532px]   px-8 lg:px-14 rounded-2xl`}
-    >
-      <h2 className='text-[32px] pt-16 font-semibold lg:px-2' >{title}</h2>
-      <p className='text-2xl font-light lg:px-2' >
+    <div className={`${className} w-full md:w-[532px]   p-8 rounded-2xl`}>
+      <h2 className='text-[32px] font-semibold lg:px-2'>{title}</h2>
+      <p className='text-2xl font-light lg:px-2'>
         Delivers a{" "}
         <strong className='text-2xl font-medium '>comprehensive result.</strong>
       </p>
@@ -30,7 +34,7 @@ export const SeenOnCard = ({ className, learnMore, title, answerForOso, bgColor 
           />
         </div>
       )}
-      <div className='flex justify-end pb-[38px] mt-12'>{learnMore}</div>
+      <div className='flex justify-end pb-[6px] mt-12'>{learnMore}</div>
     </div>
   )
 }

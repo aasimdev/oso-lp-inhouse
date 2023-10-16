@@ -55,7 +55,7 @@ const testimonialData = [
     image: Ciaran,
   },
 ]
-function SeenOn({}) {
+function SeenOn({ }) {
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
   const slidesOffsetBefore = isDesktop ? 100 : 0
   return (
@@ -71,9 +71,10 @@ function SeenOn({}) {
         <SearchAndOtherForLaptop />
         <Chat />
         <Feed />
-      </div>
-      <div className='md:flex justify-center items-center pt-8 md:pt-[60px]'>
-        <NewsLetter arrowIcon label='Join Waitlist' />
+
+        <div className='md:flex justify-center items-center pt-8 md:pt-[60px]'>
+          <NewsLetter arrowIcon label='Join Waitlist' />
+        </div>
       </div>
       <h2 className='text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center mt-24'>
         Many people already feel the magic
@@ -165,6 +166,7 @@ function SeenOn({}) {
         </Swiper>
       </div>
       <FAQ />
+
     </>
   )
 }

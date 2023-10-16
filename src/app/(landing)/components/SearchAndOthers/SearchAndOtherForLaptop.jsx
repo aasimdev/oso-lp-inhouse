@@ -3,8 +3,8 @@ import { SeenOnCard } from "../SeenOnCard"
 import Typewriter from "typewriter-effect"
 
 const SearchAndOtherForLaptop = () => {
-  const [stringTypeOut, setStringTypeOut] = useState(false);
   const [isTypingStarted, setTypingStarted] = useState(false);
+  const [stringTypeOut, setStringTypeOut] = useState(false);
   const targetDivRef = useRef(null);
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -22,13 +22,15 @@ const SearchAndOtherForLaptop = () => {
     };
   }, []);
   return (
-    <div className='hidden lg:flex flex-row gap-6 justify-between' ref={targetDivRef}>
-
+    <div
+      className='hidden lg:flex flex-row gap-6 justify-between' ref={targetDivRef}
+    >
       <div
         className={`bg-blue-100 w-full px-8 lg:p-16 rounded-2xl group relative overflow-hidden transition-all duration-300`}
       >
-        <div className="bg-gradient-to-b from-[#73b2a800] to-[#8CDCD0] group-hover:from-[#73b2a800] group-hover:to-[#58C2B1] absolute left-0 top-0 right-0 bottom-0 w-full h-full transition-all duration-300 hover:transition-all hover:duration-300" />
-        <div className="relative z-10">
+        <div className='bg-gradient-to-b from-[#73b2a800] to-[#8CDCD0] group-hover:from-[#73b2a800] group-hover:to-[#58C2B1] absolute left-0 top-0 right-0 bottom-0 w-full h-full transition-all duration-300 hover:transition-all hover:duration-300' />
+        <a href="#" className="absolute left-0 top-0 right-0 bottom-0 w-full h-full z-20"></a>
+        <div className='relative z-10'>
           <h2 className='text-[32px] font-semibold mb-2'>OSO Search</h2>
           <p className='text-2xl font-light'>
             Delivers a{" "}
@@ -68,7 +70,9 @@ const SearchAndOtherForLaptop = () => {
                   </div>
                 )}  </>}
           </div>
-          <a className='flex justify-end items-center mt-4 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2' href="#">
+          <div
+            className='flex justify-end items-center mt-4 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2'
+          >
             <p className='pr-4'>Lean more</p>
             <svg
               width='33'
@@ -83,16 +87,15 @@ const SearchAndOtherForLaptop = () => {
                 fill='black'
               />
             </svg>
-          </a>
+          </div>
         </div>
       </div>
-
 
       <div
         className={`bg-blue-100 w-full px-8 lg:p-16 rounded-2xl group relative overflow-hidden`}
       >
-        <div className="bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] absolute left-0 top-0 right-0 bottom-0 w-full h-full" />
-        <div className="relative z-10">
+        <div className='bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] absolute left-0 top-0 right-0 bottom-0 w-full h-full' />
+        <div className='relative z-10'>
           <h2 className='text-[32px] font-semibold mb-2'>Others</h2>
           <p className='text-2xl font-light'>
             Delivers a{" "}
@@ -130,7 +133,6 @@ const SearchAndOtherForLaptop = () => {
               </>
             }
           </div>
-
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const Hero = () => {
     
         <div className='pt-8 pb-0  md:py-24'>
           <div className='flex flex-col md:gap-6 gap-2  md:mb-6'>
-            <h1 className='md:text-[64px] text-[40px] md:text-center text-center font-extrabold leading-[56px] md:leading-[80px] text-black mx-auto'>
+            <h1 className='md:text-[64px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black mx-auto'>
               A better way to use the internet.
             </h1>
             <p className='text-gray-800 md:text-center text-left md:text-[32px] text-2xl font-light leading-10'>
@@ -30,7 +30,7 @@ const Hero = () => {
             <CheckListItem title='No credit card required' />
           </div>
 
-          <Video />
+          <Video src="/assets/video/lp.mp4"/>
         </div>
      
     </section>

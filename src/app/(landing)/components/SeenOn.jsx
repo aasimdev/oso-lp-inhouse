@@ -55,30 +55,73 @@ const testimonialData = [
     image: Ciaran,
   },
 ]
-function SeenOn({}) {
+function SeenOn({ }) {
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
-  const slidesOffsetBefore = isDesktop ? 100 : 0
+  const slidesOffsetBefore = isDesktop ? 100 : 0;
+
+  const accordionData = [
+    {
+      id: 1,
+      question: "Benefits of OSO?",
+      answer: `<ul class="list-disc p-[revert] space-y-6">
+
+        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Enhanced Results:</span> OSO's advanced AI Search provides more accurate and relevant search outcomes.</li>
+
+        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Up to date & un-biased:</span> Find the information you need without the censorship or limitations of other AI platforms.</li>
+
+        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Boosted Productivity:</span> OSO does the time consuming and often boring tasks, such as reading through websites to find small bits of information you actually need, freeing you to concentrate on tasks that leverage unique human skills and creativity.</li>
+        </ul>`
+    },
+    {
+      id: 2,
+      question: "Why should I choose OSO?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">While most AI applications rely on ChatGPT or existing AI solutions that have severe limitations, OSO has created its own AI technology that provides a more robust and useful user experience.</p>`
+    },
+    {
+      id: 3,
+      question: "How is it different than other AI?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">You can use OSO Free forever with certain usage limitations such as 50 searches and chats per day. If you want to unlock the full power of OSO, it only costs $20/mo and will return 100x the value in productivity and time-savings.</p>`
+    },
+
+    {
+      id: 4,
+      question: "How Does OSO's AI Differ From Others?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`
+    },
+    {
+      id: 5,
+      question: "What is pricing?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`
+    },
+    {
+      id: 6,
+      question: "On which platforms can I access OSO?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`
+    }
+
+  ];
+
   return (
     <>
       <div className='px-6 mx-auto max-w-6xl'>
+
         <Hero />
-        {/* <div className='md:text-center text-left mb-16 px-6 mx-auto max-w-6xl'>
-          <h2 className='text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black'>
-            As Seen on
-          </h2>
-        </div> */}
+
         <SearchAndOtherForMobile />
         <SearchAndOtherForLaptop />
         <Chat />
         <Feed />
+
+        <div className='md:flex justify-center items-center pt-8 md:pt-[60px]'>
+          <NewsLetter arrowIcon label='Join Waitlist' />
+        </div>
+
+        <h2 className='text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center mt-24'>
+          Many people already feel the magic
+        </h2>
       </div>
-      <div className='md:flex justify-center items-center pt-8 md:pt-[60px]'>
-        <NewsLetter arrowIcon label='Join Waitlist' />
-      </div>
-      <h2 className='text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center mt-24'>
-        Many people already feel the magic
-      </h2>
       <div className='pb-8 mt-24 tSlider relative'>
+
         <Swiper
           spaceBetween={0}
           slidesPerView={"auto"}
@@ -164,7 +207,8 @@ function SeenOn({}) {
             ))}
         </Swiper>
       </div>
-      <FAQ />
+      <FAQ accordionData={accordionData} />
+
     </>
   )
 }

@@ -15,6 +15,9 @@ html {
 .theme-btn {
   @apply bg-purple text-white p-5 w-full sm:w-[300px] border border-purple text-2xl font-normal text-center rounded-lg inline-flex items-center justify-center gap-4 transition-all duration-300 hover:gap-5 hover:bg-[#811BFF] hover:border-[#811BFF] active:bg-[#9C4BFF] focus:bg-[#9C4BFF] focus:border-[#9C4BFF] active:border-[#9C4BFF];
 }
+.learn-btn {
+  @apply text-black  sm:w-[135px] text-base rounded-lg inline-flex items-center justify-center gap-4 transition-all duration-300 hover:gap-5;
+}
 
 .white-btn {
   @apply bg-white text-black h-12 px-6 text-base font-normal text-center rounded-lg flex items-center justify-center transition-all duration-300 hover:bg-gray-30 focus:bg-gray-500;

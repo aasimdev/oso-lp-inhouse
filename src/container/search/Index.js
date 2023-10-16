@@ -11,7 +11,8 @@ import UpdatePhone from "../../../public/assets/images/updatePhones.png"
 import UpdatePhone2 from "../../../public/assets/images/updatephone-2.png"
 
 import FAQ from "@/components/FAQ/Index"
-import Comparison from "@/components/search/comparison/Index"
+import Comparisons from "@/components/common/Comparisons/Comparisons"
+import InnerSections from "@/components/common/Comparisons/InnerSections/InnerSections"
 
 const SearchView = () => {
   return (
@@ -54,8 +55,30 @@ const SearchView = () => {
           color='vivid-blue'
         />
       </Advantages>
-
-      <Comparison />
+      <Comparisons title={"How people are using OSO Search"}>
+        <InnerSections
+          titleOne={"Stay Updated"}
+          descriptionOne={
+            "Get instant news updates like the recent Maui Fires. Watch OSO gather real-time information from diverse sources."
+          }
+          titleTwo={"Plan Your Events"}
+          descriptionTwo={
+            "Wondering about the Grand Prix in Las Vegas? From dates to ticket pricing and seat recommendations, see OSO fetch it all."
+          }
+          titleThree={"Deep Dive Reviews"}
+          descriptionThree={
+            "Looking for the best restaurant experience? Observe how OSO evaluates atmosphere, culinary highlights, and more"
+          }
+          oso='OSO'
+          chatgpt='ChatGPT'
+          phoneoneOso={"869795820"}
+          phoneOneChatGPT={"869795832"}
+          phoneTwoOso={"869795741"}
+          phoneTwoChatGPT={"869795758"}
+          phoneThreeOso={"869795782"}
+          phoneThreeChatGPT={"869795803"}
+        />
+      </Comparisons>
 
       <FAQ />
     </>

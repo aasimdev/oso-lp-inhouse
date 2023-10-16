@@ -52,12 +52,9 @@ const Feed = () => {
           className={`md:absolute bottom-0 md:-bottom-3 mt-32 md:mt-0 -mb-8 lg:mb-0  lg:order-2 right-16`}
         >
           <div className='absolute bottom-4 right-7 md:-top-[160px]  md:right-0 '>
-            <a
-              href='#'
-              target='_blank'
-              className='flex justify-end items-center transform translate-x-0 transition-transform duration-100 ease-in-out hover:translate-x-2'
-            >
-              <p className='pr-4 '>Learsn more</p>
+            <a href='#' type='submit' className={`learn-btn cursor-pointer }`}>
+              <span>Learn more</span>
+
               <svg
                 width='33'
                 height='32'

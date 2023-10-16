@@ -13,7 +13,6 @@ const AdvantageCard = ({ title, description, borderLess,  image2 , image, imageW
         <div className={`lg:absolute bottom-0 mt-6 lg:mt-0 -mb-8 lg:mb-0  ${className} ${borderLess ? 'lg:order-1 bottom-0 right-0 lg:me-0 -me-8' : 'lg:order-2 right-16 '}`}>
           <Image src={image} width={imageWidth} height={imageHeight} title={title} alt={title} className={`mx-auto ${image2 && 'seondImg'}`} />
         </div>
-        {/* {image2 && <Image src={image2} alt='' className='absolute right-7 bottom-0 w-[430px] object-cover'/>} For Second Image */}
       </div>
     </div>
   )

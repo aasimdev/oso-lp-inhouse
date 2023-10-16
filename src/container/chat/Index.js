@@ -6,8 +6,9 @@ import Banner from "@/components/common/banner/Index"
 import Testimonials from "@/components/testimonials/Index"
 import webImage from "../../../public/assets/images/updated.png"
 import SecondPhone from "../../../public/assets/images/mobilephone.png"
-import UpdatePhone from "../../../public/assets/images/updatePhones.png"
-import UpdatePhone2 from "../../../public/assets/images/updatephone-2.png"
+import PhoneUncensored from "../../../public/assets/images/chat-uncensored.png"
+import PhoneUnbiased from "../../../public/assets/images/chat-unbiased.png"
+import PhonePersonalized from "../../../public/assets/images/chat-personlized.png"
 
 import FAQ from "@/components/FAQ/Index"
 import InnerSections from "@/components/common/Comparisons/InnerSections/InnerSections"
@@ -17,7 +18,7 @@ const ChatView = () => {
   return (
     <>
       <Banner
-        title='Uncensored, intelligent AI Chat'
+        title='Uncensored, intelligent <br /> AI Chat'
         description='OSO Chat sets a new standard for AI chatbots.'
       />
 
@@ -26,33 +27,31 @@ const ChatView = () => {
         <AdvantageCard
           title='Uncensored'
           description=" OSO believes in free speech and  <span class='font-medium'>unrestricted access to knowledge,</span> ensuring you receive in-depth and unfiltered answers."
-          borderLess={true}
-          image={webImage}
-          imageWidth='532'
-          className='absolute'
-          imageHeight='427'
-          color='egg-blue'
+          borderLess={false}
+          image={PhoneUncensored}
+          imageWidth='357'
+          imageHeight='507'
+          color='light-green-adv'
         />
 
         <AdvantageCard
           title='Unbiased'
           description="OSO believes in <span class='font-medium'>allowing you to formulate your own opinions</span> and  and provides different viewpoints of sensitive topics."
           borderLess={false}
-          image={UpdatePhone}
-          image2={SecondPhone}
+          image={PhoneUnbiased}
           imageWidth='357'
           imageHeight='507'
-          color='electric-blue'
+          color='medium-green-adv'
         />
 
         <AdvantageCard
           title='Personalized'
           description="OSO <span class='font-medium'> learns from your preferences</span> over time to give you answers in the format, tone, and style that suites you best."
           borderLess={false}
-          image={UpdatePhone2}
+          image={PhonePersonalized}
           imageWidth='357'
           imageHeight='507'
-          color='vivid-blue'
+          color='green-adv'
         />
       </Advantages>
 

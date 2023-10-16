@@ -15,8 +15,9 @@ html {
 .theme-btn {
   @apply bg-purple text-white p-5 w-full sm:w-[300px] border border-purple text-2xl font-normal text-center rounded-lg inline-flex items-center justify-center gap-4 transition-all duration-300 hover:gap-5 hover:bg-[#811BFF] hover:border-[#811BFF] active:bg-[#9C4BFF] focus:bg-[#9C4BFF] focus:border-[#9C4BFF] active:border-[#9C4BFF];
 }
+
 .learn-btn {
-  @apply text-black  sm:w-[135px] text-base rounded-lg inline-flex items-center justify-center gap-4 transition-all duration-300 hover:gap-5;
+  @apply text-black sm:w-[135px] text-base rounded-lg inline-flex items-center justify-center gap-4 transition-all duration-300 hover:gap-5;
 }
 
 .white-btn {
@@ -32,12 +33,10 @@ html {
   width: 292px;
   height: calc(100% - 64px);
   position: absolute;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.6) 45%,
-    rgba(255, 255, 255, 0.8) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 45%,
+      rgba(255, 255, 255, 0.8) 100%);
   top: 32px;
   right: 0;
   z-index: 1;
@@ -48,12 +47,10 @@ html {
   width: 292px;
   height: calc(100% - 64px);
   position: absolute;
-  background: linear-gradient(
-    270deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.6) 45%,
-    rgba(255, 255, 255, 0.8) 100%
-  );
+  background: linear-gradient(270deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 45%,
+      rgba(255, 255, 255, 0.8) 100%);
   top: 32px;
   left: 0;
   z-index: 2;
@@ -67,47 +64,63 @@ html {
 .electric-blue-box {
   background: #61f3f3;
 }
+
 .vivid-blue-box {
   background: #00d8ff;
 }
 
 .egg-blue-box:after {
-  background: linear-gradient(
-    180deg,
-    rgba(140, 220, 208, 0) 0%,
-    rgba(140, 220, 208, 0.1) 86%,
-    rgba(140.37, 220.07, 207.57, 0.8) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(140, 220, 208, 0) 0%,
+      rgba(140, 220, 208, 0.1) 86%,
+      rgba(140.37, 220.07, 207.57, 0.8) 100%);
 }
 
 .electric-blue-box:after {
-  background: linear-gradient(
-    180deg,
-    rgba(8, 212, 212, 0) 0%,
-    rgba(8, 212, 212, 0.1) 86%,
-    rgba(8, 212, 212, 0.8) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(8, 212, 212, 0) 0%,
+      rgba(8, 212, 212, 0.1) 86%,
+      rgba(8, 212, 212, 0.8) 100%);
 }
+
 .vivid-blue-box::after {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 198, 234, 0) 0%,
-    rgba(0, 198, 234, 0.1) 86%,
-    rgba(0, 198, 234, 0.8) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 198, 234, 0) 0%,
+      rgba(0, 198, 234, 0.1) 86%,
+      rgba(0, 198, 234, 0.8) 100%);
 }
+
+.light-green-adv-box {
+  background: #C8FAD6;
+}
+
+.medium-green-adv-box {
+  background: #77ED8B;
+}
+
+.green-adv-box {
+  background: #09EE5D;
+}
+
+
 .gradient-seen-on-blue {
   background: linear-gradient(180deg, rgba(115, 178, 168, 0) 0%, #8cdcd0 100%);
 }
+
 .gradient-seen-on-gray {
   background: linear-gradient(180deg, #f6f9fa 0%, #dedede 100%);
 }
+
 .gradient-chat-seen-on {
   background: linear-gradient(180deg, #d0fad2 0%, #abffaf 100%);
 }
+
 .egg-blue-box:after,
 .electric-blue-box:after,
-.vivid-blue-box:after {
+.vivid-blue-box:after,
+.light-green-adv-box::after,
+.medium-green-adv-box:after,
+.green-adv-box:after {
   content: "";
   position: absolute;
   left: 0;
@@ -143,6 +156,7 @@ html {
 .h-video {
   box-shadow: 0px 16px 32px -4px rgba(151, 71, 255, 0.15);
 }
+
 .player-wrapper {
   position: relative;
   padding-top: 56.25%;
@@ -157,6 +171,7 @@ html {
 }
 
 @media (max-width: 991px) {
+
   .tSlider::after,
   .tSlider::before {
     width: 212px;
@@ -164,19 +179,23 @@ html {
 }
 
 @media (max-width: 720px) {
+
   .tSlider::after,
   .tSlider::before {
     display: none;
   }
 }
+
 .fade-in {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out; /* You can adjust the duration and timing function */
+  transition: opacity 0.5s ease-in-out;
+  /* You can adjust the duration and timing function */
 }
 
 .fade-in.show {
   opacity: 1;
 }
+
 .loading-dots {
   display: flex;
 }
@@ -201,7 +220,9 @@ html {
 .dot3 {
   animation-delay: 0.4s;
 }
+
 @keyframes bounce {
+
   0%,
   100% {
     transform: translateY(0);
@@ -213,12 +234,14 @@ html {
     background-color: #000000;
   }
 }
-.react-slideshow-container + ul.indicators .each-slideshow-indicator:before {
+
+.react-slideshow-container+ul.indicators .each-slideshow-indicator:before {
   background-color: #8e33ff !important;
   width: 16px !important;
   height: 16px !important;
 }
-.react-slideshow-container + ul.indicators li {
+
+.react-slideshow-container+ul.indicators li {
   width: 25px !important;
   height: 25px !important;
 }

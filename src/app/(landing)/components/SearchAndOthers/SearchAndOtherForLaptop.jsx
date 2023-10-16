@@ -1,13 +1,28 @@
-import React, { useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { SeenOnCard } from "../SeenOnCard"
 import Typewriter from "typewriter-effect"
 
 const SearchAndOtherForLaptop = () => {
   const [stringTypeOut, setStringTypeOut] = useState(false);
+  const [isTypingStarted, setTypingStarted] = useState(false);
+  const targetDivRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && entry.intersectionRatio === 1) {
+          setTypingStarted(true);
+        }
+      });
+    }, { threshold: 1 });
 
+    observer.observe(targetDivRef.current);
 
+    return () => {
+      observer.unobserve(targetDivRef.current);
+    };
+  }, []);
   return (
-    <div className='hidden lg:flex flex-row gap-6 justify-between'>
+    <div className='hidden lg:flex flex-row gap-6 justify-between' ref={targetDivRef}>
 
       <div
         className={`bg-blue-100 w-full px-8 lg:p-16 rounded-2xl group relative overflow-hidden transition-all duration-300`}
@@ -19,36 +34,39 @@ const SearchAndOtherForLaptop = () => {
             Delivers a{" "}
             <span className='font-medium'>comprehensive result.</span>
           </p>
+
           <div className="h-64">
-            {stringTypeOut ? (
-              <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
-                <p className='text-2xl font-medium '>
-                  🌍Top Sushi Places in Prague
-                </p>
-                <br />
-                <br />
-                <p className='text-2xl font-medium '>
-                  Yami Sushi House: A popular sushi spot praised for its exquisite
-                  sushi...
-                </p>
-              </div>
-            ) : (
-              <div
-                className={`text-[40px] h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${stringTypeOut ? "bg-black" : "default"
-                  } ${stringTypeOut ? "text-white" : "default"}`}
-              >
-                <Typewriter
-                  onInit={(typewriter) => {
-                    typewriter
-                      .typeString("Where is the best sushi restaurant in Prague? 🍣")
-                      .callFunction(() => {
-                        setStringTypeOut(true)
-                      })
-                      .stop()
-                  }}
-                />
-              </div>
-            )}
+            {isTypingStarted &&
+              <>
+                {stringTypeOut ? (
+                  <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
+                    <p className='text-2xl font-medium '>
+                      🌍Top Sushi Places in Prague
+                    </p>
+                    <br />
+                    <br />
+                    <p className='text-2xl font-medium '>
+                      Yami Sushi House: A popular sushi spot praised for its exquisite
+                      sushi...
+                    </p>
+                  </div>
+                ) : (
+                  <div
+                    className={`text-[40px] h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${stringTypeOut ? "bg-black" : "default"
+                      } ${stringTypeOut ? "text-white" : "default"}`}
+                  >
+                    <Typewriter
+                      onInit={(typewriter) => {
+                        typewriter
+                          .typeString("Where is the best sushi restaurant in Prague? 🍣")
+                          .callFunction(() => {
+                            setStringTypeOut(true)
+                          })
+                          .start()
+                      }}
+                    />
+                  </div>
+                )}  </>}
           </div>
           <a className='flex justify-end items-center mt-4 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2' href="#">
             <p className='pr-4'>Lean more</p>
@@ -81,32 +99,36 @@ const SearchAndOtherForLaptop = () => {
             <span className='font-medium'>general out-dated result.</span>
           </p>
           <div className="h-64">
-            {stringTypeOut ? (
-              <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
-                <p className='text-2xl font-medium '>
-                  don&apos;t have access to real-time information or current restaurant
-                  reviews, as my knowledge was last updated in September 2021.
-                  However, I can suggest some popular sushi places in Prague as of
-                  my last update
-                </p>
-              </div>
-            ) : (
-              <div
-                className={`text-[40px] h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${stringTypeOut ? "bg-black" : "default"
-                  } ${stringTypeOut ? "text-white" : "default"}`}
-              >
-                <Typewriter
-                  onInit={(typewriter) => {
-                    typewriter
-                      .typeString("Where is the best sushi restaurant in Prague? 🍣")
-                      .callFunction(() => {
-                        setStringTypeOut(true)
-                      })
-                      .stop()
-                  }}
-                />
-              </div>
-            )}
+            {isTypingStarted &&
+              <>
+                {stringTypeOut ? (
+                  <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
+                    <p className='text-2xl font-medium '>
+                      don&apos;t have access to real-time information or current restaurant
+                      reviews, as my knowledge was last updated in September 2021.
+                      However, I can suggest some popular sushi places in Prague as of
+                      my last update
+                    </p>
+                  </div>
+                ) : (
+                  <div
+                    className={`text-[40px] h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${stringTypeOut ? "bg-black" : "default"
+                      } ${stringTypeOut ? "text-white" : "default"}`}
+                  >
+                    <Typewriter
+                      onInit={(typewriter) => {
+                        typewriter
+                          .typeString("Where is the best sushi restaurant in Prague? 🍣")
+                          .callFunction(() => {
+                            setStringTypeOut(true)
+                          })
+                          .start()
+                      }}
+                    />
+                  </div>
+                )}
+              </>
+            }
           </div>
 
         </div>

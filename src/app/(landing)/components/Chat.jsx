@@ -3,7 +3,7 @@ import React from "react"
 
 const Chat = () => {
   return (
-    <div className='bg-gradient-to-b from-[#D0FAD2] to-[#ABFFAF] hover:from-[#D0FAD2] hover:to-[#7EF684] mt-[56px] p-8 md:p-[64px] h-full md:h-[571px] group rounded-2xl relative'>
+    <div className='mt-14 p-8 md:p-16 h-full md:h-[571px] group rounded-2xl relative lp-chat-box overflow-hidden'>
       <a href="#" className="absolute left-0 top-0 bottom-0 right-0 w-full h-full z-20" />
       <div className='flex justify-between items-start'>
         <div>

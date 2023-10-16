@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-const Video = () => {
+const Video = ({src}) => {
     const [handler, setHandler] = useState(true);
     const videoRef = useRef(null);
     const [preLoad, setPreLoad] = useState(false);
@@ -28,7 +28,7 @@ const Video = () => {
             <div className={`w-full bg-black absolute left-0 top-0 right-0 bottom-0 overflow-hidden -z-10 transition-all duration-300 h-[507px] ${preLoad ? "opacity-0" : "opacity-100"}`} />
 
             <video playsInline preload="none" muted autoPlay loop controls={!handler} className={`aspect-auto object-cover transition-all duration-300 z-10 ${preLoad ? "opacity-100" : "opacity-0"}`} loading="lazy" ref={videoRef}>
-                <source src={'/assets/video/search.mp4'} type="video/mp4" />
+                <source src={src} type="video/mp4" />
             </video>
 
             {handler &&

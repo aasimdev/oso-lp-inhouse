@@ -29,7 +29,7 @@ const Banner = ({ title, description }) => {
                         <CheckListItem title="No credit card required" />
                     </div>
 
-                    <Video />
+                    <Video src="/assets/video/search.mp4"/>
                 </div>
             </div>
         </section>

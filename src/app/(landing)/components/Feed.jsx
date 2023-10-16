@@ -5,9 +5,9 @@ import React from "react"
 const Feed = () => {
   return (
     <div
-      className={`bg-gradient-to-b from-[#FEF4CC] to-[#FEF5CC]  hover:from-[#FEF5CC] hover:to-[#FDE481] rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:h-[571px] h-[639px] md:h-full  group  z-0  mt-[56px]`}
+      className={`rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:h-[571px] h-[639px] md:h-full group z-0 mt-14 lp-feed-box`}
     >
-       <a href="#" className="absolute left-0 top-0 bottom-0 right-0 w-full h-full z-20" />
+      <a href="#" className="absolute left-0 top-0 bottom-0 right-0 w-full h-full z-20" />
       <div className='flex flex-col lg:flex-row justify-between'>
         <div className={`flex gap-4 md:gap-6 flex-col  lg:order-1`}>
           <h5 className='text-black lg:text-5xl text-3xl font-bold max-w-md'>
@@ -78,9 +78,9 @@ const Feed = () => {
             alt='Example SVG'
             width={250.8}
             height={653.895}
-            // title={title}
-            // alt={title}
-            // className={`mx-auto mt-10`}
+          // title={title}
+          // alt={title}
+          // className={`mx-auto mt-10`}
           />
         </div>
         {/* {image2 && <Image src={image2} alt='' className='absolute right-7 bottom-0 w-[430px] object-cover'/>} For Second Image */}

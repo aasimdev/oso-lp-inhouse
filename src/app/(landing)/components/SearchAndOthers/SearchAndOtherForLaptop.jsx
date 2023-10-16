@@ -31,7 +31,7 @@ const SearchAndOtherForLaptop = () => {
           </>
         }
         answerForOso={
-          <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
+          <div className='bg-black text-white p-4 rounded-[20px] mt-16 transform transition-transform duration-300 scale-95'>
             <p className='text-2xl font-medium '>
               🌍Top Sushi Places in Prague
             </p>
@@ -48,7 +48,7 @@ const SearchAndOtherForLaptop = () => {
         title={"Others "}
         className={"gradient-seen-on-gray"}
         answerForOso={
-          <div className='bg-black text-white p-4 rounded-[20px] mt-16'>
+          <div className='bg-black text-white p-4 rounded-[20px] mt-16 transform transition-transform duration-300 scale-95'>
             <p className='text-2xl font-medium '>
               don&apos;t have access to real-time information or current
               restaurant reviews, as my knowledge was last updated in September

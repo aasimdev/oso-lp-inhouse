@@ -5,7 +5,7 @@ import React from "react"
 const Feed = () => {
   return (
     <div
-      className={`rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:h-[571px] h-[639px] md:h-full  z-0 egg-blue-box mt-[56px]`}
+      className={`bg-gradient-to-b from-[#FEF4CC] to-[#FEF5CC]  hover:from-[#FEF5CC] hover:to-[#FDE481]  rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:h-[571px] h-[639px] md:h-full  group  z-0  mt-[56px]`}
     >
       <div className='flex flex-col lg:flex-row justify-between'>
         <div className={`flex gap-4 md:gap-6 flex-col  lg:order-1`}>
@@ -52,7 +52,11 @@ const Feed = () => {
           className={`md:absolute bottom-0 md:-bottom-3 mt-32 md:mt-0 -mb-8 lg:mb-0  lg:order-2 right-16`}
         >
           <div className='absolute bottom-4 right-7 md:-top-[160px]  md:right-0 '>
-            <a href='#' type='submit' className={`learn-btn cursor-pointer }`}>
+            <a
+              href='#'
+              type='submit'
+              className={`inline-flex items-center gap-3 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2 }`}
+            >
               <span>Learn more</span>
 
               <svg

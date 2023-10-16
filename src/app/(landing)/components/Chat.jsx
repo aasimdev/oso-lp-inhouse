@@ -3,7 +3,7 @@ import React from "react"
 
 const Chat = () => {
   return (
-    <div className='bg-gradient-to-b from-[#D0FAD2] to-[#ABFFAF] hover:from-[#D0FAD2] hover:to-[#7EF684] mt-[56px] p-8 md:p-[64px] h-full md:h-[571px] rounded-2xl'>
+    <div className='bg-gradient-to-b from-[#D0FAD2] to-[#ABFFAF] hover:from-[#D0FAD2] hover:to-[#7EF684] mt-[56px] p-8 md:p-[64px] h-full md:h-[571px] group rounded-2xl'>
       <div className='flex justify-between items-start'>
         <div>
           <p className='text-2xl md:text-[32px] md:text-5xl font-bold'>Chat</p>
@@ -13,7 +13,10 @@ const Chat = () => {
           </p>
         </div>
         <div>
-          <a href="#" type='submit' className={`learn-btn cursor-pointer }`}>
+          <a
+            href='#'
+            className={`hidden md:inline-flex items-center gap-3 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2  }`}
+          >
             <span>Learn more</span>
 
             <svg
@@ -30,7 +33,6 @@ const Chat = () => {
               />
             </svg>
           </a>
-         
         </div>
       </div>
       <div className='flex gap-4 md:gap-[52.59px] items-center  mt-8 md:mt-[88px]'>
@@ -71,7 +73,10 @@ const Chat = () => {
         </div>
       </div>
       <div>
-        <div className='md:hidden flex justify-end items-center cursor-pointer pt-[47.5px]'>
+        <a
+          href='#'
+          className='md:hidden flex justify-end items-center cursor-pointer pt-[47.5px] '
+        >
           <p className='pr-4'>Lean more</p>
           <svg
             width='33'
@@ -86,7 +91,7 @@ const Chat = () => {
               fill='black'
             />
           </svg>
-        </div>
+        </a>
       </div>
     </div>
   )

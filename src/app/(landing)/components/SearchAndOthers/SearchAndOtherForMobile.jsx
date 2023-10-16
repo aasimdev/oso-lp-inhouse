@@ -40,7 +40,7 @@ const SearchAndOtherForMobile = () => {
         <SwiperSlide className=' pb-20 '>
           <SeenOnCard
             className={
-              "bg-gradient-to-b from-[#ffffff00] to-[#8CDCD0] hover:from-[#ffffff00] hover:to-[#58C2B1]"
+              "bg-gradient-to-b from-[#ffffff00] to-[#8CDCD0] hover:from-[#ffffff00] hover:to-[#58C2B1] bg-blue-100"
             }
             title={"OSO Search"}
             learnMore={

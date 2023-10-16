@@ -32,9 +32,7 @@ export const SeenOnCard = ({ className, learnMore, title, answerForOso }) => {
           />
         </div>
       )}
-      <div className='flex justify-end  items-center pb-[38px] mt-12 transform translate-x-0 transition-transform duration-100 ease-in-out hover:translate-x-2'>
-        {learnMore}
-      </div>
+      <div className='flex justify-end pb-[38px] mt-12'>{learnMore}</div>
     </div>
   )
 }

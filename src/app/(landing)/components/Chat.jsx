@@ -13,8 +13,9 @@ const Chat = () => {
           </p>
         </div>
         <div>
-          <a className='hidden md:flex justify-end items-center transform translate-x-0 transition-transform duration-100 ease-in-out hover:translate-x-2'>
-            <p className='pr-4'>Lean more</p>
+          <a href="#" type='submit' className={`learn-btn cursor-pointer }`}>
+            <span>Learn more</span>
+
             <svg
               width='33'
               height='32'
@@ -29,6 +30,7 @@ const Chat = () => {
               />
             </svg>
           </a>
+         
         </div>
       </div>
       <div className='flex gap-4 md:gap-[52.59px] items-center  mt-8 md:mt-[88px]'>

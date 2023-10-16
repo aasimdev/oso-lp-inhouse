@@ -58,17 +58,17 @@ const ChatView = () => {
 
       <Comparisons title={"How OSO Chat transforms AI"}>
         <InnerSections
-          titleOne={"Stay Updated"}
+          titleOne={"Customizable"}
           descriptionOne={
-            "Get instant news updates like the recent Maui Fires. Watch OSO gather real-time information from diverse sources."
+            "Unlike other AI Chats, OSO enables you to select the AI model that suites you best."
           }
-          titleTwo={"Plan Your Events"}
+          titleTwo={"Visually-appealing"}
           descriptionTwo={
-            "Wondering about the Grand Prix in Las Vegas? From dates to ticket pricing and seat recommendations, see OSO fetch it all."
+            "View answers in bite-sized chunks with beautifully crafted visuals to make digesting information easy."
           }
-          titleThree={"Deep Dive Reviews"}
+          titleThree={"Intelligent"}
           descriptionThree={
-            "Looking for the best restaurant experience? Observe how OSO evaluates atmosphere, culinary highlights, and more"
+            "Trained until Sept. 2023 and continuously learning."
           }
           oso='OSO'
           chatgpt='ChatGPT'

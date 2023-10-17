@@ -63,7 +63,7 @@ const SearchAndOtherForMobile = () => {
       >
         <SwiperSlide className=" pb-20 ">
           <div
-            className={` bg-gradient-to-b from-[#ffffff00] to-[#8CDCD0] hover:from-[#ffffff00] hover:to-[#58C2B1] bg-blue-100 w-full md:w-[532px]  group  p-8 rounded-2xl flex flex-col  gap-4`}
+            className={` bg-gradient-to-b from-[#ffffff00] to-[#8CDCD0] hover:from-[#ffffff00] hover:to-[#58C2B1] bg-blue-100 w-full md:w-[532px]  group  p-8 rounded-2xl flex flex-col`}
           >
             <div>
               <h2 className="text-[32px] font-semibold ">OSO Search</h2>
@@ -76,7 +76,7 @@ const SearchAndOtherForMobile = () => {
             </div>
             <div className="h-[400px]">
               {isTypingStarted && stringTypeOut ? (
-                <div className="bg-black text-white rounded-[20px] p-4 mt-16 ">
+                <div className="bg-black text-white rounded-[20px] p-4 md:mt-16 mt-[56px] ">
                   <p className="text-xl md:text-2xl font-medium ">
                     🌍Top Sushi Places in Prague
                   </p>
@@ -88,7 +88,9 @@ const SearchAndOtherForMobile = () => {
                   </p>
                 </div>
               ) : (
-                <div className={`text-[40px] font-normal rounded-[20px]  `}>
+                <div
+                  className={`text-[40px] font-normal rounded-[20px] mt-[56px] `}
+                >
                   <Typewriter
                     onInit={(typewriter) => {
                       typewriter
@@ -124,7 +126,7 @@ const SearchAndOtherForMobile = () => {
         </SwiperSlide>
         <SwiperSlide className=" pb-20">
           <div
-            className={`bg-blue-100 bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] w-full md:w-[532px]   p-8 rounded-2xl flex flex-col  gap-4`}
+            className={`bg-blue-100 bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] w-full md:w-[532px]   p-8 rounded-2xl flex flex-col  `}
           >
             <div>
               <h2 className="text-[32px] font-semibold ">Others</h2>
@@ -137,7 +139,7 @@ const SearchAndOtherForMobile = () => {
             </div>
             <div className="h-[400px]">
               {isTypingStarted && stringTypeOut ? (
-                <div className="bg-black text-white rounded-[20px] p-4  mt-16">
+                <div className="bg-black text-white rounded-[20px] p-4  md:mt-16 mt-[56px]">
                   <p className="text-xl md:text-2xl font-normal">
                     don&apos;t have access to real-time information or current
                     restaurant reviews, as my knowledge was last updated in
@@ -146,7 +148,9 @@ const SearchAndOtherForMobile = () => {
                   </p>
                 </div>
               ) : (
-                <div className={`text-4xl font-normal rounded-[20px]  `}>
+                <div
+                  className={`text-[40px] font-normal rounded-[20px] mt-[56px]   `}
+                >
                   <Typewriter
                     onInit={(typewriter) => {
                       typewriter

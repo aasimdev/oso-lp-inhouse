@@ -100,7 +100,7 @@ const ChatView = () => {
         <InnerSections
           titleOne={"Customizable"}
           descriptionOne={
-            "Unlike other AI Chats, OSO enables you to select the AI model that suites you best."
+            "Unlike other AI Chats, OSO enables you to select the AI model that suites you best. "
           }
           titleTwo={"Visually-appealing"}
           descriptionTwo={
@@ -110,14 +110,14 @@ const ChatView = () => {
           descriptionThree={
             "Trained until Sept. 2023 and continuously learning."
           }
-          oso='OSO'
-          chatgpt='ChatGPT'
-          phoneoneOso={"869795820"}
-          phoneOneChatGPT={"869795832"}
-          phoneTwoOso={"869795741"}
-          phoneTwoChatGPT={"869795758"}
-          phoneThreeOso={"869795782"}
-          phoneThreeChatGPT={"869795803"}
+          // oso='OSO'
+          // chatgpt='ChatGPT'
+          phoneoneOso={"123123"}
+          // phoneOneChatGPT={"869795832"}
+          phoneTwoOso={"456456"}
+          // phoneTwoChatGPT={"869795758"}
+          phoneThreeOso={"789789"}
+          // phoneThreeChatGPT={"869795803"}
         />
       </Comparisons>
 

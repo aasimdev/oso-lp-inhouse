@@ -232,28 +232,40 @@ const InnerSections = ({
           <div className='right-elemetns relative overflow-hidden w-full flex '>
             <div className='w-full h-full relative overflow-hidden'>
               <div
-                className={`phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 absolute left-0 top-0 right-0 bottom-0 opacity-0 transition-opacity duration-300 ease-in-out ${
+                className={`phoneWrap flex flex-nowrap md:${
+                  phoneOneChatGPT ? "justify-end" : " justify-center"
+                }  0 md:mt-0 mt-16 absolute left-0 top-0 right-0 bottom-0 opacity-0 transition-opacity duration-300 ease-in-out ${
                   divVisibility.stay ? "opacity-100" : ""
                 }`}
               >
-                <Phone title={oso} obj={phoneoneOso} />
-                <Phone title={chatgpt} obj={phoneOneChatGPT} />
+                {phoneoneOso && <Phone title={oso} obj={phoneoneOso} />}
+                {phoneOneChatGPT && (
+                  <Phone title={chatgpt} obj={phoneOneChatGPT} />
+                )}
               </div>
               <div
-                className={`phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 absolute left-0 top-0 right-0 bottom-0 opacity-0 transition-opacity duration-300 ease-in-out ${
+                className={`phoneWrap flex flex-nowrap md:${
+                  phoneTwoChatGPT ? "justify-end" : "justify-center"
+                } 0 md:mt-0 mt-16 absolute left-0 top-0 right-0 bottom-0 opacity-0 transition-opacity duration-300 ease-in-out ${
                   divVisibility.plan ? "opacity-100" : ""
                 }`}
               >
-                <Phone title={oso} obj={phoneTwoOso} />
-                <Phone title={chatgpt} obj={phoneTwoChatGPT} />
+                {phoneTwoOso && <Phone title={oso} obj={phoneTwoOso} />}
+                {phoneTwoChatGPT && (
+                  <Phone title={chatgpt} obj={phoneTwoChatGPT} />
+                )}
               </div>
               <div
-                className={`phoneWrap flex flex-nowrap md:justify-end 0 md:mt-0 mt-16 absolute left-0 top-0 right-0 bottom-0 opacity-0 transition-opacity duration-300 ease-in-out ${
+                className={`phoneWrap flex flex-nowrap md:${
+                  phoneThreeChatGPT ? "justify-end" : "justify-center"
+                } 0 md:mt-0 mt-16 absolute left-0 top-0 right-0 bottom-0 opacity-0 transition-opacity duration-300 ease-in-out ${
                   divVisibility.deep ? "opacity-100" : ""
                 }`}
               >
-                <Phone title={oso} obj={phoneThreeOso} />
-                <Phone title={chatgpt} obj={phoneThreeChatGPT} />
+                {phoneThreeOso && <Phone title={oso} obj={phoneThreeOso} />}
+                {phoneThreeChatGPT && (
+                  <Phone title={chatgpt} obj={phoneThreeChatGPT} />
+                )}
               </div>
             </div>
           </div>

@@ -7,7 +7,6 @@ const Comparisons = ({ title, children }) => {
       <div className='px-6 mx-auto max-w-6xl'>
         <div className='py-16 md:text-center text-start'>
           <h3 className='md:text-5xl text-[40px] leading-tight font-bold text-black md:leading-[80px]'>
-            {/* How people are using OSO Search */}
             {title}
           </h3>
         </div>

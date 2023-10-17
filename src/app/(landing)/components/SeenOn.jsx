@@ -103,15 +103,15 @@ function SeenOn({}) {
         <Chat />
         <Feed />
 
-        <div className="md:flex justify-center items-center pt-8 md:pt-[60px]">
+        <div className="md:flex justify-center items-center pt-12 md:pt-[60px]">
           <NewsLetter arrowIcon label="Join Waitlist" />
         </div>
 
-        <h2 className="text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center mt-24">
+        <h2 className="text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center md:mt-24 mt-[88px] ">
           Many people already feel the magic
         </h2>
       </div>
-      <div className="pb-8 mt-24 tSlider relative">
+      <div className="md:pb-8 md:mt-24 mt-16 tSlider relative">
         <Swiper
           spaceBetween={0}
           slidesPerView={"auto"}

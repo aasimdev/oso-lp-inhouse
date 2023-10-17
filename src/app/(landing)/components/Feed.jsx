@@ -4,7 +4,7 @@ import React from "react";
 const Feed = () => {
   return (
     <div
-      className={`rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:h-[571px] h-[639px] md:h-full group z-0 mt-14 lp-feed-box`}
+      className={`rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:h-[571px] h-[639px] md:h-full group z-0 md:mt-14 mt-12 lp-feed-box`}
     >
       <a
         href="#"

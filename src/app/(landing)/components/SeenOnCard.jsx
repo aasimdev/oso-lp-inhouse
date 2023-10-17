@@ -14,7 +14,7 @@ export const SeenOnCard = ({
       <h2 className='text-[32px] font-semibold lg:px-2'>{title}</h2>
       <p className='text-2xl font-light lg:px-2'>
         Delivers a{" "}
-        <strong className='text-2xl font-medium '>comprehensive result.</strong>
+        <strong className='text-2xl font-medium '>general out-dated result</strong>
       </p>
       {stringTypeOut ? (
         answerForOso

@@ -158,14 +158,16 @@ const InnerSections = ({
               >
                 <SwiperSlide className='!h-auto'>
                   <div className='each-slide-effect'>
-                    <Phone title='OSO' obj='869795820' />
+                    <Phone title={oso} obj={phoneoneOso} />
                   </div>
                 </SwiperSlide>
-                <SwiperSlide className='!h-auto'>
-                  <div className='each-slide-effect'>
-                    <Phone title='ChatGPT' obj='869795832' />
-                  </div>
-                </SwiperSlide>
+                {phoneOneChatGPT && (
+                  <SwiperSlide className='!h-auto'>
+                    <div className='each-slide-effect'>
+                      <Phone title={chatgpt} obj={phoneOneChatGPT} />
+                    </div>
+                  </SwiperSlide>
+                )}
               </Swiper>
             </div>
           )}
@@ -199,14 +201,16 @@ const InnerSections = ({
               >
                 <SwiperSlide className='!h-auto'>
                   <div className='each-slide-effect'>
-                    <Phone title='OSO' obj='869795741' />
+                    <Phone title={oso} obj={phoneTwoOso} />
                   </div>
                 </SwiperSlide>
-                <SwiperSlide className='!h-auto'>
-                  <div className='each-slide-effect'>
-                    <Phone title='ChatGPT' obj='869795758' />
-                  </div>
-                </SwiperSlide>
+                {phoneTwoChatGPT && (
+                  <SwiperSlide className='!h-auto'>
+                    <div className='each-slide-effect'>
+                      <Phone title={chatgpt} obj={phoneTwoChatGPT} />
+                    </div>
+                  </SwiperSlide>
+                )}
               </Swiper>
             </div>
           )}
@@ -291,14 +295,16 @@ const InnerSections = ({
               >
                 <SwiperSlide className='!h-auto'>
                   <div className='each-slide-effect'>
-                    <Phone title='OSO' obj='869795782' />
+                    <Phone title={oso} obj={phoneThreeOso} />
                   </div>
                 </SwiperSlide>
-                <SwiperSlide className='!h-auto'>
-                  <div className='each-slide-effect'>
-                    <Phone title='ChatGPT' obj='869795803' />
-                  </div>
-                </SwiperSlide>
+                {phoneThreeChatGPT && (
+                  <SwiperSlide className='!h-auto'>
+                    <div className='each-slide-effect'>
+                      <Phone title={chatgpt} obj={phoneThreeChatGPT} />
+                    </div>
+                  </SwiperSlide>
+                )}
               </Swiper>
             </div>
           </>

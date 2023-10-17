@@ -11,9 +11,40 @@ import UpdatePhone from "../../../public/assets/images/updatePhones.png"
 import UpdatePhone2 from "../../../public/assets/images/updatephone-2.png"
 
 import FAQ from "@/components/FAQ/Index"
-import Comparison from "@/components/search/comparison/Index"
+import Comparisons from "@/components/common/Comparisons/Comparisons"
+import InnerSections from "@/components/common/Comparisons/InnerSections/InnerSections"
 
 const SearchView = () => {
+  const accordionData = [
+    {
+      id: 1,
+      question: "Benefits of OSO?",
+      answer: `<ul class="list-disc p-[revert] space-y-6">
+
+        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Enhanced Results:</span> OSO's advanced AI Search provides more accurate and relevant search outcomes.</li>
+
+        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Up to date & un-biased:</span> Find the information you need without the censorship or limitations of other AI platforms.</li>
+
+        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Boosted Productivity:</span> OSO does the time consuming and often boring tasks, such as reading through websites to find small bits of information you actually need, freeing you to concentrate on tasks that leverage unique human skills and creativity.</li>
+        </ul>`
+    },
+    {
+      id: 2,
+      question: "How is OSO Search different from other AI",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">While most AI applications rely on ChatGPT or existing AI solutions that have severe limitations, OSO has created its own AI technology that provides a more robust and useful user experience.</p>`
+    },
+    {
+      id: 3,
+      question: "What is the Pricing?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">You can use OSO Free forever with certain usage limitations such as 50 searches and chats per day. If you want to unlock the full power of OSO, it only costs $20/mo and will return 100x the value in productivity and time-savings.</p>`
+    },
+
+    {
+      id: 4,
+      question: "How do I get started?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`
+    }
+  ];
   return (
     <>
       <Banner
@@ -54,10 +85,32 @@ const SearchView = () => {
           color='vivid-blue'
         />
       </Advantages>
+      <Comparisons title={"How people are using OSO Search"}>
+        <InnerSections
+          titleOne={"Stay Updated"}
+          descriptionOne={
+            "Get instant news updates like the recent Maui Fires. Watch OSO gather real-time information from diverse sources."
+          }
+          titleTwo={"Plan Your Events"}
+          descriptionTwo={
+            "Wondering about the Grand Prix in Las Vegas? From dates to ticket pricing and seat recommendations, see OSO fetch it all."
+          }
+          titleThree={"Deep Dive Reviews"}
+          descriptionThree={
+            "Looking for the best restaurant experience? Observe how OSO evaluates atmosphere, culinary highlights, and more"
+          }
+          oso='OSO'
+          chatgpt='ChatGPT'
+          phoneoneOso={"869795820"}
+          phoneOneChatGPT={"869795832"}
+          phoneTwoOso={"869795741"}
+          phoneTwoChatGPT={"869795758"}
+          phoneThreeOso={"869795782"}
+          phoneThreeChatGPT={"869795803"}
+        />
+      </Comparisons>
 
-      <Comparison />
-
-      <FAQ />
+      <FAQ accordionData={accordionData}/>
     </>
   )
 }

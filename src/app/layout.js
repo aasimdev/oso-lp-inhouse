@@ -90,7 +90,7 @@ function RootLayoutContent({ children }) {
             width='1'
             alt="facebook"
             style={{ display: "none" }}
-            src='https://www.facebook.com/tr?id=1321535528493263&ev=PageView&noscript=1'
+            // src='https://www.facebook.com/tr?id=1321535528493263&ev=PageView&noscript=1'
           />
         </noscript>
 

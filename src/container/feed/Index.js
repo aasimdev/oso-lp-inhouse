@@ -11,13 +11,11 @@ import UpdatePhone from "../../../public/assets/images/updatePhones.png"
 import UpdatePhone2 from "../../../public/assets/images/updatephone-2.png"
 
 import FAQ from "@/components/FAQ/Index"
-import Comparison from "@/components/search/comparison/Index"
 
 const FeedView = () => {
   return (
     <>
       <Banner
-       
         title='OSO Feed'
         description='Summarize your custom news, then inquire with specific questions.'
       />
@@ -56,7 +54,7 @@ const FeedView = () => {
         />
       </Advantages>
 
-      <Comparison />
+      {/* <Comparison /> */}
 
       <FAQ />
     </>

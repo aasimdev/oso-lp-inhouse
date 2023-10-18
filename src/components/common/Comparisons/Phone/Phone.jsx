@@ -1,14 +1,19 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-const Phone = ({ title, obj }) => {
+const Phone = ({ title, obj, chatPage }) => {
   return (
     <div
-      className={`flex flex-col gap-6 md:gap-8 relative ${
+      className={`flex flex-col ${!chatPage && "gap-6 md:gap-8"} relative ${
         title === "OSO" ? "lg:-mr-11" : ""
       }`}
     >
-      <p className="text-center text-[21px] font-medium text-black">{title}</p>
+      {!chatPage && (
+        <p className="text-center text-[21px] font-medium text-black">
+          {title}
+        </p>
+      )}
+
       <div className="relative xl:max-w-full max-w-[348px] xl:h-full mx-auto">
         <Image
           src={`/assets/gif/${obj}.gif`}

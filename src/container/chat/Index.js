@@ -11,7 +11,7 @@ import PhoneUnbiased from "../../../public/assets/images/chat-unbiased.png";
 import PhonePersonalized from "../../../public/assets/images/chat-personlized.png";
 
 import FAQ from "@/components/FAQ/Index";
-import InnerSections from "@/components/common/Comparisons/InnerSections/InnerSections";
+import InnerChatSection from "@/components/common/Comparisons/InnerChatSection/InnerChatSection";
 import Comparisons from "@/components/common/Comparisons/Comparisons";
 
 const ChatView = () => {
@@ -62,6 +62,28 @@ const ChatView = () => {
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
     },
   ];
+  const comparisonContent = [
+    {
+      title: "Customizable",
+      description:
+        "Unlike other AI Chats, OSO enables you to select the AI model that suites you best. ",
+      image: "123123",
+      id: "stay",
+    },
+    {
+      title: "Visually-appealing",
+      description:
+        "View answers in bite-sized chunks with beautifully crafted visuals to make digesting information easy. ",
+      image: "456456",
+      id: "plan",
+    },
+    {
+      title: "Intelligent",
+      description: "Trained until Sept. 2023 and continuously learning.",
+      image: "789789",
+      id: "deep",
+    },
+  ];
   return (
     <>
       <Banner
@@ -103,28 +125,7 @@ const ChatView = () => {
       </Advantages>
 
       <Comparisons title={"How OSO Chat transforms AI"}>
-        <InnerSections
-          titleOne={"Customizable"}
-          descriptionOne={
-            "Unlike other AI Chats, OSO enables you to select the AI model that suites you best. "
-          }
-          titleTwo={"Visually-appealing"}
-          descriptionTwo={
-            "View answers in bite-sized chunks with beautifully crafted visuals to make digesting information easy."
-          }
-          titleThree={"Intelligent"}
-          descriptionThree={
-            "Trained until Sept. 2023 and continuously learning."
-          }
-          // oso='OSO'
-          // chatgpt='ChatGPT'
-          phoneoneOso={"123123"}
-          // phoneOneChatGPT={"869795832"}
-          phoneTwoOso={"456456"}
-          // phoneTwoChatGPT={"869795758"}
-          phoneThreeOso={"789789"}
-          // phoneThreeChatGPT={"869795803"}
-        />
+        <InnerChatSection comparisonContent={comparisonContent} />
       </Comparisons>
 
       <FAQ accordionData={accordionData} />

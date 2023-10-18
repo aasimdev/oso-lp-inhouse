@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useState } from "react"
-import gsap from "gsap"
-import ScrollTrigger from "gsap/dist/ScrollTrigger"
-import { useMediaQuery } from "react-responsive"
-import { Slide } from "react-slideshow-image"
-import { FreeMode, Navigation, Pagination } from "swiper/modules"
-import "react-slideshow-image/dist/styles.css"
-import NewsLetter from "@/components/news-letter"
-import { Swiper, SwiperSlide } from "swiper/react"
+import React, { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { useMediaQuery } from "react-responsive";
+import { Slide } from "react-slideshow-image";
+import { FreeMode, Navigation, Pagination } from "swiper/modules";
+import "react-slideshow-image/dist/styles.css";
+import NewsLetter from "@/components/news-letter";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import ComparisonContent from "../ComparisonContent/ComparisonContent"
-import Phone from "../Phone/Phone"
+import ComparisonContent from "../ComparisonContent/ComparisonContent";
+import Phone from "../Phone/Phone";
 
 const InnerSections = ({
   titleOne,
@@ -27,30 +27,30 @@ const InnerSections = ({
   phoneThreeOso,
   phoneThreeChatGPT,
 }) => {
-  const container = useRef()
-  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
-  const [isMobile, setIsMobile] = useState(false)
+  const container = useRef();
+  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
+  const [isMobile, setIsMobile] = useState(false);
   const [divVisibility, setDivVisibility] = useState({
     stay: true,
     plan: false,
     deep: false,
-  })
+  });
 
-  gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger);
 
   const updateIsMobile = () => {
-    setIsMobile(window.innerWidth <= 720)
-  }
+    setIsMobile(window.innerWidth <= 720);
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      updateIsMobile()
-      window.addEventListener("resize", updateIsMobile)
+      updateIsMobile();
+      window.addEventListener("resize", updateIsMobile);
       return () => {
-        window.removeEventListener("resize", updateIsMobile)
-      }
+        window.removeEventListener("resize", updateIsMobile);
+      };
     }
-  }, [])
+  }, []);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -110,8 +110,8 @@ const InnerSections = ({
       stay: target === "stay" ? !prevVisibility.stay : false,
       plan: target === "plan" ? !prevVisibility.plan : false,
       deep: target === "deep" ? !prevVisibility.deep : false,
-    }))
-  }
+    }));
+  };
 
   const settings = {
     arrows: false,
@@ -120,16 +120,16 @@ const InnerSections = ({
     indicators: true,
     autoplay: false,
     infinite: false,
-  }
+  };
 
   return (
     <div
-      id='animation-container'
-      className='flex flex-col md:justify-center top-0 bg-white pt-8 md:pt-24'
+      id="animation-container"
+      className="flex flex-col md:justify-center top-0 bg-white pt-8 md:pt-24"
       //   ref={container}
     >
-      <div className='md:flex md:flex-nowrap flex-wrap justify-between'>
-        <div className='contentWrap w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto mb-12 sm:mb-0'>
+      <div className="md:flex md:flex-nowrap flex-wrap justify-between">
+        <div className="contentWrap w-full md:w-[346px] md:mt-[52px] flex flex-col gap-12 md:gap-9 flex-grow-0 flex-shrink-0 basis-auto md:mb-12 mb-8 sm:mb-0">
           {/* Stay Updated */}
           <div
             className={`text-block opacity-100 cursor-pointer ${
@@ -146,7 +146,7 @@ const InnerSections = ({
 
           {/* Stay Updated Mobile */}
           {!isDesktop && (
-            <div className='sm:mx-0'>
+            <div className="sm:mx-0">
               <Swiper
                 spaceBetween={-20}
                 slidesPerView={1.15}
@@ -154,16 +154,16 @@ const InnerSections = ({
                   clickable: true,
                 }}
                 modules={[Pagination]}
-                className='!z-auto mobSwiper'
+                className="!z-auto mobSwiper"
               >
-                <SwiperSlide className='!h-auto'>
-                  <div className='each-slide-effect'>
+                <SwiperSlide className="!h-auto">
+                  <div className="each-slide-effect">
                     <Phone title={oso} obj={phoneoneOso} />
                   </div>
                 </SwiperSlide>
                 {phoneOneChatGPT && (
-                  <SwiperSlide className='!h-auto'>
-                    <div className='each-slide-effect'>
+                  <SwiperSlide className="!h-auto">
+                    <div className="each-slide-effect">
                       <Phone title={chatgpt} obj={phoneOneChatGPT} />
                     </div>
                   </SwiperSlide>
@@ -189,7 +189,7 @@ const InnerSections = ({
           {/* Plan your event mobile*/}
 
           {!isDesktop && (
-            <div className='sm:mx-0'>
+            <div className="sm:mx-0">
               <Swiper
                 spaceBetween={-20}
                 slidesPerView={1.15}
@@ -197,16 +197,16 @@ const InnerSections = ({
                   clickable: true,
                 }}
                 modules={[Pagination]}
-                className='!z-auto mobSwiper'
+                className="!z-auto mobSwiper"
               >
-                <SwiperSlide className='!h-auto'>
-                  <div className='each-slide-effect'>
+                <SwiperSlide className="!h-auto">
+                  <div className="each-slide-effect">
                     <Phone title={oso} obj={phoneTwoOso} />
                   </div>
                 </SwiperSlide>
                 {phoneTwoChatGPT && (
-                  <SwiperSlide className='!h-auto'>
-                    <div className='each-slide-effect'>
+                  <SwiperSlide className="!h-auto">
+                    <div className="each-slide-effect">
                       <Phone title={chatgpt} obj={phoneTwoChatGPT} />
                     </div>
                   </SwiperSlide>
@@ -233,8 +233,8 @@ const InnerSections = ({
 
         {/* Desktop phones */}
         {!isMobile && (
-          <div className='right-elemetns relative overflow-hidden w-full flex '>
-            <div className='w-full h-full relative overflow-hidden'>
+          <div className="right-elemetns relative overflow-hidden w-full flex ">
+            <div className="w-full h-full relative overflow-hidden">
               <div
                 className={`phoneWrap flex flex-nowrap md:${
                   phoneOneChatGPT ? "justify-end" : " justify-center"
@@ -283,7 +283,7 @@ const InnerSections = ({
               description={descriptionOne}
               isMobile={isMobile}
             />
-            <div className=' sm:mx-0 mt-12 sm:mt-0'>
+            <div className=" sm:mx-0 mt-12 sm:mt-0">
               <Swiper
                 spaceBetween={-20}
                 slidesPerView={1.15}
@@ -291,16 +291,16 @@ const InnerSections = ({
                   clickable: true,
                 }}
                 modules={[Pagination]}
-                className='!z-auto mobSwiper'
+                className="!z-auto mobSwiper"
               >
-                <SwiperSlide className='!h-auto'>
-                  <div className='each-slide-effect'>
+                <SwiperSlide className="!h-auto">
+                  <div className="each-slide-effect">
                     <Phone title={oso} obj={phoneThreeOso} />
                   </div>
                 </SwiperSlide>
                 {phoneThreeChatGPT && (
-                  <SwiperSlide className='!h-auto'>
-                    <div className='each-slide-effect'>
+                  <SwiperSlide className="!h-auto">
+                    <div className="each-slide-effect">
                       <Phone title={chatgpt} obj={phoneThreeChatGPT} />
                     </div>
                   </SwiperSlide>
@@ -311,6 +311,6 @@ const InnerSections = ({
         )}
       </div>
     </div>
-  )
-}
-export default InnerSections
+  );
+};
+export default InnerSections;

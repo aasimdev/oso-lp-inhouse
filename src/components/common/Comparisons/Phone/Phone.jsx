@@ -14,7 +14,11 @@ const Phone = ({ title, obj, chatPage }) => {
         </p>
       )}
 
-      <div className="relative xl:max-w-full max-w-[348px] xl:h-full mx-auto">
+      <div
+        className={`relative xl:max-w-full max-w-[348px] ${
+          chatPage && "w-[299px]"
+        } xl:h-full mx-auto`}
+      >
         <Image
           src={`/assets/gif/${obj}.gif`}
           alt=""

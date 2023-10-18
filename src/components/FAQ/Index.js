@@ -20,15 +20,17 @@ const FAQ = ({ accordionData }) => {
         </h3>
       </div>
       <div className="mt-16 md:mt-20 flex flex-col gap-4 md:gap-7">
-        {accordionData.map((item) => (
-          <Question
-            key={item.id}
-            question={item.question}
-            answer={item.answer}
-            isOpen={openAccordionId === item.id}
-            toggleAccordion={() => toggleAccordion(item.id)}
-          />
-        ))}
+        {accordionData &&
+          accordionData.length > 0 &&
+          accordionData.map((item) => (
+            <Question
+              key={item.id}
+              question={item.question}
+              answer={item.answer}
+              isOpen={openAccordionId === item.id}
+              toggleAccordion={() => toggleAccordion(item.id)}
+            />
+          ))}
       </div>
     </section>
   );

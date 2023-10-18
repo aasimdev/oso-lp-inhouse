@@ -1,32 +1,25 @@
-"use client"
-import React, { useEffect, useRef, useState } from "react"
-import AdvantageCard from "@/components/advantages/AdvantageCard"
-import Advantages from "@/components/advantages/Index"
-import Banner from "@/components/common/banner/Index"
-import Testimonials from "@/components/testimonials/Index"
-import webImage from "../../../public/assets/images/updated.png"
-import SecondPhone from "../../../public/assets/images/mobilephone.png"
-import PhoneUncensored from "../../../public/assets/images/chat-uncensored.png"
-import PhoneUnbiased from "../../../public/assets/images/chat-unbiased.png"
-import PhonePersonalized from "../../../public/assets/images/chat-personlized.png"
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import AdvantageCard from "@/components/advantages/AdvantageCard";
+import Advantages from "@/components/advantages/Index";
+import Banner from "@/components/common/banner/Index";
+import Testimonials from "@/components/testimonials/Index";
+import webImage from "../../../public/assets/images/updated.png";
+import SecondPhone from "../../../public/assets/images/mobilephone.png";
+import PhoneUncensored from "../../../public/assets/images/chat-uncensored.png";
+import PhoneUnbiased from "../../../public/assets/images/chat-unbiased.png";
+import PhonePersonalized from "../../../public/assets/images/chat-personlized.png";
 
-import FAQ from "@/components/FAQ/Index"
-import InnerSections from "@/components/common/Comparisons/InnerSections/InnerSections"
-import Comparisons from "@/components/common/Comparisons/Comparisons"
+import FAQ from "@/components/FAQ/Index";
+import InnerChatSection from "@/components/common/Comparisons/InnerChatSection/InnerChatSection";
+import Comparisons from "@/components/common/Comparisons/Comparisons";
 
 const ChatView = () => {
   const accordionData = [
     {
       id: 1,
-      question: "Benefits of OSO?",
-      answer: `<ul class="list-disc p-[revert] space-y-6">
-
-        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Enhanced Results:</span> OSO's advanced AI Search provides more accurate and relevant search outcomes.</li>
-
-        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Up to date & un-biased:</span> Find the information you need without the censorship or limitations of other AI platforms.</li>
-
-        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Boosted Productivity:</span> OSO does the time consuming and often boring tasks, such as reading through websites to find small bits of information you actually need, freeing you to concentrate on tasks that leverage unique human skills and creativity.</li>
-        </ul>`,
+      question: "Benefits of OSO Chat?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Chat offers multiple language models so users can choose the one that is best for their objective and delivers answers in a visually-appealing and easy to read format.</p>`,
     },
     {
       id: 2,
@@ -68,75 +61,76 @@ const ChatView = () => {
       question: "How do I get started?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
     },
-  ]
+  ];
+  const comparisonContent = [
+    {
+      title: "Customizable",
+      description:
+        "Unlike other AI Chats, OSO enables you to select the AI model that suites you best. ",
+      image: "123123",
+      id: "stay",
+    },
+    {
+      title: "Visually-appealing",
+      description:
+        "View answers in bite-sized chunks with beautifully crafted visuals to make digesting information easy. ",
+      image: "456456",
+      id: "plan",
+    },
+    {
+      title: "Intelligent",
+      description: "Trained until Sept. 2023 and continuously learning.",
+      image: "789789",
+      id: "deep",
+    },
+  ];
   return (
     <>
       <Banner
-        title='Uncensored, intelligent <br /> AI Chat'
-        description='OSO Chat sets a new standard for AI chatbots.'
+        title="Uncensored, intelligent <br /> AI Chat"
+        description="OSO Chat sets a new standard for AI chatbots."
       />
 
       <Testimonials />
-      <Advantages title='Advantages of OSO Chat'>
+      <Advantages title="Advantages of OSO Chat">
         <AdvantageCard
-          title='Uncensored'
+          title="Uncensored"
           description=" OSO believes in free speech and  <span class='font-medium'>unrestricted access to knowledge,</span> ensuring you receive in-depth and unfiltered answers."
           borderLess={false}
           image={PhoneUncensored}
-          imageWidth='357'
-          imageHeight='507'
-          color='light-green-adv'
+          imageWidth="357"
+          imageHeight="507"
+          color="light-green-adv"
         />
 
         <AdvantageCard
-          title='Unbiased'
+          title="Unbiased"
           description="OSO believes in <span class='font-medium'>allowing you to formulate your own opinions</span> and  and provides different viewpoints of sensitive topics."
           borderLess={false}
           image={PhoneUnbiased}
-          imageWidth='357'
-          imageHeight='507'
-          color='medium-green-adv'
+          imageWidth="357"
+          imageHeight="507"
+          color="medium-green-adv"
         />
 
         <AdvantageCard
-          title='Personalized'
+          title="Personalized"
           description="OSO <span class='font-medium'> learns from your preferences</span> over time to give you answers in the format, tone, and style that suites you best."
           borderLess={false}
           image={PhonePersonalized}
-          imageWidth='357'
-          imageHeight='507'
-          color='green-adv'
+          imageWidth="357"
+          imageHeight="507"
+          color="green-adv"
         />
       </Advantages>
 
       <Comparisons title={"How OSO Chat transforms AI"}>
-        <InnerSections
-          titleOne={"Customizable"}
-          descriptionOne={
-            "Unlike other AI Chats, OSO enables you to select the AI model that suites you best. "
-          }
-          titleTwo={"Visually-appealing"}
-          descriptionTwo={
-            "View answers in bite-sized chunks with beautifully crafted visuals to make digesting information easy."
-          }
-          titleThree={"Intelligent"}
-          descriptionThree={
-            "Trained until Sept. 2023 and continuously learning."
-          }
-          // oso='OSO'
-          // chatgpt='ChatGPT'
-          phoneoneOso={"123123"}
-          // phoneOneChatGPT={"869795832"}
-          phoneTwoOso={"456456"}
-          // phoneTwoChatGPT={"869795758"}
-          phoneThreeOso={"789789"}
-          // phoneThreeChatGPT={"869795803"}
-        />
+        <InnerChatSection comparisonContent={comparisonContent} />
       </Comparisons>
 
       <FAQ accordionData={accordionData} />
     </>
-  )
-}
+  );
+};
 
-export default ChatView
+export default ChatView;

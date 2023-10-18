@@ -62,34 +62,35 @@ function SeenOn({}) {
   const accordionData = [
     {
       id: 1,
-      question: "Benefits of OSO?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus dictum lorem suscipit congue. Nunc malesuada accumsan eros, ac tincidunt dui viverra quis. Proin vestibulum purus eu sapien sagittis maximus. Nulla a massa facilisis, sollicitudin erat ut, molestie ipsum. Donec molestie id elit a viverra. Cras porta a libero non ultricies. Morbi ut purus orci. Nunc eleifend eget orci id pellentesque. Aliquam suscipit placerat mollis. Nullam sed ipsum sit amet massa porttitor commodo non sed augue. Nullam pulvinar blandit feugiat. Curabitur ac tincidunt velit, id molestie magna.</p>`,
+      question: "Why should I choose OSO?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO offers a more advanced and user-friendly suite of AI tools and services than any competitor and is constantly evolving, putting the needs of its users first.</p>`,
     },
     {
       id: 2,
-      question: "Why should I choose OSO?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus dictum lorem suscipit congue. Nunc malesuada accumsan eros, ac tincidunt dui viverra quis. Proin vestibulum purus eu sapien sagittis maximus. Nulla a massa facilisis, sollicitudin erat ut, molestie ipsum. Donec molestie id elit a viverra. Cras porta a libero non ultricies. Morbi ut purus orci. Nunc eleifend eget orci id pellentesque. Aliquam suscipit placerat mollis. Nullam sed ipsum sit amet massa porttitor commodo non sed augue. Nullam pulvinar blandit feugiat. Curabitur ac tincidunt velit, id molestie magna.</p>`,
+      question: "What is the difference between OSO Search and Chat?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">AI Chatbots are limited in the real-time information they can gather due to how they are created and trained.
+      <br /><br />
+      OSO Search solves this by using AI to scan the internet for the latest information about your question and provides a static answer.
+      <br /><br />
+      OSO Chat on the other-hand is an advanced AI Chatbot trained until September 2023 which continuously learns as more questions are asked.
+      <br /><br />
+      The core difference is that OSO Chat is interactive and users can have a back-and-forth conversation, while OSO Search simply delivers an answer so you don't have to waste time reading through many websites to find it.</p>`,
     },
     {
       id: 3,
-      question: "How is it different than other AI?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus dictum lorem suscipit congue. Nunc malesuada accumsan eros, ac tincidunt dui viverra quis. Proin vestibulum purus eu sapien sagittis maximus. Nulla a massa facilisis, sollicitudin erat ut, molestie ipsum. Donec molestie id elit a viverra. Cras porta a libero non ultricies. Morbi ut purus orci. Nunc eleifend eget orci id pellentesque. Aliquam suscipit placerat mollis. Nullam sed ipsum sit amet massa porttitor commodo non sed augue. Nullam pulvinar blandit feugiat. Curabitur ac tincidunt velit, id molestie magna.</p>`,
+      question: "What does uncensored & unbiased mean?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO believes in unrestricted access to knowledge; therefore, many of the censorship constraints surrounding topics on other AI platforms are lifted with OSO Chat. By creating our own uncensored LLM, we are able to provide users with an AI Chat that is actually useful to them and can give them the answers they need.<br /><br />Unbiased, means that we train OSO models with all available information and always try our best to take a neutral stance, outside of politics or popular opinion. We believe in letting our users make their own decisions on complex subjects.</p>`,
     },
 
     {
       id: 4,
-      question: "How Does OSO's AI Differ From Others?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus dictum lorem suscipit congue. Nunc malesuada accumsan eros, ac tincidunt dui viverra quis. Proin vestibulum purus eu sapien sagittis maximus. Nulla a massa facilisis, sollicitudin erat ut, molestie ipsum. Donec molestie id elit a viverra. Cras porta a libero non ultricies. Morbi ut purus orci. Nunc eleifend eget orci id pellentesque. Aliquam suscipit placerat mollis. Nullam sed ipsum sit amet massa porttitor commodo non sed augue. Nullam pulvinar blandit feugiat. Curabitur ac tincidunt velit, id molestie magna.</p>`,
+      question: "What is the pricing?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">You can use OSO Free forever with certain usage limitations such as 50 searches and chats per day. If you want to unlock the full power of OSO, it only costs $20/mo and will return 100x the value in productivity and time-savings.</p>`,
     },
     {
       id: 5,
-      question: "What is pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus dictum lorem suscipit congue. Nunc malesuada accumsan eros, ac tincidunt dui viverra quis. Proin vestibulum purus eu sapien sagittis maximus. Nulla a massa facilisis, sollicitudin erat ut, molestie ipsum. Donec molestie id elit a viverra. Cras porta a libero non ultricies. Morbi ut purus orci. Nunc eleifend eget orci id pellentesque. Aliquam suscipit placerat mollis. Nullam sed ipsum sit amet massa porttitor commodo non sed augue. Nullam pulvinar blandit feugiat. Curabitur ac tincidunt velit, id molestie magna.</p>`,
-    },
-    {
-      id: 6,
-      question: "On which platforms can I access OSO?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque faucibus dictum lorem suscipit congue. Nunc malesuada accumsan eros, ac tincidunt dui viverra quis. Proin vestibulum purus eu sapien sagittis maximus. Nulla a massa facilisis, sollicitudin erat ut, molestie ipsum. Donec molestie id elit a viverra. Cras porta a libero non ultricies. Morbi ut purus orci. Nunc eleifend eget orci id pellentesque. Aliquam suscipit placerat mollis. Nullam sed ipsum sit amet massa porttitor commodo non sed augue. Nullam pulvinar blandit feugiat. Curabitur ac tincidunt velit, id molestie magna.</p>`,
+      question: "How do I get started?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
     },
   ];
 

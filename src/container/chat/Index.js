@@ -91,6 +91,7 @@ const ChatView = () => {
       <Banner
         title="Uncensored, intelligent <br /> AI Chat"
         description="OSO Chat sets a new standard for AI chatbots."
+        videoId="v1Z1rmm4SqU"
       />
 
       <Testimonials />

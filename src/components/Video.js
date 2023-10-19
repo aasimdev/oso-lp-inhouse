@@ -33,7 +33,9 @@ const Video = ({ src, videoId }) => {
           class="w-full aspect-video"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${
             handler ? 1 : 0
-          }&loop=1&controls=${handler ? 0 : 1}&modestbranding=1&showinfo=0`}
+          }&loop=1&controls=${
+            handler ? 0 : 1
+          }&modestbranding=1&showinfo=0&playlist=${videoId}`}
           frameborder="0"
         ></iframe>
       ) : (

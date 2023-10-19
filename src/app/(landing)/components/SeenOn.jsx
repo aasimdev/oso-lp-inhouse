@@ -102,7 +102,6 @@ function SeenOn({}) {
       <div className="px-6 mx-auto max-w-6xl">
         <Hero />
 
-        {/* <SearchAndOtherForMobile /> */}
         <SearchAndOtherForLaptop />
         <Chat />
         <Feed />

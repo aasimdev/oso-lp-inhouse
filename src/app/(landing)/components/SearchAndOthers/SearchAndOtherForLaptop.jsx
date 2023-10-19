@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Typewriter from "typewriter-effect";
 
@@ -20,7 +21,7 @@ const SearchAndOtherForLaptop = () => {
     observer.observe(targetDivRef.current);
 
     return () => {
-      observer.unobserve(targetDivRef.current);
+      if (targetDivRef.current) observer.unobserve(targetDivRef?.current);
     };
   }, []);
   return (
@@ -32,10 +33,10 @@ const SearchAndOtherForLaptop = () => {
         className={`bg-blue-100 w-full px-8 lg:p-16 p-8 rounded-2xl group relative overflow-hidden transition-all duration-300`}
       >
         <div className="bg-gradient-to-b from-[#73b2a800] to-[#8CDCD0] group-hover:from-[#73b2a800] group-hover:to-[#58C2B1] absolute left-0 top-0 right-0 bottom-0 w-full h-full transition-all duration-300 hover:transition-all hover:duration-300" />
-        <a
+        <Link
           href="/search"
           className="absolute left-0 top-0 right-0 bottom-0 w-full h-full z-20"
-        ></a>
+        />
         <div className="relative z-10">
           <p className="text-[32px] md:text-5xl font-bold">OSO Search</p>
           <p className="text-2xl font-light mt-2">

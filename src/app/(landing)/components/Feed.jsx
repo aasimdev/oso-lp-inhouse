@@ -12,10 +12,9 @@ const Feed = () => {
       />
       <div className="flex justify-between items-start max-w-md">
         <div>
-          <p className="text-[32px] md:text-5xl font-bold">Feed</p>
-          <p className="text-2xl font-light mt-2 ">
-            <strong className="text-2xl font-medium">Summarize</strong> your
-            custom news, then inquire with specific questions
+          <p className="text-[32px] md:text-5xl font-bold">OSO News</p>
+          <p className="text-2xl font-light mt-2 ">Interactive
+            <strong className="text-2xl font-medium"> news you can chat with</strong> to stay updated without having to read through articles.
           </p>
         </div>
       </div>

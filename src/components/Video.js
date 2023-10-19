@@ -33,7 +33,7 @@ const Video = ({ src, homepage }) => {
           class="w-full aspect-video"
           src={`https://www.youtube.com/embed/v1Z1rmm4SqU?autoplay=1&mute=${
             handler ? 1 : 0
-          }&loop=1&controls=${handler ? 0 : 1}&playlist=v1Z1rmm4SqU&showinfo=0`}
+          }&loop=1&controls=${handler ? 0 : 1}&modestbranding=1&showinfo=0`}
           frameborder="0"
         ></iframe>
       ) : (

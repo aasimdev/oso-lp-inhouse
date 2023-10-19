@@ -66,11 +66,11 @@ const SearchAndOtherForMobile = () => {
             className={` bg-gradient-to-b from-[#ffffff00] to-[#8CDCD0] hover:from-[#ffffff00] hover:to-[#58C2B1] bg-blue-100 w-full md:w-[532px]  group  p-8 rounded-2xl flex flex-col`}
           >
             <div>
-              <h2 className="text-[32px] font-semibold ">OSO Search</h2>
-              <p className="text-2xl font-light ">
+              <p className="text-[32px] md:text-5xl font-bold">OSO Search</p>
+              <p className="text-2xl font-light mt-2">
                 Delivers a{" "}
                 <strong className="text-2xl font-medium ">
-                  comprehensive result.
+                  comprehensive answer.
                 </strong>
               </p>
             </div>
@@ -93,14 +93,16 @@ const SearchAndOtherForMobile = () => {
                 >
                   <Typewriter
                     onInit={(typewriter) => {
-                      typewriter
-                        .typeString(
-                          "Where is the best sushi restaurant in Prague? 🍣"
-                        )
-                        .callFunction(() => {
-                          setStringTypeOut(true);
-                        })
-                        .start();
+                     typewriter
+                          .changeDelay(40)
+                          .typeString(
+                            "Where is the best sushi restaurant in Prague? 🍣"
+                          )
+                          .pauseFor(2000)
+                          .callFunction(() => {
+                            setStringTypeOut(true);
+                          })
+                          .start();
                     }}
                   />
                 </div>
@@ -129,18 +131,18 @@ const SearchAndOtherForMobile = () => {
             className={`bg-blue-100 bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] w-full md:w-[532px]   p-8 rounded-2xl flex flex-col  `}
           >
             <div>
-              <h2 className="text-[32px] font-semibold ">Others</h2>
-              <p className="text-2xl font-light ">
-                Delivers a{" "}
+              <p className="text-[32px] md:text-5xl font-bold">Others</p>
+              <p className="text-2xl font-light mt-2">
+                Delivers an{" "}
                 <strong className="text-2xl font-medium ">
-                  general out-dated result.
+                  unhelpful, outdated result.
                 </strong>
               </p>
             </div>
             <div className="h-[400px]">
               {isTypingStarted && stringTypeOut ? (
                 <div className="bg-black text-white rounded-[20px] p-4  md:mt-16 mt-[56px]">
-                  <p className="text-xl md:text-2xl font-normal">
+                  <p className="text-xl md:text-2xl font-normal">I 
                     don&apos;t have access to real-time information or current
                     restaurant reviews, as my knowledge was last updated in
                     September 2021. However, I can suggest some popular sushi
@@ -153,14 +155,16 @@ const SearchAndOtherForMobile = () => {
                 >
                   <Typewriter
                     onInit={(typewriter) => {
-                      typewriter
-                        .typeString(
-                          "Where is the best sushi restaurant in Prague? 🍣"
-                        )
-                        .callFunction(() => {
-                          setStringTypeOut(true);
-                        })
-                        .start();
+                        typewriter
+                          .changeDelay(40)
+                          .typeString(
+                            "Where is the best sushi restaurant in Prague? 🍣"
+                          )
+                          .pauseFor(2000)
+                          .callFunction(() => {
+                            setStringTypeOut(true);
+                          })
+                          .start();
                     }}
                   />
                 </div>

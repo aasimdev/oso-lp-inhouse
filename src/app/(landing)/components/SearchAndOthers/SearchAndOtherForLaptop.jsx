@@ -37,10 +37,10 @@ const SearchAndOtherForLaptop = () => {
           className="absolute left-0 top-0 right-0 bottom-0 w-full h-full z-20"
         ></a>
         <div className="relative z-10">
-          <h2 className="text-[32px] font-semibold mb-2">OSO Search</h2>
-          <p className="text-2xl font-light">
+           <p className="text-[32px] md:text-5xl font-bold">OSO Search</p>
+          <p className="text-2xl font-light mt-2">
             Delivers a{" "}
-            <span className="font-medium">comprehensive result.</span>
+            <span className="font-medium">comprehensive answer.</span>
           </p>
 
           <div className="h-64">
@@ -67,9 +67,11 @@ const SearchAndOtherForLaptop = () => {
                     <Typewriter
                       onInit={(typewriter) => {
                         typewriter
+                          .changeDelay(40)
                           .typeString(
                             "Where is the best sushi restaurant in Prague? 🍣"
                           )
+                          .pauseFor(2000)
                           .callFunction(() => {
                             setStringTypeOut(true);
                           })
@@ -105,21 +107,21 @@ const SearchAndOtherForLaptop = () => {
       >
         <div className="bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] absolute left-0 top-0 right-0 bottom-0 w-full h-full" />
         <div className="relative z-10">
-          <h2 className="text-[32px] font-semibold mb-2">Others</h2>
-          <p className="text-2xl font-light">
-            Delivers a{" "}
-            <span className="font-medium">general out-dated result.</span>
+           <p className="text-[32px] md:text-5xl font-bold">Others</p>
+          <p className="text-2xl font-light mt-2">
+            Delivers an{" "}
+            <span className="font-medium">unhelpful, outdated resu;lt.</span>
           </p>
           <div className="h-64">
             {isTypingStarted && (
               <>
                 {stringTypeOut ? (
                   <div className="bg-black text-white p-4 rounded-[20px] mt-16">
-                    <p className="text-2xl font-normal ">
+                    <p className="text-2xl font-normal ">I 
                       don&apos;t have access to real-time information or current
                       restaurant reviews, as my knowledge was last updated in
                       September 2021. However, I can suggest some popular sushi
-                      places in Prague as of my last update
+                      places in Prague as of my last update.
                     </p>
                   </div>
                 ) : (
@@ -131,9 +133,11 @@ const SearchAndOtherForLaptop = () => {
                     <Typewriter
                       onInit={(typewriter) => {
                         typewriter
+                          .changeDelay(40)
                           .typeString(
                             "Where is the best sushi restaurant in Prague? 🍣"
                           )
+                          .pauseFor(2000)
                           .callFunction(() => {
                             setStringTypeOut(true);
                           })

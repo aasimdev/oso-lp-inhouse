@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import Typewriter from "typewriter-effect";
 
@@ -6,23 +7,36 @@ const SearchAndOtherForLaptop = () => {
   const [stringTypeOut, setStringTypeOut] = useState(false);
   const targetDivRef = useRef(null);
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio === 1) {
-            setTypingStarted(true);
-          }
-        });
-      },
-      { threshold: 1 }
-    );
+    const isElementInViewport = () => {
+      if (targetDivRef.current) {
+        const element = targetDivRef.current;
+        const elementRect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
 
-    observer.observe(targetDivRef.current);
+        const threshold = 0.5;
+
+        if (elementRect.top < windowHeight * threshold && elementRect.bottom > 0) {
+          setTypingStarted(true);
+        } else {
+          setTypingStarted(false);
+        }
+      }
+    };
+
+    const handleScroll = () => {
+      isElementInViewport();
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    isElementInViewport();
 
     return () => {
-      observer.unobserve(targetDivRef.current);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  
   return (
     <div
       className="flex flex-col lg:flex-row lg:gap-6 md:gap-14 gap-12 justify-between pt-16 md:pt-0"
@@ -32,10 +46,10 @@ const SearchAndOtherForLaptop = () => {
         className={`bg-blue-100 w-full px-8 lg:p-16 p-8 rounded-2xl group relative overflow-hidden transition-all duration-300`}
       >
         <div className="bg-gradient-to-b from-[#73b2a800] to-[#8CDCD0] group-hover:from-[#73b2a800] group-hover:to-[#58C2B1] absolute left-0 top-0 right-0 bottom-0 w-full h-full transition-all duration-300 hover:transition-all hover:duration-300" />
-        <a
+        <Link
           href="/search"
           className="absolute left-0 top-0 right-0 bottom-0 w-full h-full z-20"
-        ></a>
+        ></Link>
         <div className="relative z-10">
           <p className="text-[32px] md:text-5xl font-bold">OSO Search</p>
           <p className="text-2xl font-light mt-2">
@@ -60,9 +74,8 @@ const SearchAndOtherForLaptop = () => {
                   </div>
                 ) : (
                   <div
-                    className={`text-[40px] h-[280px] md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
-                      stringTypeOut ? "bg-black" : "default"
-                    } ${stringTypeOut ? "text-white" : "default"}`}
+                    className={`text-[40px] h-[280px] md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${stringTypeOut ? "bg-black" : "default"
+                      } ${stringTypeOut ? "text-white" : "default"}`}
                   >
                     <Typewriter
                       onInit={(typewriter) => {
@@ -126,9 +139,8 @@ const SearchAndOtherForLaptop = () => {
                   </div>
                 ) : (
                   <div
-                    className={`text-[40px] h-[280px] md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
-                      stringTypeOut ? "bg-black" : "default"
-                    } ${stringTypeOut ? "text-white" : "default"}`}
+                    className={`text-[40px] h-[280px] md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${stringTypeOut ? "bg-black" : "default"
+                      } ${stringTypeOut ? "text-white" : "default"}`}
                   >
                     <Typewriter
                       onInit={(typewriter) => {

@@ -139,7 +139,7 @@ const Header = () => {
         ref={header}
       >
         <nav className='flex justify-between items-center md:flex-nowrap flex-wrap px-6 py-4 mx-auto max-w-6xl'>
-          <Link href='/search'>
+          <Link href='/'>
             <Image
               src={"/assets/logo/oso.png"}
               alt='logo'

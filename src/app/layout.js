@@ -9,6 +9,7 @@ import gsap from "gsap"
 import Loader from "@/components/loader"
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3"
 import Image from "next/image"
+import { Router } from 'next/router';
 
 export default function RootLayout({ children }) {
   return (
@@ -29,29 +30,31 @@ export default function RootLayout({ children }) {
 }
 
 function RootLayoutContent({ children }) {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => {
-      // Use GSAP to animate the loader out
       gsap.to(".loader", {
-        duration: 0.5, // Animation duration
-        opacity: 0, // Fade out opacity
-        scale: 0.5, // Zoom out to 50% of original size
+        duration: 0.5,
+        opacity: 0,
+        scale: 0.5,
         onComplete: () => {
-          setLoading(true) // Set loading to true after the animation completes
-          // Use GSAP to animate the content in
+          setLoading(true)
           gsap.fromTo(".content", { opacity: 0 }, { duration: 0.5, opacity: 1 })
         },
       })
     }, 1500)
     return () => clearTimeout(timer)
-  }, [])
+  }, []);
+
+
   const { showSidebar } = useMenu("")
+
   return (
     <html lang='en'>
       <head>
         {/* <-- Global site tag (gtag.js) - Google Analytics --> */}
-          <Script
+        <Script
           async
           src='https://www.googletagmanager.com/gtag/js?id=AW-11336429150'
         ></Script>
@@ -90,7 +93,7 @@ function RootLayoutContent({ children }) {
             width='1'
             alt="facebook"
             style={{ display: "none" }}
-            // src='https://www.facebook.com/tr?id=1321535528493263&ev=PageView&noscript=1'
+          // src='https://www.facebook.com/tr?id=1321535528493263&ev=PageView&noscript=1'
           />
         </noscript>
 

@@ -15,7 +15,10 @@ const SearchAndOtherForLaptop = () => {
 
         const threshold = 0.5;
 
-        if (elementRect.top < windowHeight * threshold && elementRect.bottom > 0) {
+        if (
+          elementRect.top < windowHeight * threshold &&
+          elementRect.bottom > 0
+        ) {
           setTypingStarted(true);
         } else {
           setTypingStarted(false);
@@ -27,16 +30,15 @@ const SearchAndOtherForLaptop = () => {
       isElementInViewport();
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     isElementInViewport();
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  
   return (
     <div
       className="flex flex-col lg:flex-row lg:gap-6 md:gap-14 gap-12 justify-between pt-16 md:pt-0"
@@ -74,8 +76,9 @@ const SearchAndOtherForLaptop = () => {
                   </div>
                 ) : (
                   <div
-                    className={`text-[40px] h-[280px] md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${stringTypeOut ? "bg-black" : "default"
-                      } ${stringTypeOut ? "text-white" : "default"}`}
+                    className={`text-[40px] min-h-[216px] h-auto md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
+                      stringTypeOut ? "bg-black" : "default"
+                    } ${stringTypeOut ? "text-white" : "default"}`}
                   >
                     <Typewriter
                       onInit={(typewriter) => {
@@ -139,8 +142,9 @@ const SearchAndOtherForLaptop = () => {
                   </div>
                 ) : (
                   <div
-                    className={`text-[40px] h-[280px] md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${stringTypeOut ? "bg-black" : "default"
-                      } ${stringTypeOut ? "text-white" : "default"}`}
+                    className={`text-[40px] min-h-[216px] h-auto md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
+                      stringTypeOut ? "bg-black" : "default"
+                    } ${stringTypeOut ? "text-white" : "default"}`}
                   >
                     <Typewriter
                       onInit={(typewriter) => {

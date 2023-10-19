@@ -5,8 +5,6 @@ import Banner from "@/components/common/banner/Index";
 import Testimonials from "@/components/testimonials/Index";
 import React from "react";
 
-import webImage from "../../../public/assets/images/updated.png";
-import SecondPhone from "../../../public/assets/images/mobilephone.png";
 import UpdatePhone from "../../../public/assets/images/updatePhones.png";
 import UpdatePhone2 from "../../../public/assets/images/updatephone-2.png";
 
@@ -14,6 +12,7 @@ import FAQ from "@/components/FAQ/Index";
 import Comparisons from "@/components/common/Comparisons/Comparisons";
 import InnerChatSection from "@/components/common/Comparisons/InnerChatSection/InnerChatSection";
 import GoogleAnalytics from "@/utils/google-analytics/anaylics";
+import BrandLogos from "@/components/common/BrandLogos";
 
 const NewsView = () => {
   const accordionData = [
@@ -57,14 +56,14 @@ const NewsView = () => {
       title: "AI-Powered Summaries",
       description:
         "Saving you time by pulling the most important information from the article.",
-      image: "123123",
+      image: "newsemptyphone",
       id: "stay",
     },
     {
       title: "Chat with your personal AI News Reporter",
       description:
         "Find the specific information you're looking for by asking OSO. ",
-      image: "456456",
+      image: "newsemptyphone",
       id: "plan",
     },
   ];
@@ -79,15 +78,14 @@ const NewsView = () => {
         videoId="gAfKNS92eYM"
       />
 
-      {/* <Testimonials  /> */}
+      <BrandLogos />
 
       <Advantages title="Advantages of OSO News" page="news">
         <AdvantageCard
           title="Interactive"
           description="Skip reading through articles; <span class='font-medium'>just ask questions</span> to get the information you need."
           borderLess={false}
-          image={UpdatePhone}
-          // image2={SecondPhone}
+          image="/assets/images/newsphone1.png"
           imageWidth="357"
           imageHeight="507"
           color="egg-blue"
@@ -96,8 +94,7 @@ const NewsView = () => {
           title="Personalized"
           description="Receive daily news headlines <span class='font-medium'>tailored to your specific interests.</span>"
           borderLess={false}
-          image={UpdatePhone2}
-          // image2={SecondPhone}
+          image="/assets/images/newsphone2.png"
           imageWidth="357"
           imageHeight="507"
           color="electric-blue"
@@ -106,7 +103,7 @@ const NewsView = () => {
           title="Always up-to-date"
           description="OSO <span class='font-medium'>continuously scans the internet for the latest developments</span> to keep you updated on news as it breaks."
           borderLess={false}
-          image={UpdatePhone2}
+          image="/assets/images/newsphone3.png"
           imageWidth="357"
           imageHeight="507"
           color="vivid-blue"

@@ -4,7 +4,7 @@ import Button from "../Button";
 import Video from "@/components/Video";
 import NewsLetter from "@/components/news-letter";
 
-const Banner = ({ title, description, videoId }) => {
+const Banner = ({ title, description, videoId, page }) => {
   return (
     <section className="bg-gradient-to-b from-purple-400">
       <div className="px-6 mx-auto max-w-6xl">
@@ -28,7 +28,7 @@ const Banner = ({ title, description, videoId }) => {
           </div>
 
           <div className="mt-6 md:mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">
-            <CheckListItem title="Uncensored" />
+            <CheckListItem title={page ? "Interactive" : "Uncensored"} />
             <CheckListItem title="Up-to-date" />
             <CheckListItem title="No credit card required" />
           </div>

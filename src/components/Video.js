@@ -35,7 +35,7 @@ const Video = ({ src, videoId }) => {
             handler ? 1 : 0
           }&loop=1&controls=${
             handler ? 0 : 1
-          }&modestbranding=1&showinfo=0&playlist=${videoId}`}
+          }&modestbranding=1&showinfo=0&rel=0`}
           frameborder="0"
         ></iframe>
       ) : (

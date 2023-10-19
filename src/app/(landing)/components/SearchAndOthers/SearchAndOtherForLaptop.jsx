@@ -60,7 +60,7 @@ const SearchAndOtherForLaptop = () => {
                   </div>
                 ) : (
                   <div
-                    className={`text-[40px] h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
+                    className={`text-[40px] h-[280px] md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
                       stringTypeOut ? "bg-black" : "default"
                     } ${stringTypeOut ? "text-white" : "default"}`}
                   >
@@ -126,7 +126,7 @@ const SearchAndOtherForLaptop = () => {
                   </div>
                 ) : (
                   <div
-                    className={`text-[40px] h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
+                    className={`text-[40px] h-[280px] md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
                       stringTypeOut ? "bg-black" : "default"
                     } ${stringTypeOut ? "text-white" : "default"}`}
                   >

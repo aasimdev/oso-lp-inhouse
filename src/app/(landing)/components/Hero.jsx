@@ -29,7 +29,7 @@ const Hero = () => {
           <CheckListItem title="No credit card required" />
         </div>
 
-        <Video src="/assets/video/lp.mp4" homepage />
+        <Video videoId="v1Z1rmm4SqU" />
       </div>
     </section>
   );

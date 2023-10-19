@@ -5,7 +5,7 @@ const Chat = () => {
   return (
     <div className="mt-14 p-8 md:p-16 md:pb-20 pb-24 h-full lg:h-[571px] group rounded-2xl relative lp-chat-box overflow-hidden">
       <a
-        href="#"
+        href="/chat"
         className="absolute left-0 top-0 bottom-0 right-0 w-full h-full z-20"
       />
       <div className="flex justify-between items-start">

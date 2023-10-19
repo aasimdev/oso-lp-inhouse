@@ -7,14 +7,19 @@ const Feed = () => {
       className={`rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:h-[571px] h-[639px] md:h-full group z-0 md:mt-14 mt-12 lp-feed-box`}
     >
       <a
-        href="#"
+        href="/feed"
         className="absolute left-0 top-0 bottom-0 right-0 w-full h-full z-20"
       />
       <div className="flex justify-between items-start max-w-md">
         <div>
           <p className="text-[32px] md:text-5xl font-bold">OSO News</p>
-          <p className="text-2xl font-light mt-2 ">Interactive
-            <strong className="text-2xl font-medium"> news you can chat with</strong> to stay updated without having to read through articles.
+          <p className="text-2xl font-light mt-2 ">
+            Interactive
+            <strong className="text-2xl font-medium">
+              {" "}
+              news you can chat with
+            </strong>{" "}
+            to stay updated without having to read through articles.
           </p>
         </div>
       </div>

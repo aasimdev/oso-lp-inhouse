@@ -21,6 +21,8 @@ import Feed from "./Feed";
 import SearchAndOtherForMobile from "./SearchAndOthers/SearchAndOtherForMobile";
 import SearchAndOtherForLaptop from "./SearchAndOthers/SearchAndOtherForLaptop";
 import FAQ from "@/components/FAQ/Index";
+import GoogleAnalytics from "@/utils/google-analytics/anaylics";
+
 const testimonialData = [
   {
     name: "Jason K.",
@@ -96,10 +98,11 @@ function SeenOn({}) {
 
   return (
     <>
+      <GoogleAnalytics gaTrackingID="G-2N2XN2FQX1" />
       <div className="px-6 mx-auto max-w-6xl">
         <Hero />
 
-        <SearchAndOtherForMobile />
+        {/* <SearchAndOtherForMobile /> */}
         <SearchAndOtherForLaptop />
         <Chat />
         <Feed />

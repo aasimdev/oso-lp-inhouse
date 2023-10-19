@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const Video = ({ src, homepage }) => {
+const Video = ({ src, videoId }) => {
   const [handler, setHandler] = useState(true);
   const videoRef = useRef(null);
   const [preLoad, setPreLoad] = useState(false);
@@ -26,14 +26,16 @@ const Video = ({ src, homepage }) => {
       <div
         className={`w-full bg-black absolute left-0 top-0 right-0 bottom-0 overflow-hidden -z-10 transition-all duration-300 h-[507px]`}
       />
-      {homepage ? (
+      {videoId ? (
         <iframe
           id="ytplayer"
           type="text/html"
           class="w-full aspect-video"
-          src={`https://www.youtube.com/embed/v1Z1rmm4SqU?autoplay=1&mute=${
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=${
             handler ? 1 : 0
-          }&loop=1&controls=${handler ? 0 : 1}&modestbranding=1&showinfo=0`}
+          }&loop=1&controls=${
+            handler ? 0 : 1
+          }&modestbranding=1&showinfo=0&playlist=${videoId}`}
           frameborder="0"
         ></iframe>
       ) : (

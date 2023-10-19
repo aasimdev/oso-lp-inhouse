@@ -13,6 +13,7 @@ import PhonePersonalized from "../../../public/assets/images/chat-personlized.pn
 import FAQ from "@/components/FAQ/Index";
 import InnerChatSection from "@/components/common/Comparisons/InnerChatSection/InnerChatSection";
 import Comparisons from "@/components/common/Comparisons/Comparisons";
+import GoogleAnalytics from "@/utils/google-analytics/anaylics";
 
 const ChatView = () => {
   const accordionData = [
@@ -86,9 +87,11 @@ const ChatView = () => {
   ];
   return (
     <>
+      <GoogleAnalytics gaTrackingID="G-WZHB0QP262" />
       <Banner
         title="Uncensored, intelligent <br /> AI Chat"
         description="OSO Chat sets a new standard for AI chatbots."
+        videoId="v1Z1rmm4SqU"
       />
 
       <Testimonials />

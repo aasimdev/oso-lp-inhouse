@@ -25,25 +25,25 @@ const SearchAndOtherForLaptop = () => {
   }, []);
   return (
     <div
-      className="hidden lg:flex flex-row gap-6 justify-between"
+      className="flex flex-col lg:flex-row lg:gap-6 md:gap-14 gap-12 justify-between pt-16 md:pt-0"
       ref={targetDivRef}
     >
       <div
-        className={`bg-blue-100 w-full px-8 lg:p-16 rounded-2xl group relative overflow-hidden transition-all duration-300`}
+        className={`bg-blue-100 w-full px-8 lg:p-16 p-8 rounded-2xl group relative overflow-hidden transition-all duration-300`}
       >
         <div className="bg-gradient-to-b from-[#73b2a800] to-[#8CDCD0] group-hover:from-[#73b2a800] group-hover:to-[#58C2B1] absolute left-0 top-0 right-0 bottom-0 w-full h-full transition-all duration-300 hover:transition-all hover:duration-300" />
         <a
-          href="#"
+          href="/search"
           className="absolute left-0 top-0 right-0 bottom-0 w-full h-full z-20"
         ></a>
         <div className="relative z-10">
-           <p className="text-[32px] md:text-5xl font-bold">OSO Search</p>
+          <p className="text-[32px] md:text-5xl font-bold">OSO Search</p>
           <p className="text-2xl font-light mt-2">
             Delivers a{" "}
             <span className="font-medium">comprehensive answer.</span>
           </p>
 
-          <div className="h-64">
+          <div className="lg:h-64 pb-2 md:pb-0">
             {isTypingStarted && (
               <>
                 {stringTypeOut ? (
@@ -60,7 +60,7 @@ const SearchAndOtherForLaptop = () => {
                   </div>
                 ) : (
                   <div
-                    className={`text-[40px] h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
+                    className={`text-[40px] h-[280px] md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
                       stringTypeOut ? "bg-black" : "default"
                     } ${stringTypeOut ? "text-white" : "default"}`}
                   >
@@ -84,7 +84,7 @@ const SearchAndOtherForLaptop = () => {
             )}
           </div>
           <div className="flex justify-end items-center mt-4 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
-            <p className="pr-4">Lean more</p>
+            <p className="pr-4">Learn more</p>
             <svg
               width="33"
               height="32"
@@ -103,30 +103,30 @@ const SearchAndOtherForLaptop = () => {
       </div>
 
       <div
-        className={`bg-blue-100 w-full px-8 lg:p-16 rounded-2xl group relative overflow-hidden`}
+        className={`bg-blue-100 w-full px-8 lg:p-16 p-8 rounded-2xl group relative overflow-hidden`}
       >
         <div className="bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] absolute left-0 top-0 right-0 bottom-0 w-full h-full" />
         <div className="relative z-10">
-           <p className="text-[32px] md:text-5xl font-bold">Others</p>
+          <p className="text-[32px] md:text-5xl font-bold">Others</p>
           <p className="text-2xl font-light mt-2">
             Delivers an{" "}
             <span className="font-medium">unhelpful, outdated resu;lt.</span>
           </p>
-          <div className="h-64">
+          <div className="lg:h-64">
             {isTypingStarted && (
               <>
                 {stringTypeOut ? (
                   <div className="bg-black text-white p-4 rounded-[20px] mt-16">
-                    <p className="text-2xl font-normal ">I 
-                      don&apos;t have access to real-time information or current
-                      restaurant reviews, as my knowledge was last updated in
-                      September 2021. However, I can suggest some popular sushi
-                      places in Prague as of my last update.
+                    <p className="text-2xl font-normal ">
+                      I don&apos;t have access to real-time information or
+                      current restaurant reviews, as my knowledge was last
+                      updated in September 2021. However, I can suggest some
+                      popular sushi places in Prague as of my last update.
                     </p>
                   </div>
                 ) : (
                   <div
-                    className={`text-[40px] h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
+                    className={`text-[40px] h-[280px] md:h-[216px] font-normal mt-12 md:mt-16  rounded-[20px] p-4 ${
                       stringTypeOut ? "bg-black" : "default"
                     } ${stringTypeOut ? "text-white" : "default"}`}
                   >

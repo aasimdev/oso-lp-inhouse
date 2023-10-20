@@ -56,7 +56,7 @@ const BrandLogos = () => {
           />
         ))}
       </div>
-      <div className="px-6 mt-12 mb-6 md:mb-8 mx-auto max-w-6xl text-center">
+      <div className="px-6 py-6 md:py-12 mx-auto max-w-6xl text-center">
         <NewsLetter
           label={`Join Waitlist`}
           arrowIcon

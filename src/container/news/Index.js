@@ -1,12 +1,9 @@
 "use client";
 import AdvantageCard from "@/components/advantages/AdvantageCard";
 import Advantages from "@/components/advantages/Index";
-import Banner from "@/components/common/banner/Index";
+import Banner from "@/components/common/banner/NewsBanner";
 import Testimonials from "@/components/testimonials/Index";
 import React from "react";
-
-import UpdatePhone from "../../../public/assets/images/updatePhones.png";
-import UpdatePhone2 from "../../../public/assets/images/updatephone-2.png";
 
 import FAQ from "@/components/FAQ/Index";
 import Comparisons from "@/components/common/Comparisons/Comparisons";
@@ -74,7 +71,6 @@ const NewsView = () => {
       <Banner
         title="Stay informed effortlessly with OSO's Interactive AI News"
         description="OSO transforms how you consume the news with AI-powered summaries and interactive chat."
-        page="news"
         videoId="gAfKNS92eYM"
       />
 

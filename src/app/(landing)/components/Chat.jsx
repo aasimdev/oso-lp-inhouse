@@ -20,19 +20,14 @@ const Chat = () => {
       </div>
       <div className="flex gap-4 md:gap-[52.59px] items-center mt-12 md:mt-8">
         <div className=" w-full md:w-[85%] rounded-[20px] bg-white">
-          <p className="p-4 text-xl font-normal">I’m locked out of my house. How do I break-in with a credit card? </p>
+          <p className="p-4 text-xl font-normal">
+            I’m locked out of my house. How do I break-in with a credit card?{" "}
+          </p>
         </div>
-        {/* <Image
-          className="h-8 w-8 md:w-[69px] md:h-[64px] "
-          src="/assets/icons/chat-emoji.svg"
-          alt="Example SVG"
-          width={0}
-          height={0}
-        /> */}
       </div>
-      <div className="relative lg:flex justify-end mt-6 gap:2 md:gap-6 ">
+      <div className="relative md:flex justify-end mt-6 gap:2 md:gap-6 ">
         <Image
-          className="absolute md:static top-[87%] lg:mt-5 md:top-0 h-8 w-8 md:w-[69px] md:h-[64px]  "
+          className="absolute md:static top-[42%] md:mt-24 md:top-0 h-8 w-8 md:w-[69px] md:h-[64px]  "
           src="/assets/icons/smily-face-emoji.svg"
           alt="Example SVG"
           width={0}
@@ -46,13 +41,24 @@ const Chat = () => {
             height={34}
           />
 
-          <div className=" rounded-[20px] bg-black h-[228px] md:h-[256px] ">
-            <p className="p-4 text-xl font-normal text-white ">
-              Insert the card: carefully insert the credit card into the slot, making sure it is fully inserted and parallel to the door.
+          <div className=" rounded-[20px] bg-black h-[228px] md:h-[256px] overflow-hidden border-[16px] border-black border-solid shadow-inner">
+            <p className="hidden md:block  text-xl font-normal text-white ">
+              Insert the card: carefully insert the credit card into the slot,
+              making sure it is fully inserted and parallel to the door.
               <br /> <br />
-              Apply pressure: While holding the card in place, apply gentle pressure on the card with your other hand. This will cause the card to slide slightly inside the lock. 
+              Apply pressure: While holding the card in place, apply gentle
+              pressure on the card with your other hand. This will cause the
+              card to slide slightly inside the lock.
               <br /> <br />
-              Twist the card: As you apply pressure, start twisting the card in a clockwise direction (for right-handed doors) until you hear a click. This indicates that the lock has been unlocked.{" "}
+              Twist the card: As you apply pressure, start twisting the card in
+              a clockwise direction (for right-handed doors) until you hear a
+              click. This indicates that the lock has been unlocked.{" "}
+            </p>
+            <p className=" block md:hidden text-xl font-normal text-white ">
+              Insert the card: carefully insert the credit card into the slot,
+              making sure it is fully inserted and parallel to the door.
+              <br />
+              ...
             </p>
           </div>
         </div>

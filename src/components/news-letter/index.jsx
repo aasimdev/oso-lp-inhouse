@@ -1,7 +1,7 @@
 "use client";
 
 import { useFormik } from "formik";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { detectDevice } from "../DeviceDetector/DeviceDetector";
@@ -14,6 +14,7 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
   const [userDevice, setUserDevice] = useState("Unknown");
   const { executeRecaptcha } = useGoogleReCaptcha();
   const searchParams = useSearchParams();
+  const pathname = usePathname();
   const ac_tag_id = searchParams.get("ac_tag_id") || "";
   const router = useRouter();
   const userLang = "eng";
@@ -63,6 +64,7 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
         userLang,
         userDevice,
         formId,
+        pathname,
       }),
     });
 

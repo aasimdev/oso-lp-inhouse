@@ -256,7 +256,7 @@ const Header = () => {
           )}
         </nav>
       </header>
-      {showSidebar && <Menu isOpen={showSidebar} onClose={navigationHandler} />}
+      <Menu isOpen={showSidebar} onClose={navigationHandler} />
     </>
   );
 };

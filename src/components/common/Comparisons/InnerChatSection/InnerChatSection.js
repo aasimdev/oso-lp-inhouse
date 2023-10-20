@@ -15,7 +15,7 @@ const InnerSections = ({ comparisonContent }) => {
       id="animation-container"
       className="flex flex-col md:justify-center top-0 bg-white pt-8 md:pb-[20px] md:pt-24"
     >
-      <div className="md:flex md:flex-nowrap flex-wrap justify-between">
+      <div className="md:flex md:flex-nowrap flex-wrap justify-between items-center">
         <div className="contentWrap w-full md:w-[370px] md:mt-[52px] flex flex-col gap-12 md:gap-8 flex-grow-0 flex-shrink-0 basis-auto md:mb-12 mb-8 sm:mb-0">
           {comparisonContent.map((item) => (
             <>

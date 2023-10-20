@@ -4,38 +4,38 @@ import NewsLetter from "../news-letter";
 
 const BrandLogos = () => {
   const brandImages = [
-    { title: "bbcnews", path: "bbcnews.png", height: 70, width: 113 },
-    { title: "theguardian", path: "theguardian.png", height: 70, width: 149 },
-    { title: "techcrunch", path: "techcrunch.png", height: 70, width: 97 },
+    { title: "bbcnews", path: "bbcnews.svg", height: 70, width: 113 },
+    { title: "theguardian", path: "theguardian.svg", height: 70, width: 149 },
+    { title: "techcrunch", path: "techcrunch.svg", height: 70, width: 97 },
     {
       title: "financialtimes",
-      path: "financialtimes.png",
+      path: "financialtimes.svg",
       height: 70,
       width: 199,
     },
-    { title: "theverge", path: "theverge.png", height: 70, width: 169 },
-    { title: "fortune", path: "fortune.png", height: 70, width: 169 },
-    { title: "vector", path: "vector.png", height: 70, width: 89 },
+    { title: "theverge", path: "theverge.svg", height: 70, width: 169 },
+    { title: "fortune", path: "fortune.svg", height: 70, width: 169 },
+    { title: "vector", path: "vector.svg", height: 70, width: 89 },
     {
       title: "travelleisure",
-      path: "travelleisure.png",
+      path: "travelleisure.svg",
       height: 70,
       width: 149,
     },
     {
       title: "businessinsider",
-      path: "businessinsider.png",
+      path: "businessinsider.svg",
       height: 70,
       width: 149,
     },
-    { title: "espn", path: "espn.png", height: 70, width: 129 },
+    { title: "espn", path: "espn.svg", height: 70, width: 129 },
     {
       title: "yahoofinance",
-      path: "yahoofinance.png",
+      path: "yahoofinance.svg",
       height: 70,
       width: 149,
     },
-    { title: "darknet", path: "darknet.png", height: 70, width: 149 },
+    { title: "darknet", path: "darknet.svg", height: 70, width: 149 },
   ];
   return (
     <section className="px-6 mx-auto max-w-6xl">

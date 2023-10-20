@@ -8,7 +8,7 @@ const Feed = () => {
       className={`rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:h-[571px] h-[639px] md:h-full group z-0 md:mt-14 mt-12 lp-feed-box`}
     >
       <Link
-        href="#"
+        href="/news"
         className="absolute left-0 top-0 bottom-0 right-0 w-full h-full z-20"
       />
       <div className="flex justify-between items-start max-w-md">

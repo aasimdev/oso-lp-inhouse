@@ -11,26 +11,26 @@ const Chat = () => {
       />
       <div className="flex justify-between items-start">
         <div>
-          <p className="text-[32px] md:text-5xl font-bold">OSO Chat</p>
+          <p className="text-[32px] md:text-5xl font-bold">Chat</p>
           <p className="text-2xl font-light mt-2">
             Chat <strong className="text-2xl font-medium">uncensored</strong>{" "}
             about anything.
           </p>
         </div>
       </div>
-      <div className="flex gap-4 md:gap-[52.59px] items-center ml-4  mt-8 md:mt-[88px]">
-        <div className="w-[185px] md:w-[376px] rounded-[20px] bg-white">
-          <p className="p-4 text-xl font-normal">Is Putin a great leader? </p>
+      <div className="flex gap-4 md:gap-[52.59px] items-center mt-12 md:mt-8">
+        <div className=" w-full md:w-[85%] rounded-[20px] bg-white">
+          <p className="p-4 text-xl font-normal">I’m locked out of my house. How do I break-in with a credit card? </p>
         </div>
-        <Image
+        {/* <Image
           className="h-8 w-8 md:w-[69px] md:h-[64px] "
           src="/assets/icons/chat-emoji.svg"
           alt="Example SVG"
           width={0}
           height={0}
-        />
+        /> */}
       </div>
-      <div className="relative lg:flex justify-end mt-[51px] md:gap-[55.32px] mr-4">
+      <div className="relative lg:flex justify-end mt-6 gap:2 md:gap-6 ">
         <Image
           className="absolute md:static top-[87%] lg:mt-5 md:top-0 h-8 w-8 md:w-[69px] md:h-[64px]  "
           src="/assets/icons/smily-face-emoji.svg"
@@ -46,11 +46,13 @@ const Chat = () => {
             height={34}
           />
 
-          <div className="md:w-[617px] rounded-[20px] bg-black">
-            <p className="p-4 text-xl font-normal text-white">
-              Ultimately, whether Putin is considered a great leader or not
-              depends on one&apos;s perspective and the specific criteria used
-              to assess leadership.{" "}
+          <div className=" rounded-[20px] bg-black h-[228px] md:h-[256px] ">
+            <p className="p-4 text-xl font-normal text-white ">
+              Insert the card: carefully insert the credit card into the slot, making sure it is fully inserted and parallel to the door.
+              <br /> <br />
+              Apply pressure: While holding the card in place, apply gentle pressure on the card with your other hand. This will cause the card to slide slightly inside the lock. 
+              <br /> <br />
+              Twist the card: As you apply pressure, start twisting the card in a clockwise direction (for right-handed doors) until you hear a click. This indicates that the lock has been unlocked.{" "}
             </p>
           </div>
         </div>

@@ -1,33 +1,33 @@
-"use client"
+"use client";
 
-import { useFormik } from "formik"
-import { useRouter, useSearchParams } from "next/navigation"
-import React, { useEffect, useRef, useState } from "react"
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3"
-import { detectDevice } from "../DeviceDetector/DeviceDetector"
+import { useFormik } from "formik";
+import { useRouter, useSearchParams } from "next/navigation";
+import React, { useEffect, useRef, useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { detectDevice } from "../DeviceDetector/DeviceDetector";
 
-const NewsLetter = ({ className, label, arrowIcon, formId }) => {
-  const [showMessage, setShowMessage] = useState(false)
-  const [errorMessage, setErrorMessage] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const honeypotRef = useRef(null)
-  const [userDevice, setUserDevice] = useState("Unknown")
-  const { executeRecaptcha } = useGoogleReCaptcha()
-  const searchParams = useSearchParams()
-  const ac_tag_id = searchParams.get("ac_tag_id") || ""
-  const router = useRouter()
-  const userLang = "eng"
+const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
+  const [showMessage, setShowMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const honeypotRef = useRef(null);
+  const [userDevice, setUserDevice] = useState("Unknown");
+  const { executeRecaptcha } = useGoogleReCaptcha();
+  const searchParams = useSearchParams();
+  const ac_tag_id = searchParams.get("ac_tag_id") || "";
+  const router = useRouter();
+  const userLang = "eng";
   const form = useFormik({
     initialValues: {
       email: "",
     },
     onSubmit: async (values) => {
       if (honeypotRef.current.value) {
-        console.error("Bot detected!")
-        return
+        console.error("Bot detected!");
+        return;
       }
 
-      const token = await executeRecaptcha()
+      const token = await executeRecaptcha();
 
       if (token) {
         addWaitlistContact(
@@ -37,13 +37,13 @@ const NewsLetter = ({ className, label, arrowIcon, formId }) => {
           userDevice,
           userLang,
           formId
-        )
+        );
       } else {
-        console.error("reCAPTCHA verification failed")
+        console.error("reCAPTCHA verification failed");
       }
       // addWaitlistContact(values.email);
     },
-  })
+  });
 
   async function addWaitlistContact(
     email,
@@ -53,7 +53,7 @@ const NewsLetter = ({ className, label, arrowIcon, formId }) => {
     userLang,
     formId
   ) {
-    setIsLoading(true)
+    setIsLoading(true);
     const res = await fetch("/api/create-contact", {
       method: "POST",
       body: JSON.stringify({
@@ -64,79 +64,82 @@ const NewsLetter = ({ className, label, arrowIcon, formId }) => {
         userDevice,
         formId,
       }),
-    })
+    });
 
     if (res.status == 200) {
-      setIsLoading(false)
-      router.push("/thank-you?email=" + email)
+      setIsLoading(false);
+      router.push("/thank-you?email=" + email);
     } else if (res.status == 422) {
-      setIsLoading(false)
-      setShowMessage(true)
-      form.values.email = ""
+      setIsLoading(false);
+      setShowMessage(true);
+      form.values.email = "";
     } else {
-      setIsLoading(false)
-      setErrorMessage(true)
-      form.values.email = ""
+      setIsLoading(false);
+      setErrorMessage(true);
+      form.values.email = "";
     }
   }
   useEffect(() => {
-    const detectedDevice = detectDevice()
-    setUserDevice(detectedDevice)
-  }, [])
+    const detectedDevice = detectDevice();
+    setUserDevice(detectedDevice);
+  }, []);
   return (
     <>
       <form
         onSubmit={form?.handleSubmit}
-        className='text-center md:flex justify-center space-y-2 md:space-y-0 md:space-x-3'
+        className={`text-center ${
+          variant !== "newsBanner" ? "md:flex md:space-y-0 md:space-x-3" : ""
+        } justify-center space-y-2 `}
       >
         <input
           className={`email-width py-[26px] w-[352px] bg-white appearance-none border border-gray-900 placeholder:text-gray-100 rounded-lg px-4 text-black leading-tight focus:outline-none focus:border-purple ${className}`}
-          placeholder='Enter your email'
+          placeholder="Enter your email"
           required
-          name='email'
-          type='email'
+          name="email"
+          type="email"
           onChange={form?.handleChange}
           onBlur={form?.handleBlur}
           value={form?.values.email}
         />
         <input
-          className='hidden absolute w-0 h-0 overflow-hidden'
-          type='text'
-          tabIndex='-1'
-          value=''
+          className="hidden absolute w-0 h-0 overflow-hidden"
+          type="text"
+          tabIndex="-1"
+          value=""
           ref={honeypotRef}
-          autoComplete='off'
+          autoComplete="off"
         />
+
         <button
-          type='submit'
-          className={` theme-btn ${className ? className : null}`}
+          type="submit"
+          className={` theme-btn ${className ? className : ""}`}
         >
           {!isLoading && <span>{label}</span>}
 
           {isLoading ? (
             <svg
-              class='animate-spin h-6 w-6 text-purple-400'
-              xmlns='http://www.w3.org/2000/svg'
-              fill='none'
-              viewBox='0 0 24 24'
+              class="animate-spin h-6 w-6 text-purple-400"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
             >
               <path
-                fill='currentColor'
-                d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
               ></path>
             </svg>
           ) : (
             arrowIcon && (
               <svg
-                width='24'
-                height='24'
-                viewBox='0 0 24 24'
-                fill='none'
-                xmlns='http://www.w3.org/2000/svg'
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d='M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
-                  fill='white'
+                  d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+                  fill="white"
                 />
               </svg>
             )
@@ -145,22 +148,22 @@ const NewsLetter = ({ className, label, arrowIcon, formId }) => {
       </form>
 
       {showMessage && (
-        <div className='text-center mt-4'>
-          <p className='text-gray-800 text-lg'>
+        <div className="text-center mt-4">
+          <p className="text-gray-800 text-lg">
             Your email is already on the waitlist
           </p>
         </div>
       )}
 
       {errorMessage && (
-        <div className='text-center mt-4'>
-          <p className='text-gray-800 text-lg'>
+        <div className="text-center mt-4">
+          <p className="text-gray-800 text-lg">
             Something is wrong, please try again
           </p>
         </div>
       )}
     </>
-  )
-}
+  );
+};
 
-export default NewsLetter
+export default NewsLetter;

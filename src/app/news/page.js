@@ -3,19 +3,19 @@ import Script from "next/script";
 import React from "react";
 
 export const metadata = {
-  title: "OSO Search",
+  title: "OSO News",
   description: "Uncensored AI Search connected to the internet. ",
   keywords: "AI Search, Uncensored AI, Unbiased AI, OSO Search, up to date AI",
 };
 
-const DynamicSearchView = dynamic(() => import("@/container/search/Index"), {
+const DynamicNewsView = dynamic(() => import("@/container/news/Index"), {
   ssr: false,
 });
 
 export default function page() {
   return (
     <>
-      <DynamicSearchView />
+      <DynamicNewsView />
     </>
   );
 }

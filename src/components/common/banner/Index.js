@@ -32,7 +32,6 @@ const Banner = ({ title, description, videoId }) => {
             <CheckListItem title="Up-to-date" />
             <CheckListItem title="No credit card required" />
           </div>
-
           <Video videoId={videoId} />
         </div>
       </div>

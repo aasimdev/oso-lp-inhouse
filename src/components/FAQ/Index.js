@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Question from "./Question";
 
 const FAQ = ({ accordionData }) => {
-  console.log(accordionData);
   const [openAccordionId, setOpenAccordionId] = useState(null);
 
   const toggleAccordion = (accordionId) => {

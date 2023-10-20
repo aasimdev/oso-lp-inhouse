@@ -82,6 +82,7 @@ const Header = () => {
         formId,
         userLang,
         userDevice,
+        pathname,
       }),
     });
 
@@ -124,6 +125,7 @@ const Header = () => {
     const detectedDevice = detectDevice();
     setUserDevice(detectedDevice);
   }, []);
+
   return (
     <>
       <header

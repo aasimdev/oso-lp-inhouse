@@ -3,8 +3,6 @@
 import Script from "next/script";
 
 const GoogleAnalytics = ({ gaTrackingID }) => {
-  console.log(gaTrackingID);
-
   return (
     <>
       <Script

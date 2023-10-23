@@ -62,8 +62,8 @@ const NewsView = () => {
     <>
       <GoogleAnalytics gaTrackingID="G-M7WJFKYHCL" />
       <Banner
-        title="A new way to use the internet."
-        description="Real-time AI Search, Uncensored Chat, Interactive News – Everything You Need in One App with OSO."
+        title="Stay informed effortlessly with OSO's Interactive AI News"
+        description="OSO transforms how you consume the news with AI-powered summaries and interactive chat."
         videoId="gAfKNS92eYM"
       />
 

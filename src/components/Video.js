@@ -25,12 +25,12 @@ const Video = ({ src, videoId, variant }) => {
     <div
       className={`${
         variant !== "newsBanner" ? "mt-8 md:mt-6" : "h-full flex"
-      } mx-auto max-w-[902px] rounded-lg md:rounded-2xl overflow-hidden text-center h-video relative`}
+      } mx-auto max-w-[902px] overflow-hidden text-center h-video relative`}
     >
       <div
         className={`w-full  ${
           variant === "newsBanner" ? "h-full" : "h-[507px]"
-        } bg-black absolute left-0 top-0 right-0 bottom-0 overflow-hidden -z-10 transition-all duration-300 `}
+        } absolute left-0 top-0 right-0 bottom-0 overflow-hidden -z-10 transition-all duration-300 `}
       />
       {videoId ? (
         <iframe

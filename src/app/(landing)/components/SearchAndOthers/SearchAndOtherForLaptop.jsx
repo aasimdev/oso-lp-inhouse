@@ -126,7 +126,7 @@ const SearchAndOtherForLaptop = () => {
           <p className="text-[32px] md:text-5xl font-bold">Others</p>
           <p className="text-2xl font-light mt-2">
             Delivers an{" "}
-            <span className="font-medium">unhelpful, outdated resu;lt.</span>
+            <span className="font-medium">unhelpful, outdated result.</span>
           </p>
           <div className="lg:h-64">
             {isTypingStarted && (

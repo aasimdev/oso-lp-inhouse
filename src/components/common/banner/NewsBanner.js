@@ -5,11 +5,11 @@ import NewsLetter from "@/components/news-letter";
 
 const NewsBanner = ({ title, description, videoId }) => {
   return (
-    <section className="bg-white">
+    <section className="bg-gradient-to-b from-purple-400">
       <div className="px-6 mx-auto max-w-6xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 pt-4  md:py-16 xl:gap-[117px] lg:gap-16 gap-0">
-          <div className="lg:w-[440px] md:w-[80%] w-full flex flex-col justify-between">
-            <div className="flex flex-col md:gap-6 gap-2 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 pt-4 md:py-16 lg:gap-16 gap-0  lg:justify-items-start justify-items-center">
+          <div className="lg:w-[440px] md:w-[80%] w-full flex flex-col justify-between ">
+            <div className="flex flex-col md:gap-4 gap-2 ">
               <h1
                 className="md:text-[56px] text-[40px] text-left font-extrabold leading-[56px] md:leading-[60px] text-black max-w-4xl mx-auto"
                 dangerouslySetInnerHTML={{ __html: title }}
@@ -19,7 +19,7 @@ const NewsBanner = ({ title, description, videoId }) => {
               </p>
             </div>
             <div>
-              <div className=" py-4 md:py-8 lg:py-0 ">
+              <div className="py-4 md:py-8 lg:py-4 ">
                 <NewsLetter
                   arrowIcon
                   label="Join Waitlist"
@@ -40,7 +40,7 @@ const NewsBanner = ({ title, description, videoId }) => {
             <CheckListItem title="7-day trial" />
             <CheckListItem title="Customised Plug-ins" />
           </div>
-          <div className="lg:w-full md:w-[80%] w-full lg:h-[586px] pt-2 md:pt-6 lg:pt-0">
+          <div className="lg:w-full md:w-[80%] w-full pt-2 md:pt-6 lg:pt-0">
             <Video videoId={videoId} variant="newsBanner" />
           </div>
         </div>

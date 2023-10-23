@@ -1,27 +1,28 @@
-"use client";
-import React from "react";
-import Hero from "./Hero";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
-import { useMediaQuery } from "react-responsive";
-import Jason from "../../../../public/assets/images/jason.png";
-import Jan from "../../../../public/assets/images/jan.png";
-import Ciaran from "../../../../public/assets/images/man.jpeg";
-import Michael from "../../../../public/assets/images/face.png";
-import Steve from "../../../../public/assets/images/steveA.png";
-import Manu from "../../../../public/assets/images/manu.jpg";
-import TestimonialItem from "@/components/testimonials/Item";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/free-mode";
-import NewsLetter from "@/components/news-letter";
-import Chat from "./Chat";
-import Feed from "./Feed";
-import SearchAndOtherForMobile from "./SearchAndOthers/SearchAndOtherForMobile";
-import SearchAndOtherForLaptop from "./SearchAndOthers/SearchAndOtherForLaptop";
-import FAQ from "@/components/FAQ/Index";
-import GoogleAnalytics from "@/utils/google-analytics/anaylics";
+"use client"
+import React from "react"
+
+import { Swiper, SwiperSlide } from "swiper/react"
+import { FreeMode, Navigation, Pagination } from "swiper/modules"
+import { useMediaQuery } from "react-responsive"
+import Jason from "../../../public/assets/images/jason.png"
+import Jan from "../../../public/assets/images/jan.png"
+import Ciaran from "../../../public/assets/images/man.jpeg"
+import Michael from "../../../public/assets/images/face.png"
+import Steve from "../../../public/assets/images/steveA.png"
+import Manu from "../../../public/assets/images/manu.jpg"
+import TestimonialItem from "@/components/testimonials/Item"
+import "swiper/css"
+import "swiper/css/navigation"
+import "swiper/css/pagination"
+import "swiper/css/free-mode"
+import NewsLetter from "@/components/news-letter"
+import FAQ from "@/components/FAQ/Index"
+import GoogleAnalytics from "@/utils/google-analytics/anaylics"
+import Banner from "@/components/common/banner/Index"
+import Hero from "@/components/landingPage/Hero"
+import Chat from "@/components/landingPage/Chat"
+import Feed from "@/components/landingPage/Feed"
+import SearchAndOtherForLaptop from "@/components/landingPage/SearchAndOthers/SearchAndOtherForLaptop"
 
 const testimonialData = [
   {
@@ -56,10 +57,10 @@ const testimonialData = [
     description: "Really powerful tool! Can see this being used for so much.",
     image: Ciaran,
   },
-];
-function SeenOn({}) {
-  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
-  const slidesOffsetBefore = isDesktop ? 100 : 0;
+]
+function LandingPage({}) {
+  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
+  const slidesOffsetBefore = isDesktop ? 100 : 0
 
   const accordionData = [
     {
@@ -94,28 +95,32 @@ function SeenOn({}) {
       question: "How do I get started?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
     },
-  ];
+  ]
 
   return (
     <>
-      <GoogleAnalytics gaTrackingID="G-2N2XN2FQX1" />
-      <div className="px-6 mx-auto max-w-6xl">
+      <GoogleAnalytics gaTrackingID='G-2N2XN2FQX1' />
+      <div className='px-6 mx-auto max-w-6xl'>
         <Hero />
+        {/* <Banner
+          title="Stay informed effortlessly with OSO's Interactive AI News"
+          description='OSO transforms how you consume the news with AI-powered summaries and interactive chat.'
+          videoId='v1Z1rmm4SqU'
+        /> */}
 
-        {/* <SearchAndOtherForMobile /> */}
         <SearchAndOtherForLaptop />
         <Chat />
         <Feed />
 
-        <div className="md:flex justify-center items-center pt-12 md:pt-[60px]">
-          <NewsLetter arrowIcon label="Join Waitlist" />
+        <div className='md:flex justify-center items-center pt-12 md:pt-[60px]'>
+          <NewsLetter arrowIcon label='Join Waitlist' />
         </div>
 
-        <h2 className="text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center md:mt-24 mt-[88px] ">
+        <h2 className='text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center md:mt-24 mt-[88px] '>
           Many people already feel the magic
         </h2>
       </div>
-      <div className="md:pb-8 md:mt-24 mt-16 tSlider relative">
+      <div className='md:pb-8 md:mt-24 mt-16 tSlider relative'>
         <Swiper
           spaceBetween={0}
           slidesPerView={"auto"}
@@ -154,36 +159,36 @@ function SeenOn({}) {
               slidesPerView: 4.3,
             },
           }}
-          className="!z-auto"
+          className='!z-auto'
         >
           {isDesktop && (
             <>
-              <div className="swiper-button-next md:mr-24 !w-12 !h-12 rounded-full bg-gray-40 p-3 transition-all duration-300 hover:bg-gray-50 focus:bg-gray-30">
+              <div className='swiper-button-next md:mr-24 !w-12 !h-12 rounded-full bg-gray-40 p-3 transition-all duration-300 hover:bg-gray-50 focus:bg-gray-30'>
                 <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
                 >
                   <path
-                    d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
-                    fill="black"
+                    d='M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
+                    fill='black'
                   />
                 </svg>
               </div>
-              <div className="swiper-button-prev md:ml-24 !w-12 !h-12 rounded-full bg-gray-40 p-3 transition-all duration-300 hover:bg-gray-50 focus:bg-gray-30">
+              <div className='swiper-button-prev md:ml-24 !w-12 !h-12 rounded-full bg-gray-40 p-3 transition-all duration-300 hover:bg-gray-50 focus:bg-gray-30'>
                 <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  className="rotate-180"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  className='rotate-180'
+                  fill='none'
+                  xmlns='http://www.w3.org/2000/svg'
                 >
                   <path
-                    d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
-                    fill="black"
+                    d='M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
+                    fill='black'
                   />
                 </svg>
               </div>
@@ -191,7 +196,7 @@ function SeenOn({}) {
           )}
           {testimonialData &&
             testimonialData.map((item, index) => (
-              <SwiperSlide key={index} className="!h-auto">
+              <SwiperSlide key={index} className='!h-auto'>
                 <TestimonialItem
                   name={item.name}
                   description={item.description}
@@ -203,7 +208,7 @@ function SeenOn({}) {
       </div>
       <FAQ accordionData={accordionData} />
     </>
-  );
+  )
 }
 
-export default SeenOn;
+export default LandingPage

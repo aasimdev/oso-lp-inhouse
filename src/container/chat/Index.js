@@ -1,19 +1,19 @@
-"use client";
-import React, { useEffect, useRef, useState } from "react";
-import AdvantageCard from "@/components/advantages/AdvantageCard";
-import Advantages from "@/components/advantages/Index";
-import Banner from "@/components/common/banner/Index";
-import Testimonials from "@/components/testimonials/Index";
-import webImage from "../../../public/assets/images/updated.png";
-import SecondPhone from "../../../public/assets/images/mobilephone.png";
-import PhoneUncensored from "../../../public/assets/images/chat-uncensored.png";
-import PhoneUnbiased from "../../../public/assets/images/chat-unbiased.png";
-import PhonePersonalized from "../../../public/assets/images/chat-personlized.png";
+"use client"
+import React, { useEffect, useRef, useState } from "react"
+import AdvantageCard from "@/components/advantages/AdvantageCard"
+import Advantages from "@/components/advantages/Index"
+import Banner from "@/components/common/banner/Index"
+import Testimonials from "@/components/testimonials/Index"
+import webImage from "../../../public/assets/images/updated.png"
+import SecondPhone from "../../../public/assets/images/mobilephone.png"
+import PhoneUncensored from "../../../public/assets/images/chat-uncensored.png"
+import PhoneUnbiased from "../../../public/assets/images/chat-unbiased.png"
+import PhonePersonalized from "../../../public/assets/images/chat-personlized.png"
 
-import FAQ from "@/components/FAQ/Index";
-import InnerChatSection from "@/components/common/Comparisons/InnerChatSection/InnerChatSection";
-import Comparisons from "@/components/common/Comparisons/Comparisons";
-import GoogleAnalytics from "@/utils/google-analytics/anaylics";
+import FAQ from "@/components/FAQ/Index"
+import InnerChatSection from "@/components/common/Comparisons/InnerChatSection/InnerChatSection"
+import Comparisons from "@/components/common/Comparisons/Comparisons"
+import GoogleAnalytics from "@/utils/google-analytics/anaylics"
 
 const ChatView = () => {
   const accordionData = [
@@ -62,7 +62,7 @@ const ChatView = () => {
       question: "How do I get started?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
     },
-  ];
+  ]
   const comparisonContent = [
     {
       title: "Customizable",
@@ -84,46 +84,51 @@ const ChatView = () => {
       image: "789789",
       id: "deep",
     },
-  ];
+  ]
   return (
     <>
-      <GoogleAnalytics gaTrackingID="G-WZHB0QP262" />
+      <GoogleAnalytics gaTrackingID='G-WZHB0QP262' />
       <Banner
-        title="Uncensored, intelligent <br /> AI Chat"
-        description="OSO Chat sets a new standard for AI chatbots."
-        videoId="v1Z1rmm4SqU"
+        title='Uncensored, intelligent <br /> AI Chat'
+        description='OSO Chat sets a new standard for AI chatbots.'
+        videoId='v1Z1rmm4SqU'
       />
 
       <Testimonials />
-      <Advantages title="Advantages of OSO Chat">
+      <Advantages
+        title='Advantages of OSO Chat'
+        description={
+          "OSO Chat offers several AI language models to choose from including an uncensored version, enabling users to chat about any topic without restriction"
+        }
+      >
         <AdvantageCard
-          title="Uncensored"
+          title='Uncensored'
           description=" OSO believes in free speech and  <span class='font-medium'>unrestricted access to knowledge,</span> ensuring you receive in-depth and unfiltered answers."
           borderLess={false}
           image={PhoneUncensored}
-          imageWidth="357"
-          imageHeight="507"
-          color="light-green-adv"
+          imageWidth='357'
+          imageHeight='507'
+          color='light-green-adv'
         />
 
         <AdvantageCard
-          title="Unbiased"
+          title='Unbiased'
           description="OSO believes in <span class='font-medium'>allowing you to formulate your own opinions</span> and  and provides different viewpoints of sensitive topics."
           borderLess={false}
           image={PhoneUnbiased}
-          imageWidth="357"
-          imageHeight="507"
-          color="medium-green-adv"
+          imageWidth='357'
+          imageHeight='507'
+          color='medium-green-adv'
         />
 
         <AdvantageCard
-          title="Personalized"
+          title='Personalized'
           description="OSO <span class='font-medium'> learns from your preferences</span> over time to give you answers in the format, tone, and style that suites you best."
           borderLess={false}
           image={PhonePersonalized}
-          imageWidth="357"
-          imageHeight="507"
-          color="green-adv"
+          imageWidth='357'
+          imageHeight='507'
+          color='green-adv'
         />
       </Advantages>
 
@@ -133,7 +138,7 @@ const ChatView = () => {
 
       <FAQ accordionData={accordionData} />
     </>
-  );
-};
+  )
+}
 
-export default ChatView;
+export default ChatView

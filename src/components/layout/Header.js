@@ -151,10 +151,11 @@ const Header = () => {
             />
           </Link>
           {pathname !== "/thank-you" && (
-            <div className="hidden sm:flex items-center gap-6">
+            <div className="flex items-center gap-6">
+              
               <form
                 onSubmit={form?.handleSubmit}
-                className="flex gap-2 items-center"
+                className="hidden sm:flex gap-2 items-center"
               >
                 {hform && (
                   <>

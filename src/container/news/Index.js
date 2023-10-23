@@ -46,14 +46,14 @@ const NewsView = () => {
       title: "AI-Powered Summaries",
       description:
         "Saving you time by pulling the most important information from the article.",
-      image: "newsemptyphone",
+      image: "newsphone-1",
       id: "stay",
     },
     {
       title: "Chat with your personal AI News Reporter",
       description:
         "Find the specific information you're looking for by asking OSO. ",
-      image: "newsemptyphone",
+      image: "newsphone-2",
       id: "plan",
     },
   ];

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Advantages = ({ title, children, page }) => {
+const Advantages = ({ title, children, page, description }) => {
   return (
     <section className="px-6 mx-auto max-w-6xl">
       <div className="py-16 md:text-center text-start">
@@ -9,9 +9,7 @@ const Advantages = ({ title, children, page }) => {
         </h3>
         {!page && (
           <p className="text-2xl leading-9 font-light text-gray-900">
-            OSO reads through thousands of websites in seconds, so you don’t
-            have to waste time jumping between multiple sites, and delivers you
-            a comprehensive answer.
+         {description}
           </p>
         )}
       </div>

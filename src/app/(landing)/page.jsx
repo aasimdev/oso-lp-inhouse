@@ -1,5 +1,5 @@
 import React from "react"
-import LandingPage from "@/container/landing"
+import LandingPage from "../../container/landing"
 
 export const metadata = {
   title: "OSO",

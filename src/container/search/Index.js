@@ -36,7 +36,7 @@ const SearchView = () => {
     {
       id: 3,
       question: "What is the Pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">You can use OSO Free forever with certain usage limitations such as 50 searches and chats per day. If you want to unlock the full power of OSO, it only costs $20/mo and will return 100x the value in productivity and time-savings.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Chat is free to use with daily usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will return 100x the value in productivity and time-savings.</p>`,
     },
 
     {
@@ -49,7 +49,7 @@ const SearchView = () => {
     <>
       <Banner
         title="Experience the Future of Search with OSO"
-        description="Find what you’re looking for faster by letting OSO do the research for you."
+        description="Find what you’re looking for faster by letting OSO do the searching for you."
         videoId="7y2r9MrUeQ8"
         checklist={['Uncensored', 'Up-to-date', 'No credit card required']}
       />

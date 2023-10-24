@@ -89,8 +89,8 @@ const ChatView = () => {
     <>
       <GoogleAnalytics gaTrackingID='G-WZHB0QP262' />
       <Banner
-        title='Uncensored, intelligent <br /> AI Chat'
-        description='OSO Chat sets a new standard for AI chatbots.'
+        title="Uncensored, Highly-Intelligent AI Chat."
+        description="Engage in unrestricted conversation, and search for information on any topic."
         videoId='FpWF0i0vxGs'
         checklist={['Uncensored', 'Visually-appealing', '7-Day Free Trial']}
       />

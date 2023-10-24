@@ -76,6 +76,8 @@ const Footer = () => {
       form.setValues({ email: "" });
       setShowInput(false);
       router.push("/thank-you?email=" + email);
+      localStorage.removeItem('submitedURL');
+      localStorage.setItem('submitedURL', pathname);
     } else if (res.status === 422) {
       setIsLoading(false);
       setShowInput(false);

@@ -68,20 +68,20 @@ const ChatView = () => {
       title: "Customizable",
       description:
         "Unlike other AI Chats, OSO enables you to select the AI model that suites you best. ",
-      image: "123123",
+      image: "chatphone-1",
       id: "stay",
     },
     {
       title: "Visually-appealing",
       description:
         "View answers in bite-sized chunks with beautifully crafted visuals to make digesting information easy. ",
-      image: "456456",
+      image: "chatphone-2",
       id: "plan",
     },
     {
       title: "Intelligent",
       description: "Trained until Sept. 2023 and continuously learning.",
-      image: "789789",
+      image: "chatphone-3",
       id: "deep",
     },
   ]
@@ -91,14 +91,15 @@ const ChatView = () => {
       <Banner
         title='Uncensored, intelligent <br /> AI Chat'
         description='OSO Chat sets a new standard for AI chatbots.'
-        videoId='v1Z1rmm4SqU'
+        videoId='FpWF0i0vxGs'
+        checklist={['Uncensored', 'Visually-appealing', '7-Day Free Trial']}
       />
 
       <Testimonials />
       <Advantages
         title='Advantages of OSO Chat'
         description={
-          "OSO Chat offers several AI language models to choose from including an uncensored version, enabling users to chat about any topic without restriction"
+          "OSO Chat offers several AI language models to choose from including an uncensored version, enabling users to chat about any topic without restriction."
         }
       >
         <AdvantageCard

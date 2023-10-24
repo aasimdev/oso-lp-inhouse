@@ -17,14 +17,14 @@ export async function POST(req) {
     await req.json()
 
   try {
-    const isRecaptchaValid = await verifyRecaptcha(token)
+    // const isRecaptchaValid = await verifyRecaptcha(token)
 
-    if (!isRecaptchaValid) {
-      return NextResponse.json(
-        { status: "error", message: "reCAPTCHA verification failed" },
-        { status: 400 }
-      )
-    }
+    // if (!isRecaptchaValid) {
+    //   return NextResponse.json(
+    //     { status: "error", message: "reCAPTCHA verification failed" },
+    //     { status: 400 }
+    //   )
+    // }
 
     // Setup New Newsletter
     const res = await fetch(

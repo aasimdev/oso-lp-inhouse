@@ -71,6 +71,8 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
     if (res.status == 200) {
       setIsLoading(false);
       router.push("/thank-you?email=" + email);
+      localStorage.removeItem('submitedURL');
+      localStorage.setItem('submitedURL', pathname);
     } else if (res.status == 422) {
       setIsLoading(false);
       setShowMessage(true);

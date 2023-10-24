@@ -58,7 +58,7 @@ const testimonialData = [
     image: Ciaran,
   },
 ]
-function LandingPage({}) {
+function LandingPage({ }) {
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
   const slidesOffsetBefore = isDesktop ? 100 : 0
 
@@ -100,23 +100,17 @@ function LandingPage({}) {
   return (
     <>
       <GoogleAnalytics gaTrackingID='G-2N2XN2FQX1' />
+      <Hero />
       <div className='px-6 mx-auto max-w-6xl'>
-        <Hero />
-        {/* <Banner
-          title="Stay informed effortlessly with OSO's Interactive AI News"
-          description='OSO transforms how you consume the news with AI-powered summaries and interactive chat.'
-          videoId='v1Z1rmm4SqU'
-        /> */}
-
         <SearchAndOtherForLaptop />
         <Chat />
         <Feed />
 
-        <div className='md:flex justify-center items-center pt-12 md:pt-[60px]'>
+        <div className='md:flex justify-center items-center pt-12 md:pt-[60px] pb-24'>
           <NewsLetter arrowIcon label='Join Waitlist' />
         </div>
 
-        <h2 className='text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center md:mt-24 mt-[88px] '>
+        <h2 className='text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center'>
           Many people already feel the magic
         </h2>
       </div>

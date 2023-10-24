@@ -212,7 +212,9 @@ html {
   width: 100% !important;
   height: 100% !important;
 }
-
+.inset-0-clip {
+  clip-path: inset(0px);
+}
 @media (max-width: 991px) {
 
   .tSlider::after,

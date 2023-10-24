@@ -51,6 +51,7 @@ const SearchView = () => {
         title="Experience the Future of Search with OSO"
         description="Find what you’re looking for faster by letting OSO do the research for you."
         videoId="7y2r9MrUeQ8"
+        checklist={['Uncensored', 'Up-to-date', 'No credit card required']}
       />
       <Testimonials />
 

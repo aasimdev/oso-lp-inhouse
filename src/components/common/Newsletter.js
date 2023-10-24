@@ -67,6 +67,8 @@ const Newsletter = ({ formId }) => {
     if (res.status === 200) {
       form.setValues({ email: "" });
       router.push("/thank-you?email=" + email);
+      localStorage.removeItem('submitedURL');
+      localStorage.setItem('submitedURL', pathname);
     } else if (res.status === 422) {
       setShowMessage(true);
       form.setValues({ email: "" });

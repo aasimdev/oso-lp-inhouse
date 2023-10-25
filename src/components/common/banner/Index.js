@@ -11,7 +11,7 @@ const Banner = ({ title, description, videoId, checklist }) => {
         <div className="pt-8 md:pt-24">
           <div className="flex flex-col md:gap-6 gap-2  md:mb-6">
             <h1
-              className="md:text-[64px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto"
+              className="md:text-[56px] text-[40px] md:text-center text-left font-extrabold leading-[40px] md:leading-[80px] text-black max-w-4xl mx-auto"
               dangerouslySetInnerHTML={{ __html: title }}
             ></h1>
             <p className="text-gray-800 md:text-center text-left md:text-[32px] text-2xl font-light leading-tight">

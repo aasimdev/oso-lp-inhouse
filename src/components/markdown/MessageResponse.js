@@ -1,6 +1,6 @@
 import React from "react";
 import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm"; // Import remark-gfm to support GitHub Flavored Markdown
+import remarkGfm from 'remark-gfm'
 
 const MessageResponse = () => {
   const markdownContent = `

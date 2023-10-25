@@ -13,6 +13,7 @@ pnpm dev
 # or
 pnpm dev
 ```
+:thinking_face: 
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

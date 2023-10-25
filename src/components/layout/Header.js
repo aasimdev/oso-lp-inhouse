@@ -131,7 +131,7 @@ const Header = () => {
   return (
     <>
       <div className="bg-black text-center py-4 sm:py-2 px-6">
-        <div className="text-white text-xs sm:text-sm">OSO&apos;s investor community is growing. Find out more <Link className="underline" href="/investors">here</Link>.🔥</div>
+        <div className="text-white text-xs sm:text-sm">OSO&apos;s investor community is growing. Find out more <Link className="underline" href="/investors">here</Link>🔥</div>
       </div>
       <header
         className={`bg-white z-30 transition-shadow duration-300 ${pathname === "/dmca-policy"

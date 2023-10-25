@@ -25,7 +25,7 @@ const NewsView = () => {
     },
     {
       id: 3,
-      question: "What is the Pricing?",
+      question: "What is the pricing?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free for general use. For those who want to customize their news experience based on specific news outlets and topics, OSO costs $20/month.</p>`,
     },
 
@@ -73,7 +73,7 @@ const NewsView = () => {
       <Advantages title="Advantages of OSO News" page="news">
         <AdvantageCard
           title="Interactive"
-          description="Skip reading through articles; <span class='font-medium'>just ask questions</span> to get the information you need."
+          description="Skip reading through articles - <span class='font-medium'>just ask questions</span> to get the information you need."
           borderLess={false}
           image="/assets/images/newsphone1.png"
           imageWidth="357"

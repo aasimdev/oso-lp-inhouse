@@ -35,8 +35,8 @@ const SearchView = () => {
     },
     {
       id: 3,
-      question: "What is the Pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Chat is free to use with daily usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will return 100x the value in productivity and time-savings.</p>`,
+      question: "What is the pricing?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Search is free to use with daily usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will return 100x the value in productivity and time-savings.</p>`,
     },
 
     {

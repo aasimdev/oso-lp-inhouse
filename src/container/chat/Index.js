@@ -54,7 +54,7 @@ const ChatView = () => {
     },
     {
       id: 6,
-      question: "What is the Pricing?",
+      question: "What is the pricing?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Chat is free to use with daily usage limitations. To unlock unlimited chats and certain language models an OSO Pro subscription for $20/mo is required.</p>`,
     },
     {

@@ -65,7 +65,7 @@ const NewsView = () => {
         title="Stay informed effortlessly with OSO's Interactive AI News"
         description="OSO transforms how you consume the news with AI-powered summaries and interactive chat."
         videoId="gAfKNS92eYM"
-        checklist={['Uncensored', 'Up-to-date', 'No credit card required']}
+        checklist={['Interactive', 'Up-to-date', 'No credit card required']}
       />
 
       <BrandLogos />

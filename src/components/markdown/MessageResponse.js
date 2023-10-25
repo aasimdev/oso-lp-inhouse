@@ -4,15 +4,11 @@ import remarkGfm from "remark-gfm";
 
 const MessageResponse = () => {
   const markdownContent = `
-  Report: **How to Detect Mobile Devices Using Cloudflare Redirect Rules**
-
-  &nbsp;
+   Report: **How to Detect Mobile Devices Using Cloudflare Redirect Rules**
 
   &nbsp;
 
   🤔 **Understanding Mobile Device Detection with Cloudflare**
-
-  &nbsp;
 
   Cloudflare provides a feature called Mobile Redirect [1]. This feature allows website owners to automatically redirect mobile device visitors to a mobile-optimized website or subdomain home page [1] [2]. By detecting the user agent string of the visitor's device, Cloudflare can determine whether the request is coming from a mobile device and apply the appropriate redirect rule.
 
@@ -43,7 +39,13 @@ const MessageResponse = () => {
               remarkPlugins={[remarkGfm]}
               components={{
                 ol: ({ node, ...props }) => (
-                  <ol className="list-decimal pl-10" {...props} />
+                  <ol className="list-decimal pl-5" {...props} />
+                ),
+                p: ({ node, ...props }) => (
+                  <p className="text-base font-normal leading-6" {...props} />
+                ),
+                strong: ({ node, ...props }) => (
+                  <strong className="text-base font-medium leading-6" {...props} />
                 ),
               }}
             >

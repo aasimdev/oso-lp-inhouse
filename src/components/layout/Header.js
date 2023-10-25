@@ -92,8 +92,8 @@ const Header = () => {
       setHForm(false);
       form.setValues({ email: "" });
       router.push("/thank-you?email=" + email);
-      localStorage.removeItem('submitedURL');
-      localStorage.setItem('submitedURL', pathname);
+      localStorage.removeItem("submitedURL");
+      localStorage.setItem("submitedURL", pathname);
     } else if (res.status === 422) {
       setIsLoading(false);
       setHForm(false);
@@ -130,18 +130,26 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-black text-center py-4 sm:py-2 px-6">
-        <div className="text-white text-[10px] sm:text-sm">OSO&apos;s investor community is growing. Find out more <Link className="underline" href="/investors">here</Link>🔥</div>
+      <div className="bg-black text-center py-4 sm:py-2 px-0 sm:px-6">
+        <div className="text-white text-xs sm:text-sm">
+          OSO&apos;s investor community is growing. Find out more{" "}
+          <Link className="underline" href="/investors">
+            here
+          </Link>
+          🔥
+        </div>
       </div>
+
       <header
-        className={`bg-white z-30 transition-shadow duration-300 ${pathname === "/dmca-policy"
-          ? "sticky top-0"
-          : pathname === "/privacy-policy"
+        className={`bg-white z-30 transition-shadow duration-300 ${
+          pathname === "/dmca-policy"
+            ? "sticky top-0"
+            : pathname === "/privacy-policy"
             ? "sticky top-0"
             : pathname === "/terms-of-service"
-              ? "sticky top-0"
-              : null
-          }`}
+            ? "sticky top-0"
+            : null
+        }`}
         ref={header}
       >
         <nav className="flex justify-between items-center md:flex-nowrap flex-wrap px-6 py-4 mx-auto max-w-6xl">
@@ -156,7 +164,6 @@ const Header = () => {
           </Link>
           {pathname !== "/thank-you" && (
             <div className="flex items-center gap-6">
-
               <form
                 onSubmit={form?.handleSubmit}
                 className="hidden sm:flex gap-2 items-center"

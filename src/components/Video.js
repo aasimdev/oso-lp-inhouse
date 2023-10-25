@@ -4,6 +4,7 @@ const Video = ({ src, videoId, variant }) => {
   const [handler, setHandler] = useState(true);
   const videoRef = useRef(null);
   const [preLoad, setPreLoad] = useState(false);
+  const iframeRef = useRef(null);
 
   const videoHandler = () => {
     setHandler(false);
@@ -13,6 +14,9 @@ const Video = ({ src, videoId, variant }) => {
       video.muted = false;
       video.play();
     }
+    if (variant === "newsBanner") {
+      handleFullScreen();
+    }
   };
 
   useEffect(() => {
@@ -20,6 +24,19 @@ const Video = ({ src, videoId, variant }) => {
       setPreLoad(true);
     }, 300);
   }, []);
+
+  const handleFullScreen = () => {
+    const iframe = iframeRef.current;
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.mozRequestFullScreen) {
+      iframe.mozRequestFullScreen();
+    } else if (iframe.webkitRequestFullscreen) {
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.msRequestFullscreen) {
+      iframe.msRequestFullscreen();
+    }
+  };
 
   return (
     <div
@@ -43,6 +60,8 @@ const Video = ({ src, videoId, variant }) => {
             handler ? 0 : 1
           }&modestbranding=1&showinfo=0&rel=0`}
           frameborder="0"
+          allowFullScreen
+          ref={iframeRef}
         ></iframe>
       ) : (
         <video

@@ -1,6 +1,6 @@
 import React from "react";
 import Markdown from "react-markdown";
-import remarkGfm from 'remark-gfm'
+import remarkGfm from "remark-gfm";
 
 const MessageResponse = () => {
   const markdownContent = `
@@ -40,7 +40,12 @@ const MessageResponse = () => {
         <div className="flex-1 rounded-[20px] bg-purple-200 p-4 overflow-visible">
           <p className="text-black font-secondary text-base tracking-wider opacity-90">
             <Markdown
-              remarkPlugins={[remarkGfm]} // Use remark-gfm to enable GitHub Flavored Markdown features
+              remarkPlugins={[remarkGfm]}
+              components={{
+                ol: ({ node, ...props }) => (
+                  <ol className="list-decimal pl-10" {...props} />
+                ),
+              }}
             >
               {markdownContent}
             </Markdown>

@@ -36,59 +36,6 @@ const InnerSection = () => {
     }
   }, [])
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     ScrollTrigger.refresh();
-  //     if (isDesktop) {
-  //       const textBlocks = gsap.utils.toArray(".text-block");
-  //       const rightElements = gsap.utils.toArray(".phoneWrap");
-
-  //       const tl = gsap.timeline({
-  //         scrollTrigger: {
-  //           trigger: "#animation-container",
-  //           start: "top top",
-  //           // start: 'top',
-  //           end: "+=300%",
-  //           pin: true,
-  //           scrub: true,
-  //           // markers: true,
-  //         },
-  //       });
-
-  //       rightElements.forEach((img, i) => {
-  //         if (rightElements[i + 1]) {
-  //           tl.to(
-  //             img,
-  //             {
-  //               opacity: 0,
-  //               // translateY: 40
-  //             },
-  //             "+=0.5"
-  //           )
-  //             .to(rightElements[i + 1], { opacity: 1 }, "<")
-  //             .to(
-  //               textBlocks,
-  //               {
-  //                 yPercent: "-18%",
-  //                 opacity: 0.2,
-  //               },
-  //               "<"
-  //             )
-  //             .to(
-  //               textBlocks[i + 1],
-  //               {
-  //                 yPercent: "18%",
-  //                 opacity: 1,
-  //               },
-  //               "<"
-  //             );
-  //         }
-  //       });
-  //       tl.to({}, {}, "+=0.5");
-  //     }
-  //   }, 500);
-  // }, [isDesktop]);
-
   const toggleHandler = (target) => {
     setDivVisibility((prevVisibility) => ({
       stay: target === "stay" ? !prevVisibility.stay : false,

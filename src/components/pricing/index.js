@@ -8,9 +8,9 @@ const Pricing = () => {
     
   return (
     <>
-      <section className="pt-12 sm:pt-[64px]">
-        <div className="px-2 sm:px-6 md:px-6 mx-auto max-w-6xl">
-          <div className="pr-5 lg:pl-[120px] xl:pl-[180px] flex flex-col md:flex-row lg:flex-row">
+      <section className="pt-8 sm:pt-16">
+        <div className="px-6 mx-auto max-w-6xl">
+          <div className="flex flex-col lg:flex-row justify-center gap-6">
             {priceContent.map((v, i) => {
               return <Card price={v} key={i + v.type} />;
             })}

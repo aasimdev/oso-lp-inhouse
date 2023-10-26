@@ -1,19 +1,17 @@
-import dynamic from "next/dynamic";
-import Script from "next/script";
+import PriceView from "@/container/pricing/index";
 import React from "react";
 
 export const metadata = {
-  title: "OSO News",
-  description: "OSO's interactive AI news helps you stay informed effortlessly with your own personal AI Reporter.",
-  keywords: "AI News, AI reporter, OSO News, AI powered news, news summary, interactive news, AI news updates, AI news reporter, OSO AI News",
+  title: "OSO Pricing",
+  description: "SO Pro to benefit from everything OSO has to offer.",
+  keywords: "OSO, OSO Pricing, OSO Cost, Free AI, Free AI Chat, Free AI Search, AI Search Engine, Uncensored AI Chat",
 };
 
-const DynamicPriceView = dynamic(() => import("@/container/pricing/index"));
 
 export default function page() {
   return (
     <>
-      <DynamicPriceView />
+      <PriceView />
     </>
   );
 }

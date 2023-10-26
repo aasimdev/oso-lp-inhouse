@@ -105,7 +105,7 @@ const Footer = () => {
   }, []);
   return (
     <footer className="bg-black pb-8 pt-44 md:mt-40 mt-40  relative">
-      {pathname !== "/thank-you" && (
+      {pathname !== "/thank-you" && pathname !== "/pricing" && (
         <div className="absolute w-full top-0 -translate-y-1/2">
           <div className="px-6 mx-auto max-w-6xl">
             <CallToAction />

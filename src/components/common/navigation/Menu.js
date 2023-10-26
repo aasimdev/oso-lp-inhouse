@@ -5,6 +5,7 @@ const navItemsData = [
   { title: "Search", url: "/search" },
   { title: "Chat", url: "/chat" },
   { title: "News", url: "/news" },
+  { title: "Pricing", url: "/pricing" },
   { title: "Blog", url: "https://blog.oso.ai/" },
 ];
 const Menu = ({ isOpen, onClose }) => {

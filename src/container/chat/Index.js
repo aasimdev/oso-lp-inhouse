@@ -25,18 +25,28 @@ const ChatView = () => {
     {
       id: 2,
       question: "How is OSO Chat different than other AI chatbots?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Chat offers uncensored and unbiased language models that put it apart from any existing AI solution.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Chat stands out from other AI chatbots in several ways, primarily due to its uncensored and unbiased language models. Here's what makes OSO Chat unique:</p>
+
+            <ul class="list-disc p-[revert] space-y-6 mt-6">
+
+            <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Uncensored Responses:</span> Unlike many AI chatbots, OSO Chat provides uncensored responses, allowing you to receive information without unnecessary filters. This transparency promotes open dialogue and unrestricted access to knowledge, empowering users to engage in meaningful conversations and explore a wide range of topics without limitations.</li>
+
+            <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Unbiased Language Models:</span> OSO Chat is designed to avoid biases and present information in a fair and unbiased manner. This ensures that users can trust the integrity of the responses they receive, making OSO Chat a reliable and trustworthy source of information.
+
+                  <br /><br />
+
+            By offering uncensored and unbiased language models, OSO Chat enables users to engage in discussions openly and access information without limitations or biases.</li>
+
+            </ul>`
     },
     {
       id: 3,
-      question: "What Language Models does OSO Chat support?",
+      question: "What language models does OSO Chat support?",
       answer: `
-      <p class="text-2xl leading-9 font-light text-gray-900">Currently OSO supports 4 chat models including</p>
       <ul class="list-disc p-[revert] space-y-6 mt-6">
 
-      <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">OSO Uncensored:</span> OSO's advanced AI Search provides more accurate and relevant search outcomes.</li>
-
-      <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">OSO Savant:</span> Find the information you need without the censorship or limitations of other AI platforms.</li>
+      <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">OSO Uncensored:</span> Chat about any topic without restriction.
+      <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">OSO Savant:</span> Find the information you need with the help of highly specialized AI agents.</li>
       </ul>
       <p class="text-2xl leading-9 font-light text-gray-900 mt-6">OSO also supports a modified version of GPT 3.5 Turbo and GPT 4 with a visually-appealing format.</p>
       `,
@@ -45,20 +55,29 @@ const ChatView = () => {
     {
       id: 4,
       question: "What is OSO Savant?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Savant is a highly specific language model framework for specific functions. Instead of having broad language models for all tasks, OSO Savant enables users to switch between highly specialized AI agents for specific niches.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Savant is a specialized framework within OSO Chat that focuses on specific functions. Instead of having broad language models for all tasks, OSO Savant gives users access to highly specialized AI agents designed for specific niches. This unique feature enables you to obtain more precise and focused responses tailored to meet specific requirements. With OSO Savant, you can easily switch between these specialized AI agents, ensuring that you can access the information you need with the assistance of experts in their respective fields.</p>`,
     },
     {
       id: 5,
+      question: "Commitment to Encouraging Responsible Use of Information",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">At OSO, we take our commitment to responsible information use seriously. While we provide uncensored and unbiased access to information, we strongly emphasize that our platform is designed for responsible, legal, and ethical purposes. We do not endorse or support any illegal, harmful, or unethical activities.
+<br /><br />
+To ensure responsible use, OSO will require all users to complete a consent form upon joining. This consent form will include a legal disclaimer outlining our guidelines for appropriate use. Additionally, OSO is designed for adult users, and we do not permit access to individuals who are not of legal age in their jurisdiction.
+<br /><br />
+Our mission is to empower users with information while promoting ethical conduct and respect for the law. We encourage all OSO users to utilize our platform responsibly and in a manner that upholds these principles.</p>`,
+    },
+    {
+      id: 6,
       question: "How does OSO Uncensored Chat work?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">Uncensored Chat can be viewed as taking the training wheels off of a traditional AI Chatbot to provide users with answers to nearly any question.</p>`,
     },
     {
-      id: 6,
+      id: 7,
       question: "What is the pricing?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Chat is free to use with daily usage limitations. To unlock unlimited chats and certain language models an OSO Pro subscription for $20/mo is required.</p>`,
     },
     {
-      id: 7,
+      id: 8,
       question: "How do I get started?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
     },
@@ -67,7 +86,7 @@ const ChatView = () => {
     {
       title: "Customizable",
       description:
-        "Unlike other AI Chats, OSO enables you to select the AI model that suites you best. ",
+        "Unlike other AI Chats, OSO enables you to select the AI model that suits you best. ",
       image: "chatphone-1",
       id: "stay",
     },
@@ -89,8 +108,8 @@ const ChatView = () => {
     <>
       <GoogleAnalytics gaTrackingID='G-WZHB0QP262' />
       <Banner
-        title="Uncensored, Highly-Intelligent AI Chat."
-        description="Engage in unrestricted conversation, and search for information on any topic."
+        title="Uncensored, Unbiased, Intelligent"
+        description="OSO Chat enables users to chat about any topic without restriction."
         videoId='FpWF0i0vxGs'
         checklist={['Uncensored', 'Visually-appealing', '7-Day Free Trial']}
       />
@@ -104,7 +123,7 @@ const ChatView = () => {
       >
         <AdvantageCard
           title='Uncensored'
-          description=" OSO believes in free speech and  <span class='font-medium'>unrestricted access to knowledge,</span> ensuring you receive in-depth and unfiltered answers."
+          description=" OSO values free speech and  <span class='font-medium'>unrestricted access to knowledge,</span> ensuring you receive in-depth and unfiltered answers."
           borderLess={false}
           image={PhoneUncensored}
           imageWidth='357'
@@ -114,7 +133,7 @@ const ChatView = () => {
 
         <AdvantageCard
           title='Unbiased'
-          description="OSO believes in <span class='font-medium'>allowing you to formulate your own opinions</span> and  and provides different viewpoints of sensitive topics."
+          description="OSO believes in <span class='font-medium'>allowing you to formulate your own opinions</span> and provides different viewpoints on sensitive topics."
           borderLess={false}
           image={PhoneUnbiased}
           imageWidth='357'
@@ -124,7 +143,7 @@ const ChatView = () => {
 
         <AdvantageCard
           title='Personalized'
-          description="OSO <span class='font-medium'> learns from your preferences</span> over time to give you answers in the format, tone, and style that suites you best."
+          description="OSO <span class='font-medium'> learns from your preferences</span> over time to give you answers in the format, tone, and style that suits you best."
           borderLess={false}
           image={PhonePersonalized}
           imageWidth='357'

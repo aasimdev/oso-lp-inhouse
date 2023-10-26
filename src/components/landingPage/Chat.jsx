@@ -11,7 +11,7 @@ const Chat = () => {
       />
       <div className="flex justify-between items-start">
         <div>
-          <p className="text-[32px] md:text-5xl font-bold">Chat</p>
+          <p className="text-[32px] md:text-5xl font-bold">OSO Chat</p>
           <p className="text-2xl font-light mt-2">
             Chat <strong className="text-2xl font-medium">uncensored</strong>{" "}
             about anything.
@@ -43,7 +43,7 @@ const Chat = () => {
 
           <div className=" rounded-[20px] bg-black h-[228px] md:h-[256px] overflow-hidden border-[16px] border-black border-solid shadow-inner">
             <p className="hidden md:block  text-xl font-normal text-white ">
-              Insert the card: carefully insert the credit card into the slot,
+              Insert the card: Carefully insert the credit card into the slot,
               making sure it is fully inserted and parallel to the door.
               <br /> <br />
               Apply pressure: While holding the card in place, apply gentle
@@ -55,7 +55,7 @@ const Chat = () => {
               click. This indicates that the lock has been unlocked.{" "}
             </p>
             <p className=" block md:hidden text-xl font-normal text-white ">
-              Insert the card: carefully insert the credit card into the slot,
+              Insert the card: Carefully insert the credit card into the slot,
               making sure it is fully inserted and parallel to the door.
               <br />
               ...

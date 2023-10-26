@@ -24,7 +24,7 @@ const testimonialData = [
   {
     name: "Jason K.",
     description:
-      "OSO News has completely changed my news-reading routine. Instead of sifting through articles, I just chat with OSO to get the key points. It's like having a personal news reporter available 24/7!",
+      "OSO News has completely changed my news-reading routine. Instead of sifting through articles, I just chat with OSO to get the key points. It's like having a personal news reporter!",
     image: Jason,
   },
   {

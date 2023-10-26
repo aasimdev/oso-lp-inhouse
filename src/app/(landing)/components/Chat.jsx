@@ -11,7 +11,7 @@ const Chat = () => {
       />
       <div className="flex justify-between items-start">
         <div>
-          <p className="text-[32px] md:text-5xl font-bold">Chat</p>
+          <p className="text-[32px] md:text-5xl font-bold">OSO Chat</p>
           <p className="text-2xl font-light mt-2">
             Chat <strong className="text-2xl font-medium">uncensored</strong>{" "}
             about anything.

@@ -48,7 +48,7 @@ const SearchView = () => {
   return (
     <>
       <Banner
-        title="Experience the Future of Search with OSO"
+        title="Experience the Future of Search"
         description="Find what you’re looking for faster by letting OSO do the searching for you."
         videoId="7y2r9MrUeQ8"
         checklist={['Uncensored', 'Up-to-date', 'No credit card required']}
@@ -58,7 +58,7 @@ const SearchView = () => {
       <Advantages title="Advantages of OSO Search">
         <AdvantageCard
           title="Up to Date"
-          description="Unlike AI chatbots that have a set knowledge cutoff, <span class='font-medium'>OSO’s AI Search ensures you receive the most recent</span> and relevant information."
+          description="Unlike AI chatbots that have a set knowledge cutoff, <span class='font-medium'>OSO’s AI Search Engine ensures you receive the most recent</span> and relevant information."
           borderLess={true}
           image={webImage}
           imageWidth="532"

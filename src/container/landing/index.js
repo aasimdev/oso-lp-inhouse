@@ -44,12 +44,12 @@ const testimonialData = [
   },
   {
     name: "Steve A.",
-    description: "Most useful AI i've ever seen.",
+    description: "Most useful AI I've ever seen.",
     image: Steve,
   },
   {
     name: "Manu A.",
-    description: "This is power like i've never seen before.",
+    description: "This is power like I've never seen before.",
     image: Manu,
   },
   {
@@ -66,32 +66,43 @@ function LandingPage({ }) {
     {
       id: 1,
       question: "Why should I choose OSO?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO offers a more advanced and user-friendly suite of AI tools and services than any competitor and is constantly evolving, putting the needs of its users first.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO introduces an entirely new way to engage with the internet. Packed with three powerful tools – OSO Search, OSO Chat, and OSO News – you can access a wide range of information and engage in conversations without sifting through countless websites and articles. 
+      <br /><br />
+      OSO saves you time and offers an entirely new interactive experience, as easy as chatting with a friend. Unlike many competitors whose data is limited to 2021, OSO employs cutting-edge models, ensuring you always have up-to-date, uncensored information.</p>`,
     },
     {
       id: 2,
-      question: "What is the difference between OSO Search and Chat?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">AI Chatbots are limited in the real-time information they can gather due to how they are created and trained.
-      <br /><br />
-      OSO Search solves this by using AI to scan the internet for the latest information about your question and provides a static answer.
-      <br /><br />
-      OSO Chat on the other-hand is an advanced AI Chatbot trained until September 2023 which continuously learns as more questions are asked.
-      <br /><br />
-      The core difference is that OSO Chat is interactive and users can have a back-and-forth conversation, while OSO Search simply delivers an answer so you don't have to waste time reading through many websites to find it.</p>`,
+      question: "What is the difference between OSO Search and OSO Chat?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Search is your go-to tool for quick, comprehensive answers. OSO reads through the entire internet to find the latest information and delivers you with results in a visually appealing format. It's your personal research assistant, providing you with real-time, unbiased insights. 
+    <br /><br />
+OSO Chat, on the other hand, is your conversational companion. It engages in interactive, text-based conversations with you. Unlike other chatbots whose data is limited to 2021, OSO Chat was trained up to September 2023 and continuously learns as more questions are asked. Whether you're looking for a friendly chat or need information presented in a conversational format, OSO Chat is your companion of choice.
+    <br /><br />
+Together, OSO Search and OSO Chat form a powerful combo, quickly giving you the information you need, in the way that suits you best.</p>`,
     },
     {
       id: 3,
-      question: "What does uncensored & unbiased mean?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO believes in unrestricted access to knowledge; therefore, many of the censorship constraints surrounding topics on other AI platforms are lifted with OSO Chat. By creating our own uncensored LLM, we are able to provide users with an AI Chat that is actually useful to them and can give them the answers they need.<br /><br />Unbiased, means that we train OSO models with all available information and always try our best to take a neutral stance, outside of politics or popular opinion. We believe in letting our users make their own decisions on complex subjects.</p>`,
+      question: "What does uncensored and unbiased mean?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">At OSO, we're all about unrestricted and open access to knowledge. With OSO Chat, we've removed many of the censorship constraints you might encounter on other AI platforms. Our own uncensored LLM enables OSO Chat to provide users with useful, straightforward answers.
+  <br /><br />
+When we say "unbiased," we mean we train OSO models to take a neutral stance, free from political or popular opinion. We believe in empowering users to form their own conclusions on complex subjects by presenting information objectively.</p>`,
+    },
+    {
+      id: 4,
+      question: "Commitment to Encouraging Responsible Use of Information",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">At OSO, we take our commitment to responsible information use seriously. While we provide uncensored and unbiased access to information, we strongly emphasize that our platform is designed for responsible, legal, and ethical purposes. We do not endorse or support any illegal, harmful, or unethical activities.
+  <br /><br />
+To ensure responsible use, OSO will require all users to complete a consent form upon joining. This consent form will include a legal disclaimer outlining our guidelines for appropriate use. Additionally, OSO is designed for adult users, and we do not permit access to individuals who are not of legal age in their jurisdiction.
+  <br /><br />
+Our mission is to empower users with information while promoting ethical conduct and respect for the law. We encourage all OSO users to utilize our platform responsibly and in a manner that upholds these principles.</p>`,
     },
 
     {
-      id: 4,
+      id: 5,
       question: "What is the pricing?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will return 100x the value in productivity and time-savings.</p>`,
     },
     {
-      id: 5,
+      id: 6,
       question: "How do I get started?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
     },

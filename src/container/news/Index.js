@@ -1,8 +1,8 @@
 "use client";
 import AdvantageCard from "@/components/advantages/AdvantageCard";
 import Advantages from "@/components/advantages/Index";
-import Banner from "@/components/common/banner/NewsBanner";
-import Testimonials from "@/components/testimonials/Index";
+import Banner from "@/components/common/banner/Index";
+
 import React from "react";
 
 import FAQ from "@/components/FAQ/Index";
@@ -10,6 +10,7 @@ import Comparisons from "@/components/common/Comparisons/Comparisons";
 import InnerChatSection from "@/components/common/Comparisons/InnerChatSection/InnerChatSection";
 import GoogleAnalytics from "@/utils/google-analytics/anaylics";
 import BrandLogos from "@/components/common/BrandLogos";
+import NewsTestimonials from "@/components/testimonials/News";
 
 const NewsView = () => {
   const accordionData = [
@@ -73,7 +74,7 @@ const NewsView = () => {
       <Advantages title="Advantages of OSO News" page="news">
         <AdvantageCard
           title="Interactive"
-          description="Skip reading through articles - <span class='font-medium'>just ask questions</span> to get the information you need."
+          description="Skip reading lengthy articles - <span class='font-medium'>just ask OSO</span> to get the information you need."
           borderLess={false}
           image="/assets/images/newsphone1.png"
           imageWidth="357"
@@ -105,7 +106,7 @@ const NewsView = () => {
       >
         <InnerChatSection comparisonContent={comparisonContent} />
       </Comparisons>
-      <Testimonials title="Testimonials" />
+      <NewsTestimonials title="Testimonials" />
       <FAQ accordionData={accordionData} />
     </>
   );

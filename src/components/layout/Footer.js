@@ -207,6 +207,9 @@ const Footer = () => {
             <Link href="/privacy-policy" className="text-gray-500 text-sm">
               Privacy Policy
             </Link>
+            <Link href="https://brand.oso.ai/" target="_blank" className="text-gray-500 text-sm">
+              Brand Guidelines
+            </Link>
           </div>
         </div>
       </div>

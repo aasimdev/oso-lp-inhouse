@@ -40,12 +40,12 @@ const testimonialData = [
   },
   {
     name: "Steve A.",
-    description: "Most useful AI i've ever seen.",
+    description: "Most useful AI I've ever seen.",
     image: Steve,
   },
   {
     name: "Manu A.",
-    description: "This is power like i've never seen before.",
+    description: "This is power like I've never seen before.",
     image: Manu,
   },
   {

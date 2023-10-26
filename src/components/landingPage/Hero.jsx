@@ -15,10 +15,8 @@ const Hero = () => {
             A new way to use the internet.
           </h1>
           <p className="text-gray-800 md:text-center text-left md:text-[32px] text-2xl font-light leading-10">
-            Real-time AI Search. Uncensored Chat. Interactive News.
-
-
-            <br className="hidden sm:inline-block"/> Everything You Need in One App with OSO.
+          Real-Time AI Search, Uncensored Chat, Interactive News –
+            <br className="hidden sm:inline-block"/> All in One Powerful App.
           </p>
         </div>
           <div className="md:flex justify-center items-center pt-8 md:pt-6">

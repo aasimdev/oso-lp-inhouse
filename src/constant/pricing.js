@@ -50,14 +50,17 @@ export const priceContent = [
       {
         bulletPoint: "Customizable Interactive News",
         isEnable: true,
+        isIcon: true,
       },
       {
         bulletPoint: "OSO Uncensored LLM",
         isEnable: true,
+        isIcon: true,
       },
       {
         bulletPoint: "Voice Conversations",
         isEnable: true,
+        isIcon: true,
       },
     ],
   },

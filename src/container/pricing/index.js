@@ -9,10 +9,10 @@ const PriceView = () => {
       <section className="sm:mt-8 py-6 sm:py-8 px-6 mx-auto max-w-6xl">
         <div className="flex flex-col md:gap-4 gap-2">
           <h1 className="md:text-[56px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto">
-            Simple, transparent pricing
+            Simple and transparent pricing
           </h1>
           <p className="text-gray-800 md:text-center text-left md:text-[32px] text-2xl font-light leading-tight">
-            No credit card required, cancel anytime
+            No credit card required, cancel anytime.
           </p>
         </div>
       </section>

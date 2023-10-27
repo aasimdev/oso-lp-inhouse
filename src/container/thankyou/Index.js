@@ -47,7 +47,7 @@ const ThankYouView = ({ email }) => {
                   phone_number: null  });`,
                 }}
             />
-            <section className="bg-gradient-to-b from-purple-400 flex items-center justify-center pt-28 md:pt-40 px-6 md:px-0">
+            <section className="flex items-center justify-center pt-28 md:pt-40 px-6 md:px-0">
                 <div className="flex flex-col justify-center md:text-center max-w-[532px]">
                     {previousPageUrl === "/search" ?
                         <>

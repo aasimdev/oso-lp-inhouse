@@ -21,7 +21,7 @@ export const priceContent = [
         isEnable: true,
       },
       {
-        bulletPoint: "1OSO Uncensored LLM",
+        bulletPoint: "OSO Uncensored LLM",
         isEnable: false,
       },
       {
@@ -44,7 +44,7 @@ export const priceContent = [
         isEnable: true,
       },
       {
-        bulletPoint: "2Unlimited Messages",
+        bulletPoint: "Unlimited Messages",
         isEnable: true,
       },
       {

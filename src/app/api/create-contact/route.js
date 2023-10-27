@@ -90,6 +90,7 @@ export async function POST(req) {
       )
       const contactTagRes = await contactTagsRes.json()
     }
+
     const waitListId = () => {
       switch (pathname) {
         case "/":
@@ -99,7 +100,7 @@ export async function POST(req) {
         case "/news":
           return 5
         default:
-          return WAITLIST_ID
+          return 2
       }
     }
     // Set List
@@ -110,7 +111,7 @@ export async function POST(req) {
         body: JSON.stringify({
           contactList: {
             contact: contactRes.contact.id,
-            list: waitListId,
+            list: waitListId(),
             status: "1",
           },
         }),
@@ -122,6 +123,7 @@ export async function POST(req) {
       }
     )
 
+console.log("listID", res2);
     return NextResponse.json({ status: "success" }, { status: 200 })
   } catch (error) {
     return NextResponse.json({ status: "error" }, { status: 500 })

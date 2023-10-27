@@ -145,7 +145,7 @@ function RootLayoutContent({ children }) {
           }}
         />
       </head>
-      <body className={`${showSidebar ? "overflow-hidden md:pr-[17px]" : ""}`}>
+      <body className={`${showSidebar ? "overflow-hidden" : ""}`}>
         <Script
           id='hotjar-analytics'
           strategy='afterInteractive'

@@ -39,7 +39,7 @@ export const priceContent = [
     unit: "month",
     currency: "$",
     buttonTitle: "Coming soon",
-    buttonUrl: "",
+    buttonUrl: "https://buy.stripe.com/test_00g5n2dUDbSr5xe001",
     details: [
       {
         bulletPoint: "Unlimited Searches",

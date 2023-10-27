@@ -39,6 +39,18 @@ const SearchAndOtherForLaptop = () => {
     };
   }, []);
 
+  const resetTyping = () => {
+    setStringTypeOut(false);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(resetTyping, 8000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div
       className="flex flex-col lg:flex-row lg:gap-6 md:gap-14 gap-12 justify-between pt-16 md:pt-0"

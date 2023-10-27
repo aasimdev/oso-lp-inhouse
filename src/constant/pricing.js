@@ -7,6 +7,7 @@ export const priceContent = [
     unit: "month",
     currency: "$",
     buttonTitle: "Try OSO for free",
+    buttonUrl: "https://l.oso.ai/beta",
     details: [
       {
         bulletPoint: "10 Searches per day",
@@ -38,6 +39,7 @@ export const priceContent = [
     unit: "month",
     currency: "$",
     buttonTitle: "Coming soon",
+    buttonUrl: "",
     details: [
       {
         bulletPoint: "Unlimited Searches",
@@ -49,13 +51,15 @@ export const priceContent = [
       },
       {
         bulletPoint: "Customizable Interactive News",
-        tooltip: "Simply ask about anything in your customized news feed to quickly find out what it's about, without having to read the entire news article.",
+        tooltip:
+          "Simply ask about anything in your customized news feed to quickly find out what it's about, without having to read the entire news article.",
         isEnable: true,
         isIcon: true,
       },
       {
         bulletPoint: "OSO Uncensored LLM",
-        tooltip: "Engage in unrestricted conversation and search for information on any topic.",
+        tooltip:
+          "Engage in unrestricted conversation and search for information on any topic.",
         isEnable: true,
         isIcon: true,
       },

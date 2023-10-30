@@ -215,18 +215,42 @@ const InnerSections = ({
             </div>
           )}
 
-          {!isMobile && (
-            <div
-              className={`text-block cursor-pointer ${
-                divVisibility.deep ? "md:opacity-100" : "md:opacity-20"
-              }`}
-              onClick={() => toggleHandler("deep")}
-            >
-              <ComparisonContent
-                title={titleThree}
-                description={descriptionThree}
-                isMobile={isMobile}
-              />
+          <div
+            className={`text-block cursor-pointer ${
+              divVisibility.deep ? "md:opacity-100" : "md:opacity-20"
+            }`}
+            onClick={() => toggleHandler("deep")}
+          >
+            <ComparisonContent
+              title={titleThree}
+              description={descriptionThree}
+              isMobile={isMobile}
+            />
+          </div>
+          {!isDesktop && (
+            <div className="sm:mx-0">
+              <Swiper
+                spaceBetween={-20}
+                slidesPerView={1.15}
+                pagination={{
+                  clickable: true,
+                }}
+                modules={[Pagination]}
+                className="!z-auto mobSwiper"
+              >
+                <SwiperSlide className="!h-auto">
+                  <div className="each-slide-effect">
+                    <Phone title={oso} obj={phoneThreeOso} />
+                  </div>
+                </SwiperSlide>
+                {phoneTwoChatGPT && (
+                  <SwiperSlide className="!h-auto">
+                    <div className="each-slide-effect">
+                      <Phone title={chatgpt} obj={phoneThreeChatGPT} />
+                    </div>
+                  </SwiperSlide>
+                )}
+              </Swiper>
             </div>
           )}
         </div>
@@ -273,41 +297,6 @@ const InnerSections = ({
               </div>
             </div>
           </div>
-        )}
-
-        {/* Mobile Views */}
-        {!isDesktop && (
-          <>
-            <ComparisonContent
-              title={titleOne}
-              description={descriptionOne}
-              isMobile={isMobile}
-            />
-            <div className=" sm:mx-0 mt-12 sm:mt-0">
-              <Swiper
-                spaceBetween={-20}
-                slidesPerView={1.15}
-                pagination={{
-                  clickable: true,
-                }}
-                modules={[Pagination]}
-                className="!z-auto mobSwiper"
-              >
-                <SwiperSlide className="!h-auto">
-                  <div className="each-slide-effect">
-                    <Phone title={oso} obj={phoneThreeOso} />
-                  </div>
-                </SwiperSlide>
-                {phoneThreeChatGPT && (
-                  <SwiperSlide className="!h-auto">
-                    <div className="each-slide-effect">
-                      <Phone title={chatgpt} obj={phoneThreeChatGPT} />
-                    </div>
-                  </SwiperSlide>
-                )}
-              </Swiper>
-            </div>
-          </>
         )}
       </div>
     </div>

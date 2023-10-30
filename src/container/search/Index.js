@@ -18,25 +18,27 @@ const SearchView = () => {
   const accordionData = [
     {
       id: 1,
-      question: "Benefits of OSO?",
+      question: "Benefits of OSO Search?",
       answer: `<ul class="list-disc p-[revert] space-y-6">
 
-        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Enhanced Results:</span> OSO's advanced AI Search provides more accurate and relevant search outcomes.</li>
+        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal"> Save Time:</span> OSO significantly reduces the time you spend
+jumping between websites. Spend more time doing what you love and let OSO research it for you.</li>
 
-        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Up to date & un-biased:</span> Find the information you need without the censorship or limitations of other AI platforms.</li>
+        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Stay Informed:</span> OSO provides you with the latest information from reliable sources, ensuring you always stay updated.</li>
 
-        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Boosted Productivity:</span> OSO does the time consuming and often boring tasks, such as reading through websites to find small bits of information you actually need, freeing you to concentrate on tasks that leverage unique human skills and creativity.</li>
+        <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">Learn Faster:</span> OSO's visually engaging format and quick summaries empower you to learn and absorb information more efficiently.</li>
         </ul>`,
     },
     {
       id: 2,
-      question: "How is OSO Search different from other AI",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">While most AI applications rely on ChatGPT or existing AI solutions that have severe limitations, OSO has created its own AI technology that provides a more robust and useful user experience.</p>`,
+      question: "How is OSO Search better than traditional search engines?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Search revolutionizes the way you find information compared
+to traditional search engines. By harnessing the power of advanced AI technology and multiple search engines, OSO can provide you with the latest and most comprehensive information on any topic.</p>`,
     },
     {
       id: 3,
       question: "What is the pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Search is free to use with daily usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will return 100x the value in productivity and time-savings.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Search is free to use with daily usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will provide great value in productivity and time-savings.</p>`,
     },
 
     {

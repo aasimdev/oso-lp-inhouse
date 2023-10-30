@@ -145,8 +145,7 @@ const SearchAndOtherForMobile = () => {
                   <p className="text-xl md:text-2xl font-normal">I 
                     don&apos;t have access to real-time information or current
                     restaurant reviews, as my knowledge was last updated in
-                    September 2021. However, I can suggest some popular sushi
-                    places in Prague as of my last update.
+                    September 2021. 
                   </p>
                 </div>
               ) : (

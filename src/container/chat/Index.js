@@ -74,7 +74,7 @@ Our mission is to empower users with information while promoting ethical conduct
     {
       id: 7,
       question: "What is the pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Chat is free to use with daily usage limitations. To unlock unlimited chats and certain language models an OSO Pro subscription for $20/mo is required.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Chat is free to use with daily usage limitations. To unlock unlimited chats and certain language models, an OSO Pro subscription for $20/mo is required.</p>`,
     },
     {
       id: 8,

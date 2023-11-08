@@ -2,7 +2,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Video from "@/components/VideoThankyou";
-// import ThankyouModal from "../ThankyouModal";
 import ModalComponent from "@/components/modal/Modal";
 import VideoThankyouModal from "@/components/VideoThankyouModal";
 

@@ -16,6 +16,14 @@ html {
   @apply bg-purple text-white p-5 w-full sm:w-[300px] border border-purple text-2xl font-normal text-center rounded-lg inline-flex items-center justify-center gap-4 transition-all duration-300 hover:gap-5 hover:bg-[#811BFF] hover:border-[#811BFF] active:bg-[#9C4BFF] focus:bg-[#9C4BFF] focus:border-[#9C4BFF] active:border-[#9C4BFF];
 }
 
+.outline-theme-btn {
+  @apply bg-white text-purple p-5 w-full sm:w-[300px] border border-purple text-2xl font-normal text-center rounded-lg inline-flex items-center justify-center gap-4 transition-all duration-300 hover:gap-5 hover:border-[#811BFF] focus:bg-white focus:border-[#9C4BFF] active:border-[#9C4BFF];
+}
+
+.theme-btn2 {
+  @apply bg-purple text-white p-5 w-full sm:max-w-[732px] border border-purple text-2xl font-normal text-center rounded-lg inline-flex items-center justify-center gap-4 transition-all duration-300 hover:gap-5 hover:bg-[#811BFF] hover:border-[#811BFF] active:bg-[#9C4BFF] focus:bg-[#9C4BFF] focus:border-[#9C4BFF] active:border-[#9C4BFF];
+}
+
 .learn-btn {
   @apply text-black sm:w-[135px] text-base rounded-lg inline-flex items-center justify-center gap-4 transition-all duration-300 hover:gap-5;
 }
@@ -299,4 +307,13 @@ html {
   .email-width {
     width: 100%;
   }
+}
+
+.buttonCloseModal {
+  display: block;
+  /* float: right; */
+  position: relative;
+  top: -50px;
+  right: -820px;
+  z-index: 1002;
 }

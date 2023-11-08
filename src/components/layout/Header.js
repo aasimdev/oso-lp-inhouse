@@ -131,12 +131,14 @@ const Header = () => {
   return (
     <>
       <div className="bg-black text-center py-4 sm:py-2 px-0 sm:px-6">
-        <div className="text-white text-xs sm:text-sm">
-          OSO&apos;s investor community is growing. Find out more{" "}
-          <Link className="underline" href="/investors">
-            here
-          </Link>
-          🔥
+        <div className="text-white text-sm sm:text-sm">
+         <strong>Earn $5 per month</strong> for each friend you invite to OSO.{" "}
+         <span className="block sm:inline">
+      <Link className="underline" href="https://friends.oso.ai/signup" target="_blank">
+        Learn more
+      </Link>
+       🔥
+    </span>
         </div>
       </div>
 

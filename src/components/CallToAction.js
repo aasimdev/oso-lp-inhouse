@@ -10,7 +10,7 @@ const CallToAction = () => {
                     label="Apply now"
                     className="!text-base !font-normal md:!w-[170px] w-full !p-3 !gap-2 hover:!gap-3"
                     arrowIcon={true}
-                    link="https://eijfn1o56i0.typeform.com/to/Iq1Hv1Nz"
+                    link="https://friends.oso.ai/signup"
                     target="_blank"
                 />
             </div>

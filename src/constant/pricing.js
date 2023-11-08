@@ -6,8 +6,8 @@ export const priceContent = [
     amount: "Free",
     unit: "month",
     currency: "$",
-    buttonTitle: "Try OSO for free",
-    buttonUrl: "https://l.oso.ai/beta",
+    buttonTitle: "Invite Friends",
+    buttonUrl: "https://friends.oso.ai/",
     details: [
       {
         bulletPoint: "10 Searches per day",

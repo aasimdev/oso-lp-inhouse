@@ -40,9 +40,22 @@ to traditional search engines. By harnessing the power of advanced AI technology
       question: "What is the pricing?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Search is free to use with daily usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will provide great value in productivity and time-savings.</p>`,
     },
+     {
+      id: 4,
+      question: "What are the perks of being an OSO Ambassador?",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Ambassadors earn $5 per month when anyone they invite to OSO subscribes to OSO Pro. If 100 people they invite have active OSO Pro subscriptions, they would earn $500 every month. 
+      <br /><br />
+      Ambassadors can start inviting people right now, and start earning straight away when OSO launches.
+       <br /><br />
+       <a href="https://friends.oso.ai/signup" target="_blank" rel="noopener noreferrer">
+  <span><strong>Apply here</strong></span>
+</a>
+
+       </p>`,
+    },
 
     {
-      id: 4,
+      id: 5,
       question: "How do I get started?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
     },

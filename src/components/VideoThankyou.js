@@ -97,7 +97,7 @@ const Video = ({ src, videoId, variant, openModal, isOpen, modalValue }) => {
         variant === "two" ? "max-w-[347px]" : "max-w-[532px]"
       }${
         variant === "three"
-          ? "lg:h-[480px]"
+          ? "lg:h-[480px] max-w-[440px] mr-0"
           : variant === "two"
           ? "lg:h-[231px]"
           : "lg:h-[354px]"

@@ -58,7 +58,7 @@ const ThankYouViewThree = () => {
                 videoId="FpWF0i0vxGs"
                 openModal={openModal}
                 isOpen={isOpen}
-                modalValue={false}
+                modalValue={true}
                 variant={"three"}
               />
             </div>

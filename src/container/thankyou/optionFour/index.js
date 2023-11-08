@@ -1,9 +1,20 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
-import Video from "@/components/VideoThankyou";
+import React, { useEffect, useState } from "react";
+import ModalComponent from "@/components/modal/Modal";
+import VideoThankyouModal from "@/components/VideoThankyouModal";
 
 const ThankYouViewFour = () => {
+  const [isOpen, setIsOpen] = useState(true);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <section className="bg-gradient-to-b from-purple-400">
@@ -11,7 +22,7 @@ const ThankYouViewFour = () => {
           <div className="flex flex-col justify-center items-center gap-4 mx-2">
             <div className="max-w-[533px]">
               <div className="w-[532px] text-start md:text-center font-extrabold text-black text-[32px]">
-                We're thrilled to have you onboard!
+                Thank you for subscribing to OSO Pro.
               </div>
               <p className="w-[532px] text-start md:text-center text-gray-800 text-2xl font-light pt-4">
                 You will soon receive an email with steps to unlock early access
@@ -149,6 +160,13 @@ const ThankYouViewFour = () => {
           </div>
         </div>
       </section>
+      {isOpen && (
+        <>
+          <ModalComponent modalIsOpen={isOpen} closeModal={closeModal}>
+            <VideoThankyouModal videoId="FpWF0i0vxGs" />
+          </ModalComponent>
+        </>
+      )}
     </>
   );
 };

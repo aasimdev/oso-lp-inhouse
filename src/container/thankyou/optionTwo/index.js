@@ -2,9 +2,21 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import Video from "@/components/VideoThankyou";
+import ModalComponent from "@/components/modal/Modal";
+import VideoThankyouModal from "@/components/VideoThankyouModal";
 
 const ThankYouViewTwo = () => {
   const [isMobile, setIsMobile] = useState(false);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
 
   useEffect(() => {
     function handleResize() {
@@ -30,7 +42,13 @@ const ThankYouViewTwo = () => {
         <div className="px-6 mx-auto max-w-6xl pt-20">
           <div className="flex flex-col md:justify-center items-center gap-6 mx-2">
             <div className="hidden sm:inline-block py-2 max-w-[347px] h-[231px]">
-              <Video videoId="FpWF0i0vxGs" modalValue={false} variant={"two"} />
+              <Video
+                videoId="FpWF0i0vxGs"
+                openModal={openModal}
+                isOpen={isOpen}
+                modalValue={true}
+                variant={"two"}
+              />
             </div>
             <div>
               <div className="w-[532px] text-start md:text-center font-extrabold text-black text-[32px]">
@@ -289,11 +307,24 @@ const ThankYouViewTwo = () => {
               </button>
             </div>
             <div className="inline-block md:hidden py-2 max-w-[347px] h-[231px]">
-              <Video videoId="FpWF0i0vxGs" modalValue={false} variant={"two"} />
+              <Video
+                videoId="FpWF0i0vxGs"
+                openModal={openModal}
+                isOpen={isOpen}
+                modalValue={true}
+                variant={"two"}
+              />
             </div>
           </div>
         </div>
       </section>
+      {isOpen && (
+        <>
+          <ModalComponent modalIsOpen={isOpen} closeModal={closeModal}>
+            <VideoThankyouModal videoId="FpWF0i0vxGs" />
+          </ModalComponent>
+        </>
+      )}
     </>
   );
 };

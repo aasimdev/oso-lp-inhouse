@@ -1,14 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
 
 const Video = ({ src, videoId, variant }) => {
-  const [handler, setHandler] = useState(true);
+  const [handler, setHandler] = useState(false);
   const videoRef = useRef(null);
   const [preLoad, setPreLoad] = useState(false);
   const iframeRef = useRef(null);
 
-  const videoHandler = () => {
+  const videoHandler = (n) => {
     setHandler(false);
     const video = videoRef.current;
+    console.log("-------------", video, n);
     if (video) {
       video.currentTime = 0;
       video.muted = false;
@@ -22,8 +23,13 @@ const Video = ({ src, videoId, variant }) => {
   useEffect(() => {
     setTimeout(() => {
       setPreLoad(true);
+      videoHandler(1);
     }, 300);
   }, []);
+
+  useLayoutEffect(() => {
+    videoHandler(2);
+  });
 
   const handleFullScreen = () => {
     const iframe = iframeRef.current;
@@ -103,8 +109,8 @@ const Video = ({ src, videoId, variant }) => {
           type="text/html"
           className="w-full aspect-video -m-[1px] inset-0-clip md:w-[532px] md:h-[354px] lg:w-[800px] lg:h-[533px]"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=${
-            variant !== "newsBanner" ? 1 : handler ? 0 : 1
-          }&mute=${handler ? 1 : 0}&loop=1&controls=${
+            handler ? 0 : 1
+          }&mute=${handler ? 1 : 1}&loop=1&controls=${
             handler ? 0 : 1
           }&modestbranding=1&showinfo=0&rel=0`}
           frameborder="0"

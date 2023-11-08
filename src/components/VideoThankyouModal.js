@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState, useLayoutEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const Video = ({ src, videoId, variant }) => {
   const [handler, setHandler] = useState(false);
@@ -9,27 +9,18 @@ const Video = ({ src, videoId, variant }) => {
   const videoHandler = (n) => {
     setHandler(false);
     const video = videoRef.current;
-    console.log("-------------", video, n);
     if (video) {
       video.currentTime = 0;
       video.muted = false;
       video.play();
-    }
-    if (variant === "newsBanner") {
-      handleFullScreen();
     }
   };
 
   useEffect(() => {
     setTimeout(() => {
       setPreLoad(true);
-      videoHandler(1);
     }, 300);
   }, []);
-
-  useLayoutEffect(() => {
-    videoHandler(2);
-  });
 
   const handleFullScreen = () => {
     const iframe = iframeRef.current;
@@ -110,7 +101,7 @@ const Video = ({ src, videoId, variant }) => {
           className="w-full aspect-video -m-[1px] inset-0-clip md:w-[532px] md:h-[354px] lg:w-[800px] lg:h-[533px]"
           src={`https://www.youtube.com/embed/${videoId}?autoplay=${
             handler ? 0 : 1
-          }&mute=${handler ? 1 : 1}&loop=1&controls=${
+          }&mute=${handler ? 1 : 0}&loop=1&controls=${
             handler ? 0 : 1
           }&modestbranding=1&showinfo=0&rel=0`}
           frameborder="0"

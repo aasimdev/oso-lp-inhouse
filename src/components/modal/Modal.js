@@ -20,6 +20,8 @@ const customStyles = {
     width: "calc(100% - 32px)",
     maxWidth: "800px",
     overflow: "visible",
+    border: 0,
+    backgroundColor: "transparent"
   },
 };
 
@@ -48,7 +50,7 @@ function ModalComponent({
             style={customStyles}
             contentLabel="Example Modal"
           >
-            <button className="relative top-[-100px] float-right" onClick={closeModal}>
+            <button className="absolute right-0 -mt-16 sm:-mt-8 sm:-mr-24" onClick={closeModal}>
               <div className="w-12 h-12 p-4 bg-gray-50 rounded-[100px] flex-col justify-center items-center gap-2 inline-flex">
                 <div className="w-6 h-6 relative">
                   <svg

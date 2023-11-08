@@ -99,11 +99,7 @@ const Video = ({ src, videoId, variant }) => {
           id="ytplayer"
           type="text/html"
           className="w-full aspect-video -m-[1px] inset-0-clip md:w-[532px] md:h-[354px] lg:w-[800px] lg:h-[533px]"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=${
-            handler ? 0 : 1
-          }&mute=${handler ? 1 : 0}&loop=1&controls=${
-            handler ? 0 : 1
-          }&modestbranding=1&showinfo=0&rel=0`}
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&controls=1&modestbranding=1&showinfo=0&rel=0`}
           frameborder="0"
           allowFullScreen
           allow="fullscreen"

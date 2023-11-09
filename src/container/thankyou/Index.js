@@ -2,10 +2,10 @@
 import Video from "@/components/VideoThankyou";
 import ModalComponent from "@/components/modal/Modal";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import Script from "next/script";
 import React, { useEffect, useState } from "react";
 import VideoThankyouModal from "@/components/VideoThankyouModal";
+
 const ThankYouView = ({ email, checkoutSessionId }) => {
   const [previousPageUrl, setPreviousPageUrl] = useState("/");
   const [isOpen, setIsOpen] = useState(true);
@@ -31,28 +31,27 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
     }
   }, []);
 
-  useEffect(() => {
-    (async () => {
-      if (checkoutSessionId) {
-
-        const res = await fetch("/api/stripe-checkout-data", {
-          method: "POST",
-          body: JSON.stringify({
-            checkoutSessionId,
-          }),
-        });
-        const sessionData = await res.json();
-        const customerEmail = sessionData?.data?.customerEmail;
-        if (customerEmail && typeof rewardful === "function") {
-          window.rewardful("convert", { email: customerEmail });
-        }
-      }
-    })();
-  }, [checkoutSessionId]);
+  // useEffect(() => {
+  //   (async () => {
+  //     if (checkoutSessionId) {
+  //       const res = await fetch("/api/stripe-checkout-data", {
+  //         method: "POST",
+  //         body: JSON.stringify({
+  //           checkoutSessionId,
+  //         }),
+  //       });
+  //       const sessionData = await res.json();
+  //       const customerEmail = sessionData?.data?.customerEmail;
+  //       if (customerEmail && typeof rewardful === "function") {
+  //         window.rewardful("convert", { email: customerEmail });
+  //       }
+  //     }
+  //   })();
+  // }, [checkoutSessionId]);
 
   return (
     <>
-    <style jsx>{`
+      <style jsx>{`
         @media (max-width: 768px) {
           .hide-on-mobile {
             display: none;
@@ -67,7 +66,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
       />
       {/* <!-- Twitter conversion tracking event code -->  */}
       <Script
-        id="twitter-conversion-tracking"
+        id="twitter-conversion-tracking-event-1"
         strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `twq('event', 'tw-ogmtw-ogmtz', { 
@@ -75,6 +74,31 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
                   (e.g. order id '1a2b3c') 
                   email_address: ${email}, 
                   phone_number: null  });`,
+        }}
+      />
+
+      <Script
+        id="twitter-conversion-tracking-event-2"
+        strategy="lazyOnload"
+        dangerouslySetInnerHTML={{
+          __html: `twq('event', 'tw-oha7k-oha7m', { 
+              conversion_id: null,
+                  (e.g. order id '1a2b3c') 
+                  email_address: ${email}, 
+                  phone_number: null  });`,
+        }}
+      />
+
+      <Script
+        strategy="lazyOnload"
+        id="google-analytics-event-lead"
+        dangerouslySetInnerHTML={{
+          __html: ` window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+      
+            gtag('config', 'G-V2Y9R8B57Y');
+            gtag('event', 'Lead')`,
         }}
       />
 
@@ -86,9 +110,10 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
                 We&apos;re thrilled to have you onboard!
               </h1>
               <p className="text-2xl mt-4 mb-8 font-light text-gray-800">
-                You&apos;ve joined us early, before the buzz and the viral explosion.
-                To show our appreciation for your trust in us, we&apos;re offering
-                early supporters the chance to get <span className="font-medium">pre-release access</span> to OSO
+                You&apos;ve joined us early, before the buzz and the viral
+                explosion. To show our appreciation for your trust in us,
+                we&apos;re offering early supporters the chance to get{" "}
+                <span className="font-medium">pre-release access</span> to OSO
                 Uncensored Chat.
                 <br /> <br />
                 <span className="text-gray-800 text-base font-semibold">
@@ -105,8 +130,11 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
                 </span>
               </p>
               <div className="flex flex-col-reverse gap-2">
-                <Link href="/" className="theme-btn2 mx-auto !bg-white !text-purple !border-2">
-                 <span> Claim Offer</span>
+                <Link
+                  href="/"
+                  className="theme-btn2 mx-auto !bg-white !text-purple !border-2"
+                >
+                  <span> Claim Offer</span>
                   <svg
                     width="24"
                     height="24"
@@ -124,7 +152,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
             </div>
             <div>
               <Video
-                videoId="FpWF0i0vxGs"
+                videoId="B2xT7U-hcaA"
                 openModal={openModal}
                 isOpen={isOpen}
                 modalValue={true}
@@ -136,11 +164,10 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
       </section>
       {isOpen && (
         <ModalComponent modalIsOpen={isOpen} closeModal={closeModal}>
-          <VideoThankyouModal videoId="FpWF0i0vxGs" />
+          <VideoThankyouModal videoId="B2xT7U-hcaA" />
         </ModalComponent>
       )}
     </>
-
   );
 };
 

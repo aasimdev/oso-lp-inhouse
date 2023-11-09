@@ -49,14 +49,25 @@ const Header = () => {
       }
       const token = await executeRecaptcha();
 
+      let referralData;
+      window.rewardful("ready", () => {
+        if (Rewardful.referral) {
+          referralData = Rewardful.referral;
+        }
+      });
+
+      const referral = data.referral || referralData;
+
       if (token) {
-        addWaitlistContact(
+        console.log("referel------", referral);
+        await addWaitlistContact(
           data.email,
           token,
           ac_tag_id,
           formId,
           userLang,
-          userDevice
+          userDevice,
+          referral
         );
       } else {
         console.error("reCAPTCHA verification failed");
@@ -70,9 +81,11 @@ const Header = () => {
     ac_tag_id,
     formId,
     userLang,
-    userDevice
+    userDevice,
+    referral
   ) {
     setIsLoading(true);
+
     const res = await fetch("/api/create-contact", {
       method: "POST",
       body: JSON.stringify({
@@ -83,6 +96,7 @@ const Header = () => {
         userLang,
         userDevice,
         pathname,
+        referral,
       }),
     });
 
@@ -132,13 +146,17 @@ const Header = () => {
     <>
       <div className="bg-black text-center py-4 sm:py-2 px-0 sm:px-6">
         <div className="text-white text-sm sm:text-sm">
-         <strong>Earn $5 per month</strong> for each friend you invite to OSO.{" "}
-         <span className="block sm:inline">
-      <Link className="underline" href="https://friends.oso.ai/signup" target="_blank">
-        Learn more
-      </Link>
-       🔥
-    </span>
+          <strong>Earn $5 per month</strong> for each friend you invite to OSO.{" "}
+          <span className="block sm:inline">
+            <Link
+              className="underline"
+              href="https://friends.oso.ai/signup"
+              target="_blank"
+            >
+              Learn more
+            </Link>
+            🔥
+          </span>
         </div>
       </div>
 
@@ -169,6 +187,7 @@ const Header = () => {
               <form
                 onSubmit={form?.handleSubmit}
                 className="hidden sm:flex gap-2 items-center"
+                data-rewardful="true"
               >
                 {hform && (
                   <>

@@ -8,5 +8,7 @@ export const metadata = {
 
 export default function Page({ searchParams }) {
   const { email, checkout_session_id } = searchParams;
-  return <ThankYouViewFour />;
+  return (
+    <ThankYouViewFour email={email} checkoutSessionId={checkout_session_id} />
+  );
 }

@@ -27,6 +27,15 @@ const Newsletter = ({ formId }) => {
       }
       const token = await executeRecaptcha();
 
+      let referralData;
+      window.rewardful("ready", () => {
+        if (Rewardful.referral) {
+          referralData = Rewardful.referral;
+        }
+      });
+
+      const referral = data.referral || referralData;
+
       if (token) {
         handleCreateContact(
           data.email,
@@ -34,7 +43,8 @@ const Newsletter = ({ formId }) => {
           ac_tag_id,
           userDevice,
           userLang,
-          formId
+          formId,
+          referral
         );
       } else {
         console.error("reCAPTCHA verification failed");
@@ -49,7 +59,8 @@ const Newsletter = ({ formId }) => {
     ac_tag_id,
     userDevice,
     userLang,
-    formId
+    formId,
+    referral
   ) {
     const res = await fetch("/api/create-contact", {
       method: "POST",
@@ -61,14 +72,15 @@ const Newsletter = ({ formId }) => {
         userLang,
         formId,
         pathname,
+        referral,
       }),
     });
 
     if (res.status === 200) {
       form.setValues({ email: "" });
       router.push("/thank-you?email=" + email);
-      localStorage.removeItem('submitedURL');
-      localStorage.setItem('submitedURL', pathname);
+      localStorage.removeItem("submitedURL");
+      localStorage.setItem("submitedURL", pathname);
     } else if (res.status === 422) {
       setShowMessage(true);
       form.setValues({ email: "" });
@@ -87,7 +99,11 @@ const Newsletter = ({ formId }) => {
         Stay updated on the latest news and features.
       </p>
       <div className="mt-4 mb-7 sm:mb-12">
-        <form className="relative transition-all" onSubmit={form?.handleSubmit}>
+        <form
+          className="relative transition-all"
+          onSubmit={form?.handleSubmit}
+          data-rewardful="true"
+        >
           <input
             type="email"
             onChange={form?.handleChange}

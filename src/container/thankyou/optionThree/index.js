@@ -6,7 +6,7 @@ import ModalComponent from "@/components/modal/Modal";
 import VideoThankyouModal from "@/components/VideoThankyouModal";
 
 const ThankYouViewThree = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const openModal = () => {
     setIsOpen(true);
@@ -23,18 +23,18 @@ const ThankYouViewThree = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="lg:h-[480px]">
               <h1 className="text-[32px] font-bold">
-                We're thrilled to have you onboard!
+                We&apos;re thrilled to have you onboard!
               </h1>
               <p className="text-2xl mt-4 mb-8 font-light text-gray-800">
-                You've joined us early, before the buzz and the viral explosion.
-                To show our appreciation for your trust in us, we're offering
-                early supporters the chance to get pre-release access to OSO
+                You&apos;ve joined us early, before the buzz and the viral explosion.
+                To show our appreciation for your trust in us, we&apos;re offering
+                early supporters the chance to get <span className="font-medium">pre-release access</span> to OSO
                 Uncensored Chat.
                 <br /> <br />
                 <span className="text-gray-800 text-base font-semibold">
                   Special Perks 
                 </span>
-                <br /> <br />
+                <br />
                 <span className="text-gray-800 text-base font-normal">
                   💼 Monthly subscription at $8 (regularly $20/month).
                   <br />
@@ -45,10 +45,7 @@ const ThankYouViewThree = () => {
                 </span>
               </p>
               <div className="flex flex-col-reverse gap-2">
-                <Link
-                  href="/"
-                  className="theme-btn2 mx-auto !bg-white !text-purple !border-2"
-                >
+                <Link href="/" className="theme-btn2 mx-auto !bg-white !text-purple !border-2">
                  <span> Claim Offer</span>
                   <svg
                     width="24"

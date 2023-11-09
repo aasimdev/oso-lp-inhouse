@@ -52,7 +52,7 @@ const ThankYouViewTwo = () => {
             </div>
             <div>
               <div className="w-[532px] text-start md:text-center font-extrabold text-black text-[32px]">
-                We're thrilled to have you onboard!
+                We&apos;re thrilled to have you onboard!
               </div>
               <div className="w-[532px] text-start md:text-center text-gray-800 text-2xl font-light">
                 Stay Connected with the OSO Community.

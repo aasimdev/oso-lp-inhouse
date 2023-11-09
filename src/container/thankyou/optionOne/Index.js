@@ -25,10 +25,10 @@ const ThankYouViewOne = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
               <h1 className="text-[32px] font-bold">
-                We're thrilled to have you onboard!
+                We&apos;re thrilled to have you onboard!
               </h1>
               <p className="text-2xl mt-4 mb-8 font-light text-gray-800">
-                OSO is about to get exciting, and we don't want you or your
+                OSO is about to get exciting, and we don&apos;t want you or your
                 friends to miss out.
                 <br /> <br />
                 Invite your friends to join the waitlist and{" "}

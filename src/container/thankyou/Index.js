@@ -1,12 +1,22 @@
 "use client";
+import Video from "@/components/VideoThankyou";
+import ModalComponent from "@/components/modal/Modal";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Script from "next/script";
 import React, { useEffect, useState } from "react";
-
+import VideoThankyouModal from "@/components/VideoThankyouModal";
 const ThankYouView = ({ email, checkoutSessionId }) => {
   const [previousPageUrl, setPreviousPageUrl] = useState("/");
+  const [isOpen, setIsOpen] = useState(true);
 
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
   useEffect(() => {
     const storedPreviousPageUrl = localStorage.getItem("submitedURL");
     if (storedPreviousPageUrl) {
@@ -68,37 +78,35 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
         }}
       />
 
-
-
-      <section className="flex items-center justify-center pt-28 md:pt-40 px-6 md:px-0">
-        <div className="flex flex-col justify-center md:text-center max-w-[532px]">
-          {previousPageUrl === "/search" ? (
-            <>
-              <h1 className="text-3xl font-black md:text-center mb-4 md:mb-8">
-                {'We\'re'} thrilled to have you onboard!
+      <section className="bg-gradient-to-b from-purple-400">
+        <div className="px-6 mx-auto max-w-6xl pt-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="lg:h-[480px]">
+              <h1 className="text-[32px] font-bold">
+                We&apos;re thrilled to have you onboard!
               </h1>
-
-              <p className="text-gray-800 text-2xl font-light mb-4 md:mb-8">
-        OSO is about to get exciting, and we {'don\'t'} want you or your friends to miss out.{" "}
-                </p>
-      <p className="text-gray-800 text-2xl font-light">
-        Invite your friends to join the waitlist and <strong>earn $5/month forever</strong>
-        <span className="hide-on-mobile"><br /></span> {/* This break will only show on desktop */}
-        for <strong>each friend</strong> that subscribes to OSO Pro after launch.
-      </p>
-              <div className="mt-12 md:mt-16 flex flex-col-reverse md:flex-row gap-2 md:gap-6">
-                <Link
-                  href="/"
-                  className="theme-btn mx-auto !bg-white !text-purple !border-2"
-                >
-                  No thanks
-                </Link>
-                  <Link
-                  href="https://friends.oso.ai/signup"
-                  target="_blank"
-                  className="theme-btn mx-auto"
-                >
-                  <span>Invite Friends</span>
+              <p className="text-2xl mt-4 mb-8 font-light text-gray-800">
+                You&apos;ve joined us early, before the buzz and the viral explosion.
+                To show our appreciation for your trust in us, we&apos;re offering
+                early supporters the chance to get <span className="font-medium">pre-release access</span> to OSO
+                Uncensored Chat.
+                <br /> <br />
+                <span className="text-gray-800 text-base font-semibold">
+                  Special Perks
+                </span>
+                <br />
+                <span className="text-gray-800 text-base font-normal">
+                  💼 Monthly subscription at $8 (regularly $20/month).
+                  <br />
+                  🚀 Pre-release access to OSO Uncensored.
+                  <br />
+                  🌟 Join a private tester community with direct OSO team
+                  access.
+                </span>
+              </p>
+              <div className="flex flex-col-reverse gap-2">
+                <Link href="/" className="theme-btn2 mx-auto !bg-white !text-purple !border-2">
+                 <span> Claim Offer</span>
                   <svg
                     width="24"
                     height="24"
@@ -113,53 +121,26 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
                   </svg>
                 </Link>
               </div>
-            </>
-          ) : (
-            <>
-              <h1 className="text-3xl font-black md:text-center mb-4 md:mb-8">
-               {'We\'re'} thrilled to have you onboard!
-              </h1>
-             <p className="text-gray-800 text-2xl font-light mb-4 md:mb-8">
-        OSO is about to get exciting, and we {'don\'t'} want you or your friends to miss out.{" "}
-                </p> 
-      <p className="text-gray-800 text-2xl font-light">
-        Invite your friends to join the waitlist and <strong>earn $5/month forever</strong>
-        <span className="hide-on-mobile"><br /></span> {/* This break will only show on desktop */}
-        for <strong>each friend</strong> that subscribes to OSO Pro after launch.
-      </p>
-
-              <div className="mt-8 md:mt-16 flex flex-col-reverse md:flex-row gap-2 md:gap-6">
-                <Link
-                  href="/"
-                  className="theme-btn mx-auto !bg-white !text-purple !border-2"
-                >
-                  No thanks
-                </Link>
-                <Link
-                  href="https://friends.oso.ai/signup"
-                  target="_blank"
-                  className="theme-btn mx-auto"
-                >
-                  <span>Invite Friends</span>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
-                      fill="white"
-                    />
-                  </svg>
-                </Link>
-              </div>
-            </>
-          )}
+            </div>
+            <div>
+              <Video
+                videoId="FpWF0i0vxGs"
+                openModal={openModal}
+                isOpen={isOpen}
+                modalValue={true}
+                variant={"three"}
+              />
+            </div>
+          </div>
         </div>
       </section>
+      {isOpen && (
+        <ModalComponent modalIsOpen={isOpen} closeModal={closeModal}>
+          <VideoThankyouModal videoId="FpWF0i0vxGs" />
+        </ModalComponent>
+      )}
     </>
+
   );
 };
 

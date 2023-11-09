@@ -65,15 +65,14 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
         dangerouslySetInnerHTML={{ __html: `fbq('track', 'Lead');` }}
       />
       {/* <!-- Twitter conversion tracking event code -->  */}
+
       <Script
         id="twitter-conversion-tracking-event-1"
         strategy="lazyOnload"
         dangerouslySetInnerHTML={{
-          __html: `twq('event', 'tw-ogmtw-ogmtz', { 
-              conversion_id: null,
-                  (e.g. order id '1a2b3c') 
-                  email_address: ${email}, 
-                  phone_number: null  });`,
+          __html: `twq('event', 'tw-ogmtw-ogmtz', {
+        email_address: '${email}'
+    });`,
         }}
       />
 
@@ -81,11 +80,9 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
         id="twitter-conversion-tracking-event-2"
         strategy="lazyOnload"
         dangerouslySetInnerHTML={{
-          __html: `twq('event', 'tw-oha7k-oha7m', { 
-              conversion_id: null,
-                  (e.g. order id '1a2b3c') 
-                  email_address: ${email}, 
-                  phone_number: null  });`,
+          __html: `twq('event', 'tw-oha7k-oha7m', {
+        email_address: '${email}'
+    });`,
         }}
       />
 

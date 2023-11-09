@@ -1,29 +1,38 @@
-import { NextResponse } from "next/server"
+import { NextResponse } from "next/server";
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-const WAITLIST_ID = "2"
+const WAITLIST_ID = "2";
 
 async function verifyRecaptcha(token) {
-  const secretKey = process.env.RECAPTCHA_SECRET_KEY
-  const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
 
-  const response = await fetch(verificationUrl, { method: "POST" })
-  const data = await response.json()
+  const response = await fetch(verificationUrl, { method: "POST" });
+  const data = await response.json();
 
-  return data.success
+  return data.success;
 }
 
 export async function POST(req) {
-  const { email, token, ac_tag_id, formId, userLang, userDevice, pathname } =
-    await req.json()
+  const {
+    email,
+    token,
+    ac_tag_id,
+    formId,
+    userLang,
+    userDevice,
+    pathname,
+    referral,
+  } = await req.json();
 
   try {
-    const isRecaptchaValid = await verifyRecaptcha(token)
+    const isRecaptchaValid = await verifyRecaptcha(token);
 
     if (!isRecaptchaValid) {
       return NextResponse.json(
         { status: "error", message: "reCAPTCHA verification failed" },
         { status: 400 }
-      )
+      );
     }
 
     // Setup New Newsletter
@@ -56,8 +65,17 @@ export async function POST(req) {
           "Allow-Cross-Origin": "*",
         },
       }
-    )
-    const contactRes = await res.json()
+    );
+    const contactRes = await res.json();
+
+    if (res.status === 200) {
+      await stripe.customers.create({
+        email,
+        metadata: {
+          referral,
+        },
+      });
+    }
 
     if (
       res.status === 422 &&
@@ -67,7 +85,7 @@ export async function POST(req) {
       return NextResponse.json(
         { status: "already_exists", error: contactRes.errors[0].title },
         { status: 422 }
-      )
+      );
     }
 
     if (ac_tag_id !== "") {
@@ -87,22 +105,22 @@ export async function POST(req) {
             "Allow-Cross-Origin": "*",
           },
         }
-      )
-      const contactTagRes = await contactTagsRes.json()
+      );
+      const contactTagRes = await contactTagsRes.json();
     }
 
     const waitListId = () => {
       switch (pathname) {
         case "/":
-          return 3
+          return 3;
         case "/chat":
-          return 4
+          return 4;
         case "/news":
-          return 5
+          return 5;
         default:
-          return 2
+          return 2;
       }
-    }
+    };
     // Set List
     const res2 = await fetch(
       `${process.env.ACTIVE_CAMPAIGN_URL}/api/3/contactLists/`,
@@ -121,11 +139,11 @@ export async function POST(req) {
           "Allow-Cross-Origin": "*",
         },
       }
-    )
+    );
 
-console.log("listID", res2);
-    return NextResponse.json({ status: "success" }, { status: 200 })
+    console.log("listID", res2);
+    return NextResponse.json({ status: "success" }, { status: 200 });
   } catch (error) {
-    return NextResponse.json({ status: "error" }, { status: 500 })
+    return NextResponse.json({ status: "error" }, { status: 500 });
   }
 }

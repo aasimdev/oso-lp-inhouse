@@ -34,6 +34,15 @@ const Footer = () => {
       }
       const token = await executeRecaptcha();
 
+      let referralData;
+      window.rewardful("ready", () => {
+        if (Rewardful.referral) {
+          referralData = Rewardful.referral;
+        }
+      });
+
+      const referral = data.referral || referralData;
+
       if (token) {
         handleCreateContact(
           data.email,
@@ -41,7 +50,8 @@ const Footer = () => {
           ac_tag_id,
           formId,
           userLang,
-          userDevice
+          userDevice,
+          referral
         );
       } else {
         console.error("reCAPTCHA verification failed");
@@ -55,7 +65,8 @@ const Footer = () => {
     ac_tag_id,
     formId,
     userLang,
-    userDevice
+    userDevice,
+    referral
   ) {
     setIsLoading(true);
     const res = await fetch("/api/create-contact", {
@@ -68,6 +79,7 @@ const Footer = () => {
         userLang,
         userDevice,
         pathname,
+        referral,
       }),
     });
 
@@ -109,7 +121,7 @@ const Footer = () => {
         pathname !== "/thank-you/1" &&
         pathname !== "/thank-you/2" &&
         pathname !== "/thank-you/3" &&
-        pathname !== "/thank-you/4" &&
+        pathname !== "/thank-you/pro" &&
         pathname !== "/pricing" && (
           <div className="absolute w-full top-0 -translate-y-1/2">
             <div className="px-6 mx-auto max-w-6xl">
@@ -134,6 +146,7 @@ const Footer = () => {
             <form
               onSubmit={form?.handleSubmit}
               className="flex md:flex-nowrap flex-wrap gap-4 items-center"
+              data-rewardful="true"
             >
               <button
                 className="white-btn !py-[11px] !px-[23.25px] !text-base !w-[137px]"

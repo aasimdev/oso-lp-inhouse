@@ -6,8 +6,8 @@ export const priceContent = [
     amount: "Free",
     unit: "month",
     currency: "$",
-    buttonTitle: "Invite Friends",
-    buttonUrl: "https://friends.oso.ai/",
+    buttonTitle: "Coming Soon",
+    buttonUrl: "",
     details: [
       {
         bulletPoint: "10 Searches per day",
@@ -34,13 +34,12 @@ export const priceContent = [
   {
     type: "pro",
     title: "Pro",
-    desc: "Unlock the Full Potential of OSO",
-    amount: "20",
+    desc: "Unlock the Full Potential of OSO.",
+    amount: "8",
     unit: "month",
     currency: "$",
-    buttonTitle: "Coming soon",
-    // buttonUrl: "https://buy.stripe.com/fZe9BjeVl1oz0GQeUU",
-    buttonUrl : "",
+    buttonTitle: "Get Started",
+    buttonUrl: "https://buy.stripe.com/5kA5l36oP3wH2OY146",
     details: [
       {
         bulletPoint: "Unlimited Searches",

@@ -45,7 +45,7 @@ const ThankYouViewThree = () => {
                 </span>
               </p>
               <div className="flex flex-col-reverse gap-2">
-                <Link href="/" className="theme-btn2 mx-auto !bg-white !text-purple !border-2">
+                <Link href="https://buy.stripe.com/5kA5l36oP3wH2OY146" className="theme-btn2 mx-auto !bg-white !text-purple !border-2">
                  <span> Claim Offer</span>
                   <svg
                     width="24"

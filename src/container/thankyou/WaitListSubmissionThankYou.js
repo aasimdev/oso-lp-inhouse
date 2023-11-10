@@ -33,23 +33,20 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
     }
   }, []);
 
-  // useEffect(() => {
-  //   (async () => {
-  //     if (checkoutSessionId) {
-  //       const res = await fetch("/api/stripe-checkout-data", {
-  //         method: "POST",
-  //         body: JSON.stringify({
-  //           checkoutSessionId,
-  //         }),
-  //       });
-  //       const sessionData = await res.json();
-  //       const customerEmail = sessionData?.data?.customerEmail;
-  //       if (customerEmail && typeof rewardful === "function") {
-  //         window.rewardful("convert", { email: customerEmail });
-  //       }
-  //     }
-  //   })();
-  // }, [checkoutSessionId]);
+  useEffect(() => {
+    (async () => {
+      if (email) {
+        await fetch("/api/active-campaign-event", {
+          method: "POST",
+          body: JSON.stringify({
+            event: "Viewed Annual Sales Page",
+            email
+          }),
+        });
+      }
+    })();
+  }, [email]);
+
 
   return (
     <>

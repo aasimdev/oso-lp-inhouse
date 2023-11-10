@@ -35,8 +35,8 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
             await fetch("/api/active-campaign-event", {
               method: "POST",
               body: JSON.stringify({
-                event: "Viewed Monthly Sales Page",
-                email
+                event: "Purchased Monthly Subscription",
+                email: customerEmail
               }),
             });
           }

@@ -7,7 +7,7 @@ import Script from "next/script";
 
 const ThankYouViewFour = ({ email, checkoutSessionId }) => {
   const [isOpen, setIsOpen] = useState(true);
-  const [userEmail, setUserEmail] = useState()
+  const [userEmail, setUserEmail] = useState();
 
   const openModal = () => {
     setIsOpen(true);
@@ -35,16 +35,14 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
             await fetch("/api/active-campaign-event", {
               method: "POST",
               body: JSON.stringify({
-                event: "Viewed Annual Sales Page",
-                email
+                event: "Purchased Annual Subscription",
+                email: customerEmail,
               }),
             });
           }
           if (customerEmail && typeof rewardful === "function") {
             window.rewardful("convert", { email: customerEmail });
           }
-
-        
         } catch (error) {
           console.error("Error fetching user email:", error);
         }
@@ -70,7 +68,7 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
             gtag('event', 'Conversion')`,
         }}
       />
-       <Script
+      <Script
         type="text/javascript"
         id="thankyo-four-script"
         dangerouslySetInnerHTML={{
@@ -114,7 +112,10 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
             </div>
 
             <div className="flex flex-row gap-1 md:gap-4 items-center">
-              <Link href="https://www.facebook.com/profile.php?id=100095431967672" className="px-1 md:px-4 py-2">
+              <Link
+                href="https://www.facebook.com/profile.php?id=100095431967672"
+                className="px-1 md:px-4 py-2"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="51"
@@ -128,7 +129,10 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
                   />
                 </svg>
               </Link>
-              <Link href="https://twitter.com/osocentral" className="px-1 md:px-4 py-2">
+              <Link
+                href="https://twitter.com/osocentral"
+                className="px-1 md:px-4 py-2"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="33"
@@ -154,7 +158,10 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
                   </defs>
                 </svg>
               </Link>
-              <Link href="https://www.instagram.com/oso_central/" className="px-1 md:px-4 py-2">
+              <Link
+                href="https://www.instagram.com/oso_central/"
+                className="px-1 md:px-4 py-2"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="51"
@@ -176,7 +183,10 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
                   />
                 </svg>
               </Link>
-              <Link href="https://www.youtube.com/@osoCentral" className="px-1 md:px-4 py-2">
+              <Link
+                href="https://www.youtube.com/@osoCentral"
+                className="px-1 md:px-4 py-2"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="51"
@@ -192,21 +202,23 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
                   />
                 </svg>
               </Link>
-              <Link href="https://www.tiktok.com/@osocentral?lang=en" className="px-1 md:px-4 py-2">
-              <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="51"
-                    height="50"
-                    viewBox="0 0 51 50"
-                    fill="none"
-                  >
-                    <path
-                      d="M38.2406 12.5189C35.9962 11.0556 34.3762 8.71411 33.8709 5.98462C33.7617 5.3949 33.7018 4.78797 33.7018 4.16699H26.5384L26.5269 32.8752C26.4065 36.0901 23.7606 38.6703 20.5169 38.6703C19.5088 38.6703 18.5595 38.4183 17.7237 37.9784C15.807 36.9698 14.4954 34.9608 14.4954 32.6489C14.4954 29.3285 17.1968 26.6271 20.5169 26.6271C21.1367 26.6271 21.7312 26.7293 22.2936 26.9055V19.5925C21.7116 19.5132 21.1203 19.4637 20.5169 19.4637C13.2466 19.4637 7.33203 25.3786 7.33203 32.6489C7.33203 37.1095 9.56069 41.057 12.9607 43.444C15.1024 44.9476 17.7074 45.8337 20.5169 45.8337C27.7872 45.8337 33.7018 39.9191 33.7018 32.6489V18.0913C36.5113 20.1079 39.9535 21.2962 43.6678 21.2962V14.1328C41.667 14.1328 39.8035 13.538 38.2406 12.5189Z"
-                      fill="#8E33FF"
-                    />
-                  </svg>
+              <Link
+                href="https://www.tiktok.com/@osocentral?lang=en"
+                className="px-1 md:px-4 py-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="51"
+                  height="50"
+                  viewBox="0 0 51 50"
+                  fill="none"
+                >
+                  <path
+                    d="M38.2406 12.5189C35.9962 11.0556 34.3762 8.71411 33.8709 5.98462C33.7617 5.3949 33.7018 4.78797 33.7018 4.16699H26.5384L26.5269 32.8752C26.4065 36.0901 23.7606 38.6703 20.5169 38.6703C19.5088 38.6703 18.5595 38.4183 17.7237 37.9784C15.807 36.9698 14.4954 34.9608 14.4954 32.6489C14.4954 29.3285 17.1968 26.6271 20.5169 26.6271C21.1367 26.6271 21.7312 26.7293 22.2936 26.9055V19.5925C21.7116 19.5132 21.1203 19.4637 20.5169 19.4637C13.2466 19.4637 7.33203 25.3786 7.33203 32.6489C7.33203 37.1095 9.56069 41.057 12.9607 43.444C15.1024 44.9476 17.7074 45.8337 20.5169 45.8337C27.7872 45.8337 33.7018 39.9191 33.7018 32.6489V18.0913C36.5113 20.1079 39.9535 21.2962 43.6678 21.2962V14.1328C41.667 14.1328 39.8035 13.538 38.2406 12.5189Z"
+                    fill="#8E33FF"
+                  />
+                </svg>
               </Link>
-
             </div>
           </div>
         </div>

@@ -5,7 +5,14 @@ export const metadata = {
   title: "Thank you",
 };
 
-export default function Page({ searchParams }) {
+const Page = ({ searchParams }) => {
   const { email, checkout_session_id } = searchParams;
-  return <ThankYouView email={email} checkoutSessionId={checkout_session_id} />;
-}
+
+  return (
+    <>
+      <ThankYouView email={email} checkoutSessionId={checkout_session_id} />
+    </>
+  );
+};
+
+export default Page;

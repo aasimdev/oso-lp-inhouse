@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const nodecacheData = require("node-cache")
 
 const WAITLIST_ID = "2";
 
@@ -34,6 +35,7 @@ export async function POST(req) {
         { status: 400 }
       );
     }
+    
 
     // Setup New Newsletter
     const res = await fetch(
@@ -142,7 +144,11 @@ export async function POST(req) {
     );
 
     console.log("listID", res2);
-    return NextResponse.json({ status: "success" }, { status: 200 });
+    const variation = nodecacheData.get('nodecacheData') === 0 ? 1 : 0;
+    nodecacheData.set('nodecacheData', variation);
+    
+    const thankYouPage = variation === 0 ? "/thank-you" : "/waitlist-submission";
+    return NextResponse.json({ status: "success" }, { status: 200, redirect: thankYouPage });
   } catch (error) {
     return NextResponse.json({ status: "error" }, { status: 500 });
   }

@@ -1,6 +1,5 @@
 import React from "react";
-import ThankYouView from "@/container/thankyou/Index";
-import ThankYouViewFour from "@/container/thankyou/optionFour";
+import ThankYouView from "@/container/thankyou/WaitListSubmissionThankYou";
 
 export const metadata = {
   title: "Thank you",
@@ -8,9 +7,12 @@ export const metadata = {
 
 const Page = ({ searchParams }) => {
   const { email, checkout_session_id } = searchParams;
+
   return (
     <>
-      <ThankYouViewFour email={email} checkoutSessionId={checkout_session_id} />
+      <ThankYouView email={email} checkoutSessionId={checkout_session_id} />
     </>
   );
 };
+
+export default Page;

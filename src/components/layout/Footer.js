@@ -87,7 +87,7 @@ const Footer = () => {
       setIsLoading(false);
       form.setValues({ email: "" });
       setShowInput(false);
-      router.push("/thank-you?email=" + email);
+      router.push(`${res.redirect}?email=` + email);
       localStorage.removeItem("submitedURL");
       localStorage.setItem("submitedURL", pathname);
     } else if (res.status === 422) {

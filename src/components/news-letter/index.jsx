@@ -37,7 +37,7 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
         }
       });
 
-      const referral = data.referral || referralData;
+      const referral = values.referral || referralData;
 
       if (token) {
         addWaitlistContact(
@@ -66,6 +66,7 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
     referral
   ) {
     setIsLoading(true);
+   
     const res = await fetch("/api/create-contact", {
       method: "POST",
       body: JSON.stringify({

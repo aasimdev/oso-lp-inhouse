@@ -6,7 +6,7 @@ import VideoThankyouModal from "@/components/VideoThankyouModal";
 import Script from "next/script";
 // test comment
 
-const ThankYouViewFour = ({ email, checkoutSessionId }) => {
+const ThankYouCheckSubmission = ({ email, checkoutSessionId }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [userEmail, setUserEmail] = useState();
 
@@ -235,4 +235,4 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
   );
 };
 
-export default ThankYouViewFour;
+export default ThankYouCheckSubmission;

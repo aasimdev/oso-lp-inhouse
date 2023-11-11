@@ -30,6 +30,15 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
 
       const token = await executeRecaptcha();
 
+      let referralData;
+      window.rewardful("ready", () => {
+        if (Rewardful.referral) {
+          referralData = Rewardful.referral;
+        }
+      });
+
+      const referral = data.referral || referralData;
+
       if (token) {
         addWaitlistContact(
           values.email,
@@ -37,7 +46,8 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
           ac_tag_id,
           userDevice,
           userLang,
-          formId
+          formId,
+          referral
         );
       } else {
         console.error("reCAPTCHA verification failed");
@@ -52,7 +62,8 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
     ac_tag_id,
     userDevice,
     userLang,
-    formId
+    formId,
+    referral
   ) {
     setIsLoading(true);
     const res = await fetch("/api/create-contact", {
@@ -65,14 +76,17 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
         userDevice,
         formId,
         pathname,
+        referral,
       }),
     });
 
+    const resData = await res.json();
+
     if (res.status == 200) {
       setIsLoading(false);
-      router.push(`${res.redirect}?email=` + email);
-      localStorage.removeItem('submitedURL');
-      localStorage.setItem('submitedURL', pathname);
+      router.push(`${resData.redirect}?email=` + email);
+      localStorage.removeItem("submitedURL");
+      localStorage.setItem("submitedURL", pathname);
     } else if (res.status == 422) {
       setIsLoading(false);
       setShowMessage(true);
@@ -94,6 +108,7 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
         className={`text-center ${
           variant !== "newsBanner" ? "md:flex md:space-y-0 md:space-x-3" : ""
         } justify-center space-y-2 `}
+        data-rewardful="true"
       >
         <input
           className={`email-width py-[26px] w-[352px] bg-white appearance-none border border-gray-900 placeholder:text-gray-100 rounded-lg px-4 text-black leading-tight focus:outline-none focus:border-purple ${className}`}

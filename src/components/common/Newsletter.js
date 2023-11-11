@@ -76,9 +76,12 @@ const Newsletter = ({ formId }) => {
       }),
     });
 
+    const resData = await res.json();
+
+
     if (res.status === 200) {
       form.setValues({ email: "" });
-      router.push(`${res.redirect}?email=` + email);
+      router.push(`${resData.redirect}?email=` + email);
       localStorage.removeItem("submitedURL");
       localStorage.setItem("submitedURL", pathname);
     } else if (res.status === 422) {

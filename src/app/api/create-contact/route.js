@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
-const nodecacheData = require("node-cache");
+const NodeCache = require("node-cache");
+const nodecacheData = new NodeCache({ stdTTL: 86400, checkperiod: 10 });
 
 const WAITLIST_ID = "2";
 
@@ -69,7 +70,7 @@ export async function POST(req) {
     );
     const contactRes = await res.json();
 
-    if (res.status === 200) {
+    if (res.status === 200 && email) {
       await stripe.customers.create({
         email,
         metadata: {
@@ -122,7 +123,9 @@ export async function POST(req) {
           return 2;
       }
     };
+    
     // Set List
+
     const res2 = await fetch(
       `${process.env.ACTIVE_CAMPAIGN_URL}/api/3/contactLists/`,
       {
@@ -144,20 +147,20 @@ export async function POST(req) {
 
     console.log("listID", res2);
     let variation;
-    if (nodecacheData.has("nodecacheData")) {
-      variation = nodecacheData.get("nodecacheData") === 0 ? 1 : 0;
+    const isKey = nodecacheData.has("variation");
+    if (isKey) {
+      variation = nodecacheData.get("variation") === 0 ? 1 : 0;
     } else {
       variation = 0;
-      nodecacheData.set("nodecacheData", variation);
     }
 
-    nodecacheData.set("nodecacheData", variation);
+    nodecacheData.set("variation", variation);
 
     const thankYouPage =
       variation === 0 ? "/thank-you" : "/waitlist-submission";
     return NextResponse.json(
-      { status: "success" },
-      { status: 200, redirect: thankYouPage }
+      { status: "success", redirect: thankYouPage },
+      { status: 200 }
     );
   } catch (error) {
     return NextResponse.json({ status: "error" }, { status: 500 });

@@ -100,12 +100,14 @@ const Header = () => {
       }),
     });
 
+    const resData = await res.json();
+
     if (res.status === 200) {
       // setShowMessage(true);
       setIsLoading(false);
       setHForm(false);
       form.setValues({ email: "" });
-      router.push(`${res.redirect}?email=` + email);
+      router.push(`${resData.redirect}?email=` + email);
       localStorage.removeItem("submitedURL");
       localStorage.setItem("submitedURL", pathname);
     } else if (res.status === 422) {

@@ -9,32 +9,18 @@ export async function POST(req) {
         checkoutSessionId
       );
 
+      const amountTotal = session.amount_total / 100;
+
       // console.log(
       //   "----------------em",
       //   session,
       //   session?.customer_details?.email,
       //   session.subscription
       // );
+      let isMonthly = false;
 
-      const subscriptionID = session?.subscription;
-      let isMonthly = null;
-
-      if (subscriptionID) {
-        const subscription = await stripe.subscriptions.retrieve(
-          subscriptionID
-        );
-
-        const billingInterval =
-          subscription?.items?.data[0]?.price?.recurring?.interval;
-
-        // console.log("----------------em2", billingInterval);
-
-        if (billingInterval === "month") {
-          isMonthly = true;
-        }
-        if (billingInterval === "year") {
-          isMonthly = false;
-        }
+      if (billingInterval === 15) {
+        isMonthly = true;
       }
 
       return NextResponse.json(

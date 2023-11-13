@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-const stripe = require("stripe")("sk_test_zHVJsPqk1dU1TwofOCqBxwyT00lzpPRsCb");
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 export async function POST(req) {
   const { checkoutSessionId } = await req.json();

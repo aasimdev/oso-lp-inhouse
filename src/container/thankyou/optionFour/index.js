@@ -37,7 +37,7 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
               body: JSON.stringify({
                 event: isMonthly
                   ? "Purchased Monthly Subscription"
-                  : "Purchased Monthly Subscription",
+                  : "Purchased Yearly Subscription",
                 email: customerEmail,
               }),
             });

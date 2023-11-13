@@ -19,7 +19,7 @@ export async function POST(req) {
       // );
       let isMonthly = false;
 
-      if (billingInterval === 15) {
+      if (amountTotal === 15) {
         isMonthly = true;
       }
 

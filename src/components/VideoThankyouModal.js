@@ -22,70 +22,70 @@ const Video = ({ src, videoId, variant }) => {
     }, 300);
   }, []);
 
-  const handleFullScreen = () => {
-    const iframe = iframeRef.current;
-    if (iframe) {
-      if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-      } else if (iframe.mozRequestFullScreen) {
-        iframe.mozRequestFullScreen();
-      } else if (iframe.webkitRequestFullscreen) {
-        iframe.webkitRequestFullscreen();
-      } else if (iframe.msRequestFullscreen) {
-        iframe.msRequestFullscreen();
-      }
+  // const handleFullScreen = () => {
+  //   const iframe = iframeRef.current;
+  //   if (iframe) {
+  //     if (iframe.requestFullscreen) {
+  //       iframe.requestFullscreen();
+  //     } else if (iframe.mozRequestFullScreen) {
+  //       iframe.mozRequestFullScreen();
+  //     } else if (iframe.webkitRequestFullscreen) {
+  //       iframe.webkitRequestFullscreen();
+  //     } else if (iframe.msRequestFullscreen) {
+  //       iframe.msRequestFullscreen();
+  //     }
 
-      // Add an event listener to listen for the fullscreen change event
-      if (variant === "newsBanner") {
-        document.addEventListener("fullscreenchange", exitFullScreenHandler);
-        document.addEventListener(
-          "webkitfullscreenchange",
-          exitFullScreenHandler
-        );
-        document.addEventListener("mozfullscreenchange", exitFullScreenHandler);
-        document.addEventListener("MSFullscreenChange", exitFullScreenHandler);
-        setHandler(false);
-      }
-    }
-  };
+  //     // Add an event listener to listen for the fullscreen change event
+  //     if (variant === "newsBanner") {
+  //       document.addEventListener("fullscreenchange", exitFullScreenHandler);
+  //       document.addEventListener(
+  //         "webkitfullscreenchange",
+  //         exitFullScreenHandler
+  //       );
+  //       document.addEventListener("mozfullscreenchange", exitFullScreenHandler);
+  //       document.addEventListener("MSFullscreenChange", exitFullScreenHandler);
+  //       setHandler(false);
+  //     }
+  //   }
+  // };
 
-  const exitFullScreenHandler = () => {
-    const iframe = iframeRef.current;
-    if (
-      !document.fullscreenElement &&
-      !document.webkitFullscreenElement &&
-      !document.mozFullScreenElement &&
-      !document.msFullscreenElement
-    ) {
-      // Exit fullscreen
-      if (iframe.exitFullscreen) {
-        iframe.exitFullscreen();
-      } else if (iframe.mozCancelFullScreen) {
-        iframe.mozCancelFullScreen();
-      } else if (iframe.webkitExitFullscreen) {
-        iframe.webkitExitFullscreen();
-      } else if (iframe.msExitFullscreen) {
-        iframe.msExitFullscreen();
-      }
+  // const exitFullScreenHandler = () => {
+  //   const iframe = iframeRef.current;
+  //   if (
+  //     !document.fullscreenElement &&
+  //     !document.webkitFullscreenElement &&
+  //     !document.mozFullScreenElement &&
+  //     !document.msFullscreenElement
+  //   ) {
+  //     // Exit fullscreen
+  //     if (iframe.exitFullscreen) {
+  //       iframe.exitFullscreen();
+  //     } else if (iframe.mozCancelFullScreen) {
+  //       iframe.mozCancelFullScreen();
+  //     } else if (iframe.webkitExitFullscreen) {
+  //       iframe.webkitExitFullscreen();
+  //     } else if (iframe.msExitFullscreen) {
+  //       iframe.msExitFullscreen();
+  //     }
 
-      if (variant === "newsBanner") {
-        document.removeEventListener("fullscreenchange", exitFullScreenHandler);
-        document.removeEventListener(
-          "webkitfullscreenchange",
-          exitFullScreenHandler
-        );
-        document.removeEventListener(
-          "mozfullscreenchange",
-          exitFullScreenHandler
-        );
-        document.removeEventListener(
-          "MSFullscreenChange",
-          exitFullScreenHandler
-        );
-      }
-      setHandler(true);
-    }
-  };
+  //     if (variant === "newsBanner") {
+  //       document.removeEventListener("fullscreenchange", exitFullScreenHandler);
+  //       document.removeEventListener(
+  //         "webkitfullscreenchange",
+  //         exitFullScreenHandler
+  //       );
+  //       document.removeEventListener(
+  //         "mozfullscreenchange",
+  //         exitFullScreenHandler
+  //       );
+  //       document.removeEventListener(
+  //         "MSFullscreenChange",
+  //         exitFullScreenHandler
+  //       );
+  //     }
+  //     setHandler(true);
+  //   }
+  // };
 
   return (
     <div
@@ -99,7 +99,7 @@ const Video = ({ src, videoId, variant }) => {
           id="ytplayer"
           type="text/html"
           className="w-full aspect-video -m-[1px] inset-0-clip md:w-[532px] md:h-[354px] lg:w-[800px] lg:h-[533px]"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&controls=1&modestbranding=1&showinfo=0&rel=0`}
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=0&mute=0&loop=1&controls=1&modestbranding=1&showinfo=0&rel=0`}
           frameborder="0"
           allowFullScreen
           allow="fullscreen"

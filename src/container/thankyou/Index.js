@@ -10,8 +10,6 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
   const [previousPageUrl, setPreviousPageUrl] = useState("/");
   const [isOpen, setIsOpen] = useState(true);
 
-
-
   const openModal = () => {
     setIsOpen(true);
   };
@@ -40,7 +38,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
           method: "POST",
           body: JSON.stringify({
             event: "Viewed Annual Sales Page",
-            email
+            email,
           }),
         });
       }
@@ -96,7 +94,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
             gtag('event', 'Lead')`,
         }}
       />
-       <Script
+      <Script
         type="text/javascript"
         id="thankyou-script"
         dangerouslySetInnerHTML={{
@@ -119,6 +117,20 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
             vgo('setEmail', '${email}');
             vgo('process');
           `,
+        }}
+      />
+      <Script
+        strategy="lazyOnload"
+        id="hotjar-tracking-script"
+        dangerouslySetInnerHTML={{
+          __html: `(function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3734391,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');`,
         }}
       />
 
@@ -150,8 +162,11 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
                 </span>
               </p>
               <div className="flex flex-col-reverse gap-2">
-                <Link href="https://buy.stripe.com/5kA5l36oP3wH2OY146" className="theme-btn2 mx-auto !bg-white !text-purple !border-2">
-                 <span> Claim Offer</span>
+                <Link
+                  href="https://buy.stripe.com/5kA5l36oP3wH2OY146"
+                  className="theme-btn2 mx-auto !bg-white !text-purple !border-2"
+                >
+                  <span> Claim Offer</span>
                   <svg
                     width="24"
                     height="24"

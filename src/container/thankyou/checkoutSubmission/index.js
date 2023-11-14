@@ -4,8 +4,9 @@ import React, { useEffect, useState } from "react";
 import ModalComponent from "@/components/modal/Modal";
 import VideoThankyouModal from "@/components/VideoThankyouModal";
 import Script from "next/script";
+// test comment
 
-const ThankYouViewFour = ({ email, checkoutSessionId }) => {
+const ThankYouCheckSubmission = ({ email, checkoutSessionId }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [userEmail, setUserEmail] = useState();
 
@@ -29,15 +30,13 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
 
         try {
           const userEmail = await res.json();
-          const { customerEmail, isMonthly } = userEmail?.data;
+          const customerEmail = userEmail?.data?.customerEmail;
           setUserEmail(customerEmail);
-          if (customerEmail && isMonthly !== null) {
+          if (customerEmail) {
             await fetch("/api/active-campaign-event", {
               method: "POST",
               body: JSON.stringify({
-                event: isMonthly
-                  ? "Purchased Monthly Subscription"
-                  : "Purchased Yearly Subscription",
+                event: "Purchased Annual Subscription",
                 email: customerEmail,
               }),
             });
@@ -72,7 +71,7 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
       />
       <Script
         type="text/javascript"
-        id="thankyou-viewfour-script"
+        id="thankyo-four-script"
         dangerouslySetInnerHTML={{
           __html: `
             (function(e,t,o,n,p,r,i){
@@ -228,7 +227,7 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
       {isOpen && (
         <>
           <ModalComponent modalIsOpen={isOpen} closeModal={closeModal}>
-            <VideoThankyouModal videoId="3P2kUgeqGjw" />
+            <VideoThankyouModal videoId="qzBdkukgItY" />
           </ModalComponent>
         </>
       )}
@@ -236,4 +235,4 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
   );
 };
 
-export default ThankYouViewFour;
+export default ThankYouCheckSubmission;

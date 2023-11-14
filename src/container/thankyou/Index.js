@@ -169,7 +169,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
             </div>
             <div>
               <Video
-                videoId="B2xT7U-hcaA"
+                videoId="Oz90MdjxDLA"
                 openModal={openModal}
                 isOpen={isOpen}
                 modalValue={true}
@@ -181,7 +181,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
       </section>
       {isOpen && (
         <ModalComponent modalIsOpen={isOpen} closeModal={closeModal}>
-          <VideoThankyouModal videoId="B2xT7U-hcaA" />
+          <VideoThankyouModal videoId="Oz90MdjxDLA" />
         </ModalComponent>
       )}
     </>

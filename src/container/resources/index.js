@@ -8,12 +8,6 @@ import CreativeUsecase from "@/components/resources/CreativeUsecase";
 import BenefitFromOSO from "@/components/resources/BenefitFromOSO";
 import FAQ from "@/components/FAQ/Index";
 
-// import PIC2 from "../../../public/assets/newpage/Image2.png";
-// import PIC3 from "../../../public/assets/newpage/Image3.png";
-// import PIC4 from "../../../public/assets/newpage/Image4.png";
-// import PIC5 from "../../../public/assets/newpage/Image5.png";
-// import PIC6 from "../../../public/assets/newpage/Image6.png";
-// import CARD1 from "../../../public/assets/card-image/Image1.png"
 
 const accordionData = [
   {

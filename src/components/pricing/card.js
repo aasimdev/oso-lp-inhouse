@@ -53,14 +53,14 @@ const Card = ({ price }) => {
               {desc}
             </div>
           </div>
-          <div className="py-6 justify-center items-center gap-2 inline-flex">
-            <div className="flex-col justify-center gap-1 inline-flex">
+          <div className="py-6 justify-center items-center gap-2 flex w-full">
+            <div className="flex-col justify-center gap-1 flex w-full">
               {type === "free" ? (
                 <div className="text-5xl font-extrabold leading-[64px]">
                   {amount}
                 </div>
               ) : (
-                <div className="flex-row justify-between items-center gap-11 inline-flex">
+                <div className="flex-row justify-between items-center flex">
                   <div>
                     <span className="text-black text-5xl font-extrabold">
                       {currency}
@@ -73,7 +73,11 @@ const Card = ({ price }) => {
                       / {unit}
                     </span>
                   </div>
-                  <div className="bg-gray-50 rounded-lg border px-2.5 py-2 text-gray-100">{billedType}</div>
+                  <div className="w-[73px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded">
+                    <div className="text-gray-100 text-xs font-normal">
+                      Billed Yearly{" "}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

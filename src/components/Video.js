@@ -94,19 +94,25 @@ const Video = ({ src, videoId, variant }) => {
     <div
       className={`${
         variant !== "newsBanner" ? "mt-8 md:mt-6" : "h-full flex"
-      } mx-auto max-w-[902px] overflow-hidden text-center h-video relative rounded-2xl`}
+      } mx-auto max-w-[902px] overflow-hidden text-center relative ${
+        variant === "osowork"
+          ? " rounded-t-2xl h-[296px]"
+          : " rounded-2xl h-video"
+      }`}
     >
       <div
         className={`w-full  ${
           variant === "newsBanner" ? "h-full" : "h-[507px]"
-        } absolute left-0 top-0 right-0 bottom-0 overflow-hidden -z-10 transition-all duration-300 rounded-2xl`}
+        } absolute left-0 top-0 right-0 bottom-0 overflow-hidden -z-10 transition-all duration-300 ${
+          variant === "osowork" ? " rounded-t-2xl h-[296px]" : " rounded-2xl"
+        }`}
       />
       {videoId ? (
         <iframe
           id="ytplayer"
           type="text/html"
-          class="w-full aspect-video -m-[1px] inset-0-clip"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=${
+          class="w-full aspect-video -m-[1px] inset-0-clip h-full"
+          src={`https://www.youtube.com/embed/${videoId}?${
             variant !== "newsBanner" ? 1 : handler ? 0 : 1
           }&mute=${handler ? 1 : 0}&loop=1&controls=${
             handler ? 0 : 1

@@ -123,9 +123,9 @@ const Video = ({ src, videoId, variant, openModal, isOpen, modalValue }) => {
               ? "lg:h-[231px]"
               : "lg:h-[354px]"
           }`}
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=${
-            modalValue ? 0 : handler ? 0 : 1
-          }&mute=${handler ? 1 : 0}&loop=1&controls=${
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=0&mute=${
+            handler ? 1 : 0
+          }&loop=1&controls=${
             handler ? 0 : 1
           }&modestbranding=1&showinfo=0&rel=0`}
           frameborder="0"

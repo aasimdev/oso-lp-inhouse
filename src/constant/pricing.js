@@ -37,7 +37,6 @@ export const priceContent = [
     desc: "Unlock the Full Potential of OSO.",
     amount: "8",
     unit: "month",
-    billedType: "Billed Yearly",
     currency: "$",
     buttonTitle: "Get Started",
     buttonUrl: "https://buy.stripe.com/5kA5l36oP3wH2OY146",

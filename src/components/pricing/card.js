@@ -9,7 +9,6 @@ const Card = ({ price }) => {
     desc,
     amount,
     unit,
-    billedType,
     currency,
     buttonTitle,
     buttonUrl,
@@ -48,35 +47,30 @@ const Card = ({ price }) => {
       >
         <div className="self-stretch flex-col justify-start items-start flex">
           <div className="self-stretch flex-col justify-start items-start gap-2 flex">
-            <div className="text-2xl font-bold leading-9">{title}</div>
+            <div className="w-[79px] text-2xl font-bold leading-9">{title}</div>
             <div className="self-stretch text-gray-400 text-base font-normal leading-normal">
               {desc}
             </div>
           </div>
-          <div className="py-6 justify-center items-center gap-2 flex w-full">
-            <div className="flex-col justify-center gap-1 flex w-full">
+          <div className="py-6 justify-center items-center gap-2 inline-flex">
+            <div className="flex-col justify-center items-start gap-1 inline-flex">
               {type === "free" ? (
                 <div className="text-5xl font-extrabold leading-[64px]">
                   {amount}
                 </div>
               ) : (
-                <div className="flex-row justify-between items-center flex">
+                <div className="flex-col justify-center items-start gap-1 inline-flex">
                   <div>
-                    <span className="text-black text-5xl font-extrabold">
+                    <span className="text-black text-5xl font-extrabold leading-[64px]">
                       {currency}
                       {amount}
                     </span>
-                    <span className="text-black text-4xl font-semibold tracking-tight">
+                    <span className="text-black text-4xl font-semibold leading-10 tracking-tight">
                       {" "}
                     </span>
-                    <span className="text-black text-base font-semibold">
+                    <span className="text-black text-base font-semibold leading-normal">
                       / {unit}
                     </span>
-                  </div>
-                  <div className="w-[73px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded">
-                    <div className="text-gray-100 text-xs font-normal">
-                      Billed Yearly{" "}
-                    </div>
                   </div>
                 </div>
               )}
@@ -94,8 +88,7 @@ const Card = ({ price }) => {
               </button>
             ) : (
               <button
-                disabled
-                className="text-white text-base font-semibold leading-normal self-stretch h-12 px-6 py-2 bg-gray-400 rounded-lg border border-gray-400 justify-center items-center gap-2 inline-flex"
+                disabled className="text-white text-base font-semibold leading-normal self-stretch h-12 px-6 py-2 bg-gray-400 rounded-lg border border-gray-400 justify-center items-center gap-2 inline-flex"
                 onClick={() => {
                   redirectToURL(buttonUrl);
                 }}

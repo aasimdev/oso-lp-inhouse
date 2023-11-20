@@ -8,7 +8,7 @@ import VideoThankyouModal from "@/components/VideoThankyouModal";
 
 const ThankYouView = ({ email, checkoutSessionId }) => {
   const [previousPageUrl, setPreviousPageUrl] = useState("/");
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
     setIsOpen(true);

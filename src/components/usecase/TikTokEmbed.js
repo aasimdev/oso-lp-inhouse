@@ -1,13 +1,13 @@
 const TikTokEmbed = ({ videoId }) => {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden md:mt-6">
       <iframe
-        className=""
+        className="border border-gray-50"
         src={`https://www.tiktok.com/embed/v2/${videoId}?lang=en`}
         width="100%"
-        height="500"
+        height="750"
         allowFullScreen
-        style={{ overflow: 'hidden' }}
+        style={{ overflow: 'hidden', border: "1px", borderRadius: "16px" }}
       ></iframe>
     </div>
   );

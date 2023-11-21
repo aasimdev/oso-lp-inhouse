@@ -1,16 +1,18 @@
 import React from "react";
 import Video from "../Video";
 
-const OSOWorkCard = ({ bgColor, title }) => {
+const OSOWorkCard = ({ bgColor, title, itemCenter }) => {
   return (
-    <div class="max-w-[347px] h-[620px] mx-2 lg:mx-1 xl:mx-2 rounded-2xl overflow-hidden">
-      <div className="max-w-[347px] h-[296px]">
+    <div
+      className={`max-w-[330px] md:max-w-[347px] h-[620px] mx-2 lg:mx-1 xl:mx-2 rounded-2xl overflow-hidden`}
+    >
+      <div className="max-w-[330px] md:max-w-[347px] h-[296px]">
         <Video videoId="FpWF0i0vxGs" variant={"osowork"} />
       </div>
 
       <div className={`${bgColor} h-[300px] relative`}>
-        <div class="h-1/4 p-8">
-          <h2 class="text-black text-[32px] font-semibold">{title}</h2>
+        <div className="h-1/4 p-8">
+          <h2 className="text-black text-[32px] font-semibold">{title}</h2>
           <div className="w-[283px]">
             <span className="text-black text-2xl font-light ">Delivers a </span>
             <span className="text-black text-2xl font-medium">

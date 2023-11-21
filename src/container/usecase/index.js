@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import ExploreUsecases from "@/components/resources/ExploreUsecases";
 import Category from "@/components/usecase/Category";
 import Link from "next/link";
@@ -15,9 +15,10 @@ import AllUsecases from "@/components/usecase/AllUsecases";
 
 const UseCase = () => {
   const handleClick = () => {};
+
   return (
     <>
-      <section className=" mx-auto max-w-6xl">
+      <section className="mx-auto max-w-6xl">
         <div className="w-[1281px] h-[88px] px-24 py-8 justify-start items-start gap-2 inline-flex">
           <div className="w-6 h-6 relative" />
           <Link
@@ -43,8 +44,8 @@ const UseCase = () => {
           </Link>
         </div>
       </section>
-      <section className=" sm:py-8 px-6 mx-auto max-w-6xl">
-        <div className="flex flex-col md:gap-4 gap-2  md:items-center">
+      <section className="sm:py-8 px-6 mx-auto max-w-6xl">
+        <div className="px-6 flex flex-col md:gap-4 gap-2  md:items-center">
           <h1 className="md:text-[56px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl md:mx-auto">
             OSO Use Cases
           </h1>
@@ -52,7 +53,7 @@ const UseCase = () => {
             Explore the common and easy ways to use OSO.
           </p>
         </div>
-        <div className="flex gap-2   flex-wrap md:justify-center md:px-24 py-6">
+        <div className="px-6 flex gap-2 flex-wrap md:justify-center md:px-24 py-6">
           <div>
             {" "}
             <Category text="All" />
@@ -111,14 +112,14 @@ const UseCase = () => {
       <AllUsecases />
 
       <section className="sm:mt-8 py-6 sm:py-8 px-6 mx-auto max-w-6xl">
-        <div className="flex flex-col md:gap-4 gap-2">
-          <h1 className="md:text-[56px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto">
+        <div className="px-6 flex flex-col md:gap-4 gap-2">
+          <h1 className="text-[40px] md:text-5xl md:text-center font-bold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto">
             More than 100 thousand people across the world choose OSO
           </h1>
         </div>
         <div className="flex justify-center items-center py-6 md:py-8 mt-4">
           <button
-            className="bg-purple text-white text-2xl font-normal px-8 h-[74px] rounded-lg justify-center items-center flex gap-2"
+            className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
             onClick={handleClick}
           >
             Try Using OSO

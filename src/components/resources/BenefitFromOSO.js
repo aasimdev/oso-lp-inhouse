@@ -20,12 +20,12 @@ const BenefitFromOSO = () => {
 
   return (
     <section className="sm:mt-8 py-4 mx-auto max-w-6xl">
-      <div className="flex flex-col md:gap-4 gap-2">
-        <h1 className="text-[40px] md:text-5xl text-center font-bold md:font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto py-6">
+      <div className="px-8 flex flex-col md:gap-4 gap-2">
+        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto py-6">
           Who Benefits from OSO?
         </h1>
       </div>
-      <div className="flex gap-3 py-6 md:gap-6 flex-wrap md:justify-center px-6 md:px-24">
+      <div className="px-8 flex gap-3 py-6 md:gap-6 flex-wrap md:justify-center md:px-24">
         <div>
           {" "}
           <Avatar text="Researchers" avtarImage={Avt1} />

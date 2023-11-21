@@ -7,7 +7,7 @@ const TikTokEmbed = ({ videoId }) => {
         width="100%"
         height="750"
         allowFullScreen
-        style={{ overflow: 'hidden', border: "1px", borderRadius: "16px" }}
+        style={{ overflow: 'hidden', border: "1px", borderRadius: "30px" }}
       ></iframe>
     </div>
   );

@@ -8,10 +8,10 @@ const AllUsecases = () => {
   const image = usecaseImage;
 
   return (
-    <section className=" py-6 sm:py-8 mx-auto max-w-6xl">
+    <section className="py-6 sm:py-8 mx-auto max-w-6xl">
       <div className="flex flex-col md:gap-4 gap-2">
-        <div className="mx-auto max-w-6xl flex flex-col gap-2 lg:gap-4">
-          <div className="mx-auto max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-6">
+        <div className="max-w-6xl flex flex-col gap-2 lg:gap-4">
+          <div className="max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4">
             <UseCaseCard
               bgImage={image}
               avatar={AVTAR}

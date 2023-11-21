@@ -9,10 +9,10 @@ const ExploreUsecases = () => {
   const image = PIC1;
 
   return (
-    <section className="mx-auto max-w-6xl">
+    <section className="mx-auto max-w-6xl pt-6 md:pt-10">
       <div className="flex flex-col md:gap-4 gap-2">
-        <div className="mx-auto max-w-6xl flex flex-col gap-2 lg:gap-4">
-          <div className="mx-auto max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-6">
+        <div className="max-w-6xl flex flex-col gap-2 lg:gap-4">
+          <div className="mx-6 max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
             <UseCaseCard
               bgImage={image}
               avatar={AVTAR}
@@ -53,7 +53,7 @@ const ExploreUsecases = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center py-6 md:py-8 gap-4 mt-4">
+      <div className="flex justify-center items-center py-6 md:py-8 gap-4 mt-4 md:mt-8">
         <Link
           className=" bg-transparent text-purple border border-purple text-2xl font-normal w-[345px] md:w-[431px] h-[74px] rounded-lg justify-center items-center flex gap-2"
           href="/usecase"

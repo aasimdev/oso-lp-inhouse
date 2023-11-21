@@ -13,7 +13,7 @@ const TopThreeUsecase = () => {
           Top 3 most used cases
         </h1>
         <div className="mx-auto max-w-6xl flex flex-col py-6">
-          <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-2 md:gap-6">
             <UseCaseCard
               bgImage={PIC1}
               avatar={AVTAR}

@@ -3,7 +3,7 @@ import Video from "../Video";
 
 const OSOWorkCard = ({ bgColor, title }) => {
   return (
-    <div class="max-w-[347px] h-[620px] mx-2 lg:mx-1 xl:mx-2 my-4 rounded-lg overflow-hidden shadow-lg">
+    <div class="max-w-[347px] h-[620px] mx-2 lg:mx-1 xl:mx-2 rounded-2xl overflow-hidden">
       <div className="max-w-[347px] h-[296px]">
         <Video videoId="FpWF0i0vxGs" variant={"osowork"} />
       </div>

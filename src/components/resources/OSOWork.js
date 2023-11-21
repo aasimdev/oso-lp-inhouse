@@ -8,20 +8,20 @@ const OSOWork = () => {
   const handleClick = () => {};
 
   return (
-    <section className="sm:mt-8 py-4 mx-auto max-w-6xl">
+    <section className="py-6 md:pt-16 mx-auto max-w-6xl">
       <div className="flex flex-col md:gap-4 gap-2">
         <h1 className="text-5xl md:text-center text-left font-extrabold text-black max-w-4xl mx-auto">
           How OSO Works?
         </h1>
         <div className="mx-auto max-w-6xl flex flex-col py-6">
-          <div className="flex flex-col lg:flex-row justify-center items-center gap-2">
+          <div className="flex flex-col lg:flex-row justify-center items-center gap-2 lg:gap-3">
             <OSOWorkCard bgColor={"bg-[#61F3F3]"} title={"Search"} />
             <OSOWorkCard bgColor={"bg-[#77ED8B]"} title={"Chat"} />
             <OSOWorkCard bgColor={"bg-[#FFD666]"} title={"News"} />
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center py-8 w-full">
+      <div className="flex justify-center items-center pt-10 w-full">
         <button
           className="bg-purple text-white text-2xl font-normal px-14 h-[74px] rounded-lg justify-center items-center flex gap-2"
           onClick={handleClick}

@@ -8,7 +8,6 @@ import CreativeUsecase from "@/components/resources/CreativeUsecase";
 import BenefitFromOSO from "@/components/resources/BenefitFromOSO";
 import FAQ from "@/components/FAQ/Index";
 
-
 const accordionData = [
   {
     id: 1,
@@ -67,18 +66,19 @@ const Resources = () => {
   const handleClick = () => {};
   return (
     <>
-      <section className="sm:mt-8 py-6 sm:py-8 px-6 mx-auto max-w-6xl">
-        <div className="flex flex-col md:gap-4 gap-2">
-          <h1 className="md:text-[56px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto">
+      <section className="px-6 mx-auto max-w-6xl">
+        <div className="flex flex-col md:gap-4 gap-2 py-2 md:py-6">
+          <h1 className="md:text-[64px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto">
             How people are using OSO
           </h1>
           <p className="text-gray-800 md:text-center text-left md:text-[32px] text-2xl font-light leading-tight">
+            See how OSO can save your time. <br />
             Watch tips and tricks that help you level up your use of OSO.
           </p>
         </div>
-        <div className="flex justify-center items-center py-6 md:py-8 mt-4 w-full">
+        <div className="flex justify-center items-center py-6 md:py-8">
           <button
-            className="bg-purple text-white text-2xl font-normal px-14 h-[74px] rounded-lg justify-center items-center flex gap-2"
+            className="bg-purple text-white text-2xl font-normal px-14 py-6 rounded-lg justify-center items-center flex gap-2"
             onClick={handleClick}
           >
             Try Using OSO

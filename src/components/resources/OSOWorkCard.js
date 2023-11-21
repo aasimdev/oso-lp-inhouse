@@ -18,7 +18,7 @@ const OSOWorkCard = ({ bgColor, title }) => {
             </span>
             <span className="text-black text-2xl font-light">.</span>
           </div>
-          <div className="w-[251px] text-black text-2xl font-light inline-flex absolute bottom-6">
+          <div className="w-[251px] text-black text-2xl font-light inline-flex absolute bottom-6 gap-2 items-center">
             <svg
               width="24"
               height="24"

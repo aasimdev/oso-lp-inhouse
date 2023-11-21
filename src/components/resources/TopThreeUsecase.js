@@ -38,7 +38,7 @@ const TopThreeUsecase = () => {
       </div>
       <div className="flex justify-center items-center py-8 w-full">
         <button
-          className="bg-purple text-white text-2xl font-normal px-14 h-[74px] rounded-lg justify-center items-center flex gap-2"
+          className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
           onClick={handleClick}
         >
           Try Using OSO

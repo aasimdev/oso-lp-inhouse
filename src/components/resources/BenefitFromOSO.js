@@ -24,66 +24,66 @@ const BenefitFromOSO = () => {
         <h1 className="text-[40px] md:text-5xl text-center font-bold md:font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto py-6">
           Who Benefits from OSO?
         </h1>
-          <div className="flex gap-3 py-6 md:gap-6 flex-wrap md:justify-center px-6 md:px-24">
-            <div>
-              {" "}
-              <Avatar text="Researchers" avtarImage={Avt1} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="Shoppers" avtarImage={Avt2} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="UX Designers" avtarImage={Avt3} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="Lawyers" avtarImage={Avt4} />
-            </div>
-            <div>
-              <Avatar text="Engineers" avtarImage={Avt5} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="Bloggers" avtarImage={Avt6} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="Marketers" avtarImage={Avt7} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="Accountant" avtarImage={Avt8} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="Scientists" avtarImage={Avt9} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="Influencers" avtarImage={Avt10} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="Students" avtarImage={Avt11} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="Investors" avtarImage={Avt12} />
-            </div>
-            <div>
-              {" "}
-              <Avatar text="World-Travelers" avtarImage={Avt13} />
-            </div>
-            <div>
-              <Avatar text="Content Creators" avtarImage={Avt14} />
-            </div>
-          </div>
+      </div>
+      <div className="flex gap-3 py-6 md:gap-6 flex-wrap md:justify-center px-6 md:px-24">
+        <div>
+          {" "}
+          <Avatar text="Researchers" avtarImage={Avt1} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="Shoppers" avtarImage={Avt2} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="UX Designers" avtarImage={Avt3} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="Lawyers" avtarImage={Avt4} />
+        </div>
+        <div>
+          <Avatar text="Engineers" avtarImage={Avt5} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="Bloggers" avtarImage={Avt6} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="Marketers" avtarImage={Avt7} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="Accountant" avtarImage={Avt8} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="Scientists" avtarImage={Avt9} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="Influencers" avtarImage={Avt10} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="Students" avtarImage={Avt11} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="Investors" avtarImage={Avt12} />
+        </div>
+        <div>
+          {" "}
+          <Avatar text="World-Travelers" avtarImage={Avt13} />
+        </div>
+        <div>
+          <Avatar text="Content Creators" avtarImage={Avt14} />
+        </div>
       </div>
       <div className="flex justify-center items-center py-8 w-full">
         <button
-          className="bg-purple text-white text-2xl font-normal px-14 h-[74px] rounded-lg justify-center items-center flex gap-2"
+          className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
           onClick={handleClick}
         >
           Try Using OSO

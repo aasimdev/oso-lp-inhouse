@@ -78,7 +78,7 @@ const Resources = () => {
         </div>
         <div className="flex justify-center items-center py-6 md:py-8">
           <button
-            className="bg-purple text-white text-2xl font-normal px-14 py-6 rounded-lg justify-center items-center flex gap-2"
+            className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
             onClick={handleClick}
           >
             Try Using OSO

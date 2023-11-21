@@ -9,7 +9,7 @@ const CreativeUsecase = () => {
   return (
     <section className="sm:mt-8 py-4 mx-auto max-w-6xl">
       <div className="flex flex-col md:gap-4 gap-2">
-        <h1 className="text-5xl text-center font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto">
+        <h1 className="text-[40px] md:text-5xl text-center font-bold md:font-extrabold leading-[56px] md:leading-[80px] text-black">
           Creative ways to use OSO
         </h1>
       </div>

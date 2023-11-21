@@ -10,7 +10,7 @@ const OSOWork = () => {
   return (
     <section className="py-6 md:pt-16 mx-auto max-w-6xl">
       <div className="flex flex-col md:gap-4 gap-2">
-        <h1 className="text-5xl md:text-center text-left font-extrabold text-black max-w-4xl mx-auto">
+        <h1 className="text-[40px] md:text-5xl text-center font-bold md:font-extrabold  text-black max-w-4xl mx-auto">
           How OSO Works?
         </h1>
         <div className="mx-auto max-w-6xl flex flex-col py-6">

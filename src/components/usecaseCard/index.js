@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import TikTokEmbed from "../usecase/TikTokEmbed";
 
 const UseCaseCard = ({ bgImage, avatar, name, trip }) => {
   return (
@@ -11,11 +12,12 @@ const UseCaseCard = ({ bgImage, avatar, name, trip }) => {
         </div>
       </div>
       <div className="max-w-[347px]">
-        <Image
+        {/* <Image
           src={bgImage}
           alt="Image"
           className="rounded-t-2xl"
-        />
+        /> */}
+        <TikTokEmbed videoId="7303588919692627242" />
       </div>
       <div className="w-[347px] p-6 justify-start items-center gap-2 inline-flex">
         <div className="grow shrink basis-0 text-black text-base font-semibold leading-normal">

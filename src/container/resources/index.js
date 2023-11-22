@@ -71,7 +71,7 @@ const Resources = () => {
           <h1 className="md:text-[64px] text-[40px] md:text-center text-left font-extrabold leading-[32px] md:leading-[80px] text-black mx-auto">
             How people are using OSO
           </h1>
-          <p className="text-gray-800 md:text-center md:text-[32px] text-2xl font-light leading-10">
+          <p className="text-gray-800 md:text-center md:text-[32px] text-2xl font-light leading-8 md:leading-10">
             See how OSO can save your time. <br />
             Watch tips and tricks that help you level up your use of OSO.
           </p>

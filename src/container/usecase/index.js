@@ -80,9 +80,7 @@ const UseCase = () => {
         </div>
         {isMobile ? (
           <div
-            className="w-screen flex gap-2 justify-start overflow-x-auto pl-2 pr-6 py-6"
-            style={{ overflowX: "auto" }}
-          >
+            className="usecase-tagOverflow w-screen flex gap-2 justify-start pl-2 pr-6 py-6">
             {filterUsecaseButton.map((v, i) => {
               return (
                 <div key={i}>

@@ -365,3 +365,7 @@ html {
   align-items: center;
   gap: 16px;
 }
+
+.usecase-tagOverflow {
+  overflow-x: auto;
+}

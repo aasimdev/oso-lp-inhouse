@@ -68,7 +68,7 @@ const Resources = () => {
     <>
       <section className="px-6 mx-auto max-w-6xl pt-16">
         <div className="flex flex-col md:gap-4 gap-2 py-2 md:py-6 justify-center items-center">
-          <h1 className="md:text-[64px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black mx-auto">
+          <h1 className="md:text-[64px] text-[40px] md:text-center text-left font-extrabold leading-[32px] md:leading-[80px] text-black mx-auto">
             How people are using OSO
           </h1>
           <p className="text-gray-800 md:text-center md:text-[32px] text-2xl font-light leading-10">

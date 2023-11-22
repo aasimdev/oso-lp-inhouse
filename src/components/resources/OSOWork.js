@@ -14,7 +14,7 @@ const OSOWork = () => {
           How OSO Works?
         </h1>
         <div className="max-w-6xl flex flex-col py-6 md:py-12">
-          <div className="max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-6">
+          <div className="max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <OSOWorkCard bgColor={"bg-[#61F3F3]"} title={"Search"} />
             <OSOWorkCard bgColor={"bg-[#77ED8B]"} title={"Chat"} />
             <OSOWorkCard bgColor={"bg-[#FFD666]"} title={"News"}/>

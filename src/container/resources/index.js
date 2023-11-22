@@ -67,11 +67,11 @@ const Resources = () => {
   return (
     <>
       <section className="px-6 mx-auto max-w-6xl pt-16">
-        <div className="px-6 flex flex-col md:gap-4 gap-2 py-2 md:py-6">
-          <h1 className="md:text-[64px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto">
+        <div className="pl-2 pr-6 flex flex-col md:gap-4 gap-2 py-2 md:py-6">
+          <h1 className="md:text-[64px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black mx-auto">
             How people are using OSO
           </h1>
-          <p className="text-gray-800 md:text-center text-left md:text-[32px] text-2xl font-light leading-10">
+          <p className="text-gray-800 md:text-center md:text-[32px] text-2xl font-light leading-10">
             See how OSO can save your time. <br />
             Watch tips and tricks that help you level up your use of OSO.
           </p>

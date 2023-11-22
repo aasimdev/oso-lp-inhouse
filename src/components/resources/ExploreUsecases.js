@@ -53,9 +53,9 @@ const ExploreUsecases = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center py-6 md:py-8 gap-4 mt-4 md:mt-8">
+      <div className="flex justify-center items-center pb-6 gap-4">
         <Link
-          className=" bg-transparent text-purple border border-purple text-2xl font-normal w-[345px] md:w-[431px] h-[74px] rounded-lg justify-center items-center flex gap-2"
+          className=" bg-transparent text-purple border border-purple text-2xl font-normal px-4 md:px-16  h-[74px] rounded-lg justify-center items-center flex gap-2"
           href="/usecase"
         >
           explore all the use cases

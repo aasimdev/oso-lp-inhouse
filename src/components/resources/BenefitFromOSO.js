@@ -1,27 +1,22 @@
 import React from "react";
-import Avt1 from "../../../public/assets/avtars/avtar1.png";
-import Avt2 from "../../../public/assets/avtars/avtar2.png";
-import Avt3 from "../../../public/assets/avtars/avtar3.png";
-import Avt4 from "../../../public/assets/avtars/avtar4.png";
-import Avt5 from "../../../public/assets/avtars/avtar5.png";
-import Avt6 from "../../../public/assets/avtars/avtar6.png";
-import Avt7 from "../../../public/assets/avtars/avtar7.png";
-import Avt8 from "../../../public/assets/avtars/avtar8.png";
-import Avt9 from "../../../public/assets/avtars/avtar9.png";
-import Avt10 from "../../../public/assets/avtars/avtar10.png";
-import Avt11 from "../../../public/assets/avtars/avtar11.png";
-import Avt12 from "../../../public/assets/avtars/avtar12.png";
-import Avt13 from "../../../public/assets/avtars/avtar13.png";
-import Avt14 from "../../../public/assets/avtars/avtar14.png";
+import Avt1 from "../../../public/assets/avatars/avt1.png";
+import Avt2 from "../../../public/assets/avatars/avt2.png";
+import Avt3 from "../../../public/assets/avatars/avt3.png";
+import Avt4 from "../../../public/assets/avatars/avt4.png";
+import Avt5 from "../../../public/assets/avatars/avt5.png";
+import Avt6 from "../../../public/assets/avatars/avt6.png";
+import Avt7 from "../../../public/assets/avatars/avt7.png";
+import Avt8 from "../../../public/assets/avatars/avt8.png";
+import Avt9 from "../../../public/assets/avatars/avt9.png";
 import Avatar from "./Avatar";
 
 const BenefitFromOSO = () => {
   const handleClick = () => {};
 
   return (
-    <section className="sm:mt-8 py-4 mx-auto max-w-6xl">
+    <section className="sm:mt-8 pb-4 mx-auto max-w-6xl">
       <div className="px-8 flex flex-col md:gap-4 gap-2">
-        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold leading-[56px] md:leading-[80px] text-black max-w-4xl mx-auto py-6">
+        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold leading-[56px] md:leading-[64px] text-black max-w-4xl mx-auto pb-6">
           Who Benefits from OSO?
         </h1>
       </div>
@@ -63,22 +58,22 @@ const BenefitFromOSO = () => {
         </div>
         <div>
           {" "}
-          <Avatar text="Influencers" avtarImage={Avt10} />
+          <Avatar text="Influencers" avtarImage={Avt4} />
         </div>
         <div>
           {" "}
-          <Avatar text="Students" avtarImage={Avt11} />
+          <Avatar text="Students" avtarImage={Avt6} />
         </div>
         <div>
           {" "}
-          <Avatar text="Investors" avtarImage={Avt12} />
+          <Avatar text="Investors" avtarImage={Avt9} />
         </div>
         <div>
           {" "}
-          <Avatar text="World-Travelers" avtarImage={Avt13} />
+          <Avatar text="World-Travelers" avtarImage={Avt3} />
         </div>
         <div>
-          <Avatar text="Content Creators" avtarImage={Avt14} />
+          <Avatar text="Content Creators" avtarImage={Avt2} />
         </div>
       </div>
       <div className="flex justify-center items-center py-8 w-full">

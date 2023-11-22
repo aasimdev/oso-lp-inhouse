@@ -7,13 +7,13 @@ const CreativeUsecase = () => {
   const handleClick = () => {};
 
   return (
-    <section className="sm:mt-8 py-4 mx-auto max-w-6xl">
+    <section className="sm:mt-8 pt-4 mx-auto max-w-6xl">
       <div className="px-6 flex flex-col md:gap-4 gap-2">
-        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold leading-[56px] md:leading-[80px] text-black">
+        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold leading-[56px] md:leading-[64px] text-black">
           Creative ways to use OSO
         </h1>
       </div>
-      <div className="max-w-6xl flex flex-col py-8 md:py-12">
+      <div className="max-w-6xl flex flex-col pt-6">
         <div className="mx-6 max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
           <UseCaseCard
             bgImage={PIC1}

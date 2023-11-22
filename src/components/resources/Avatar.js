@@ -6,12 +6,13 @@ const Avatar = ({ avtarImage, text }) => {
     <>
       <div className="w-auto h-14 px-4 py-2 rounded-full shadow border-2 border-purple-400 justify-center items-center gap-2 inline-flex">
         <div className="w-10 h-10 relative">
-          <div className="w-10 h-10 left-0 top-0 absolute bg-purple-200 rounded-full" />
-          <Image
-            className="w-[38.75px] h-[38.44px] left-[0.62px] top-[1.88px] absolute"
-            src={avtarImage}
-            alt=""
-          />
+          <div className="h-10 w-10 rounded-full overflow-hidden bg-purple-400">
+            <Image
+              src={avtarImage}
+              alt="Avatar"
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
         <div className="text-center text-gray-900 text-base font-normal leading-normal">
           {text}

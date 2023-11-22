@@ -70,7 +70,7 @@ export async function POST(req) {
     );
     const contactRes = await res.json();
 
-    if (res.status === 200 && email) {
+    if (email) {
       await stripe.customers.create({
         email,
         metadata: {

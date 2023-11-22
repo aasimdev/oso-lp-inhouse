@@ -9,10 +9,10 @@ const TopThreeUsecase = () => {
   return (
     <section className="py-6 md:pt-16 mx-auto max-w-6xl">
       <div className="flex flex-col md:gap-4 gap-2">
-        <h1 className="px-6 text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold  leading-[56px] md:leading-[64px] text-black max-w-4xl mx-auto">
+        <h1 className="px-6 text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold leading-[56px] md:leading-[64px] text-black max-w-4xl mx-auto">
           Top 3 most used cases
         </h1>
-        <div className="max-w-6xl flex flex-col py-2">
+        <div className="max-w-6xl flex flex-col py-6 md:py-12">
           <div className="mx-6 max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
             <UseCaseCard
               bgImage={PIC1}
@@ -36,7 +36,7 @@ const TopThreeUsecase = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center pb-6 w-full">
+      <div className="flex justify-center items-center pb-6 md:pt-8 w-full">
         <button
           className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
           onClick={handleClick}

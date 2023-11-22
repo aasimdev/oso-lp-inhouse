@@ -10,14 +10,14 @@ const OSOWork = () => {
   return (
     <section className="py-6 md:pt-16 mx-auto max-w-6xl">
       <div className="px-6 flex flex-col md:gap-4 gap-2">
-        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold  text-black max-w-4xl mx-auto">
+        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold  text-black mx-auto">
           How OSO Works?
         </h1>
-        <div className="max-w-6xl flex flex-col py-6 md:py-12">
-          <div className="max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-col py-6 md:py-12">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <OSOWorkCard bgColor={"bg-[#61F3F3]"} title={"Search"} />
             <OSOWorkCard bgColor={"bg-[#77ED8B]"} title={"Chat"} />
-            <OSOWorkCard bgColor={"bg-[#FFD666]"} title={"News"}/>
+            <OSOWorkCard bgColor={"bg-[#FFD666]"} title={"News"} />
           </div>
         </div>
       </div>

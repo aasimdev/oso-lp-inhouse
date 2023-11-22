@@ -14,9 +14,9 @@ const BenefitFromOSO = () => {
   const handleClick = () => {};
 
   return (
-    <section className="sm:mt-8 pb-4 mx-auto max-w-6xl">
+    <section className="sm:mt-8 py-4 mx-auto max-w-6xl">
       <div className="px-8 flex flex-col md:gap-4 gap-2">
-        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold leading-[56px] md:leading-[64px] text-black max-w-4xl mx-auto pb-6">
+        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold leading-[56px] md:leading-[64px] text-black max-w-4xl mx-auto py-6">
           Who Benefits from OSO?
         </h1>
       </div>

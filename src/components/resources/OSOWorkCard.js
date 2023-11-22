@@ -1,11 +1,11 @@
 import React from "react";
-import Video from "../Video";
 import VideoResource from "../VideoResourceCard";
+
 
 const OSOWorkCard = ({ bgColor, title, itemCenter }) => {
   return (
     <div
-      className={`${bgColor} max-w-[330px] md:max-w-[347px] h-[580px] mx-2 lg:mx-1 xl:mx-2 rounded-2xl overflow-hidden`}
+      className={`${bgColor} max-w-[330px] md:max-w-[347px] h-[580px] rounded-2xl overflow-hidden`}
     >
       <div className="max-w-[330px] md:max-w-[347px] h-[296px]">
         <VideoResource videoId="FpWF0i0vxGs" variant={"osowork"} />

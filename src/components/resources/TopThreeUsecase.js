@@ -2,6 +2,7 @@ import React from "react";
 import UseCaseCard from "../usecaseCard/index";
 import PIC1 from "../../../public/assets/newpage/Image1.png";
 import AVTAR from "../../../public/assets/newpage/avtar.svg";
+import TikTokEmbed from "../usecase/TikTokEmbed";
 
 const TopThreeUsecase = () => {
   const handleClick = () => {};
@@ -14,25 +15,9 @@ const TopThreeUsecase = () => {
         </h1>
         <div className="max-w-6xl flex flex-col py-6 md:py-12">
           <div className="mx-6 max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-            <UseCaseCard
-              bgImage={PIC1}
-              avatar={AVTAR}
-              name={"Laura Aden"}
-              trip={"Plan a Trip"}
-            />
-            <UseCaseCard
-              bgImage={PIC1}
-              avatar={AVTAR}
-              name={"Laura Aden"}
-              trip={"Plan a Trip"}
-            />
-
-            <UseCaseCard
-              bgImage={PIC1}
-              avatar={AVTAR}
-              name={"Laura Aden"}
-              trip={"Plan a Trip"}
-            />
+          <TikTokEmbed videoId="7303588919692627242" />
+          <TikTokEmbed videoId="7303588919692627242" />
+          <TikTokEmbed videoId="7303588919692627242" />
           </div>
         </div>
       </div>

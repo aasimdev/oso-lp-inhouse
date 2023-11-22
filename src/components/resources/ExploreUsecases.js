@@ -4,6 +4,7 @@ import usecaseImage from "../../../public/assets/usecase/usecase1.png";
 import AVTAR from "../../../public/assets/newpage/avtar.svg";
 import UseCaseCard from "../usecaseCard/index";
 import Link from "next/link";
+import TikTokEmbed from "../usecase/TikTokEmbed";
 
 const ExploreUsecases = () => {
   const image = PIC1;
@@ -13,43 +14,12 @@ const ExploreUsecases = () => {
       <div className="flex flex-col md:gap-4 gap-2">
         <div className="max-w-6xl flex flex-col gap-2 lg:gap-4">
           <div className="mx-6 max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-            <UseCaseCard
-              bgImage={image}
-              avatar={AVTAR}
-              name={"Laura Aden"}
-              trip={"Plan a Trip"}
-            />
-            <UseCaseCard
-              bgImage={image}
-              avatar={AVTAR}
-              name={"Laura Aden"}
-              trip={"Plan a Trip"}
-            />
-            <UseCaseCard
-              bgImage={image}
-              avatar={AVTAR}
-              name={"Laura Aden"}
-              trip={"Plan a Trip"}
-            />
-            <UseCaseCard
-              bgImage={image}
-              avatar={AVTAR}
-              name={"Laura Aden"}
-              trip={"Plan a Trip"}
-            />
-            <UseCaseCard
-              bgImage={image}
-              avatar={AVTAR}
-              name={"Laura Aden"}
-              trip={"Plan a Trip"}
-            />
-
-            <UseCaseCard
-              bgImage={image}
-              avatar={AVTAR}
-              name={"Laura Aden"}
-              trip={"Plan a Trip"}
-            />
+          <TikTokEmbed videoId="7303588919692627242" />
+          <TikTokEmbed videoId="7303588919692627242" />
+          <TikTokEmbed videoId="7303588919692627242" />
+          <TikTokEmbed videoId="7303588919692627242" />
+          <TikTokEmbed videoId="7303588919692627242" />
+          <TikTokEmbed videoId="7303588919692627242" />
           </div>
         </div>
       </div>

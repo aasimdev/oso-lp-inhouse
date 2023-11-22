@@ -14,7 +14,11 @@ const UseCase = () => {
   const handleFilter = (value) => {
     setActive(value);
     const newVideos = usecaseData.filter((v) => v.type === value);
-    setVideoData(newVideos);
+    if (value === "All") {
+      setVideoData(usecaseData.slice(0, 12));
+    } else {
+      setVideoData(newVideos);
+    }
   };
 
   const handleClick = () => {};
@@ -75,7 +79,10 @@ const UseCase = () => {
           </p>
         </div>
         {isMobile ? (
-          <div className="w-screen flex gap-2 justify-start overflow-x-auto pl-2 pr-6  py-6">
+          <div
+            className="w-screen flex gap-2 justify-start overflow-x-auto pl-2 pr-6 py-6"
+            style={{ overflowX: "auto" }}
+          >
             {filterUsecaseButton.map((v, i) => {
               return (
                 <div key={i}>

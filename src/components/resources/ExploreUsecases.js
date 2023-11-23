@@ -5,21 +5,27 @@ import AVTAR from "../../../public/assets/newpage/avtar.svg";
 import UseCaseCard from "../usecaseCard/index";
 import Link from "next/link";
 import TikTokEmbed from "../usecase/TikTokEmbed";
+import { tiktokVideosData } from "@/constant/usecase";
 
 const ExploreUsecases = () => {
   const image = PIC1;
 
+  const videoData = tiktokVideosData.slice(-6);
+
   return (
     <section className="mx-auto max-w-6xl pt-6 md:pt-10">
       <div className="flex flex-col md:gap-4 gap-2">
-        <div className="max-w-6xl flex flex-col gap-2 lg:gap-4">
-          <div className="mx-6 max-w-6xl grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-            <TikTokEmbed videoId="7303588919692627242" category="food"/>
-            <TikTokEmbed videoId="7303588919692627242" />
-            <TikTokEmbed videoId="7303588919692627242" />
-            <TikTokEmbed videoId="7303588919692627242" />
-            <TikTokEmbed videoId="7303588919692627242" />
-            <TikTokEmbed videoId="7303588919692627242" />
+        <div className="flex flex-col gap-2 lg:gap-4">
+          <div className="mx-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {videoData.map((v, i) => {
+              return (
+                <TikTokEmbed
+                  key={i}
+                  videoId={v.videoId}
+                  category={v.category}
+                />
+              );
+            })}
           </div>
         </div>
       </div>

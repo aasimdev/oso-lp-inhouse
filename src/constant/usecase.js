@@ -57,6 +57,7 @@ export const usecaseData = [
   {
     id: 1,
     type: "FoodRecipies",
+    
   },
   {
     id: 2,

@@ -187,7 +187,7 @@ function RootLayoutContent({ children }) {
     `,
           }}
         />
-      <Script async src="https://www.tiktok.com/embed.js"></Script>
+      {/* <Script async src="https://www.tiktok.com/embed.js"></Script> */}
 
       </head>
       <body className={`${showSidebar ? "overflow-hidden md:pr-[17px]" : ""}`}>

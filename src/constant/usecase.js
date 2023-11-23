@@ -1,130 +1,110 @@
-export const filterUsecaseButton = [
-  {
-    name: "All",
-    value: "All",
-  },
-  {
-    name: `Food${"\u00A0"}Recipies`,
-    value: "FoodRecipies",
-  },
-  {
-    name: `Advance${"\u00A0"}Search`,
-    value: "AdvanceSearch",
-  },
-  {
-    name: `Plan${"\u00A0"}a${"\u00A0"}Trip`,
-    value: "PlanaTrip",
-  },
-  {
-    name: "Students",
-    value: "Students",
-  },
-  {
-    name: "Research",
-    value: "Research",
-  },
-  {
-    name: "Research",
-    value: "Research",
-  },
-  {
-    name: "Art",
-    value: "Art",
-  },
-  {
-    name: "Technology",
-    value: "Technology",
-  },
-  {
-    name: "Design",
-    value: "Design",
-  },
-  {
-    name: "Music",
-    value: "Music",
-  },
-  {
-    name: "Music",
-    value: "Music",
-  },
-  {
-    name: "Music",
-    value: "Music",
-  },
-];
-
-export const usecaseData = [
+export const tiktokVideosData = [
   {
     id: 1,
-    type: "FoodRecipies",
-    
+    videoId: "7272326794877881602",
+    type: ["top3", "creative-oso"],
+    category: "FoodRecipies",
   },
   {
     id: 2,
-    type: "FoodRecipies",
+    videoId: "7272326794877881602",
+    type: ["top3", "creative-oso"],
+    category: "FoodRecipies",
   },
   {
     id: 3,
-    type: "FoodRecipies",
+    videoId: "7272326794877881602",
+    type: ["top3", "creative-oso"],
+    category: "FoodRecipies",
   },
   {
     id: 4,
-    type: "FoodRecipies",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "FoodRecipies",
   },
   {
     id: 5,
-    type: "AdvanceSearch",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "AdvanceSearch",
   },
   {
     id: 6,
-    type: "AdvanceSearch",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "PlanaTrip",
   },
   {
     id: 7,
-    type: "AdvanceSearch",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "PlanaTrip",
   },
   {
     id: 8,
-    type: "PlanaTrip",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "PlanaTrip",
   },
   {
     id: 9,
-    type: "Students",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "Students",
   },
   {
     id: 10,
-    type: "Students",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "Students",
   },
   {
     id: 11,
-    type: "Research",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "Research",
   },
   {
     id: 12,
-    type: "Research",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "Research",
   },
   {
     id: 13,
-    type: "Art",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "Art",
   },
   {
     id: 14,
-    type: "Technology",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "Technology",
   },
   {
     id: 15,
-    type: "Technology",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "Technology",
   },
   {
     id: 16,
-    type: "Design",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "FoodRecipies",
   },
   {
     id: 17,
-    type: "Technology",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "Music",
   },
   {
     id: 18,
-    type: "Music",
+    videoId: "7272326794877881602",
+    type: [],
+    category: "Music",
   },
 ];

@@ -18,7 +18,7 @@ const TikTokEmbed = ({ videoId }) => {
 
   return (
     <div
-      className="overflow-hidden md:mt-6 left-0 w-full h-[750px] relative"
+      className="overflow-hidden md:mt-6 left-0 w-full h-[720px] relative"
       // onMouseEnter={handleHover}
       // onMouseLeave={handleMouseLeave}
     >
@@ -31,8 +31,8 @@ const TikTokEmbed = ({ videoId }) => {
         }`}
         src={`https://www.tiktok.com/embed/v2/${videoId}?lang=en&autoplay=false`}
         width="100%"
-        height="750"
-        // allowFullScreen
+        // height="700"
+        allowFullScreen
         loading="eager"
         style={{ overflow: "hidden", border: "1px", borderRadius: "30px" }}
         muted

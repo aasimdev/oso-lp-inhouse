@@ -20,7 +20,7 @@ const CreativeUsecase = () => {
         </h1>
       </div>
       <div className="flex flex-col py-8 md:py-12">
-        <div className="mx-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="md:mx-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {memoizedTikTokEmbedComponents}
         </div>
       </div>

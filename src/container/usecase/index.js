@@ -4,18 +4,18 @@ import React, { useState, useEffect } from "react";
 import Category from "@/components/usecase/Category";
 import Link from "next/link";
 import AllUsecases from "@/components/usecase/AllUsecases";
-import { filterUsecaseButton, usecaseData } from "@/constant/usecase";
+import { filterUsecaseButton, tiktokVideosData } from "@/constant/usecase";
 
 const UseCase = () => {
   const [active, setActive] = useState("All");
-  const [videoData, setVideoData] = useState(usecaseData.slice(0, 12));
+  const [videoData, setVideoData] = useState(tiktokVideosData.slice(0, 12));
   const [isMobile, setIsMobile] = useState(false);
 
   const handleFilter = (value) => {
     setActive(value);
-    const newVideos = usecaseData.filter((v) => v.type === value);
+    const newVideos = tiktokVideosData.filter((v) => v.category === value);
     if (value === "All") {
-      setVideoData(usecaseData.slice(0, 12));
+      setVideoData(tiktokVideosData.slice(0, 12));
     } else {
       setVideoData(newVideos);
     }
@@ -79,8 +79,7 @@ const UseCase = () => {
           </p>
         </div>
         {isMobile ? (
-          <div
-            className="usecase-tagOverflow w-screen flex gap-2 justify-start pl-2 pr-6 py-6">
+          <div className="usecase-tagOverflow w-screen flex gap-2 justify-start pl-2 pr-6 py-6">
             {filterUsecaseButton.map((v, i) => {
               return (
                 <div key={i}>

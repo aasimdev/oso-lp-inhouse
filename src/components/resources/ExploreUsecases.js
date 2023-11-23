@@ -1,31 +1,24 @@
-import React from "react";
-import PIC1 from "../../../public/assets/newpage/Image1.png";
-import usecaseImage from "../../../public/assets/usecase/usecase1.png";
-import AVTAR from "../../../public/assets/newpage/avtar.svg";
-import UseCaseCard from "../usecaseCard/index";
+import React, { useMemo } from "react";
 import Link from "next/link";
 import TikTokEmbed from "../usecase/TikTokEmbed";
 import { tiktokVideosData } from "@/constant/usecase";
 
 const ExploreUsecases = () => {
-  const image = PIC1;
 
-  const videoData = tiktokVideosData.slice(-6);
+  const videoData = tiktokVideosData?.slice(-6);
+
+  const memoizedTikTokEmbedComponents = useMemo(() => {
+    return videoData.map((v, i) => (
+      <TikTokEmbed key={i} videoId={v.videoId} category={v.category} />
+    ));
+  }, [videoData]);
 
   return (
     <section className="mx-auto max-w-6xl pt-6 md:pt-10">
       <div className="flex flex-col md:gap-4 gap-2">
         <div className="flex flex-col gap-2 lg:gap-4">
           <div className="mx-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {videoData.map((v, i) => {
-              return (
-                <TikTokEmbed
-                  key={i}
-                  videoId={v.videoId}
-                  category={v.category}
-                />
-              );
-            })}
+            {memoizedTikTokEmbedComponents}
           </div>
         </div>
       </div>

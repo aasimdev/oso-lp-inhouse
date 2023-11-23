@@ -97,6 +97,7 @@ const Resources = () => {
           </button>
         </div>
       </section>
+      
       <ExploreUsecases />
 
       <OSOWork />

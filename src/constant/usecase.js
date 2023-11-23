@@ -1,3 +1,58 @@
+export const filterUsecaseButton = [
+  {
+    name: "All",
+    value: "All",
+  },
+  {
+    name: `Food${"\u00A0"}Recipies`,
+    value: "FoodRecipies",
+  },
+  {
+    name: `Advance${"\u00A0"}Search`,
+    value: "AdvanceSearch",
+  },
+  {
+    name: `Plan${"\u00A0"}a${"\u00A0"}Trip`,
+    value: "PlanaTrip",
+  },
+  {
+    name: "Students",
+    value: "Students",
+  },
+  {
+    name: "Research",
+    value: "Research",
+  },
+  {
+    name: "Research",
+    value: "Research",
+  },
+  {
+    name: "Art",
+    value: "Art",
+  },
+  {
+    name: "Technology",
+    value: "Technology",
+  },
+  {
+    name: "Design",
+    value: "Design",
+  },
+  {
+    name: "Music",
+    value: "Music",
+  },
+  {
+    name: "Music",
+    value: "Music",
+  },
+  {
+    name: "Music",
+    value: "Music",
+  },
+];
+
 export const tiktokVideosData = [
   {
     id: 1,

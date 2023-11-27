@@ -5,9 +5,9 @@ import VideoResource from "../VideoResourceCard";
 const OSOWorkCard = ({ bgColor, title, itemCenter }) => {
   return (
     <div
-      className={`${bgColor} max-w-[330px] md:max-w-[347px] h-[580px] rounded-2xl overflow-hidden`}
+      className={`${bgColor}  h-[580px] rounded-2xl overflow-hidden`}
     >
-      <div className="max-w-[330px] md:max-w-[347px] h-[296px]">
+      <div className=" h-[296px]">
         <VideoResource videoId="FpWF0i0vxGs" variant={"osowork"} />
       </div>
 

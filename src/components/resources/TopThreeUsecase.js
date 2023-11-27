@@ -6,7 +6,7 @@ const TopThreeUsecase = () => {
   const [startVideo, setStartVideo] = useState(false);
   const containerTop3Ref = useRef(null);
 
-  const handleClick = () => {};
+  const handleClick = () => { };
 
   const videoData = useMemo(() => {
     return tiktokVideosData.filter((v) => v.type.includes("top3"));
@@ -59,10 +59,8 @@ const TopThreeUsecase = () => {
           Top 3 most used cases
         </h1>
       </div>
-      <div className="flex flex-col py-8 md:py-12">
-        <div className="md:mx-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {startVideo && memoizedTikTokEmbedComponents}
-        </div>
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8 md:py-12">
+        {startVideo && memoizedTikTokEmbedComponents}
       </div>
       <div className="flex justify-center items-center pb-6 md:pt-8 w-full">
         <button

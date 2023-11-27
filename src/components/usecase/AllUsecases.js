@@ -5,7 +5,7 @@ const AllUsecases = ({ videoData }) => {
   const containerRefs = useRef([]);
   const [loadedVideos, setLoadedVideos] = useState([]);
 
-  console.log("--------loaded videos", loadedVideos);
+  // console.log("--------loaded videos", loadedVideos);
 
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData.map((v, i) => {
@@ -35,7 +35,7 @@ const AllUsecases = ({ videoData }) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !loadedVideos.includes(index)) {
           console.log(`Video at index ${index} is in view`);
-          console.log("--------loaded videos inside methode", loadedVideos);
+          // console.log("--------loaded videos inside methode", loadedVideos);
           if (loadedVideos.length <= videoData.length) {
             setLoadedVideos((prev) => [...prev, index]);
           }

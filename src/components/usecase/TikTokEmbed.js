@@ -33,7 +33,7 @@ const TikTokEmbed = ({ videoId }) => {
         }`}
         src={`https://www.youtube.com/embed/${videoId}?lang=en&autoplay=${
           isPlay ? 1 : 0
-        }&mute=${isPlay ? 1 : 0}`}
+        }&mute=${isPlay ? 1 : 0}&loop=1`}
         width="100%"
         // height="700"
         allowFullScreen

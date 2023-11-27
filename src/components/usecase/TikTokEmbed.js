@@ -25,7 +25,7 @@ const TikTokEmbed = ({ videoId }) => {
       onMouseEnter={handleHover}
     >
       {isLoading && (
-        <PlaceholderLoading shape="rect" width={320} height={580} />
+        <PlaceholderLoading shape="rect" width={336} height={580} />
       )}
       <iframe
         className={`border border-gray-50 left-0 w-full h-full absolute ${

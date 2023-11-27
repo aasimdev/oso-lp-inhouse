@@ -29,7 +29,7 @@ const TikTokEmbed = ({ videoId }) => {
         className={`border border-gray-50 left-0 w-full h-full absolute ${
           isLoading ? "hidden" : ""
         }`}
-        src={`https://www.tiktok.com/embed/v2/${videoId}?lang=en&autoplay=false`}
+        src={`https://www.tiktok.com/embed/v2/${videoId}?lang=en&autoplay=0`}
         width="100%"
         // height="700"
         allowFullScreen

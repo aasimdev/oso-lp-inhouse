@@ -1,11 +1,44 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import TikTokEmbed from "../usecase/TikTokEmbed";
 import { tiktokVideosData } from "@/constant/usecase";
 
 const ExploreUsecases = () => {
-
+  const [startVideo, setStartVideo] = useState(false);
+  const containerExploreRef = useRef(null);
   const videoData = tiktokVideosData?.slice(-6);
+
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // Adjust as needed
+    };
+
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Logic to start loading or displaying TikTok videos
+          setStartVideo(true);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (containerExploreRef.current) {
+      observer.observe(containerExploreRef.current);
+    }
+
+    return () => {
+      if (containerExploreRef.current) {
+        observer.unobserve(containerExploreRef.current);
+      }
+    };
+  }, []);
+
+  // console.log("ExploreUsecases---------------", startVideo);
 
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData.map((v, i) => (
@@ -14,11 +47,11 @@ const ExploreUsecases = () => {
   }, [videoData]);
 
   return (
-    <section className="mx-auto max-w-6xl pt-6 md:pt-10">
+    <section ref={containerExploreRef} className="mx-auto max-w-6xl pt-6 md:pt-10">
       <div className="flex flex-col md:gap-4 gap-2">
         <div className="flex flex-col gap-2 lg:gap-4">
           <div className="mx-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {memoizedTikTokEmbedComponents}
+            {startVideo && memoizedTikTokEmbedComponents}
           </div>
         </div>
       </div>

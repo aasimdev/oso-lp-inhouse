@@ -21,11 +21,11 @@ const TikTokEmbed = ({ videoId }) => {
 
   return (
     <div
-      className="overflow-hidden md:mt-6 left-0 w-full h-[600px] relative"
+      className="overflow-hidden md:mt-6 left-0 w-full h-[580px] relative"
       onMouseEnter={handleHover}
     >
       {isLoading && (
-        <PlaceholderLoading shape="rect" width={320} height={600} />
+        <PlaceholderLoading shape="rect" width={320} height={580} />
       )}
       <iframe
         className={`border border-gray-50 left-0 w-full h-full absolute ${
@@ -33,12 +33,12 @@ const TikTokEmbed = ({ videoId }) => {
         }`}
         src={`https://www.youtube.com/embed/${videoId}?lang=en&autoplay=${
           isPlay ? 1 : 0
-        }&&mute=${isPlay ? 1 : 0}`}
+        }&mute=${isPlay ? 1 : 0}`}
         width="100%"
         // height="700"
         allowFullScreen
         loading="eager"
-        style={{ overflow: "hidden", border: "1px", borderRadius: "30px" }}
+        style={{ overflow: "hidden", border: "1px", borderRadius: "16px" }}
         muted
         onLoad={onLoadVideo}
       ></iframe>

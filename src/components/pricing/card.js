@@ -54,13 +54,13 @@ const Card = ({ price, isMonthly }) => {
           <div className="py-6 justify-center items-center gap-2 flex w-full">
             <div className="flex-col justify-center gap-1 flex w-full">
               {type === "free" ? (
-                <div className="text-5xl font-extrabold">
+                <div className="text-5xl font-extrabold leading-normal">
                   {amount}
                 </div>
               ) : (
-                <div className="flex-row justify-between items-end flex">
+                <div className="flex-row justify-between items-center flex">
                   <div>
-                    <span className="text-black text-5xl font-extrabold">
+                    <span className="text-black text-5xl font-extrabold leading-normal">
                       {currency}
                       {isMonthly ? amount : annuallyAmount}
                     </span>
@@ -72,8 +72,8 @@ const Card = ({ price, isMonthly }) => {
                     </span>
                   </div>
                   {!isMonthly && (
-                    <div className="w-[87px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded mb-1">
-                      <div className="text-gray-500 text-xs font-normal leading-[18px]">
+                    <div className="w-[87px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded">
+                      <div className="text-gray-100 text-xs font-normal leading-[18px]">
                         Billed Yearly{" "}
                       </div>
                     </div>
@@ -82,7 +82,7 @@ const Card = ({ price, isMonthly }) => {
               )}
             </div>
           </div>
-          <div className="self-stretch h-[70px] flex-col justify-center items-center flex">
+          <div className="self-stretch flex-col justify-center items-center flex">
             {type === "pro" ? (
               <Link
                 href={isMonthly ? monthlyUrl : annuallyUrl}
@@ -104,7 +104,7 @@ const Card = ({ price, isMonthly }) => {
             </div>
           </div>
         </div>
-        <div className="self-stretch flex-col justify-start items-start flex">
+        <div className="self-stretch flex-col justify-start items-start flex pt-8">
           {details.map((v, i) => {
             return (
               <div

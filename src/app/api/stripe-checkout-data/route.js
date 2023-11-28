@@ -1,5 +1,6 @@
-import { NextResponse } from "next/server";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+import { monthlyPrice } from "@/constant/pricing";
+import { NextResponse } from "next/server";
 
 export async function POST(req) {
   const { checkoutSessionId } = await req.json();
@@ -19,7 +20,7 @@ export async function POST(req) {
       // );
       let isMonthly = false;
 
-      if (amountTotal === 15) {
+      if (amountTotal === monthlyPrice) {
         isMonthly = true;
       }
 

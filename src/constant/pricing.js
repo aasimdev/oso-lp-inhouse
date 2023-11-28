@@ -7,7 +7,7 @@ export const priceContent = [
     unit: "month",
     currency: "$",
     buttonTitle: "Try OSO for free",
-    buttonUrl: "",
+    freeUrl: "",
     details: [
       {
         bulletPoint: (
@@ -159,13 +159,13 @@ export const priceContent = [
     type: "pro",
     title: "Pro",
     desc: "Unlock the Full Potential of OSO.",
-    amount1: "30",
-    amount2: "20",
+    amount: "30",
+    annuallyAmount: "20",
     unit: "month",
     currency: "$",
     buttonTitle: "Upgrade to Pro",
-    buttonUrl1: "https://buy.stripe.com/6oEcNv9B15EP2OY5kp",
-    buttonUrl2: "https://buy.stripe.com/9AQdRzcNd7MX61a7sw",
+    monthlyUrl: "https://buy.stripe.com/9AQdRzcNd7MX61a7sw",
+    annuallyUrl: "https://buy.stripe.com/6oEcNv9B15EP2OY5kp",
     details: [
       {
         bulletPoint: (
@@ -284,7 +284,8 @@ export const priceContent = [
             <span style={{ marginLeft: "8px" }}>OSO Uncensored LLM</span>
           </div>
         ),
-        tooltip: "Engage in unrestricted conversation and search for information on any topic.",
+        tooltip:
+          "Engage in unrestricted conversation and search for information on any topic.",
         isEnable: true,
         isIcon: true,
       },
@@ -316,3 +317,5 @@ export const priceContent = [
     ],
   },
 ];
+
+export const monthlyPrice = 30;

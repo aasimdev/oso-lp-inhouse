@@ -2,17 +2,20 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { Tooltip } from "react-tooltip";
 
-const Card = ({ price }) => {
+const Card = ({ price, annually }) => {
   const {
     type,
     title,
     desc,
     amount,
+    amount1,
+    amount2,
     unit,
     billedType,
     currency,
     buttonTitle,
-    buttonUrl,
+    buttonUrl1,
+    buttonUrl2,
     details,
   } = price;
   const [isMobile, setIsMobile] = useState(false);
@@ -64,7 +67,7 @@ const Card = ({ price }) => {
                   <div>
                     <span className="text-black text-5xl font-extrabold">
                       {currency}
-                      {amount}
+                      {annually ? amount1 : amount2}
                     </span>
                     <span className="text-black text-4xl font-semibold tracking-tight">
                       {" "}
@@ -73,11 +76,13 @@ const Card = ({ price }) => {
                       / {unit}
                     </span>
                   </div>
-                  <div className="w-[73px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded">
-                    <div className="text-gray-100 text-xs font-normal">
-                      Billed Yearly{" "}
+                  {!annually && (
+                    <div className="w-[73px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded">
+                      <div className="text-gray-100 text-xs font-normal">
+                        Billed Yearly{" "}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               )}
             </div>
@@ -85,19 +90,21 @@ const Card = ({ price }) => {
           <div className="self-stretch h-[70px] flex-col justify-center items-center flex">
             {type === "pro" ? (
               <button
-                className="text-[#8E33FF] text-base font-semibold leading-normal self-stretch h-12 px-6 py-2 bg-white rounded-lg border border-[#8E33FF] justify-center items-center gap-2 inline-flex"
+                className="text-white text-base font-normal leading-normal self-stretch h-12 px-6 py-2 bg-[#8E33FF] rounded-lg border border-[#8E33FF] justify-center items-center gap-2 inline-flex"
                 onClick={() => {
-                  redirectToURL(buttonUrl);
+                  const redirectUrl = annually ? buttonUrl2 : buttonUrl1;
+                  redirectToURL(redirectUrl);
                 }}
               >
                 {buttonTitle}
               </button>
             ) : (
               <button
-                disabled
-                className="text-white text-base font-semibold leading-normal self-stretch h-12 px-6 py-2 bg-gray-400 rounded-lg border border-gray-400 justify-center items-center gap-2 inline-flex"
+                
+                className="text-[#8E33FF] text-base font-normal leading-normal self-stretch h-12 px-6 py-2 bg-white rounded-lg border border-[#8E33FF] justify-center items-center gap-2 inline-flex"
                 onClick={() => {
-                  redirectToURL(buttonUrl);
+                  const redirectUrl = annually ? buttonUrl2 : buttonUrl1;
+                  redirectToURL(redirectUrl);
                 }}
               >
                 {buttonTitle}

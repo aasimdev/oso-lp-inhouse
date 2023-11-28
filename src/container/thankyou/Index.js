@@ -153,7 +153,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
                 </span>
                 <br />
                 <span className="text-gray-800 text-base font-normal">
-                  💼 Monthly subscription at $8 (regularly $20/month).
+                  💼 Shape the future of OSO with feedback and suggestions.
                   <br />
                   🚀 Pre-release access to OSO Uncensored.
                   <br />

@@ -1,6 +1,6 @@
 const ToggleButton = ({ handleToggle, isMonthly }) => {
   return (
-    <div className="flex gap-4 justify-center items-center pt-8 m-0">
+    <div className="flex gap-4 justify-center items-center pt-8 m-0 lg:pl-16">
       <div
         className={`${
           !isMonthly

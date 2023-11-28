@@ -38,73 +38,63 @@ const Card = ({ price, isMonthly }) => {
   return (
     <>
       <div
-        className={`w-full md:w-[348px] mx-auto lg:mx-0 p-8 rounded-2xl ${
-          type === "pro"
-            ? "border-4 border-[#8E33FF]"
-            : "border-2 border-gray-400 "
-        } gap-2`}
+        className={`w-full md:w-[348px] mx-auto lg:mx-0 p-8 rounded-2xl ${type === "pro"
+          ? "border-4 border-purple"
+          : "border-2 border-gray-400 "
+          }`}
       >
-        <div className="self-stretch flex-col justify-start items-start flex">
-          <div className="self-stretch flex-col justify-start items-start gap-2 flex">
-            <div className="text-2xl font-bold leading-9">{title}</div>
-            <div className="self-stretch text-gray-400 text-base font-normal leading-normal">
-              {desc}
-            </div>
+        <div className="flex-col justify-start items-start gap-2 flex">
+          <div className="text-2xl font-bold leading-9">{title}</div>
+          <div className="text-gray-400 text-base font-normal leading-normal">
+            {desc}
           </div>
-          <div className="py-6 justify-center items-center gap-2 flex w-full">
-            <div className="flex-col justify-center gap-1 flex w-full">
-              {type === "free" ? (
-                <div className="text-5xl font-extrabold leading-normal">
-                  {amount}
-                </div>
-              ) : (
-                <div className="flex-row justify-between items-center flex">
-                  <div>
-                    <span className="text-black text-5xl font-extrabold leading-normal">
-                      {currency}
-                      {isMonthly ? amount : annuallyAmount}
-                    </span>
-                    <span className="text-black text-4xl font-semibold tracking-tight">
-                      {" "}
-                    </span>
-                    <span className="text-black text-base font-semibold">
-                      / {unit}
-                    </span>
+        </div>
+        <div className="py-6">
+          {type === "free" ? (
+            <div className="text-5xl font-extrabold leading-normal">
+              {amount}
+            </div>
+          ) : (
+            <div className="justify-between items-center flex">
+              <div>
+                <span className="text-black text-5xl font-extrabold leading-normal">
+                  {currency}
+                  {isMonthly ? amount : annuallyAmount}
+                </span>
+                <span className="text-black text-4xl font-semibold tracking-tight">
+                  {" "}
+                </span>
+                <span className="text-black text-base font-semibold">
+                  / {unit}
+                </span>
+              </div>
+              {!isMonthly && (
+                <div className="w-[87px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded">
+                  <div className="text-gray-100 text-xs font-normal leading-[18px]">
+                    Billed Yearly{" "}
                   </div>
-                  {!isMonthly && (
-                    <div className="w-[87px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded">
-                      <div className="text-gray-100 text-xs font-normal leading-[18px]">
-                        Billed Yearly{" "}
-                      </div>
-                    </div>
-                  )}
                 </div>
               )}
             </div>
-          </div>
-          <div className="self-stretch flex-col justify-center items-center flex">
-            {type === "pro" ? (
-              <Link
-                href={isMonthly ? monthlyUrl : annuallyUrl}
-                target="_blank"
-                className="text-white text-base font-normal leading-normal self-stretch h-12 px-6 py-2 bg-[#8E33FF] rounded-lg border border-[#8E33FF] justify-center items-center gap-2 inline-flex"
-              >
-                {buttonTitle}
-              </Link>
-            ) : (
-              <Link
-                href={freeUrl}
-                className="text-[#8E33FF] text-base font-normal leading-normal self-stretch h-12 px-6 py-2 bg-white rounded-lg border border-[#8E33FF] justify-center items-center gap-2 inline-flex"
-              >
-                {buttonTitle}
-              </Link>
-            )}
-            <div className="w-[347px] text-white text-sm font-normal leading-snug">
-              {}
-            </div>
-          </div>
+          )}
         </div>
-        <div className="self-stretch flex-col justify-start items-start flex pt-8">
+          {type === "pro" ? (
+            <Link
+              href={isMonthly ? monthlyUrl : annuallyUrl}
+              target="_blank"
+              className="text-white text-base font-normal leading-normal h-12 px-6 py-2 bg-purple rounded-lg border border-purple justify-center items-center gap-2 flex"
+            >
+              {buttonTitle}
+            </Link>
+          ) : (
+            <Link
+              href={freeUrl}
+              className="text-purple text-base font-normal leading-normal h-12 px-6 py-2 bg-white rounded-lg border border-purple justify-center items-center gap-2 flex lg:mt-[3px]"
+            >
+              {buttonTitle}
+            </Link>
+          )}
+        <div className="flex-col justify-start items-start flex pt-8">
           {details.map((v, i) => {
             return (
               <div
@@ -113,9 +103,8 @@ const Card = ({ price, isMonthly }) => {
               >
                 <div className="self-stretch flex-col justify-start items-start flex">
                   <div
-                    className={`self-stretch text-base font-normal leading-normal flex gap-1 items-center ${
-                      !v.isEnable && "text-gray-400 line-through"
-                    }`}
+                    className={`self-stretch text-base font-normal leading-normal flex gap-1 items-center ${!v.isEnable && "text-gray-400 line-through"
+                      }`}
                   >
                     {v.bulletPoint}
                     {v.isIcon && (

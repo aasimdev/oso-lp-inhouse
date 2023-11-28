@@ -16,13 +16,11 @@ const Pricing = () => {
       <div className="flex justify-center">
         <ToggleButton handleToggle={handleToggle} isMonthly={isMonthly} />
       </div>
-      <section className="pt-6 md:pt-8">
-        <div className="px-6 mx-auto max-w-6xl">
-          <div className="flex flex-col-reverse lg:flex-row justify-center gap-6">
-            {priceContent.map((v, i) => {
-              return <Card isMonthly={isMonthly} price={v} key={i + v.type} />;
-            })}
-          </div>
+      <section className="pt-6 md:pt-8 px-6 mx-auto max-w-6xl">
+        <div className="flex flex-col-reverse lg:flex-row justify-center gap-6">
+          {priceContent.map((v, i) => {
+            return <Card isMonthly={isMonthly} price={v} key={i + v.type} />;
+          })}
         </div>
       </section>
     </>

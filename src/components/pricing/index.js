@@ -9,7 +9,6 @@ const Pricing = () => {
 
   const handleToggle = () => {
     setAnnually(!annually);
-    console.log("Toogle----------", annually);
   };
 
   return (

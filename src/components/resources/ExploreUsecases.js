@@ -1,13 +1,12 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import TikTokEmbed from "../usecase/TikTokEmbed";
-import { tiktokVideosData } from "@/constant/usecase";
+import { shortVideosData } from "@/constant/usecase";
+import UseCaseCard from "../usecaseCard";
 
 const ExploreUsecases = () => {
   const [startVideo, setStartVideo] = useState(false);
   const containerExploreRef = useRef(null);
-  const videoData = tiktokVideosData?.slice(-6);
-
+  const videoData = shortVideosData?.slice(-6);
 
   useEffect(() => {
     const options = {
@@ -42,12 +41,20 @@ const ExploreUsecases = () => {
 
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData.map((v, i) => (
-      <TikTokEmbed key={i} videoId={v.videoId} category={v.category} />
+      <UseCaseCard
+        key={i}
+        videoId={v.videoId}
+        category={v.category}
+        title={v.title}
+      />
     ));
   }, [videoData]);
 
   return (
-    <section ref={containerExploreRef} className="mx-auto max-w-6xl pt-6 md:pt-10">
+    <section
+      ref={containerExploreRef}
+      className="mx-auto max-w-6xl pt-6 md:pt-10"
+    >
       <div className="flex flex-col md:gap-4 gap-2">
         <div className="flex flex-col gap-2 lg:gap-4">
           <div className="mx-6 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

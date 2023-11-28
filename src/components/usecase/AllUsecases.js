@@ -1,5 +1,6 @@
 import React, { useMemo, useEffect, useRef, useState } from "react";
-import TikTokEmbed from "./TikTokEmbed";
+import TikTokEmbed from "./ShortVideo";
+import UseCaseCard from "../usecaseCard";
 
 const AllUsecases = ({ videoData }) => {
   const containerRefs = useRef([]);
@@ -15,7 +16,11 @@ const AllUsecases = ({ videoData }) => {
           {loadedVideos.includes(i) && (
             <div key={i} ref={containerRefs.current[i]}>
               {loadedVideos.includes(i) && (
-                <TikTokEmbed videoId={v.videoId} category={v.category} />
+                <UseCaseCard
+                  videoId={v.videoId}
+                  category={v.category}
+                  title={v.title}
+                />
               )}
             </div>
           )}

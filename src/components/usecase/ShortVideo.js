@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PlaceholderLoading from "react-placeholder-loading";
 
-const TikTokEmbed = ({ videoId }) => {
+const ShortVideo = ({ videoId }) => {
   const [isPlay, setIsPlay] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -21,14 +21,14 @@ const TikTokEmbed = ({ videoId }) => {
 
   return (
     <div
-      className="overflow-hidden md:mt-6 left-0 w-full h-[580px] relative"
+      className="overflow-hidden left-0 w-full h-[508px] relative"
       onMouseEnter={handleHover}
     >
       {isLoading && (
-        <PlaceholderLoading shape="rect" width={336} height={580} />
+        <PlaceholderLoading shape="rect" width={347} height={508} />
       )}
       <iframe
-        className={`border border-gray-50 left-0 w-full h-full absolute ${
+        className={`border border-gray-50 left-0 w-full h-full absolute rounded-t-2xl ${
           isLoading ? "hidden" : ""
         }`}
         src={`https://www.youtube.com/embed/${videoId}?lang=en&autoplay=${
@@ -38,7 +38,7 @@ const TikTokEmbed = ({ videoId }) => {
         // height="700"
         allowFullScreen
         loading="eager"
-        style={{ overflow: "hidden", border: "1px", borderRadius: "16px" }}
+        style={{ overflow: "hidden" }}
         muted
         onLoad={onLoadVideo}
       ></iframe>
@@ -46,4 +46,4 @@ const TikTokEmbed = ({ videoId }) => {
   );
 };
 
-export default TikTokEmbed;
+export default ShortVideo;

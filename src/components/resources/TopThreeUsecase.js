@@ -1,15 +1,15 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
-import TikTokEmbed from "../usecase/TikTokEmbed";
-import { tiktokVideosData } from "@/constant/usecase";
+import { shortVideosData } from "@/constant/usecase";
+import UseCaseCard from "../usecaseCard";
 
 const TopThreeUsecase = () => {
   const [startVideo, setStartVideo] = useState(false);
   const containerTop3Ref = useRef(null);
 
-  const handleClick = () => { };
+  const handleClick = () => {};
 
   const videoData = useMemo(() => {
-    return tiktokVideosData.filter((v) => v.type.includes("top3"));
+    return shortVideosData.filter((v) => v.type.includes("top3"));
   }, []);
 
   useEffect(() => {
@@ -45,7 +45,12 @@ const TopThreeUsecase = () => {
 
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData.map((v, i) => (
-      <TikTokEmbed key={i} videoId={v.videoId} category={v.category} />
+      <UseCaseCard
+        key={i}
+        videoId={v.videoId}
+        category={v.category}
+        title={v.title}
+      />
     ));
   }, [videoData]);
 

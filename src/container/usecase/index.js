@@ -4,18 +4,18 @@ import React, { useState, useEffect } from "react";
 import Category from "@/components/usecase/Category";
 import Link from "next/link";
 import AllUsecases from "@/components/usecase/AllUsecases";
-import { filterUsecaseButton, tiktokVideosData } from "@/constant/usecase";
+import { filterUsecaseButton, shortVideosData } from "@/constant/usecase";
 
 const UseCase = () => {
   const [active, setActive] = useState("All");
-  const [videoData, setVideoData] = useState(tiktokVideosData.slice(0, 12));
+  const [videoData, setVideoData] = useState(shortVideosData.slice(0, 12));
   const [isMobile, setIsMobile] = useState(false);
 
   const handleFilter = (value) => {
     setActive(value);
-    const newVideos = tiktokVideosData.filter((v) => v.category === value);
+    const newVideos = shortVideosData.filter((v) => v.category === value);
     if (value === "All") {
-      setVideoData(tiktokVideosData.slice(0, 12));
+      setVideoData(shortVideosData.slice(0, 12));
     } else {
       setVideoData(newVideos);
     }

@@ -1,11 +1,11 @@
-import React, { useMemo, useState, useEffect, useRef } from "react";  
-import TikTokEmbed from "../usecase/TikTokEmbed";
-import { tiktokVideosData } from "@/constant/usecase";
+import React, { useMemo, useState, useEffect, useRef } from "react";
+import { shortVideosData } from "@/constant/usecase";
+import UseCaseCard from "../usecaseCard";
 
 const CreativeUsecase = () => {
   const [startVideo, setStartVideo] = useState(false);
   const videoData = useMemo(() => {
-    return tiktokVideosData.filter((v) => v.type.includes("creative-oso"));
+    return shortVideosData.filter((v) => v.type.includes("creative-oso"));
   }, []);
 
   const containerRef = useRef(null);
@@ -43,7 +43,12 @@ const CreativeUsecase = () => {
 
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData?.map((v, i) => (
-      <TikTokEmbed key={i} videoId={v.videoId} category={v.category} />
+      <UseCaseCard
+        key={i}
+        videoId={v.videoId}
+        category={v.category}
+        title={v.title}
+      />
     ));
   }, [videoData]);
   return (
@@ -56,9 +61,9 @@ const CreativeUsecase = () => {
           Creative ways to use OSO
         </h1>
       </div>
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8 md:py-12">
-          {startVideo && memoizedTikTokEmbedComponents}
-        </div>
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8 md:py-12">
+        {startVideo && memoizedTikTokEmbedComponents}
+      </div>
     </section>
   );
 };

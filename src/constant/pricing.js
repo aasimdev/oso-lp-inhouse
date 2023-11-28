@@ -284,7 +284,7 @@ export const priceContent = [
             <span style={{ marginLeft: "8px" }}>OSO Uncensored LLM</span>
           </div>
         ),
-        tooltip: "Exchange voice messages instead of typing text.",
+        tooltip: "Engage in unrestricted conversation and search for information on any topic.",
         isEnable: true,
         isIcon: true,
       },

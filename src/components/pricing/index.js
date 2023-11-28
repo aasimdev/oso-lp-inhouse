@@ -16,7 +16,7 @@ const Pricing = () => {
       <div className="flex justify-center">
         <ToggleButton handleToggle={handleToggle} annually={annually} />
       </div>
-      <section className="pt-6 sm:pt-14">
+      <section className="pt-4 sm:pt-14">
         <div className="px-6 mx-auto max-w-6xl">
           <div className="flex flex-col lg:flex-row justify-center gap-6">
             {priceContent.map((v, i) => {

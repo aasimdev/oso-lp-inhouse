@@ -9,6 +9,7 @@ import Avt7 from "../../../public/assets/avatars/avt7.png";
 import Avt8 from "../../../public/assets/avatars/avt8.png";
 import Avt9 from "../../../public/assets/avatars/avt9.png";
 import Avatar from "./Avatar";
+import Link from "next/link";
 
 const BenefitFromOSO = () => {
   const handleClick = () => {};
@@ -77,24 +78,25 @@ const BenefitFromOSO = () => {
         </div>
       </div>
       <div className="flex justify-center items-center py-8 w-full">
-        <button
-          className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
-          onClick={handleClick}
-        >
-          Try Using OSO
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+      <Link
+            href="https://l.oso.ai/beta"
+            className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
+            onClick={handleClick}
           >
-            <path
-              d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
-              fill="white"
-            />
-          </svg>
-        </button>
+            Try Using OSO
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+                fill="white"
+              />
+            </svg>
+          </Link>
       </div>
     </section>
   );

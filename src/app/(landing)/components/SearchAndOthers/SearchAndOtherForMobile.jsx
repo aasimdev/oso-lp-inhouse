@@ -24,13 +24,16 @@ const SearchAndOtherForMobile = () => {
       },
       { threshold: 1 }
     );
-
-    observer.observe(targetDivRef.current);
-
+  
+    const currentTargetDiv = targetDivRef.current; 
+  
+    observer.observe(currentTargetDiv); 
+  
     return () => {
-      observer.unobserve(targetDivRef.current);
+      observer.unobserve(currentTargetDiv); 
     };
-  }, []);
+  }, []); 
+  
   return (
     <div
       ref={targetDivRef}

@@ -7,6 +7,7 @@ import TopThreeUsecase from "@/components/resources/TopThreeUsecase";
 import CreativeUsecase from "@/components/resources/CreativeUsecase";
 import BenefitFromOSO from "@/components/resources/BenefitFromOSO";
 import FAQ from "@/components/FAQ/Index";
+import Link from "next/link";
 
 const accordionData = [
   {
@@ -77,7 +78,8 @@ const Resources = () => {
           </p>
         </div>
         <div className="flex justify-center items-center py-6 md:py-8">
-          <button
+          <Link
+            href="https://l.oso.ai/beta"
             className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
             onClick={handleClick}
           >
@@ -94,7 +96,7 @@ const Resources = () => {
                 fill="white"
               />
             </svg>
-          </button>
+          </Link>
         </div>
       </section>
       

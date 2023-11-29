@@ -1,6 +1,7 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { shortVideosData } from "@/constant/usecase";
 import UseCaseCard from "../usecaseCard";
+import Link from "next/link";
 
 const TopThreeUsecase = () => {
   const [startVideo, setStartVideo] = useState(false);
@@ -30,13 +31,15 @@ const TopThreeUsecase = () => {
 
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    if (containerTop3Ref.current) {
-      observer.observe(containerTop3Ref.current);
+    const currentContainer = containerTop3Ref.current;
+
+    if (currentContainer) {
+      observer.observe(currentContainer);
     }
 
     return () => {
-      if (containerTop3Ref.current) {
-        observer.unobserve(containerTop3Ref.current);
+      if (currentContainer) {
+        observer.unobserve(currentContainer);
       }
     };
   }, []);
@@ -68,7 +71,8 @@ const TopThreeUsecase = () => {
         {startVideo && memoizedTikTokEmbedComponents}
       </div>
       <div className="flex justify-center items-center pb-6 md:pt-8 w-full">
-        <button
+        <Link
+          href="https://l.oso.ai/beta"
           className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
           onClick={handleClick}
         >
@@ -85,7 +89,7 @@ const TopThreeUsecase = () => {
               fill="white"
             />
           </svg>
-        </button>
+        </Link>
       </div>
     </section>
   );

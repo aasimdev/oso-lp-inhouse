@@ -29,42 +29,45 @@ const AllUsecases = ({ videoData }) => {
     });
   }, [videoData, loadedVideos, containerRefs]);
 
-  useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-    };
+ useEffect(() => {
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
 
-    const handleIntersection = (index) => (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting && !loadedVideos.includes(index)) {
-          console.log(`Video at index ${index} is in view`);
-          // console.log("--------loaded videos inside methode", loadedVideos);
-          if (loadedVideos.length <= videoData.length) {
-            setLoadedVideos((prev) => [...prev, index]);
-          }
+  const handleIntersection = (index) => (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !loadedVideos.includes(index)) {
+        console.log(`Video at index ${index} is in view`);
+        if (loadedVideos.length <= videoData.length) {
+          setLoadedVideos((prev) => [...prev, index]);
         }
-      });
-    };
-
-    containerRefs.current.forEach((containerRef, index) => {
-      const observer = new IntersectionObserver(
-        handleIntersection(index),
-        options
-      );
-
-      if (containerRef.current) {
-        observer.observe(containerRef.current);
       }
-
-      return () => {
-        if (containerRef.current) {
-          observer.unobserve(containerRef.current);
-        }
-      };
     });
-  }, [containerRefs, loadedVideos]);
+  };
+
+  containerRefs.current.forEach((containerRef, index) => {
+    const currentContainer = containerRef.current;
+
+    const observer = new IntersectionObserver(
+      handleIntersection(index),
+      options
+    );
+
+    if (currentContainer) {
+      observer.observe(currentContainer);
+    }
+
+    return () => {
+      if (currentContainer) {
+        observer.unobserve(currentContainer);
+      }
+    };
+  });
+
+}, [containerRefs, loadedVideos, videoData.length]);
+
 
   return (
     <section className="py-6 sm:py-8 mx-auto max-w-6xl">

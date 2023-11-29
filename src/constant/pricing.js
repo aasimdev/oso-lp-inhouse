@@ -6,7 +6,7 @@ export const priceContent = [
     amount: "Free",
     unit: "month",
     currency: "$",
-    buttonTitle: "Try OSO for free",
+    buttonTitle: "Coming Soon",
     freeUrl: "",
     details: [
       {
@@ -208,7 +208,7 @@ export const priceContent = [
                 />
               </g>
             </svg>
-            <span style={{ marginLeft: "8px" }}>Unlimited Messages</span>
+            <span style={{ marginLeft: "8px" }}>50 Uncensored Messages per day</span>
           </div>
         ),
         isEnable: true,

@@ -3,6 +3,7 @@ import UseCaseCard from "../usecaseCard/index";
 import PIC1 from "../../../public/assets/newpage/Image1.png";
 import AVTAR from "../../../public/assets/newpage/avtar.svg";
 import OSOWorkCard from "./OSOWorkCard";
+import Link from "next/link";
 
 const OSOWork = () => {
   const handleClick = () => {};
@@ -22,24 +23,25 @@ const OSOWork = () => {
         </div>
       </div>
       <div className="flex justify-center items-center md:pt-10 w-full">
-        <button
-          className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
-          onClick={handleClick}
-        >
-          Try Using OSO
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+      <Link
+            href="https://l.oso.ai/beta"
+            className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
+            onClick={handleClick}
           >
-            <path
-              d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
-              fill="white"
-            />
-          </svg>
-        </button>
+            Try Using OSO
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+                fill="white"
+              />
+            </svg>
+          </Link>
       </div>
     </section>
   );

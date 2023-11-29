@@ -2,6 +2,7 @@ import React from "react";
 import NavItem from "./MenuItem";
 
 const navItemsData = [
+  { title: "Use Cases", url: "/resource" },
   { title: "Search", url: "/search" },
   { title: "Chat", url: "/chat" },
   { title: "News", url: "/news" },

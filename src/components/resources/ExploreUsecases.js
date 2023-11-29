@@ -14,7 +14,7 @@ const ExploreUsecases = () => {
       rootMargin: "0px",
       threshold: 0.5, // Adjust as needed
     };
-
+  
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -23,19 +23,22 @@ const ExploreUsecases = () => {
         }
       });
     };
-
+  
     const observer = new IntersectionObserver(handleIntersection, options);
-
-    if (containerExploreRef.current) {
-      observer.observe(containerExploreRef.current);
+  
+    const currentContainer = containerExploreRef.current;
+  
+    if (currentContainer) {
+      observer.observe(currentContainer);
     }
-
+  
     return () => {
-      if (containerExploreRef.current) {
-        observer.unobserve(containerExploreRef.current);
+      if (currentContainer) {
+        observer.unobserve(currentContainer); 
       }
     };
   }, []);
+  
 
   // console.log("ExploreUsecases---------------", startVideo);
 

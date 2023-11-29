@@ -11,33 +11,36 @@ const CreativeUsecase = () => {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5, // Adjust as needed
-    };
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Adjust as needed
+  };
 
-    const handleIntersection = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Logic to start loading or displaying TikTok videos
-          setStartVideo(true);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(handleIntersection, options);
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
-
-    return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+  const handleIntersection = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Logic to start loading or displaying TikTok videos
+        setStartVideo(true);
       }
-    };
-  }, []);
+    });
+  };
+
+  const observer = new IntersectionObserver(handleIntersection, options);
+
+  const currentContainer = containerRef.current;
+
+  if (currentContainer) {
+    observer.observe(currentContainer);
+  }
+
+  return () => {
+    if (currentContainer) {
+      observer.unobserve(currentContainer); 
+    }
+  };
+}, []);
+
 
   // console.log("CreativeUsecase---------------", startVideo);
 

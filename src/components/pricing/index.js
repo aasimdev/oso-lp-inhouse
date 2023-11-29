@@ -5,7 +5,7 @@ import { priceContent } from "@/constant/pricing";
 import ToggleButton from "./ToogleButton";
 
 const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
+  const [isMonthly, setIsMonthly] = useState(false);
 
   const handleToggle = () => {
     setIsMonthly(!isMonthly);

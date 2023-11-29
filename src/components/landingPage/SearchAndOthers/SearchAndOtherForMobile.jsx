@@ -14,6 +14,8 @@ const SearchAndOtherForMobile = () => {
   const [stringTypeOut, setStringTypeOut] = useState(false);
   const targetDivRef = useRef(null);
   useEffect(() => {
+    const currentTargetDiv = targetDivRef.current; 
+  
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -24,13 +26,14 @@ const SearchAndOtherForMobile = () => {
       },
       { threshold: 1 }
     );
-
-    observer.observe(targetDivRef.current);
-
+  
+    observer.observe(currentTargetDiv); 
+  
     return () => {
-      observer.unobserve(targetDivRef.current);
+      observer.unobserve(currentTargetDiv); 
     };
   }, []);
+  
   return (
     <div
       ref={targetDivRef}

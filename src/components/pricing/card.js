@@ -89,7 +89,7 @@ const Card = ({ price, isMonthly }) => {
           ) : (
             <Link
               href={freeUrl}
-              className="text-purple text-base font-normal leading-normal h-12 px-6 py-2 bg-white rounded-lg border border-purple justify-center items-center gap-2 flex lg:mt-[3px]"
+              className="w-[284px] h-12 px-6 py-2 bg-gray-400 rounded-lg border border-gray-400 justify-center items-center gap-2 inline-flex text-white text-base font-semibold leading-normal pointer-events-none"
             >
               {buttonTitle}
             </Link>

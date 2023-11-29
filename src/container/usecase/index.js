@@ -118,7 +118,8 @@ const UseCase = () => {
           </h1>
         </div>
         <div className="flex justify-center items-center py-6 md:py-8 mt-4">
-          <button
+          <Link
+            href="https://l.oso.ai/beta"
             className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
             onClick={handleClick}
           >
@@ -135,7 +136,7 @@ const UseCase = () => {
                 fill="white"
               />
             </svg>
-          </button>
+          </Link>
         </div>
       </section>
     </>

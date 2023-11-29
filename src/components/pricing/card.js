@@ -99,7 +99,7 @@ const Card = ({ price, isMonthly }) => {
             return (
               <div
                 key={i + v.bulletPoint}
-                className=" pr-6 py-2 flex-col justify-start items-start gap-2 flex"
+                className="py-2 flex-col justify-start items-start gap-2 flex"
               >
                 <div className="self-stretch flex-col justify-start items-start flex">
                   <div

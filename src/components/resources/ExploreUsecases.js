@@ -6,7 +6,7 @@ import UseCaseCard from "../usecaseCard";
 const ExploreUsecases = () => {
   const [startVideo, setStartVideo] = useState(false);
   const containerExploreRef = useRef(null);
-  const videoData = shortVideosData?.slice(-6);
+  const videoData = shortVideosData?.slice(0, 6);
 
   useEffect(() => {
     const options = {
@@ -14,7 +14,7 @@ const ExploreUsecases = () => {
       rootMargin: "0px",
       threshold: 0.5, // Adjust as needed
     };
-  
+
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -23,22 +23,21 @@ const ExploreUsecases = () => {
         }
       });
     };
-  
+
     const observer = new IntersectionObserver(handleIntersection, options);
-  
+
     const currentContainer = containerExploreRef.current;
-  
+
     if (currentContainer) {
       observer.observe(currentContainer);
     }
-  
+
     return () => {
       if (currentContainer) {
-        observer.unobserve(currentContainer); 
+        observer.unobserve(currentContainer);
       }
     };
   }, []);
-  
 
   // console.log("ExploreUsecases---------------", startVideo);
 

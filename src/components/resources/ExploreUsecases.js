@@ -39,8 +39,6 @@ const ExploreUsecases = () => {
     };
   }, []);
 
-  // console.log("ExploreUsecases---------------", startVideo);
-
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData.map((v, i) => (
       <UseCaseCard

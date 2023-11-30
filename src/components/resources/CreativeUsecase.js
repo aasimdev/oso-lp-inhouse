@@ -41,9 +41,6 @@ const CreativeUsecase = () => {
   };
 }, []);
 
-
-  // console.log("CreativeUsecase---------------", startVideo);
-
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData?.map((v, i) => (
       <UseCaseCard

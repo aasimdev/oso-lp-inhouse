@@ -44,8 +44,6 @@ const TopThreeUsecase = () => {
     };
   }, []);
 
-  // console.log("TopThreeUsecase---------------", startVideo);
-
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData.map((v, i) => (
       <UseCaseCard

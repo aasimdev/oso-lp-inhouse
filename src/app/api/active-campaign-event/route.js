@@ -12,7 +12,6 @@ export async function POST(req) {
   formData.append("event", event);
   formData.append("visit", JSON.stringify({ email }));
 
-  // console.log("event----------", event, email);
 
   try {
     const trackEvent = await fetch(url, {
@@ -26,7 +25,6 @@ export async function POST(req) {
 
     const resData = await trackEvent.json();
 
-    // console.log("----------response", resData, resData.data);
     return NextResponse.json(
       { status: "success" },
       { status: 200, message: "successfully track" }

@@ -6,7 +6,6 @@ const ShortVideo = ({ videoId }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   const handleHover = () => {
-    // console.log("------hover--");
     setIsPlay(true);
     setTimeout(() => {
       setIsPlay(false);
@@ -16,8 +15,6 @@ const ShortVideo = ({ videoId }) => {
   const onLoadVideo = () => {
     setIsLoading(false);
   };
-
-  // console.log("------hover--value", isPlay);
 
   return (
     <div

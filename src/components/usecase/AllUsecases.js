@@ -1,12 +1,9 @@
 import React, { useMemo, useEffect, useRef, useState } from "react";
-import TikTokEmbed from "./ShortVideo";
 import UseCaseCard from "../usecaseCard";
 
 const AllUsecases = ({ videoData }) => {
   const containerRefs = useRef([]);
   const [loadedVideos, setLoadedVideos] = useState([]);
-
-  // console.log("--------loaded videos", loadedVideos);
 
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData.map((v, i) => {

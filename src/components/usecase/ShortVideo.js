@@ -5,7 +5,7 @@ const ShortVideo = ({ videoId }) => {
   const [isPlay, setIsPlay] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
-  const [currentWidth, setCurrentWidth] = useState(347);
+  const [currentWidth, setCurrentWidth] = useState(349);
 
   useEffect(() => {
     function handleResize() {
@@ -15,7 +15,7 @@ const ShortVideo = ({ videoId }) => {
           setCurrentWidth(425 - 48);
         }
         if (window.innerWidth <= 375) {
-          setCurrentWidth(375 - 48);
+          setCurrentWidth(window.innerWidth - 48);
         }
       } else {
         setIsMobile(false);

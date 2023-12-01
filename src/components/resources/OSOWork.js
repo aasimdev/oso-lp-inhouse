@@ -6,9 +6,9 @@ const OSOWork = () => {
   const handleClick = () => {};
 
   return (
-    <section className="py-6 md:pt-16 mx-auto max-w-6xl">
+    <section className="py-6 md:pt-16 mx-auto max-w-6xl ">
       <div className="px-6 flex flex-col md:gap-4 gap-2">
-        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold  text-black mx-auto">
+        <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold  text-black">
           How OSO Works?
         </h1>
         <div className="flex flex-col py-6 md:py-12">
@@ -19,7 +19,7 @@ const OSOWork = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center items-center md:pt-10 w-full">
+      <div className="flex justify-center items-center md:pt-10 w-full px-6">
       <Link
             href="https://l.oso.ai/prod"
             className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"

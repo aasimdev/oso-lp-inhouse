@@ -60,7 +60,7 @@ const TopThreeUsecase = () => {
       ref={containerTop3Ref}
       className="py-6 px-6 md:pt-16 mx-auto max-w-6xl"
     >
-      <div className="px-6 flex flex-col md:gap-4 gap-2 justify-center items-center">
+      <div className="flex flex-col md:gap-4 gap-2 justify-center items-center">
         <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold leading-[56px] md:leading-[64px] text-black">
           Top 3 most used cases
         </h1>

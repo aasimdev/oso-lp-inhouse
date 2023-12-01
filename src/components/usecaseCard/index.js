@@ -4,7 +4,7 @@ import ShortVideo from "../usecase/ShortVideo";
 
 const UseCaseCard = ({ videoId, category, title }) => {
   return (
-    <div className="max-w-[347px] h-[580px] rounded-2xl border border-gray-50">
+    <div className="h-[580px] rounded-2xl border border-gray-50">
       <div className="">
         <ShortVideo videoId={videoId} />
       </div>

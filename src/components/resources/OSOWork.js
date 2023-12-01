@@ -1,7 +1,4 @@
 import React from "react";
-import UseCaseCard from "../usecaseCard/index";
-import PIC1 from "../../../public/assets/newpage/Image1.png";
-import AVTAR from "../../../public/assets/newpage/avtar.svg";
 import OSOWorkCard from "./OSOWorkCard";
 import Link from "next/link";
 

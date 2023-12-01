@@ -1,9 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PlaceholderLoading from "react-placeholder-loading";
 
 const ShortVideo = ({ videoId }) => {
   const [isPlay, setIsPlay] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  const [currentWidth, setCurrentWidth] = useState(347);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth <= 425) {
+        setIsMobile(true);
+        if (window.innerWidth == 425) {
+          setCurrentWidth(425 - 48);
+        }
+        if (window.innerWidth <= 375) {
+          setCurrentWidth(375 - 48);
+        }
+      } else {
+        setIsMobile(false);
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleHover = () => {
     setIsPlay(true);
@@ -22,7 +48,7 @@ const ShortVideo = ({ videoId }) => {
       onMouseEnter={handleHover}
     >
       {isLoading && (
-        <PlaceholderLoading shape="rect" width={347} height={508} />
+        <PlaceholderLoading shape="rect" width={currentWidth} height={508} />
       )}
       <iframe
         className={`border border-gray-50 left-0 w-full h-full absolute rounded-t-2xl ${

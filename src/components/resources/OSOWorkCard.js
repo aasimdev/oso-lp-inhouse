@@ -2,13 +2,13 @@ import React from "react";
 import VideoResource from "../VideoResourceCard";
 
 
-const OSOWorkCard = ({ bgColor, title, itemCenter }) => {
+const OSOWorkCard = ({ bgColor, title, itemCenter, videoID }) => {
   return (
     <div
       className={`${bgColor} h-[580px] rounded-2xl overflow-hidden`}
     >
       <div className="h-[296px]">
-        <VideoResource videoId="FpWF0i0vxGs" variant={"osowork"} />
+        <VideoResource videoId={videoID} variant={"osowork"} />
       </div>
 
       <div className={`h-[300px] relative`}>

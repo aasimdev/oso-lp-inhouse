@@ -16,15 +16,15 @@ const OSOWork = () => {
         </h1>
         <div className="flex flex-col py-6 md:py-12">
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
-            <OSOWorkCard bgColor={"bg-[#61F3F3]"} title={"Search"} />
-            <OSOWorkCard bgColor={"bg-[#77ED8B]"} title={"Chat"} />
-            <OSOWorkCard bgColor={"bg-[#FFD666]"} title={"News"} />
+            <OSOWorkCard bgColor={"bg-[#61F3F3]"} title={"Search"} videoID="7y2r9MrUeQ8"/>
+            <OSOWorkCard bgColor={"bg-[#77ED8B]"} title={"Chat"} videoID="FpWF0i0vxGs"/>
+            <OSOWorkCard bgColor={"bg-[#FFD666]"} title={"News"} videoID="gAfKNS92eYM"/>
           </div>
         </div>
       </div>
       <div className="flex justify-center items-center md:pt-10 w-full">
       <Link
-            href="https://l.oso.ai/beta"
+            href="https://l.oso.ai/prod"
             className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
             onClick={handleClick}
           >

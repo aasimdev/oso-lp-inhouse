@@ -126,7 +126,7 @@ export const priceContent = [
               </g>
             </svg>
 
-            <span style={{ marginLeft: "8px" }}>Voice Conversations</span>
+            <span style={{ marginLeft: "8px" }}>AI Turbo Search</span>
           </div>
         ),
         isEnable: false,
@@ -262,10 +262,10 @@ export const priceContent = [
                 />
               </g>
             </svg>
-            <span style={{ marginLeft: "8px" }}>Voice Conversations</span>
+            <span style={{ marginLeft: "8px" }}>AI Turbo Search</span>
           </div>
         ),
-        tooltip: "Exchange voice messages instead of typing text.",
+        tooltip: "An enhanced, faster, and more robust search experience.",
         isEnable: true,
         isIcon: true,
       },

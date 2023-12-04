@@ -68,16 +68,11 @@ const Resources = () => {
     {
       id: 6,
       question: "How can I access OSO?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO AI is available as a Web application, and in the Apple iOS and Google Android app stores.  You can access the latest version of OSO AI from your computer or your mobile device through a single dynamic-link:
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO AI is available as a Web application, and in the Apple iOS and Google Android app stores.  You can access the latest version of OSO AI from your computer or your mobile device through a single dynamic-link: https://l.oso.ai/prod
+      <br/><br/>
 
-     <br /><br />
-     <a href=${
-       isMobile
-         ? "https://play.google.com/store/apps/details?id=your_app_package_name"
-         : "https://l.oso.ai/prod"
-     } target="_blank" rel="noopener noreferrer">
-<span><strong>Apply here</strong></span>
-</a>
+      If you click on the link from your computer, you will be taken to the web app, and if you click on the link from your mobile device, it will take you to the correct app store. 
+      
   
        </p>`,
     },

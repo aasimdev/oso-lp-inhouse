@@ -73,6 +73,8 @@ Our mission is to empower users with information while promoting ethical conduct
       id: 6,
       question: "How does OSO Uncensored Chat work?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">Our most advanced and Uncensored LLM, affectionately known as OSO Pro, is like having a super knowledgeable and refreshingly honest best friend on speed dial. By upgrading to OSO Pro and enabling Uncensored Chat, you can expect more balanced and unbiased responses.
+      <br /><br />
+      That being said, the onus is on users to make responsible use of the information that is provided. OSO doesn't promote or condone the use of our platform for illegal or unethical activities. While we're committed to transparency and sharing accurate, unbiased information, we expect our users to make informed decisions and use our services responsibly.
       </p>`,
     },
     {

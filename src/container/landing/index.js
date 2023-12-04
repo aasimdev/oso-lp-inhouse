@@ -88,8 +88,10 @@ When we say "unbiased," we mean we train OSO models to take a neutral stance, fr
     },
     {
       id: 4,
-      question: "OSO's Pledge for Responsible Use of Information",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">At OSO, we recognize the power of information and the responsibility that comes with it. Our commitment to responsible information use is not just a policy; it's a core principle that guides every aspect of our platform. We provide uncensored and unbiased access to information, but with a steadfast commitment to legal, ethical, and responsible usage.
+      question: "Commitment to Encouraging Responsible Use of Information",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900"><strong >OSO's Pledge for Responsible Use of Information
+      </strong> <br/><br/>
+      At OSO, we recognize the power of information and the responsibility that comes with it. Our commitment to responsible information use is not just a policy; it's a core principle that guides every aspect of our platform. We provide uncensored and unbiased access to information, but with a steadfast commitment to legal, ethical, and responsible usage.
       <br/><br/>
       <strong >Informed Consent and Legal Compliance</strong>
       <br/><br/>

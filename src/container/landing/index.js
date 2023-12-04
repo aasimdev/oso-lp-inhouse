@@ -88,12 +88,24 @@ When we say "unbiased," we mean we train OSO models to take a neutral stance, fr
     },
     {
       id: 4,
-      question: "Commitment to Encouraging Responsible Use of Information",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">At OSO, we take our commitment to responsible information use seriously. While we provide uncensored and unbiased access to information, we strongly emphasize that our platform is designed for responsible, legal, and ethical purposes. We do not endorse or support any illegal, harmful, or unethical activities.
-  <br /><br />
-To ensure responsible use, OSO will require all users to complete a consent form upon joining. This consent form will include a legal disclaimer outlining our guidelines for appropriate use. Additionally, OSO is designed for adult users, and we do not permit access to individuals who are not of legal age in their jurisdiction.
-  <br /><br />
-Our mission is to empower users with information while promoting ethical conduct and respect for the law. We encourage all OSO users to utilize our platform responsibly and in a manner that upholds these principles.</p>`,
+      question: "OSO's Pledge for Responsible Use of Information",
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">At OSO, we recognize the power of information and the responsibility that comes with it. Our commitment to responsible information use is not just a policy; it's a core principle that guides every aspect of our platform. We provide uncensored and unbiased access to information, but with a steadfast commitment to legal, ethical, and responsible usage.
+      <br/><br/>
+      <strong >Informed Consent and Legal Compliance</strong>
+      <br/><br/>
+      In line with our ethical stance, our OSO Uncensored model is strictly restricted to adults only. We enforce this policy rigorously, ensuring that only individuals who are of legal age in their respective jurisdictions can access our services. This policy is a testament to our commitment to responsible use and ethical information dissemination.
+      <br/><br/>
+      <strong >Empowerment with Accountability</strong>
+      <br/><br/>
+      Our mission at OSO goes beyond just empowering users with information. We aim to cultivate an environment where ethical conduct, respect for the law, and personal accountability are paramount. We encourage our users to not only utilize the wealth of information available on our platform, but to do so with a deep sense of responsibility and integrity.
+      <br/><br/>
+      <strong >A Call to Action
+      </strong>
+      <br/><br/>
+      We urge all OSO users to embrace these principles. Use our platform to learn, grow, and innovate, but always with a conscious commitment to responsible, legal, and ethical practices. Together, we can ensure that the power of information is harnessed for positive impact and the betterment of society.
+
+
+      </p>`,
     },
 
     {

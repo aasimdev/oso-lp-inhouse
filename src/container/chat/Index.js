@@ -43,12 +43,15 @@ const ChatView = () => {
       id: 3,
       question: "What language models does OSO Chat support?",
       answer: `
-      <ul class="list-disc p-[revert] space-y-6 mt-6">
+      
+      <p class="text-2xl leading-9 font-light text-gray-900 mt-6">
+      OSO supports a custom-tuned model based on Mistral 7B with a modified dataset for uncensoring, deduping, cleaning, and quality, as well as to increase creativity and overall empathy. We are continually improving this model to provide better results for our users.
+      <br/><br/>
+      The OSO team is also working on new models that specialize in areas such as <strong class=" text-gray-900">
+      coding assistants, data curation, image generation, and improving our aggregation of web resources.
 
-      <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">OSO Uncensored:</span> Chat about any topic without restriction.
-      <li class="text-2xl leading-9 font-light text-gray-900"><span class="text-black font-normal">OSO Savant:</span> Find the information you need with the help of highly specialized AI agents.</li>
-      </ul>
-      <p class="text-2xl leading-9 font-light text-gray-900 mt-6">OSO also supports a modified version of GPT 3.5 Turbo and GPT 4 with a visually-appealing format.</p>
+      </strong>
+      </p>
       `,
     },
 
@@ -69,7 +72,8 @@ Our mission is to empower users with information while promoting ethical conduct
     {
       id: 6,
       question: "How does OSO Uncensored Chat work?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">Uncensored Chat can be viewed as taking the training wheels off of a traditional AI Chatbot to provide users with answers to nearly any question.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">Our most advanced and Uncensored LLM, affectionately known as OSO Pro, is like having a super knowledgeable and refreshingly honest best friend on speed dial. By upgrading to OSO Pro and enabling Uncensored Chat, you can expect more balanced and unbiased responses.
+      </p>`,
     },
     {
       id: 7,

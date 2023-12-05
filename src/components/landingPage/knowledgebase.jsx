@@ -5,15 +5,15 @@ import Link from "next/link";
 const KnowledgebaseContent = [
   {
     title: "Enhancing Results through Prompt Engineering in OSO AI",
-    url: "https://learn.oso.ai/",
+    url: "https://learn.oso.ai/tips-tricks/prompt-engineering?from_search=134189309",
   },
   {
     title: "Your Personal Classroom Sidekick – Less Study, Better Grades",
-    url: "https://learn.oso.ai/",
+    url: "https://learn.oso.ai/use-cases/students?from_search=134189374",
   },
   {
     title: "Everything you need to know about OSO",
-    url: "https://learn.oso.ai/",
+    url: "https://learn.oso.ai/getting-started/what-is-oso?from_search=134189407",
   },
 ];
 

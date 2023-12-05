@@ -39,6 +39,7 @@ module.exports = withMT({
     extend: {
       backgroundImage: {
         'gradient-slider': 'linear-gradient(90deg, rgba(255, 255, 255, 0) 73%, rgba(255, 255, 255, 0.80) 100%)',
+        'gradient-gray': 'linear-gradient(180deg, white 0%, #E2E2E2 100%)'
       },
     },
   },

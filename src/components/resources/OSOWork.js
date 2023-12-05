@@ -21,7 +21,7 @@ const OSOWork = () => {
       </div>
       <div className="flex justify-center items-center md:pt-10 w-full px-6">
       <Link
-            href="https://l.oso.ai/prod"
+            href="https://l.oso.ai/NewUser"
             className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
             onClick={handleClick}
           >

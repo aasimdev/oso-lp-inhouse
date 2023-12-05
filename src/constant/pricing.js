@@ -137,13 +137,14 @@ export const priceContent = [
     type: "pro",
     title: "Pro",
     desc: "Unlock the Full Potential of OSO.",
-    amount: "30",
-    annuallyAmount: "20",
+    amount: "20",
+    annuallyAmount: "16",
     unit: "month",
+    unit2:"Annualy",
     currency: "$",
     buttonTitle: "Upgrade to Pro",
-    monthlyUrl: "https://buy.stripe.com/9AQdRzcNd7MX61a7sw",
-    annuallyUrl: "https://buy.stripe.com/6oEcNv9B15EP2OY5kp",
+    monthlyUrl: "https://buy.stripe.com/7sIaFA5czcwT5ryfYY",
+    annuallyUrl: "https://buy.stripe.com/28o4hc0WjeF1bPWfYZ",
     details: [
       {
         bulletPoint: (
@@ -186,7 +187,7 @@ export const priceContent = [
                 />
               </g>
             </svg>
-            <span style={{ marginLeft: "8px" }}>50 Messages per day</span>
+            <span style={{ marginLeft: "8px" }}>Unlimited Messages</span>
           </div>
         ),
         isEnable: true,

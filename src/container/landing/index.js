@@ -23,6 +23,8 @@ import Hero from "@/components/landingPage/Hero"
 import Chat from "@/components/landingPage/Chat"
 import Feed from "@/components/landingPage/Feed"
 import SearchAndOtherForLaptop from "@/components/landingPage/SearchAndOthers/SearchAndOtherForLaptop"
+import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding"
+import Knowledgebase from "@/components/landingPage/knowledgebase"
 
 const testimonialData = [
   {
@@ -143,6 +145,7 @@ When we say "unbiased," we mean we train OSO models to take a neutral stance, fr
     <>
       <GoogleAnalytics gaTrackingID='G-2N2XN2FQX1' />
       <Hero />
+      <OSOUseCaseLanding />
       <div className='px-6 mx-auto max-w-6xl'>
         <SearchAndOtherForLaptop />
         <Chat />
@@ -242,6 +245,9 @@ When we say "unbiased," we mean we train OSO models to take a neutral stance, fr
             ))}
         </Swiper>
       </div>
+
+      <Knowledgebase />
+      
       <FAQ accordionData={accordionData} />
     </>
   )

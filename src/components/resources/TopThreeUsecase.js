@@ -70,7 +70,7 @@ const TopThreeUsecase = () => {
       </div>
       <div className="flex justify-center items-center pb-6 md:pt-8 w-full">
         <Link
-          href="https://l.oso.ai/prod"
+          href="https://l.oso.ai/NewUser"
           className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
           onClick={handleClick}
         >

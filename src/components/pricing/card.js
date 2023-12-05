@@ -11,6 +11,7 @@ const Card = ({ price, isMonthly }) => {
     amount,
     annuallyAmount,
     unit,
+    unit2,
     billedType,
     currency,
     buttonTitle,
@@ -38,62 +39,101 @@ const Card = ({ price, isMonthly }) => {
   return (
     <>
       <div
-        className={`w-full md:w-[348px] mx-auto lg:mx-0 p-8 rounded-2xl ${type === "pro"
-          ? "border-4 border-purple"
-          : "border-2 border-gray-400 "
-          }`}
+        className={`w-full md:w-[348px] mx-auto lg:mx-0 p-8 rounded-2xl ${
+          type === "pro"
+            ? "border-4 border-purple"
+            : "border-2 border-gray-400 "
+        }`}
       >
-        <div className="flex-col justify-start items-start gap-2 flex">
-          <div className="text-2xl font-bold leading-9">{title}</div>
-          <div className="text-gray-400 text-base font-normal leading-normal">
-            {desc}
+        {type === "pro" && !isMonthly ? (
+          <div className="flex-col gap-2 flex">
+            <div className="flex  justify-between items-center">
+              <div className="text-2xl font-bold leading-9">{title}</div>
+              <div>
+                <div className="px-2 py-1 bg-[#D9FFBC] rounded-lg flex-col justify-start items-end gap-2 inline-flex">
+                  <div className="p-1 justify-center items-center gap-2 inline-flex">
+                    <div className="text-black text-sm font-semibold font-['Roboto'] leading-snug">
+                      Save 17%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="text-gray-400 text-base font-normal leading-normal">
+              {desc}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="flex-col justify-start items-start gap-2 flex">
+            <div className="flex">
+              <div className="text-2xl font-bold leading-9">{title}</div>
+            </div>
+            <div className="text-gray-400 text-base font-normal leading-normal">
+              {desc}
+            </div>
+          </div>
+        )}
         <div className="py-6">
           {type === "free" ? (
             <div className="text-5xl font-extrabold leading-normal">
               {amount}
             </div>
           ) : (
-            <div className="justify-between items-center flex">
-              <div>
-                <span className="text-black text-5xl font-extrabold leading-normal">
-                  {currency}
-                  {isMonthly ? amount : annuallyAmount}
-                </span>
-                <span className="text-black text-4xl font-semibold tracking-tight">
-                  {" "}
-                </span>
-                <span className="text-black text-base font-semibold">
-                  / {unit}
-                </span>
-              </div>
-              {!isMonthly && (
-                <div className="w-[87px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded">
-                  <div className="text-gray-100 text-xs font-normal leading-[18px]">
-                    Billed Yearly{" "}
+            <div className="justify-between items-center md:flex-row sm:flex-col">
+           
+                {isMonthly ? (
+                  <span className="text-black text-5xl font-extrabold leading-normal">
+                    {currency}
+                    {isMonthly ? amount : annuallyAmount}
+                    <span className="text-black text-4xl font-semibold tracking-tight">
+                      {" "}
+                    </span>
+                    <span className="text-black text-base font-semibold">
+                      / {unit}
+                    </span>
+                  </span>
+                ) : (
+                  <span className="text-black text-5xl font-extrabold leading-normal pr-2">
+                    <span className="text-gray-400 text-xl font-bold font-['Roboto'] line-through leading-[30px]">
+                      $20
+                    </span>
+                    {currency}
+                    {isMonthly ? amount : annuallyAmount}
+                    <span className="text-black text-4xl font-semibold tracking-tight">
+                      {" "}
+                    </span>
+                    <span className="text-black text-base font-semibold">
+                      / {unit}
+                    </span>
+                  </span>
+                )}
+                {!isMonthly && (
+                  <div className="w-[87px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded">
+                    <div className="text-gray-100 text-xs font-normal leading-[18px]">
+                      Billed Yearly{" "}
+                    </div>
                   </div>
-                </div>
-              )}
-            </div>
+                )}
+              </div>
+           
           )}
         </div>
-          {type === "pro" ? (
-            <Link
-              href={isMonthly ? monthlyUrl : annuallyUrl}
-              target="_blank"
-              className="text-white text-base font-normal leading-normal h-12 px-6 py-2 bg-purple rounded-lg border border-purple justify-center items-center gap-2 flex"
-            >
-              {buttonTitle}
-            </Link>
-          ) : (
-            <Link
-              href={freeUrl}
-              className="w-[284px] h-12 px-6 py-2 bg-gray-400 rounded-lg border border-gray-400 justify-center items-center gap-2 inline-flex text-white text-base font-semibold leading-normal pointer-events-none"
-            >
-              {buttonTitle}
-            </Link>
-          )}
+        {type === "pro" ? (
+          <Link
+            href={isMonthly ? monthlyUrl : annuallyUrl}
+            target="_blank"
+            className="text-white text-base font-normal leading-normal h-12 px-6 py-2 bg-purple rounded-lg border border-purple justify-center items-center gap-2 flex"
+          >
+            {buttonTitle}
+          </Link>
+        ) : (
+          <Link
+            href={freeUrl}
+            className="w-[284px] h-12 px-6 py-2 bg-gray-400 rounded-lg border border-gray-400 justify-center items-center gap-2 inline-flex text-white text-base font-semibold leading-normal pointer-events-none"
+          >
+            {buttonTitle}
+          </Link>
+        )}
         <div className="flex-col justify-start items-start flex pt-8">
           {details.map((v, i) => {
             return (
@@ -103,8 +143,9 @@ const Card = ({ price, isMonthly }) => {
               >
                 <div className="self-stretch flex-col justify-start items-start flex">
                   <div
-                    className={`self-stretch text-base font-normal leading-normal flex gap-1 items-center ${!v.isEnable && "text-gray-400 line-through"
-                      }`}
+                    className={`self-stretch text-base font-normal leading-normal flex gap-1 items-center ${
+                      !v.isEnable && "text-gray-400 line-through"
+                    }`}
                   >
                     {v.bulletPoint}
                     {v.isIcon && (

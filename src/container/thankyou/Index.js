@@ -163,7 +163,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
               </p>
               <div className="flex flex-col-reverse gap-2">
                 <Link
-                  href="https://buy.stripe.com/9AQdRzcNd7MX61a7sw"
+                  href="https://buy.stripe.com/7sIaFA5czcwT5ryfYY"
                   className="theme-btn2 mx-auto !bg-white !text-purple !border-2"
                 >
                   <span> Claim Offer</span>

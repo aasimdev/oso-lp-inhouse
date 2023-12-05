@@ -253,7 +253,7 @@ html {
 }
 
 .swiper-pagination {
-  @apply md:hidden;
+  @apply md:hidden relative;
 }
 
 .swiper-pagination-bullet {

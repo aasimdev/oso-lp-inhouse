@@ -47,10 +47,10 @@ const ToggleButton = ({ handleToggle, isMonthly }) => {
         }`}
       >
         Annually
-        <div className="w-[79px] h-[30px] px-2 bg-purple rounded-lg flex-col justify-start items-end gap-2 inline-flex">
+        <div className="px-2 py-1 bg-[#D9FFBC] rounded-lg flex-col justify-start items-end gap-2 inline-flex">
           <div className="p-1 justify-center items-center gap-2 inline-flex">
-            <div className="text-white text-sm font-semibold font-['Roboto'] leading-snug">
-              33% OFF
+            <div className="text-black text-sm font-semibold font-['Roboto'] leading-snug">
+              Save 17%
             </div>
           </div>
         </div>

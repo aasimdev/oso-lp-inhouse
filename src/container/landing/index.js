@@ -158,7 +158,7 @@ When we say "unbiased," we mean we train OSO models to take a neutral stance, fr
         <Chat />
         <Feed />
         <div className='md:flex justify-center items-center pt-12 md:pt-[60px] pb-16 md:pb-24'>
-          <Button label="Try OSO for free" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank" />
+          <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank" />
         </div>
       </div>
 

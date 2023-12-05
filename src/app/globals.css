@@ -221,7 +221,7 @@ html {
 
 /* Swiper Slider */
 .swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled+.r-gr-control,
+.swiper-button-next.swiper-button-disabled~.r-gr-control,
 .swiper-button-prev.swiper-button-disabled+.l-gr-control {
   @apply transition-all duration-300 opacity-0 invisible;
 }

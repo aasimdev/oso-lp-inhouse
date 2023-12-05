@@ -96,7 +96,7 @@ const OSOUseCaseLanding = () => {
                   </svg>
                 </div>
                 <div className="bg-gradient-slider w-52 h-full absolute left-0 top-0 z-10 rotate-180 l-gr-control"></div>
-                <div className="bg-gradient-slider w-52 h-full absolute right-0 top-0 z-10 l-gr-control"></div>
+                <div className="bg-gradient-slider w-52 h-full absolute right-0 top-0 z-10 r-gr-control"></div>
               </>
             )}
             {videoData &&
@@ -113,7 +113,7 @@ const OSOUseCaseLanding = () => {
         </div>
 
         <div className="flex justify-center items-center sm:pb-6 md:pb-16 w-full sm:mb-8">
-          <Button label="Try OSO for free" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank" />
+          <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank" />
         </div>
       </section>
     </>

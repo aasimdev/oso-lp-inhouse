@@ -21,7 +21,7 @@ const Hero = () => {
           </p>
         </div>
           <div className="md:flex justify-center items-center pt-8 md:pt-6">
-            <Button label="Try OSO for free" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank"/>
+            <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank"/>
           </div>
 
           <div className="mt-6 md:mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">

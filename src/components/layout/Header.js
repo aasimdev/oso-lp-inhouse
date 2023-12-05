@@ -186,7 +186,7 @@ const Header = () => {
           </Link>
           {pathname !== "/thank-you" && (
             <div className="flex items-center gap-6">
-              <form
+              {/* <form
                 onSubmit={form?.handleSubmit}
                 className="hidden sm:flex gap-2 items-center"
                 data-rewardful="true"
@@ -247,7 +247,9 @@ const Header = () => {
                     </svg>
                   )}
                 </button>
-              </form>
+              </form> */}
+
+              <Link href="https://l.oso.ai/NewUser" target="_blank" className="!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn">Try OSO</Link>
 
               {showSidebar ? (
                 <button

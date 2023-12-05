@@ -145,7 +145,7 @@ const Footer = () => {
                 Experience the power of AI
               </p>
             </div>
-            <form
+            {/* <form
               onSubmit={form?.handleSubmit}
               className="flex md:flex-nowrap flex-wrap gap-4 items-center"
               data-rewardful="true"
@@ -205,7 +205,8 @@ const Footer = () => {
                   Something is wrong, please try again
                 </p>
               )}
-            </form>
+            </form> */}
+            <Link href="https://l.oso.ai/NewUser" className="white-btn !py-[11px] !px-[23.25px] !text-base !w-[137px]" target="_blank">Try OSO</Link>
           </div>
           <div className="lg:w-[433px] w-full ml-auto">
             <Newsletter formId={"FooterNewsletterForm"} />

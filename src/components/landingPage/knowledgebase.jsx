@@ -7,11 +7,11 @@ const KnowledgebaseContent = [
     url: "https://learn.oso.ai/",
   },
   {
-    title: "Enhancing Results through Prompt Engineering in OSO AI",
+    title: "Your Personal Classroom Sidekick – Less Study, Better Grades",
     url: "https://learn.oso.ai/",
   },
   {
-    title: "Enhancing Results through Prompt Engineering in OSO AI",
+    title: "Everything you need to know about OSO",
     url: "https://learn.oso.ai/",
   },
 ];

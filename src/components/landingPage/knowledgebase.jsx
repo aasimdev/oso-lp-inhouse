@@ -1,5 +1,6 @@
 import React from "react";
 import KnowledgebaseCard from "./knowledgebaseCard";
+import Link from "next/link";
 
 const KnowledgebaseContent = [
   {
@@ -19,50 +20,34 @@ const KnowledgebaseContent = [
 const Knowledgebase = () => {
   return (
     <>
-      <section className="px-6 md:px-24 flex flex-col justify-center py-4">
-        <div className="md:w-[1088px] md:h-64 md:p-16 bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl justify-between flex-col md:flex-row w-[345px]  p-8">
-          <div className="md:text-5xl text-white text-[32px] font-bold">
-            Knowledgebase
-            <div className="md:w-[422px] text-gray-400 text-2xl font-light leading-loose w-[281px]  ">
-              Need help with OSO? Search for answers or browse our
-              Knowledgebase.
-            </div>
-          </div>
-          <div className="text-white text-base font-normal flex items-center gap-2">
-            Lean more
-            <div>
-              <svg
-                width="23"
-                height="22"
-                viewBox="0 0 23 22"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-black"
-              >
-                <circle
-                  cx="11.5"
-                  cy="11"
-                  r="11"
-                  fill="white"
-                  className="text-white"
-                />
-                <g id="ArrowBack">
-                  <path
-                    id="Vector_35"
-                    d="M4.38911 11.8891L15.2069 11.8891L10.238 16.858L11.5002 18.1113L18.6113 11.0002L11.5002 3.88911L10.2469 5.14244L15.2069 10.1113L4.38911 10.1113L4.38911 11.8891Z"
-                    fill="currentColor"
-                  />
-                </g>
-              </svg>
-            </div>
-          </div>
-        </div>
 
-        <div className="pt-8 flex-col md:flex-row gap-6">
+      <section className="px-6 mx-auto max-w-6xl">
+        {/* Knowledgebase */}
+        <div className="bg-gradient-to-b from-[#282D39] to-[#161C24] p-8 md:p-16 rounded-2xl flex flex-col md:flex-row gap-8 justify-between items-start">
+          <div className="max-w-[422px]">
+            <h5 className="text-white font-bold text-[32px] sm:text-5xl mb-2">Knowledgebase</h5>
+            <p className="text-2xl font-light text-gray-500 break-all">Need help with OSO? Search for answers or browse our Knowledgebase.</p>
+          </div>
+          <div className="w-full">
+          <Link href="https://learn.oso.ai/" target="_blank" className="flex items-center justify-end gap-4 text-white text-base">
+              <span>Lean more</span>
+              <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16.5" cy="16" r="16" fill="white" />
+                <path d="M9.38911 16.8891L20.2069 16.8891L15.238 21.858L16.5002 23.1113L23.6113 16.0002L16.5002 8.88911L15.2469 10.1424L20.2069 15.1113L9.38911 15.1113L9.38911 16.8891Z" fill="black" />
+              </svg>
+
+            </Link>
+          </div>
+           
+
+        </div>
+        {/* Knowledgebase Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8 pb-16">
           {KnowledgebaseContent.map((v, i) => {
             return <KnowledgebaseCard key={i} title={v.title} url={v.url} />;
           })}
         </div>
+
       </section>
     </>
   );

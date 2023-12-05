@@ -36,6 +36,11 @@ module.exports = withMT({
     fontFamily: {
       primary: ['Roboto', 'sans-serif'],
     },
+    extend: {
+      backgroundImage: {
+        'gradient-slider': 'linear-gradient(90deg, rgba(255, 255, 255, 0) 73%, rgba(255, 255, 255, 0.80) 100%)',
+      },
+    },
   },
   plugins: [],
 });

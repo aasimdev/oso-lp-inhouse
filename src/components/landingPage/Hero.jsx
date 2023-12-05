@@ -4,6 +4,7 @@ import CheckListItem from "@/components/common/banner/CheckListItem";
 import Banner from "@/components/common/banner/Index";
 import NewsLetter from "@/components/news-letter";
 import React from "react";
+import Button from "../common/Button";
 
 const Hero = () => {
   return (
@@ -20,7 +21,7 @@ const Hero = () => {
           </p>
         </div>
           <div className="md:flex justify-center items-center pt-8 md:pt-6">
-            <NewsLetter arrowIcon label="Join Waitlist" />
+            <Button label="Try OSO for free" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank"/>
           </div>
 
           <div className="mt-6 md:mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">

@@ -2,11 +2,10 @@ const ToggleButton = ({ handleToggle, isMonthly }) => {
   return (
     <div className="flex gap-4 justify-center items-center pt-8 m-0 lg:pl-16">
       <div
-        className={`${
-          !isMonthly
+        className={`${!isMonthly
             ? "text-gray-100 font-semibold text-base"
             : "text-purple font-semibold text-base"
-        }`}
+          }`}
       >
         Monthly
       </div>
@@ -40,19 +39,14 @@ const ToggleButton = ({ handleToggle, isMonthly }) => {
       </label>
 
       <div
-        className={`flex gap-2 justify-center items-center ${
-          !isMonthly
+        className={`flex gap-2 justify-center items-center ${!isMonthly
             ? "text-purple font-semibold text-base"
             : "text-gray-100 font-semibold text-base"
-        }`}
+          }`}
       >
         Annually
-        <div className="px-2 py-1 bg-[#D9FFBC] rounded-lg flex-col justify-start items-end gap-2 inline-flex">
-          <div className="p-1 justify-center items-center gap-2 inline-flex">
-            <div className="text-black text-sm font-semibold font-['Roboto'] leading-snug">
-              Save 17%
-            </div>
-          </div>
+        <div className="px-2 h-[30px] bg-[#D9FFBC] rounded-lg flex items-center justify-center text-black text-sm font-semibold">
+          Save 17%
         </div>
       </div>
     </div>

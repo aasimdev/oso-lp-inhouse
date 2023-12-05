@@ -39,24 +39,17 @@ const Card = ({ price, isMonthly }) => {
   return (
     <>
       <div
-        className={`w-full md:w-[348px] mx-auto lg:mx-0 p-8 rounded-2xl ${
-          type === "pro"
+        className={`w-full p-8 rounded-2xl ${type === "pro"
             ? "border-4 border-purple"
             : "border-2 border-gray-400 "
-        }`}
+          }`}
       >
         {type === "pro" && !isMonthly ? (
           <div className="flex-col gap-2 flex">
             <div className="flex  justify-between items-center">
               <div className="text-2xl font-bold leading-9">{title}</div>
-              <div>
-                <div className="px-2 py-1 bg-[#D9FFBC] rounded-lg flex-col justify-start items-end gap-2 inline-flex">
-                  <div className="p-1 justify-center items-center gap-2 inline-flex">
-                    <div className="text-black text-sm font-semibold font-['Roboto'] leading-snug">
-                      Save 17%
-                    </div>
-                  </div>
-                </div>
+              <div className="px-2 h-[30px] bg-[#D9FFBC] rounded-lg flex items-center justify-center text-black text-sm font-semibold">
+                Save 17%
               </div>
             </div>
             <div className="text-gray-400 text-base font-normal leading-normal">
@@ -79,43 +72,37 @@ const Card = ({ price, isMonthly }) => {
               {amount}
             </div>
           ) : (
-            <div className="justify-between items-center md:flex-row sm:flex-col">
-           
-                {isMonthly ? (
-                  <span className="text-black text-5xl font-extrabold leading-normal">
-                    {currency}
-                    {isMonthly ? amount : annuallyAmount}
-                    <span className="text-black text-4xl font-semibold tracking-tight">
-                      {" "}
-                    </span>
-                    <span className="text-black text-base font-semibold">
-                      / {unit}
-                    </span>
+            <div className="flex justify-between items-center md:flex-row sm:flex-col">
+
+              {isMonthly ? (
+                <span className="text-black text-5xl font-extrabold leading-normal">
+                  {currency}
+                  {isMonthly ? amount : annuallyAmount}
+                  <span className="text-black text-base font-semibold">
+                    / {unit}
                   </span>
-                ) : (
-                  <span className="text-black text-5xl font-extrabold leading-normal pr-2">
-                    <span className="text-gray-400 text-xl font-bold font-['Roboto'] line-through leading-[30px]">
-                      $20
-                    </span>
-                    {currency}
-                    {isMonthly ? amount : annuallyAmount}
-                    <span className="text-black text-4xl font-semibold tracking-tight">
-                      {" "}
-                    </span>
-                    <span className="text-black text-base font-semibold">
-                      / {unit}
-                    </span>
+                </span>
+              ) : (
+                <span className="text-black text-5xl font-extrabold leading-normal">
+                  <span className="text-gray-400 text-xl font-bold line-through leading-[30px] mr-1.5">
+                    $20
                   </span>
-                )}
-                {!isMonthly && (
-                  <div className="w-[87px] h-[26px] p-1 justify-center items-center gap-2 inline-flex bg-gray-50 rounded">
-                    <div className="text-gray-100 text-xs font-normal leading-[18px]">
-                      Billed Yearly{" "}
-                    </div>
+                  {currency}
+                  {isMonthly ? amount : annuallyAmount}
+                  <span className="text-black text-base font-semibold">
+                    / {isMonthly ? "month" : "month"}
+                  </span>
+                </span>
+              )}
+              {!isMonthly && (
+                <div className="w-[87px] h-[26px] p-1 mt-2 justify-center items-center gap-2 inline-flex bg-gray-50 rounded-lg">
+                  <div className="text-gray-100 text-xs font-normal leading-[18px]">
+                    Billed Yearly{" "}
                   </div>
-                )}
-              </div>
-           
+                </div>
+              )}
+            </div>
+
           )}
         </div>
         {type === "pro" ? (
@@ -143,9 +130,8 @@ const Card = ({ price, isMonthly }) => {
               >
                 <div className="self-stretch flex-col justify-start items-start flex">
                   <div
-                    className={`self-stretch text-base font-normal leading-normal flex gap-1 items-center ${
-                      !v.isEnable && "text-gray-400 line-through"
-                    }`}
+                    className={`self-stretch text-base font-normal leading-normal flex gap-1 items-center ${!v.isEnable && "text-gray-400 line-through"
+                      }`}
                   >
                     {v.bulletPoint}
                     {v.isIcon && (

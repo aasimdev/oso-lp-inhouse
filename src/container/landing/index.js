@@ -25,6 +25,7 @@ import Feed from "@/components/landingPage/Feed"
 import SearchAndOtherForLaptop from "@/components/landingPage/SearchAndOthers/SearchAndOtherForLaptop"
 import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding"
 import Knowledgebase from "@/components/landingPage/knowledgebase"
+import Button from "@/components/common/Button"
 
 const testimonialData = [
   {
@@ -121,7 +122,7 @@ When we say "unbiased," we mean we train OSO models to take a neutral stance, fr
       question: "What is the pricing?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will provide great value in productivity and time-savings.</p>`,
     },
-     {
+    {
       id: 6,
       question: "What are the perks of being an OSO Ambassador?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Ambassadors earn $5 per month when anyone they invite to OSO subscribes to OSO Pro. If 100 people they invite have active OSO Pro subscriptions, they would earn $500 every month. 
@@ -144,110 +145,27 @@ When we say "unbiased," we mean we train OSO models to take a neutral stance, fr
   return (
     <>
       <GoogleAnalytics gaTrackingID='G-2N2XN2FQX1' />
+
+      {/* Banner */}
       <Hero />
+
+      {/* Usecases */}
       <OSOUseCaseLanding />
+
+
       <div className='px-6 mx-auto max-w-6xl'>
         <SearchAndOtherForLaptop />
         <Chat />
         <Feed />
-
-        <div className='md:flex justify-center items-center pt-12 md:pt-[60px] pb-24'>
-          <NewsLetter arrowIcon label='Join Waitlist' />
+        <div className='md:flex justify-center items-center pt-12 md:pt-[60px] pb-16 md:pb-24'>
+          <Button label="Try OSO for free" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank" />
         </div>
-
-        <h2 className='text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center'>
-          Many people already feel the magic
-        </h2>
-      </div>
-      <div className='md:pb-8 md:mt-24 mt-16 tSlider relative'>
-        <Swiper
-          spaceBetween={0}
-          slidesPerView={"auto"}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          }}
-          pagination={{
-            clickable: true,
-          }}
-          freeMode={true}
-          modules={[FreeMode, Navigation, Pagination]}
-          grabCursor={true}
-          slidesOffsetBefore={slidesOffsetBefore}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 1.3,
-              pagination: false,
-            },
-            1020: {
-              slidesPerView: 1.9,
-            },
-            1200: {
-              slidesPerView: 2.2,
-            },
-            1400: {
-              slidesPerView: 2.45,
-            },
-            1537: {
-              slidesPerView: 3.2,
-            },
-            1921: {
-              slidesPerView: 4.3,
-            },
-          }}
-          className='!z-auto'
-        >
-          {isDesktop && (
-            <>
-              <div className='swiper-button-next md:mr-24 !w-12 !h-12 rounded-full bg-gray-40 p-3 transition-all duration-300 hover:bg-gray-50 focus:bg-gray-30'>
-                <svg
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    d='M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
-                    fill='black'
-                  />
-                </svg>
-              </div>
-              <div className='swiper-button-prev md:ml-24 !w-12 !h-12 rounded-full bg-gray-40 p-3 transition-all duration-300 hover:bg-gray-50 focus:bg-gray-30'>
-                <svg
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  className='rotate-180'
-                  fill='none'
-                  xmlns='http://www.w3.org/2000/svg'
-                >
-                  <path
-                    d='M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z'
-                    fill='black'
-                  />
-                </svg>
-              </div>
-            </>
-          )}
-          {testimonialData &&
-            testimonialData.map((item, index) => (
-              <SwiperSlide key={index} className='!h-auto'>
-                <TestimonialItem
-                  name={item.name}
-                  description={item.description}
-                  image={item.image}
-                />
-              </SwiperSlide>
-            ))}
-        </Swiper>
       </div>
 
+      {/* Knowledgebase */}
       <Knowledgebase />
-      
+
+      {/* FAQs */}
       <FAQ accordionData={accordionData} />
     </>
   )

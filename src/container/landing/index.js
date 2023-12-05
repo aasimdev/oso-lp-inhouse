@@ -95,6 +95,10 @@ When we say "unbiased," we mean we train OSO models to take a neutral stance, fr
       <br/><br/>
       <strong >Informed Consent and Legal Compliance</strong>
       <br/><br/>
+      To foster a culture of responsibility, every new member at OSO is required to complete a comprehensive consent form. This form serves as more than just a legal disclaimer; it's an educational tool that outlines our stringent guidelines for appropriate use. It ensures that every user is not only aware of and agrees to these guidelines, but also understands the importance of adhering to them.
+      <br/><br/>
+      <strong>Adult-Only Access</strong>
+      <br/><br/>
       In line with our ethical stance, our OSO Uncensored model is strictly restricted to adults only. We enforce this policy rigorously, ensuring that only individuals who are of legal age in their respective jurisdictions can access our services. This policy is a testament to our commitment to responsible use and ethical information dissemination.
       <br/><br/>
       <strong >Empowerment with Accountability</strong>

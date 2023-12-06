@@ -26,7 +26,7 @@ const OSOUseCaseLanding = () => {
         <div className="pb-14 pt-16 md:py-16 relative  usecase-slider">
           <Swiper
             spaceBetween={16}
-            slidesPerView={"4"}
+            slidesPerView={"3"}
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -37,7 +37,6 @@ const OSOUseCaseLanding = () => {
             freeMode={true}
             modules={[FreeMode, Navigation, Pagination]}
             grabCursor={true}
-            slidesOffsetBefore={slidesOffsetBefore}
             breakpoints={{
               0: {
                 slidesPerView: 1,

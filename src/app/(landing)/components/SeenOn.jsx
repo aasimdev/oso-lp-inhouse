@@ -108,7 +108,7 @@ function SeenOn({}) {
         <Feed />
 
         <div className="md:flex justify-center items-center pt-12 md:pt-[60px]">
-          <NewsLetter arrowIcon label="Join Waitlist" />
+          {/* <NewsLetter arrowIcon label="Join Waitlist" /> */}
         </div>
 
         <h2 className="text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black text-center md:mt-24 mt-[88px] ">

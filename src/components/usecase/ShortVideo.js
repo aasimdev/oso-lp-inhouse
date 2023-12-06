@@ -50,6 +50,12 @@ const ShortVideo = ({ videoId }) => {
       {isLoading && (
         <PlaceholderLoading shape="rect" width={currentWidth} height={508} />
       )}
+      {isMobile && !isLoading && (
+        <div
+          className="absolute left-0 w-full h-full"
+          style={{ zIndex: 10 }}
+        ></div>
+      )}
       <iframe
         className={`border border-gray-50 left-0 w-full h-full absolute rounded-t-2xl ${
           isLoading ? "hidden" : ""

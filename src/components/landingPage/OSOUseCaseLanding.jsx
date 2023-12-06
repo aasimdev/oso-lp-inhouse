@@ -37,6 +37,7 @@ const OSOUseCaseLanding = () => {
             freeMode={true}
             modules={[FreeMode, Navigation, Pagination]}
             grabCursor={true}
+            slidesOffsetBefore={slidesOffsetBefore}
             breakpoints={{
               0: {
                 slidesPerView: 1,

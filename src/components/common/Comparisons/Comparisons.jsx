@@ -1,5 +1,6 @@
 import NewsLetter from "@/components/news-letter";
 import React from "react";
+import Button from "../Button";
 
 const Comparisons = ({ title, children }) => {
   return (
@@ -12,11 +13,12 @@ const Comparisons = ({ title, children }) => {
         </div>
         {children}
         <div className="md:flex justify-center items-center pb-6 md:pt-20 pt-6 sm:pt-[100px] flex-col">
-          <NewsLetter
+          {/* <NewsLetter
             label="Join Waitlist"
             arrowIcon={true}
             formId={"ComparisonFormId"}
-          />
+          /> */}
+          <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank"/>
         </div>
       </div>
     </section>

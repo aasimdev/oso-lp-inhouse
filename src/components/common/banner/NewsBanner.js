@@ -2,6 +2,7 @@ import React from "react";
 import CheckListItem from "./CheckListItem";
 import Video from "@/components/Video";
 import NewsLetter from "@/components/news-letter";
+import Button from "../Button";
 
 const NewsBanner = ({ title, description, videoId, checklist }) => {
   return (
@@ -20,13 +21,14 @@ const NewsBanner = ({ title, description, videoId, checklist }) => {
             </div>
             <div>
               <div className="py-4 md:py-8 lg:py-4 ">
-                <NewsLetter
+                {/* <NewsLetter
                   arrowIcon
                   label="Join Waitlist"
                   formId={"BannerFormId"}
                   variant="newsBanner"
                   className="!w-full"
-                />
+                /> */}
+                <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank"/>
               </div>
               <div className="pt-6 hidden lg:flex justify-start gap-2 md:flex-nowrap flex-wrap">
                 {checklist.map((v, i) => (

@@ -13,7 +13,7 @@ const Comparison = () => {
         </div>
         <InnerSection />
         <div className="md:flex justify-center items-center pb-6 sm:pb-0 pt-20 sm:pt-[100px] flex-col">
-          <NewsLetter label="Join Waitlist" arrowIcon={true} formId={"ComparisonFormId"}  />
+          {/* <NewsLetter label="Join Waitlist" arrowIcon={true} formId={"ComparisonFormId"}  /> */}
         </div>
       </div>
     </section>

@@ -6,7 +6,7 @@ import NewsLetter from "@/components/news-letter";
 
 const Banner = ({ title, description, videoId, checklist }) => {
   return (
-    <section className="bg-gradient-to-b from-purple-400">
+    <section className="bg-gradient-to-b from-purple-400 pb-24">
       <div className="px-6 mx-auto max-w-6xl">
         <div className="pt-8 md:pt-24">
           <div className="flex flex-col md:gap-6 gap-2  md:mb-6">
@@ -20,11 +20,12 @@ const Banner = ({ title, description, videoId, checklist }) => {
           </div>
 
           <div className="md:flex justify-center items-center pt-8 md:pt-6 flex-col">
-            <NewsLetter
+            {/* <NewsLetter
               arrowIcon
               label="Join Waitlist"
               formId={"BannerFormId"}
-            />
+            /> */}
+            <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank"/>
           </div>
 
           <div className="mt-6 md:mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">

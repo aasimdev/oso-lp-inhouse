@@ -155,15 +155,16 @@ const NewsTestimonials = ({ title }) => {
         </Swiper>
       </div> */}
       <OSOUseCaseLanding />
-      {title !== "Testimonials" && (
+      
         <div className="px-6 mt-12 mb-6 md:mb-8 mx-auto max-w-6xl text-center">
-          <NewsLetter
+          {/* <NewsLetter
             label={`Join Waitlist`}
             arrowIcon
             formId={"TestimonialFormId"}
-          />
+          /> */}
+          
         </div>
-      )}
+      
     </section>
   );
 };

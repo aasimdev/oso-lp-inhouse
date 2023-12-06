@@ -21,9 +21,9 @@ const Hero = () => {
           </p>
         </div>
 
-        <div className="md:flex justify-center items-center pt-8 md:pt-6">
+        {/* <div className="md:flex justify-center items-center pt-8 md:pt-6">
           <NewsLetter arrowIcon label="Join Waitlist" />
-        </div>
+        </div> */}
 
         <div className="mt-6 md:mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">
           <CheckListItem title="Uncensored" />

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import NewsLetter from "../news-letter";
 import { brandImages, mobileBrandImages } from "@/constant/news";
+import Button from "./Button";
 
 const BrandLogos = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -46,11 +47,12 @@ const BrandLogos = () => {
         ))}
       </div>
       <div className="py-6 md:py-12 mx-auto max-w-6xl text-center">
-        <NewsLetter
+        {/* <NewsLetter
           label={`Join Waitlist`}
           arrowIcon
           formId={"TestimonialFormId"}
-        />
+        /> */}
+        <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank"/>
       </div>
     </section>
   );

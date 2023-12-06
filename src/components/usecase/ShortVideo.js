@@ -10,13 +10,13 @@ const ShortVideo = ({ videoId }) => {
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth <= 425) {
-        setIsMobile(true);
         if (window.innerWidth == 425) {
           setCurrentWidth(425 - 48);
         }
         if (window.innerWidth <= 375) {
           setCurrentWidth(window.innerWidth - 48);
         }
+        setIsMobile(true);
       } else {
         setIsMobile(false);
       }

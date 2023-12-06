@@ -26,7 +26,7 @@ const OSOUseCaseLanding = () => {
         <div className="pb-14 pt-16 md:py-16 relative  usecase-slider">
           <Swiper
             spaceBetween={16}
-            slidesPerView={"3"}
+            slidesPerView={"4"}
             navigation={{
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
@@ -112,7 +112,7 @@ const OSOUseCaseLanding = () => {
           </Swiper>
         </div>
 
-        <div className="flex justify-center items-center sm:pb-6 md:pb-16 w-full sm:mb-8">
+        <div className="flex justify-center items-center sm:pb-6 md:pb-12 md:pt-2 w-full sm:mb-8 md:mb-0">
           <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank" />
         </div>
       </section>

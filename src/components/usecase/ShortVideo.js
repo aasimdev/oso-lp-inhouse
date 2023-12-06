@@ -85,6 +85,7 @@ const ShortVideo = ({ videoId, isSlideChange, setIsSlideChange }) => {
         onLoad={onLoadVideo}
         onMouseMove={() => onMove()}
         onTouchMove={() => onMove()}
+        // onDragEnd={() => console.log("-------------------drags")}
       ></iframe>
     </div>
   );

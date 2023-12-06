@@ -19,6 +19,7 @@ import Michael from "../../../public/assets/images/face.png";
 import Steve from "../../../public/assets/images/steveA.png";
 import Manu from "../../../public/assets/images/manu.jpg";
 import NewsLetter from "../news-letter";
+import OSOUseCaseLanding from "../landingPage/OSOUseCaseLanding";
 
 const testimonialData = [
   {
@@ -61,7 +62,7 @@ const NewsTestimonials = ({ title }) => {
 
   return (
     <section className="pt-12 sm:pt-[120px]">
-      <div className="md:text-center text-left mb-16 px-6 mx-auto max-w-6xl">
+      {/* <div className="md:text-center text-left mb-16 px-6 mx-auto max-w-6xl">
         <h2 className="text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black">
           {title || "Many people already feel the magic"}
         </h2>
@@ -152,7 +153,8 @@ const NewsTestimonials = ({ title }) => {
               </SwiperSlide>
             ))}
         </Swiper>
-      </div>
+      </div> */}
+      <OSOUseCaseLanding />
       {title !== "Testimonials" && (
         <div className="px-6 mt-12 mb-6 md:mb-8 mx-auto max-w-6xl text-center">
           <NewsLetter

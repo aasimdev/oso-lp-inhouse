@@ -6,7 +6,7 @@ export const priceContent = [
     amount: "Free",
     unit: "month",
     currency: "$",
-    buttonTitle: "Coming Soon",
+    buttonTitle: "Try OSO",
     freeUrl: "",
     details: [
       {

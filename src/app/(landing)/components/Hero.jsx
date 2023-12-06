@@ -28,7 +28,7 @@ const Hero = () => {
         <div className="mt-6 md:mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">
           <CheckListItem title="Uncensored" />
           <CheckListItem title="Up-to-date" />
-          <CheckListItem title="No credit card required" />
+          <CheckListItem title="Unbiased" />
         </div>
 
         <Video videoId="v1Z1rmm4SqU" />

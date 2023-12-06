@@ -148,16 +148,16 @@ const Header = () => {
     <>
       <div className="bg-black text-center py-4 sm:py-2 px-0 sm:px-6">
         <div className="text-white text-sm sm:text-sm">
-          <strong>Earn $5 per month</strong> for each friend you invite to OSO.{" "}
+          <strong>OSO is Live🔥.</strong> {" "}
           <span className="block sm:inline">
             <Link
               className="underline"
-              href="https://friends.oso.ai/signup"
+              href="https://l.oso.ai/NewUser"
               target="_blank"
             >
-              Learn more
+              Try it out here
             </Link>
-            🔥
+            
           </span>
         </div>
       </div>

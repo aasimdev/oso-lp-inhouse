@@ -115,8 +115,8 @@ const Card = ({ price, isMonthly }) => {
           </Link>
         ) : (
           <Link
-            href={freeUrl}
-            className="w-[284px] h-12 px-6 py-2 bg-gray-400 rounded-lg border border-gray-400 justify-center items-center gap-2 inline-flex text-white text-base font-semibold leading-normal pointer-events-none"
+            href="https://l.oso.ai/NewUser"
+            className="w-[284px] h-12 px-6 py-2 bg-gray-400 rounded-lg border border-gray-400 justify-center items-center gap-2 inline-flex text-white text-base font-semibold leading-normal"
           >
             {buttonTitle}
           </Link>

@@ -11,6 +11,7 @@ import UpdatePhone from "../../../public/assets/images/updatePhones.png"
 import UpdatePhone2 from "../../../public/assets/images/updatephone-2.png"
 
 import FAQ from "@/components/FAQ/Index"
+import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding"
 
 const FeedView = () => {
   return (
@@ -19,8 +20,8 @@ const FeedView = () => {
         title='OSO Feed'
         description='Summarize your custom news, then inquire with specific questions.'
       />
-
-      <Testimonials />
+      <OSOUseCaseLanding />
+      {/* <Testimonials /> */}
 
       <Advantages title='Advantages of OSO Feed'>
         <AdvantageCard

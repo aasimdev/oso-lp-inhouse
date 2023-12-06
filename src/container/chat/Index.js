@@ -14,6 +14,7 @@ import FAQ from "@/components/FAQ/Index"
 import InnerChatSection from "@/components/common/Comparisons/InnerChatSection/InnerChatSection"
 import Comparisons from "@/components/common/Comparisons/Comparisons"
 import GoogleAnalytics from "@/utils/google-analytics/anaylics"
+import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding"
 
 const ChatView = () => {
   const accordionData = [
@@ -132,8 +133,8 @@ Our mission is to empower users with information while promoting ethical conduct
         videoId='FpWF0i0vxGs'
         checklist={['Uncensored', 'Visually-appealing', '7-Day Free Trial']}
       />
-
-      <Testimonials />
+      <OSOUseCaseLanding />
+      {/* <Testimonials /> */}
       <Advantages
         title='Advantages of OSO Chat'
         description={

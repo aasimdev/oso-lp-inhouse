@@ -13,6 +13,7 @@ import UpdatePhone2 from "../../../public/assets/images/updatephone-2.png";
 import FAQ from "@/components/FAQ/Index";
 import Comparisons from "@/components/common/Comparisons/Comparisons";
 import InnerSections from "@/components/common/Comparisons/InnerSections/InnerSections";
+import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding";
 
 const SearchView = () => {
   const accordionData = [
@@ -68,7 +69,8 @@ to traditional search engines. By harnessing the power of advanced AI technology
         videoId="7y2r9MrUeQ8"
         checklist={['Uncensored', 'Up-to-date', 'No credit card required']}
       />
-      <Testimonials />
+      <OSOUseCaseLanding />
+      {/* <Testimonials /> */}
 
       <Advantages title="Advantages of OSO Search">
         <AdvantageCard

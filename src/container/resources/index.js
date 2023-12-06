@@ -93,7 +93,7 @@ const Resources = () => {
         </div>
         <div className="flex justify-center items-center py-6 md:py-8">
           <Link
-            href="https://l.oso.ai/prod"
+            href="https://l.oso.ai/NewUser"
             className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
             onClick={handleClick}
           >

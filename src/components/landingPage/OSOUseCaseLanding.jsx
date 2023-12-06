@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Pagination } from "swiper/modules";
 import { useMediaQuery } from "react-responsive";
@@ -10,6 +10,8 @@ import Button from "../common/Button";
 const OSOUseCaseLanding = () => {
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
   const slidesOffsetBefore = isDesktop ? 100 : 0;
+
+  const [isSlideChange , setIsSlideChange]  = useState(false)
 
   const videoData = shortVideosData?.slice(0, 6);
 
@@ -62,6 +64,8 @@ const OSOUseCaseLanding = () => {
               },
             }}
             className="!z-auto"
+            onSlideChange={() => setIsSlideChange(true)}
+            onSwiper={(swiper) => setIsSlideChange(false)}
           >
             {isDesktop && (
               <>
@@ -106,6 +110,8 @@ const OSOUseCaseLanding = () => {
                     videoId={v.videoId}
                     category={v.category}
                     title={v.title}
+                    isSlideChange={isSlideChange}
+                    setIsSlideChange={setIsSlideChange}
                   />
                 </SwiperSlide>
               ))}

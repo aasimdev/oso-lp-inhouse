@@ -69,7 +69,7 @@ to traditional search engines. By harnessing the power of advanced AI technology
         videoId="7y2r9MrUeQ8"
         checklist={['Uncensored', 'Up-to-date', 'Unbiased']}
       />
-      <OSOUseCaseLanding />
+      <OSOUseCaseLanding type="search" />
       {/* <Testimonials /> */}
 
       <Advantages title="Advantages of OSO Search">

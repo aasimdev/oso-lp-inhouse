@@ -20,7 +20,7 @@ const FeedView = () => {
         title='OSO Feed'
         description='Summarize your custom news, then inquire with specific questions.'
       />
-      <OSOUseCaseLanding />
+      <OSOUseCaseLanding type="feed" />
       {/* <Testimonials /> */}
 
       <Advantages title='Advantages of OSO Feed'>

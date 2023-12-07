@@ -1,8 +1,5 @@
 "use client"
 import React from "react"
-
-import { Swiper, SwiperSlide } from "swiper/react"
-import { FreeMode, Navigation, Pagination } from "swiper/modules"
 import { useMediaQuery } from "react-responsive"
 import Jason from "../../../public/assets/images/jason.png"
 import Jan from "../../../public/assets/images/jan.png"
@@ -10,15 +7,10 @@ import Ciaran from "../../../public/assets/images/man.jpeg"
 import Michael from "../../../public/assets/images/face.png"
 import Steve from "../../../public/assets/images/steveA.png"
 import Manu from "../../../public/assets/images/manu.jpg"
-import TestimonialItem from "@/components/testimonials/Item"
-import "swiper/css"
-import "swiper/css/navigation"
-import "swiper/css/pagination"
-import "swiper/css/free-mode"
-import NewsLetter from "@/components/news-letter"
+// import NewsLetter from "@/components/news-letter"
 import FAQ from "@/components/FAQ/Index"
 import GoogleAnalytics from "@/utils/google-analytics/anaylics"
-import Banner from "@/components/common/banner/Index"
+// import Banner from "@/components/common/banner/Index"
 import Hero from "@/components/landingPage/Hero"
 import Chat from "@/components/landingPage/Chat"
 import Feed from "@/components/landingPage/Feed"
@@ -150,7 +142,7 @@ When we say "unbiased," we mean we train OSO models to take a neutral stance, fr
       <Hero />
 
       {/* Usecases */}
-      <OSOUseCaseLanding />
+      <OSOUseCaseLanding type="landing" />
 
 
       <div className='px-6 mx-auto max-w-6xl'>

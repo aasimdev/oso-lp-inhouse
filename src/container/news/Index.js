@@ -11,6 +11,7 @@ import InnerChatSection from "@/components/common/Comparisons/InnerChatSection/I
 import GoogleAnalytics from "@/utils/google-analytics/anaylics";
 import BrandLogos from "@/components/common/BrandLogos";
 import NewsTestimonials from "@/components/testimonials/News";
+import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding";
 
 const NewsView = () => {
   const accordionData = [
@@ -119,7 +120,8 @@ const NewsView = () => {
       >
         <InnerChatSection comparisonContent={comparisonContent} />
       </Comparisons>
-      <NewsTestimonials title="Testimonials" />
+      {/* <NewsTestimonials title="Testimonials" /> */}
+      <OSOUseCaseLanding type="news" />
       <FAQ accordionData={accordionData} />
     </>
   );

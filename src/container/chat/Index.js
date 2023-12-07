@@ -133,7 +133,7 @@ Our mission is to empower users with information while promoting ethical conduct
         videoId='FpWF0i0vxGs'
         checklist={['Uncensored', 'Visually-appealing', '7-Day Free Trial']}
       />
-      <OSOUseCaseLanding />
+      <OSOUseCaseLanding type="chat" />
       {/* <Testimonials /> */}
       <Advantages
         title='Advantages of OSO Chat'

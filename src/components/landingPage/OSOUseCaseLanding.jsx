@@ -1,19 +1,24 @@
-import React, { useState } from "react";
+import React, { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
+import { FreeMode, Navigation } from "swiper/modules";
 import { useMediaQuery } from "react-responsive";
 import { shortVideosData } from "@/constant/usecase";
 import UseCaseCard from "../usecaseCard";
-import Link from "next/link";
 import Button from "../common/Button";
+import "swiper/css";
+import "swiper/css/navigation";
+// import "swiper/css/pagination"
+import "swiper/css/free-mode";
 
-const OSOUseCaseLanding = () => {
+const OSOUseCaseLanding = ({ type }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
-  const slidesOffsetBefore = isDesktop ? 100 : 0;
+  // const slidesOffsetBefore = isDesktop ? 100 : 0;
 
-  const [isSlideChange , setIsSlideChange]  = useState(false)
+  const videoData = useMemo(() => {
+    return shortVideosData.filter((v) => v.type.includes(type));
+  }, [type]);
 
-  const videoData = shortVideosData?.slice(0, 6);
+  // const videoData = videoData?.slice(0, 6);
 
   return (
     <>
@@ -24,7 +29,6 @@ const OSOUseCaseLanding = () => {
           </h3>
         </div>
 
-
         <div className="pb-14 pt-16 md:py-16 relative  usecase-slider">
           <Swiper
             spaceBetween={16}
@@ -33,12 +37,12 @@ const OSOUseCaseLanding = () => {
               nextEl: ".swiper-button-next",
               prevEl: ".swiper-button-prev",
             }}
-            pagination={{
-              clickable: true,
-            }}
+            // pagination={{
+            //   clickable: true,
+            // }}
             freeMode={true}
-            modules={[FreeMode, Navigation, Pagination]}
-            grabCursor={true}
+            modules={[FreeMode, Navigation]}
+            grabCursor={false}
             breakpoints={{
               0: {
                 slidesPerView: 1,
@@ -64,45 +68,41 @@ const OSOUseCaseLanding = () => {
               },
             }}
             className="!z-auto"
-            onSlideChange={() => setIsSlideChange(true)}
-            onSwiper={(swiper) => setIsSlideChange(false)}
           >
-            {isDesktop && (
-              <>
-               
-                <div className="swiper-button-next !z-20 md:mr-4 !w-12 !h-12 rounded-full bg-gray-40 p-3 transition-all duration-300 hover:bg-gray-50 focus:bg-gray-30">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
-                      fill="black"
-                    />
-                  </svg>
-                </div>
-                <div className="swiper-button-prev !z-20 md:ml-4 !w-12 !h-12 rounded-full bg-gray-40 p-3 transition-all duration-300 hover:bg-gray-50 focus:bg-gray-30">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    className="rotate-180"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
-                      fill="black"
-                    />
-                  </svg>
-                </div>
-                <div className="bg-gradient-slider w-52 h-full absolute left-0 top-0 z-10 rotate-180 l-gr-control"></div>
-                <div className="bg-gradient-slider w-52 h-full absolute right-0 top-0 z-10 r-gr-control"></div>
-              </>
-            )}
+            <>
+              <div className="swiper-button-next !z-20 md:mr-4 !w-12 !h-12 rounded-full bg-gray-40 p-3 transition-all duration-300 hover:bg-gray-50 focus:bg-gray-30">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div className="swiper-button-prev !z-20 md:ml-4 !w-12 !h-12 rounded-full bg-gray-40 p-3 transition-all duration-300 hover:bg-gray-50 focus:bg-gray-30">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  className="rotate-180"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+                    fill="black"
+                  />
+                </svg>
+              </div>
+              <div className="bg-gradient-slider w-10 h-full absolute left-0 top-0 z-10 rotate-180 l-gr-control"></div>
+              <div className="bg-gradient-slider w-10 h-full absolute right-0 top-0 z-10 r-gr-control"></div>
+            </>
+
             {videoData &&
               videoData.map((v, index) => (
                 <SwiperSlide key={index}>
@@ -110,8 +110,6 @@ const OSOUseCaseLanding = () => {
                     videoId={v.videoId}
                     category={v.category}
                     title={v.title}
-                    isSlideChange={isSlideChange}
-                    setIsSlideChange={setIsSlideChange}
                   />
                 </SwiperSlide>
               ))}
@@ -119,7 +117,12 @@ const OSOUseCaseLanding = () => {
         </div>
 
         <div className="flex justify-center items-center sm:pb-6 md:pb-12 md:pt-2 w-full sm:mb-8 md:mb-0">
-          <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank" />
+          <Button
+            label="Try OSO"
+            arrowIcon={true}
+            link="https://l.oso.ai/NewUser"
+            target="_blank"
+          />
         </div>
       </section>
     </>

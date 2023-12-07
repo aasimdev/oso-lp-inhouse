@@ -1,21 +1,16 @@
 import React from "react";
-import Image from "next/image";
 import ShortVideo from "../usecase/ShortVideo";
 
 const UseCaseCard = ({
   videoId,
   category,
   title,
-  isSlideChange,
-  setIsSlideChange,
 }) => {
   return (
     <div className="h-[580px] rounded-2xl border border-gray-50">
       <div className="">
         <ShortVideo
           videoId={videoId}
-          isSlideChange={isSlideChange}
-          setIsSlideChange={setIsSlideChange}
         />
       </div>
       <div className="p-6 justify-start items-center gap-2 inline-flex">

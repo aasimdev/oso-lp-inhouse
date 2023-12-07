@@ -3,12 +3,12 @@ import React from "react";
 const Advantages = ({ title, children, page, description }) => {
   return (
     <section className="px-6 mx-auto max-w-6xl">
-      <div className="pb-16 pt-6 md:text-center text-start">
-        <h3 className="text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black mb-2">
+      <div className="pb-16 pt-6 md:pt-0 md:text-center text-start">
+        <h3 className="py-16 md:py-0 text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black mb-2">
           {title}
         </h3>
         {!page && (
-          <p className="text-2xl leading-9 font-light text-gray-900">
+          <p className="text-2xl leading-9 font-light text-gray-900 py-0">
          {description}
           </p>
         )}

@@ -23,13 +23,13 @@ const OSOUseCaseLanding = ({ type }) => {
   return (
     <>
       <section className="px-6 mx-auto max-w-6xl">
-        <div className="md:text-center text-satrt pt-16 md:pt-6 mx-2">
+        <div className="md:text-center text-satrt pt-16 pb-16 md:pt-16 mx-2">
           <h3 className="text-[40px] md:text-5xl font-extrabold text-black md:leading-[64px] leading-tight">
             Discover how people are using OSO
           </h3>
         </div>
 
-        <div className="pb-14 pt-16 md:py-16 relative  usecase-slider">
+        <div className="md:pb-16 md:pt-0 md:py-16 relative  usecase-slider">
           <Swiper
             spaceBetween={16}
             slidesPerView={"4"}
@@ -116,7 +116,7 @@ const OSOUseCaseLanding = ({ type }) => {
           </Swiper>
         </div>
 
-        <div className="flex justify-center items-center sm:pb-6 md:pb-12 md:pt-2 w-full sm:mb-8 md:mb-0">
+        <div className="flex justify-center items-center sm:pb-6 md:pb-24 w-full sm:mb-8 md:mb-0">
           <Button
             label="Try OSO"
             arrowIcon={true}

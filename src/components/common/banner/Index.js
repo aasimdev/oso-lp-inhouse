@@ -6,7 +6,7 @@ import NewsLetter from "@/components/news-letter";
 
 const Banner = ({ title, description, videoId, checklist }) => {
   return (
-    <section className="bg-gradient-to-b from-purple-400 pb-24">
+    <section className="bg-gradient-to-b from-purple-400 pb-10 md:pb-14">
       <div className="px-6 mx-auto max-w-6xl">
         <div className="pt-8 md:pt-24">
           <div className="flex flex-col md:gap-6 gap-2  md:mb-6">

@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section className="bg-gradient-to-b from-purple-400">
       <div className="px-6 mx-auto max-w-6xl">
-        <div className="pt-8 pb-0  md:py-24">
+        <div className="pt-8 md:pb-14 pb-10  md:py-24">
            <div className="flex flex-col md:gap-6 gap-2  md:mb-6">
           <h1 className="md:text-[64px] text-[40px] md:text-center text-left font-extrabold leading-[56px] md:leading-[80px] text-black mx-auto">
             A new way to use the internet

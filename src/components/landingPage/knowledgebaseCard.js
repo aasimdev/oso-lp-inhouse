@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 
 
-const KnowledgebaseCard = ({ title, url }) => {
+const KnowledgebaseCard = ({ title, url, backgroundColor, hoverBgColor }) => {
   return (
     <>
-      <Link href={url} target="_blank" className="p-8 bg-white rounded-2xl border border-gray-30 flex-col justify-between items-end gap-[38px] inline-flex hover:bg-gradient-gray">
+      <Link href={url} target="_blank" className={`p-8 ${backgroundColor} ${hoverBgColor} rounded-2xl border border-gray-30 flex-col justify-between items-end gap-[38px] inline-flex`}>
         <div className="text-black text-2xl font-bold leading-9">
           {title}
         </div>

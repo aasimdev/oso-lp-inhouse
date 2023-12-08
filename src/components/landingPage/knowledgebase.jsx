@@ -6,14 +6,17 @@ const KnowledgebaseContent = [
   {
     title: "Enhancing Results through Prompt Engineering in OSO AI",
     url: "https://learn.oso.ai/tips-tricks/prompt-engineering?from_search=134189309",
+    backgroundColor : "bg-[#c5fbf2] hover:bg-[#6bccbd]",
   },
   {
     title: "Your Personal Classroom Sidekick – Less Study, Better Grades",
     url: "https://learn.oso.ai/use-cases/students?from_search=134189374",
+    backgroundColor : 'bg-[#d3fcd2] hover:bg-[#9cf89f]'
   },
   {
     title: "Everything you need to know about OSO",
     url: "https://learn.oso.ai/getting-started/what-is-oso?from_search=134189407",
+    backgroundColor : 'bg-[#fff5cc] hover:bg-[#feea99]'
   },
 ];
 
@@ -23,7 +26,7 @@ const Knowledgebase = () => {
 
       <section className="px-6 mx-auto max-w-6xl">
         {/* Knowledgebase */}
-        <div className="bg-[#f67bf6] p-8 md:p-16 rounded-2xl flex flex-col md:flex-row gap-8 justify-between items-start">
+        <Link href="https://learn.oso.ai/" className="bg-[#f67bf6] p-8 md:p-16 rounded-2xl flex flex-col md:flex-row gap-8 justify-between items-start">
           <div className="md:max-w-[430px] flex-auto">
             <h5 className="text-white font-bold text-[32px] sm:text-5xl mb-2">Knowledgebase</h5>
             <p className="text-2xl font-light text-white md:w-[430px] leading-loose">Need help with OSO? Search for answers or browse our Knowledgebase.</p>
@@ -40,11 +43,11 @@ const Knowledgebase = () => {
           </div>
            
 
-        </div>
+        </Link>
         {/* Knowledgebase Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-8 pb-16">
           {KnowledgebaseContent.map((v, i) => {
-            return <KnowledgebaseCard key={i} title={v.title} url={v.url} />;
+            return <KnowledgebaseCard key={i} title={v.title} url={v.url} backgroundColor={v.backgroundColor} hoverBgColor={v.hoverBgColor}/>;
           })}
         </div>
 

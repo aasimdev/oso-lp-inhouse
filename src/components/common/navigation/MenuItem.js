@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-const NavItem = ({ item, url, onClose }) => {
+const NavItem = ({ item, url, onClose, target }) => {
   return (
     <Link
       href={url}
       onClick={onClose}
-      target={item === "Blog" && "_blank"}
+      target={target}
       rel="noopener noreferrer"
       className="flex items-center justify-between h-20 border-b border-gray-50 px-2 py-4"
     >

@@ -44,7 +44,7 @@ const ShortVideo = ({ videoId }) => {
 
   return (
     <div
-      className="overflow-hidden left-0 w-full h-[508px] relative"
+      className="overflow-hidden left-0 w-full h-[508px] relative iframe-container-div"
       onMouseEnter={handleHover}
     >
       {isLoading && (
@@ -60,6 +60,7 @@ const ShortVideo = ({ videoId }) => {
         }&mute=${isPlay ? 1 : 0}&loop=1`}
         width="100%"
         allowFullScreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         loading="eager"
         style={{ overflow: "hidden" }}
         muted

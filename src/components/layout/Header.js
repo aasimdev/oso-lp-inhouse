@@ -249,7 +249,7 @@ const Header = () => {
                 </button>
               </form> */}
 
-              <Link href="https://l.oso.ai/NewUser" target="_blank" className="!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn">Try OSO</Link>
+              <Link href="https://l.oso.ai/NewUser" target="_blank" className="!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn !hidden sm:!inline-flex">Try OSO</Link>
 
               {showSidebar ? (
                 <button

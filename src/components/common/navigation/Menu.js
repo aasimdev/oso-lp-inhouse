@@ -2,13 +2,13 @@ import React from "react";
 import NavItem from "./MenuItem";
 
 const navItemsData = [
-  { title: "Use Cases", url: "/resource" },
-  { title: "Knowledgebase ", url: "https://learn.oso.ai/" },
-  { title: "Search", url: "/search" },
-  { title: "Chat", url: "/chat" },
-  { title: "News", url: "/news" },
-  { title: "Pricing", url: "/pricing" },
-  { title: "Blog", url: "https://blog.oso.ai/" },
+  { title: "Use Cases", url: "/resource", target: "_self" },
+  { title: "Knowledgebase ", url: "https://learn.oso.ai/", target: "_blank" },
+  { title: "Search", url: "/search", target: "_self" },
+  { title: "Chat", url: "/chat", target: "_self" },
+  { title: "News", url: "/news", target: "_self" },
+  { title: "Pricing", url: "/pricing", target: "_self" },
+  { title: "Blog", url: "https://blog.oso.ai/", target: "_blank" },
 ];
 const Menu = ({ isOpen, onClose }) => {
   const sideMenuClasses = isOpen
@@ -24,6 +24,7 @@ const Menu = ({ isOpen, onClose }) => {
               item={item.title}
               url={item.url}
               onClose={onClose}
+              target={item.target}
             />
           ))}
         </div>

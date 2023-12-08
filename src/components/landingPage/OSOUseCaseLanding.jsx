@@ -41,6 +41,8 @@ const OSOUseCaseLanding = ({ type }) => {
             //   clickable: true,
             // }}
             freeMode={true}
+            observer={true}
+       
             modules={[FreeMode, Navigation]}
             grabCursor={false}
             breakpoints={{

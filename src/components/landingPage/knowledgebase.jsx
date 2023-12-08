@@ -6,17 +6,17 @@ const KnowledgebaseContent = [
   {
     title: "Enhancing Results through Prompt Engineering in OSO AI",
     url: "https://learn.oso.ai/tips-tricks/prompt-engineering?from_search=134189309",
-    backgroundColor : "bg-[#c5fbf2] hover:bg-[#6bccbd]",
+    backgroundColor : "bg-[#c5fbf2] hover:bg-gradient-to-t from-[#6bccbd] to-[#c5fbf2]",
   },
   {
     title: "Your Personal Classroom Sidekick – Less Study, Better Grades",
     url: "https://learn.oso.ai/use-cases/students?from_search=134189374",
-    backgroundColor : 'bg-[#d3fcd2] hover:bg-[#9cf89f]'
+    backgroundColor : 'bg-[#d3fcd2] hover:bg-gradient-to-t from-[#9cf89f] to-[#d3fcd2]'
   },
   {
     title: "Everything you need to know about OSO",
     url: "https://learn.oso.ai/getting-started/what-is-oso?from_search=134189407",
-    backgroundColor : 'bg-[#fff5cc] hover:bg-[#feea99]'
+    backgroundColor : 'bg-[#fff5cc] hover:bg-gradient-to-t from-[#feea99] to-[#fff5cc]'
   },
 ];
 

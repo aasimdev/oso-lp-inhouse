@@ -74,7 +74,7 @@ const TopThreeUsecase = () => {
           className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
           onClick={handleClick}
         >
-          Try Using OSO
+          Try OSO
           <svg
             width="24"
             height="24"

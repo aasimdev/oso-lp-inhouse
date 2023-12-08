@@ -280,11 +280,11 @@ html {
     @apply hidden
   }
 
-  .usecase-slider .swiper {
-    @apply pb-[70px] pt-16
+   .usecase-slider .swiper {
+    @apply pb-[70px]
   }
 
-  .usecase-slider .swiper-button-prev, .swiper-button-next {
+  /*.usecase-slider .swiper-button-prev, .swiper-button-next {
     @apply !top-6
   }
 
@@ -297,7 +297,7 @@ html {
   .swiper-button-next.swiper-button-disabled~.r-gr-control,
   .swiper-button-prev.swiper-button-disabled+.l-gr-control {
     visibility: visible;
-  }
+  } */
 }
 
 .fade-in {

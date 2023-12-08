@@ -12,7 +12,7 @@ const PriceView = () => {
             Simple and transparent pricing
           </h1>
           <p className="text-gray-800 md:text-center text-left md:text-[32px] text-2xl font-light leading-tight">
-            No credit card required, cancel anytime.
+            Try OSO risk-free, cancel anytime.
           </p>
         </div>
       </section>

@@ -148,14 +148,14 @@ const Header = () => {
     <>
       <div className="bg-black text-center py-4 sm:py-2 px-0 sm:px-6">
         <div className="text-white text-sm sm:text-sm">
-          <strong>OSO is Live🔥.</strong> {" "}
+          <strong>OSO is Live!🔥</strong> {" "}
           <span>
             <Link
               className="underline"
               href="https://l.oso.ai/NewUser"
               target="_blank"
             >
-              Try it out here
+              Try OSO Now
             </Link>
             
           </span>

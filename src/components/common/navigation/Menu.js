@@ -2,7 +2,7 @@ import React from "react";
 import NavItem from "./MenuItem";
 
 const navItemsData = [
-  { title: "Use Cases", url: "/resource", target: "_self" },
+  { title: "How People Use OSO", url: "/resource", target: "_self" },
   { title: "Knowledgebase ", url: "https://learn.oso.ai/", target: "_blank" },
   { title: "Search", url: "/search", target: "_self" },
   { title: "Chat", url: "/chat", target: "_self" },

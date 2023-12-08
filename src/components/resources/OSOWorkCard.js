@@ -15,7 +15,7 @@ const OSOWorkCard = ({ bgColor, title, itemCenter, videoID }) => {
         <div className="h-1/4 p-8">
           <h2 className="text-black text-[32px] font-semibold">{title}</h2>
           <div className="max-w-[283px]">
-            <span className="text-black text-2xl font-light ">Delivers a </span>
+            <span className="text-black text-2xl font-light ">Delivers aa </span>
             <span className="text-black text-2xl font-medium">
               comprehensive result
             </span>

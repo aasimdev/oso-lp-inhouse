@@ -117,20 +117,16 @@ When we say "unbiased," we mean we train OSO models to take a neutral stance, fr
     {
       id: 6,
       question: "What are the perks of being an OSO Ambassador?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Ambassadors earn $5 per month when anyone they invite to OSO subscribes to OSO Pro. If 100 people they invite have active OSO Pro subscriptions, they would earn $500 every month. 
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Ambassadors earn passive income each month when anyone they invite to OSO subscribes to OSO Pro. 
       <br /><br />
-      Ambassadors can start inviting people right now, and start earning straight away when OSO launches.
-       <br /><br />
-       <a href="https://friends.oso.ai/signup" target="_blank" rel="noopener noreferrer">
-  <span><strong>Apply here</strong></span>
-</a>
+     
 
        </p>`,
     },
     {
       id: 7,
       question: "How do I get started?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is available on Android, iOS, and Web. A subscription to OSO Pro is required to use Uncensored Chat.</p>`,
     },
   ]
 

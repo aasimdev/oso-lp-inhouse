@@ -65,7 +65,7 @@ const ExploreUsecases = () => {
           className="bg-transparent text-purple border border-purple text-2xl font-normal px-4 md:px-16 h-[74px] rounded-lg justify-center items-center flex gap-2"
           href="/usecase"
         >
-          explore all the use cases
+         Explore more use cases
           <svg
             width="24"
             height="24"

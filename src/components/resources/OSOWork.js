@@ -9,7 +9,7 @@ const OSOWork = () => {
     <section className="py-6 md:pt-16 mx-auto max-w-6xl ">
       <div className="px-6 flex flex-col md:gap-4 gap-2">
         <h1 className="text-[40px] md:text-5xl md:text-center font-bold md:font-extrabold  text-black">
-          How OSO Works?
+          How OSO works?
         </h1>
         <div className="flex flex-col py-6 md:py-12">
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
@@ -25,7 +25,7 @@ const OSOWork = () => {
             className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
             onClick={handleClick}
           >
-            Try Using OSO
+            Try OSO
             <svg
               width="24"
               height="24"

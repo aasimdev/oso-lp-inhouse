@@ -89,7 +89,7 @@ const NewsView = () => {
           image="/assets/images/newsphone1.png"
           imageWidth="357"
           imageHeight="507"
-          color="egg-blue"
+          color="light-yellow"
         />
         <AdvantageCard
           title="Personalized"
@@ -98,7 +98,7 @@ const NewsView = () => {
           image="/assets/images/newsphone2.png"
           imageWidth="357"
           imageHeight="507"
-          color="electric-blue"
+          color="medium-yellow"
         />
         <AdvantageCard
           title="Always up-to-date"
@@ -107,7 +107,7 @@ const NewsView = () => {
           image="/assets/images/newsphone3.png"
           imageWidth="357"
           imageHeight="507"
-          color="vivid-blue"
+          color="yellow"
         />
 
       </Advantages>

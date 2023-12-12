@@ -50,7 +50,7 @@ html {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #C4CDD5;
+  background-color: #c4cdd5;
   border-radius: 8px;
 }
 
@@ -59,10 +59,12 @@ html {
   width: 292px;
   height: calc(100% - 64px);
   position: absolute;
-  background: linear-gradient(90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.6) 45%,
-      rgba(255, 255, 255, 0.8) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 45%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
   top: 32px;
   right: 0;
   z-index: 1;
@@ -73,10 +75,12 @@ html {
   width: 292px;
   height: calc(100% - 64px);
   position: absolute;
-  background: linear-gradient(270deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0.6) 45%,
-      rgba(255, 255, 255, 0.8) 100%);
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 45%,
+    rgba(255, 255, 255, 0.8) 100%
+  );
   top: 32px;
   left: 0;
   z-index: 2;
@@ -84,11 +88,11 @@ html {
 
 /* Advantages box */
 .egg-blue-box {
-  background: #cafdf5;
+  background: #CAFDF5;
 }
 
 .electric-blue-box {
-  background: #61f3f3;
+  background: #61F3F3;
 }
 
 .vivid-blue-box {
@@ -96,24 +100,71 @@ html {
 }
 
 .egg-blue-box:after {
-  background: linear-gradient(180deg,
-      rgba(140, 220, 208, 0) 0%,
-      rgba(140, 220, 208, 0.1) 86%,
-      rgba(140.37, 220.07, 207.57, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(140, 220, 208, 0) 0%,
+    rgba(140, 220, 208, 0.1) 86%,
+    rgba(140, 220, 208, 1) 100%
+  );
 }
 
 .electric-blue-box:after {
-  background: linear-gradient(180deg,
-      rgba(8, 212, 212, 0) 0%,
-      rgba(8, 212, 212, 0.1) 86%,
-      rgba(8, 212, 212, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(8, 212, 212, 0) 0%,
+    rgba(8, 212, 212, 0.1) 86%,
+    rgba(99, 243, 243, 1)100%
+  );
 }
 
 .vivid-blue-box::after {
-  background: linear-gradient(180deg,
-      rgba(0, 198, 234, 0) 0%,
-      rgba(0, 198, 234, 0.1) 86%,
-      rgba(0, 198, 234, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 198, 234, 0) 0%,
+    rgba(0, 198, 234, 0.1) 86%,
+    rgba(0, 198, 234, 0.8) 100%
+  );
+}
+
+/* Advantages news box */
+.light-yellow-box {
+  background: #FFF5CC;
+}
+
+.medium-yellow-box {
+  background: #FFD666;
+}
+
+.yellow-box {
+  background: #FFAB00;
+}
+
+.light-yellow-box::after {
+  transition: 0.3s all;
+  background: linear-gradient(
+    180deg,
+    rgba(55, 228, 117, 0) 0%,
+    rgba(255, 228, 117, 0.1) 86%,
+    rgba(255, 228, 117, 0.8) 100%
+  );
+}
+
+.medium-yellow-box::after {
+  background: linear-gradient(
+    180deg,
+    rgba(55, 196, 35, 0) 0%,
+    rgba(55, 196, 35, 0.1) 86%,
+    rgba(255, 196, 35, 1) 100%
+  );
+}
+
+.yellow-box::after {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 175, 0, 0) 0%,
+    rgba(0255, 175, 0, 0.1) 86%,
+    rgba(255, 175, 0, 1) 100%
+  );
 }
 
 .light-green-adv-box {
@@ -129,24 +180,30 @@ html {
 }
 
 .light-green-adv-box::after {
-  background: linear-gradient(180deg,
-      rgba(141, 255, 173, 0) 82%,
-      rgba(141, 255, 173, 0.1) 86%,
-      rgba(141, 255, 173, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(141, 255, 173, 0) 82%,
+    rgba(141, 255, 173, 0.1) 86%,
+    rgba(141, 255, 173, 0.8) 100%
+  );
 }
 
 .medium-green-adv-box::after {
-  background: linear-gradient(180deg,
-      rgba(113, 255, 135, 0) 82%,
-      rgba(113, 255, 135, 0.1) 86%,
-      rgba(113, 255, 135, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(113, 255, 135, 0) 82%,
+    rgba(113, 255, 135, 0.1) 86%,
+    rgba(113, 255, 135, 0.8) 100%
+  );
 }
 
 .green-adv-box::after {
-  background: linear-gradient(180deg,
-      rgba(8, 196, 78, 0) 82%,
-      rgba(8, 196, 78, 0.1) 86%,
-      rgba(8, 196, 78, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(8, 196, 78, 0) 82%,
+    rgba(8, 196, 78, 0.1) 86%,
+    rgba(8, 196, 78, 0.8) 100%
+  );
 }
 
 .gradient-seen-on-blue {
@@ -171,34 +228,42 @@ html {
 
 .lp-feed-box::after {
   transition: 0.3s all;
-  background: linear-gradient(180deg,
-      rgba(255, 235, 156, 0) 0%,
-      rgba(255, 235, 156, 0.1) 86%,
-      rgba(255, 235, 156, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 235, 156, 0) 0%,
+    rgba(255, 235, 156, 0.1) 86%,
+    rgba(255, 235, 156, 0.8) 100%
+  );
 }
 
 .lp-feed-box:hover::after {
   transition: 0.3s all;
-  background: linear-gradient(180deg,
-      rgba(253, 228, 129, 0) 82%,
-      rgba(253, 228, 129, 0.1) 86%,
-      rgba(253, 228, 129, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(253, 228, 129, 0) 82%,
+    rgba(253, 228, 129, 0.1) 86%,
+    rgba(253, 228, 129, 0.8) 100%
+  );
 }
 
 .lp-chat-box::after {
   transition: 0.3s all;
-  background: linear-gradient(180deg,
-      rgba(171, 255, 175, 0) 82%,
-      rgba(171, 255, 175, 0.1) 86%,
-      rgba(171, 255, 175, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(171, 255, 175, 0) 82%,
+    rgba(171, 255, 175, 0.1) 86%,
+    rgba(171, 255, 175, 0.8) 100%
+  );
 }
 
 .lp-chat-box:hover::after {
   transition: 0.3s all;
-  background: linear-gradient(180deg,
-      rgba(126, 246, 132, 0) 82%,
-      rgba(126, 246, 132, 0.1) 86%,
-      rgba(126, 246, 132, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(126, 246, 132, 0) 82%,
+    rgba(126, 246, 132, 0.1) 86%,
+    rgba(126, 246, 132, 0.8) 100%
+  );
 }
 
 .egg-blue-box:after,
@@ -208,6 +273,9 @@ html {
 .medium-green-adv-box:after,
 .green-adv-box:after,
 .lp-chat-box::after,
+.light-yellow-box::after,
+.medium-yellow-box::after,
+.yellow-box::after,
 .lp-feed-box::after {
   content: "";
   position: absolute;
@@ -221,11 +289,10 @@ html {
 
 /* Swiper Slider */
 .swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled~.r-gr-control,
-.swiper-button-prev.swiper-button-disabled+.l-gr-control {
+.swiper-button-next.swiper-button-disabled ~ .r-gr-control,
+.swiper-button-prev.swiper-button-disabled + .l-gr-control {
   @apply transition-all duration-300 opacity-0 invisible;
 }
-
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
@@ -266,7 +333,6 @@ html {
 }
 
 @media (max-width: 991px) {
-
   .tSlider::after,
   .tSlider::before {
     width: 212px;
@@ -274,14 +340,13 @@ html {
 }
 
 @media (max-width: 720px) {
-
   .tSlider::after,
   .tSlider::before {
-    @apply hidden
+    @apply hidden;
   }
 
-   .usecase-slider .swiper {
-    @apply pb-[70px]
+  .usecase-slider .swiper {
+    @apply pb-[70px];
   }
 }
 
@@ -321,7 +386,6 @@ html {
 }
 
 @keyframes bounce {
-
   0%,
   100% {
     transform: translateY(0);
@@ -334,13 +398,13 @@ html {
   }
 }
 
-.react-slideshow-container+ul.indicators .each-slideshow-indicator:before {
+.react-slideshow-container + ul.indicators .each-slideshow-indicator:before {
   background-color: #8e33ff !important;
   width: 16px !important;
   height: 16px !important;
 }
 
-.react-slideshow-container+ul.indicators li {
+.react-slideshow-container + ul.indicators li {
   width: 25px !important;
   height: 25px !important;
 }

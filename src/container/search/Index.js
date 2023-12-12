@@ -71,11 +71,10 @@ to traditional search engines. By harnessing the power of advanced AI technology
         <AdvantageCard
           title="Up to Date"
           description="Unlike AI chatbots that have a set knowledge cutoff, <span class='font-medium'>OSO’s AI Search Engine ensures you receive the most recent</span> and relevant information."
-          borderLess={true}
-          image={webImage}
-          imageWidth="532"
-          className="absolute"
-          imageHeight="427"
+          borderLess={false}
+          image={UpdatePhone}
+          imageWidth="357"
+          imageHeight="507"
           color="egg-blue"
         />
         <AdvantageCard

@@ -8,14 +8,14 @@ import { filterUsecaseButton, shortVideosData } from "@/constant/usecase";
 
 const UseCase = () => {
   const [active, setActive] = useState("All");
-  const [videoData, setVideoData] = useState(shortVideosData.slice(0, 12));
+  const [videoData, setVideoData] = useState(shortVideosData);
   const [isMobile, setIsMobile] = useState(false);
 
   const handleFilter = (value) => {
     setActive(value);
     const newVideos = shortVideosData.filter((v) => v.category === value);
     if (value === "All") {
-      setVideoData(shortVideosData.slice(0, 12));
+      setVideoData(shortVideosData);
     } else {
       setVideoData(newVideos);
     }
@@ -114,7 +114,7 @@ const UseCase = () => {
       <section className="sm:mt-8 py-6 sm:py-8 px-6 mx-auto max-w-6xl">
         <div className="pl-2 pr-6 flex flex-col md:gap-4 gap-2 w-full">
           <h1 className="text-[40px] md:text-5xl md:text-center font-bold leading-[56px] md:leading-[64px] text-black mx-auto">
-           Join the thousands of people across the world who already use OSO
+            Join the thousands of people across the world who already use OSO
           </h1>
         </div>
         <div className="flex justify-center items-center py-6 md:py-8 mt-4">

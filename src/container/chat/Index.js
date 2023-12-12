@@ -114,7 +114,7 @@ Our mission is to empower users with information while promoting ethical conduct
     },
     {
       title: "Intelligent",
-      description: "Trained until Sept. 2023 and continuously learning.",
+      description: "Trained until 12th Dec 2023 and continuously learning.",
       image: "chatphone-3",
       id: "deep",
     },

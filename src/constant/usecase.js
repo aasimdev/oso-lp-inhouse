@@ -249,6 +249,4 @@ export const shortVideosData = [
     title: "Unbiased AI News",
   },
   
-
-  
 ];

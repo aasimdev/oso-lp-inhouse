@@ -25,33 +25,27 @@ const Feed = () => {
         </div>
       </div>
 
-      <div className="absolute hidden md:static md:flex items-start gap-2 mt-60 md:mt-12 ml-3 md:ml-[18px]">
-        <Image
-          src="/assets/icons/oso-logo-black.svg"
-          alt="Example SVG"
-          width={24}
-          height={34}
-        />
-        <div className="w-[46%] lg:w-[55%] rounded-[20px] bg-black">
-          <p className="hidden md:block p-4 text-xl font-normal text-white">
-            📝 Report on Apple&apos;s iPhone 15 Camera Improvements and Flagship
-            Features
-            <br />
-            <br />
-            📸 Smart Camera Improvements in iPhone 15 The iPhone 15 introduces
-            several smart camera improvements. - Larger main sensor for better
-            image quality and low-light performance.
-            <br />
-            ...
+      <div className="absolute hidden md:static md:flex md:flex-col items-start gap-8 mt-60 md:mt-6 ml-3 md:ml-[18px]">
+        <div className="w-[46%] lg:w-[55%] rounded-[20px] bg-[#d9eff6]">
+          <p className="hidden md:block p-4 text-xl font-normal text-black">
+            Tell me more about Google enters genAl space with Gemini.
           </p>
-          <p className="block md:hidden p-4 text-xl font-normal text-white">
-            📝 Report on Apple&apos;s iPhone 15 Camera Improvements and Flagship
-            Features
-            <br />
-            <br />
-            📸 Smart Camera Improvements in iPhone 15 ...
-            <br />
-          </p>
+        </div>
+        <div className="md:flex gap-3 items-start">
+          <Image
+            src="/assets/icons/oso-logo-black.svg"
+            alt="Example SVG"
+            width={24}
+            height={34}
+          />
+          <div className="w-[46%] lg:w-[55%] rounded-[20px] bg-black">
+            <p className="hidden md:block p-4 text-xl font-normal text-white">
+              Google has ventured into the generative Al (genAl) space with
+              their newly announced project, Gemini. This platform is designed
+              to offer researchers, developers, and businesses access to
+              advanced Al technologies, while also allowing them to...
+            </p>
+          </div>
         </div>
       </div>
 
@@ -64,8 +58,8 @@ const Feed = () => {
           width={250.8}
           height={653.895}
           className="hidden md:block"
-          // title={title}
-          // alt={title}
+        // title={title}
+        // alt={title}
         />
         <Image
           src="/assets/images/Feed.png"

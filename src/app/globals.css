@@ -283,21 +283,6 @@ html {
    .usecase-slider .swiper {
     @apply pb-[70px]
   }
-
-  /*.usecase-slider .swiper-button-prev, .swiper-button-next {
-    @apply !top-6
-  }
-
-  .usecase-slider .swiper-button-prev {
-    right: 72px !important;
-    left: unset !important;
-  }
-
-  .swiper-button-disabled,
-  .swiper-button-next.swiper-button-disabled~.r-gr-control,
-  .swiper-button-prev.swiper-button-disabled+.l-gr-control {
-    visibility: visible;
-  } */
 }
 
 .fade-in {

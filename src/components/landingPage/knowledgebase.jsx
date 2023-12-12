@@ -4,18 +4,18 @@ import Link from "next/link";
 
 const KnowledgebaseContent = [
   {
-    title: "Enhancing Results through Prompt Engineering in OSO AI",
-    url: "https://learn.oso.ai/tips-tricks/prompt-engineering?from_search=134189309",
+    title: "OSO, The Ultimate AI Travel Planner: Seamless, Up-to-Date AI Travel Planning for Stress-Free Vacations",
+    url: "https://learn.oso.ai/en_US/use-cases/travel",
     backgroundColor : "bg-[#c5fbf2] hover:bg-gradient-to-t from-[#6bccbd] to-[#c5fbf2]",
   },
   {
-    title: "Your Personal Classroom Sidekick – Less Study, Better Grades",
-    url: "https://learn.oso.ai/use-cases/students?from_search=134189374",
+    title: "Revolutionize Your Decision Making with OSO's Up-to-date AI Search Engine and AI Ratings Algorithm",
+    url: "https://learn.oso.ai/en_US/use-cases/review-restaurants",
     backgroundColor : 'bg-[#d3fcd2] hover:bg-gradient-to-t from-[#9cf89f] to-[#d3fcd2]'
   },
   {
-    title: "Everything you need to know about OSO",
-    url: "https://learn.oso.ai/getting-started/what-is-oso?from_search=134189407",
+    title: "OSO: Your AI-Powered Search Engine for Up-to-Date Professional Research",
+    url: "https://learn.oso.ai/en_US/use-cases/research",
     backgroundColor : 'bg-[#fff5cc] hover:bg-gradient-to-t from-[#feea99] to-[#fff5cc]'
   },
 ];
@@ -26,7 +26,7 @@ const Knowledgebase = () => {
 
       <section className="px-6 mx-auto max-w-6xl">
         {/* Knowledgebase */}
-        <Link href="https://learn.oso.ai/" className="bg-[#f67bf6] p-8 md:p-16 rounded-2xl flex flex-col md:flex-row gap-8 justify-between items-start">
+        <Link href="https://learn.oso.ai/" target="_blank" className="bg-[#f67bf6] p-8 md:p-16 rounded-2xl flex flex-col md:flex-row gap-8 justify-between items-start">
           <div className="md:max-w-[430px] flex-auto">
             <h5 className="text-white font-bold text-[32px] sm:text-5xl mb-2">Knowledgebase</h5>
             <p className="text-2xl font-light text-white md:w-[430px] leading-loose">Need help with OSO? Search for answers or browse our Knowledgebase.</p>

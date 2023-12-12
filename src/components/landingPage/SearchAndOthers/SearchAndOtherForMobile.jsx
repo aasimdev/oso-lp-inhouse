@@ -99,7 +99,7 @@ const SearchAndOtherForMobile = () => {
                      typewriter
                           .changeDelay(40)
                           .typeString(
-                            "Where is the best sushi restaurant in Prague? 🍣"
+                            "Where is the best sushi restaurant near me? 🍣"
                           )
                           .pauseFor(2000)
                           .callFunction(() => {
@@ -160,7 +160,7 @@ const SearchAndOtherForMobile = () => {
                         typewriter
                           .changeDelay(40)
                           .typeString(
-                            "Where is the best sushi restaurant in Prague? 🍣"
+                            "Where is the best sushi restaurant near me? 🍣"
                           )
                           .pauseFor(2000)
                           .callFunction(() => {

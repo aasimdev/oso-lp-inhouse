@@ -131,5 +131,124 @@ export const shortVideosData = [
     category: "Research",
     title: "Community Sentiment",
   },
+   {
+    id: 13,
+    videoId: "6nCLbYSktHw",
+    type: ["creative-oso"],
+    category: "Reviews",
+    title: "Investigate New Product Features",
+  },
+  
+   {
+    id: 14,
+    videoId: "mLrexj1a7lM",
+    type: ["creative-oso"],
+    category: "Movies",
+    title: "Movie Reviews and Viewer Feedback",
+  },
+  
+   {
+    id: 15,
+    videoId: "jopBz_Q-G5A",
+    type: ["creative-oso"],
+    category: "Travel",
+    title: "Travel to the Sahara",
+  },
+  
+   {
+    id: 16,
+    videoId: "2y0yMo7HVOw",
+    type: ["creative-oso"],
+    category: "Research",
+    title: "Analyze the Real Estate Market",
+  },
+  
+   {
+    id: 17,
+    videoId: "pNds6q_OxB0",
+    type: ["creative-oso"],
+    category: "Travel",
+    title: "Plan any Trip",
+  },
+  
+   {
+    id: 18,
+    videoId: "16jr68pxb44",
+    type: ["creative-oso"],
+    category: "Travel",
+    title: "OSO has the Answer",
+  },
+  
+   {
+    id: 19,
+    videoId: "9bP9Ib5kLFk",
+    type: ["creative-oso"],
+    category: "Food",
+    title: "Best Restaurants Near Me",
+  },
+  
+   {
+    id: 20,
+    videoId: "hXgLvcBCkXM",
+    type: ["creative-oso"],
+    category: "Money",
+    title: "Build a Community",
+  },
+  
+   {
+    id: 21,
+    videoId: "0TtLjMCyNqY",
+    type: ["creative-oso"],
+    category: "Travel",
+    title: "3 Must Have Travel Tools",
+  },
+  
+   {
+    id: 22,
+    videoId: "Ymmop9SlcvM",
+    type: ["creative-oso"],
+    category: "Money",
+    title: "Revolutionizing Content Creation",
+  },
+  
+   {
+    id: 23,
+    videoId: "diSiFuXsO3s",
+    type: ["creative-oso"],
+    category: "Travel",
+    title: "Save Time Planning",
+  },
+  
+   {
+    id: 24,
+    videoId: "j0eKIOncxnk",
+    type: ["creative-oso"],
+    category: "Reviews",
+    title: "Any Easier Way to Search Reviews",
+  },
+  
+   {
+    id: 25,
+    videoId: "l7Xr14IcvH0",
+    type: ["creative-oso"],
+    category: "Movies",
+    title: "What Movie Should I Watch?",
+  },
+   {
+    id: 26,
+    videoId: "5QDb6iNRnnY",
+    type: ["creative-oso"],
+    category: "Food",
+    title: "Finding the Best Burger",
+  },
+    {
+    id: 27,
+    videoId: "qDr18VGlWfE",
+    type: ["creative-oso"],
+    category: "News",
+    title: "Unbiased AI News",
+  },
+  
+
   
 ];

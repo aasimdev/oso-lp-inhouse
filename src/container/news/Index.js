@@ -46,7 +46,9 @@ const NewsView = () => {
     {
       id: 6,
       question: "How do I get started?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is available on Android, iOS, and Web. A subscription to OSO Pro is required to use Uncensored Chat.</p>`,
+        answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is available on Android, iOS, and Web. You can access OSO AI by going to this <span><strong><a href="https://l.oso.ai/newuser" target="_blank">link<a/></strong></span> and completing a quick 2 minute survey.
+      <br><br>
+      An OSO Pro subscription is required to access all of the Pro features.  With OSO Pro, you get our most advanced Uncensored model with faster search results and unlimited Chats and Searches. </p>`,
     },
   ];
   const comparisonContent = [

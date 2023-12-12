@@ -148,7 +148,7 @@ const Header = () => {
     <>
       <div className="bg-black text-center py-4 sm:py-2 px-0 sm:px-6">
         <div className="text-white text-sm sm:text-sm">
-          <strong>OSO is Live!🔥</strong> {" "}
+          <strong>OSO Early Access is Live!🔥</strong> {" "}
           <span>
             <Link
               className="underline"

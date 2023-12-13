@@ -72,7 +72,7 @@ to traditional search engines. By harnessing the power of advanced AI technology
           title="Up to Date"
           description="Unlike AI chatbots that have a set knowledge cutoff, <span class='font-medium'>OSO’s AI Search Engine ensures you receive the most recent</span> and relevant information."
           borderLess={false}
-          image={UpdatePhone}
+          image={webImage}
           imageWidth="357"
           imageHeight="507"
           color="egg-blue"

@@ -26,13 +26,13 @@ const Knowledgebase = () => {
 
       <section className="px-6 mx-auto max-w-6xl">
         {/* Knowledgebase */}
-        <Link href="https://learn.oso.ai/" target="_blank" className="bg-[#f67bf6] p-8 md:p-16 rounded-2xl flex flex-col md:flex-row gap-8 justify-between items-start">
+        <Link href="https://learn.oso.ai/" target="_blank" className="bg-[#f67bf6] p-8 md:p-16 rounded-2xl flex flex-col md:flex-row gap-8 justify-between items-start group">
           <div className="md:max-w-[430px] flex-auto">
             <h5 className="text-white font-bold text-[32px] sm:text-5xl mb-2">Knowledgebase</h5>
-            <p className="text-2xl font-light text-white md:w-[430px] leading-loose">Need help with OSO? Search for answers or browse our Knowledgebase.</p>
+            <p className="text-2xl font-light text-white md:w-[430px]">Need help with OSO? Search for answers or browse our Knowledgebase.</p>
           </div>
           <div className="w-full text-right">
-          <Link href="https://learn.oso.ai/" target="_blank" className="inline-flex items-center justify-end gap-4 text-white text-base">
+          <Link href="https://learn.oso.ai/" target="_blank" className="inline-flex items-center justify-end gap-4 text-white text-base transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
               <span>Lean more</span>
               <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="16.5" cy="16" r="16" fill="white" />

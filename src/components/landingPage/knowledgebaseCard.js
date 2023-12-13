@@ -5,11 +5,11 @@ import Link from "next/link";
 const KnowledgebaseCard = ({ title, url, backgroundColor, hoverBgColor }) => {
   return (
     <>
-      <Link href={url} target="_blank" className={`p-8 ${backgroundColor} ${hoverBgColor} rounded-2xl flex-col justify-between items-end gap-[38px] inline-flex`}>
+      <Link href={url} target="_blank" className={`p-8 ${backgroundColor} ${hoverBgColor} rounded-2xl flex-col justify-between items-end gap-[38px] inline-flex group`}>
         <div className="text-black text-2xl font-bold leading-9">
           {title}
         </div>
-        <div className="justify-start items-center gap-4 inline-flex text-black text-base">
+        <div className="justify-start items-center gap-4 inline-flex text-black text-base transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
           <span>Read</span>
           <span className="bg-gray-40 rounded-full">
             <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">

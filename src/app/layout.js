@@ -9,7 +9,6 @@ import gsap from "gsap";
 import Loader from "@/components/loader";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Image from "next/image";
-import { Router } from "next/router";
 
 export default function RootLayout({ children }) {
   return (
@@ -73,7 +72,6 @@ function RootLayoutContent({ children }) {
         />
 
         {/* <!-- Meta Pixel Code --> */}
-
         <Script
           id="meta-pixel-code"
           strategy="lazyOnload"
@@ -96,7 +94,7 @@ function RootLayoutContent({ children }) {
             width="1"
             alt="facebook"
             style={{ display: "none" }}
-            // src='https://www.facebook.com/tr?id=1321535528493263&ev=PageView&noscript=1'
+          // src='https://www.facebook.com/tr?id=1321535528493263&ev=PageView&noscript=1'
           />
         </noscript>
 
@@ -187,7 +185,24 @@ function RootLayoutContent({ children }) {
     `,
           }}
         />
-      {/* <Script async src="https://www.tiktok.com/embed.js"></Script> */}
+        {/* <Script async src="https://www.tiktok.com/embed.js"></Script> */}
+
+
+        {/* Add canonical links */}
+        <link rel="canonical" href="https://learn.oso.ai/overview-of-oso-ambassador-program?kb_language=en_US" />
+        <link rel="canonical" href="https://learn.oso.ai/providing-feedback-and-suggestions" />
+        <link rel="canonical" href="https://learn.oso.ai/responses-are-not-good?kb_language=en_US" />
+        <link rel="canonical" href="https://learn.oso.ai/no-response-error-message-on-oso-chat-" />
+        <link rel="canonical" href="https://learn.oso.ai/review-restaurants?kb_language=en_US" />
+        <link rel="canonical" href="https://friends.oso.ai/confirmation/new" />
+        <link rel="canonical" href="https://learn.oso.ai/where-can-i-download-oso" />
+        <link rel="canonical" href="https://www.oso.ai/?via=osman" />
+        <link rel="canonical" href="https://www.oso.ai/?via=chrisina" />
+        <link rel="canonical" href="https://www.oso.ai/?via=dalton" />
+
+
+        {/* Metas */}
+        <meta name="robots" content="index, follow" />
 
       </head>
       <body className={`${showSidebar ? "overflow-hidden md:pr-[17px]" : ""}`}>

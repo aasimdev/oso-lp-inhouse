@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import UseCaseCard from "../usecaseCard";
+import ShortVideo from "./ShortVideo";
 
 const AllUsecases = ({ videoData }) => {
   const [videosToShow, setVideosToShow] = useState(9);
@@ -17,12 +17,10 @@ const AllUsecases = ({ videoData }) => {
               {videoData.slice(0, videosToShow).map((v, i) => {
                 return (
                   <div key={i}>
-                    <UseCaseCard
-                      key={i}
+                    <ShortVideo key={i}
                       videoId={v.videoId}
                       category={v.category}
-                      title={v.title}
-                    />
+                      title={v.title} />
                   </div>
                 );
               })}

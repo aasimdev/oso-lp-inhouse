@@ -87,7 +87,7 @@ function SeenOn({}) {
     {
       id: 4,
       question: "What is the pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with daily usage and feature limitations.  If you want to unlock the full power of OSO, it only costs $20/mo and will return 100x the value in productivity and time-savings.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/month or $16/month when paid annually (17% discount) for a limited time, providing great value in productivity and time-saving.</p>`,
     },
     {
       id: 5,

@@ -97,7 +97,7 @@ const SearchAndOtherForLaptop = () => {
                         typewriter
                           .changeDelay(40)
                           .typeString(
-                            "Where is the best sushi restaurant near me? <span>&#x1F363;</span>"
+                            'Where is the best sushi restaurant near me? <img src="/assets/images/sushi.svg" width="50" height="49" style="display: inline-block"/>'
                           )
                           .pauseFor(2000)
                           .callFunction(() => {
@@ -137,7 +137,7 @@ const SearchAndOtherForLaptop = () => {
         <div className="relative z-10">
           <p className="text-[32px] md:text-5xl font-bold">Others</p>
           <p className="text-2xl font-light mt-2">
-            Delivers an{" "}
+            Deliver an{" "}
             <span className="font-medium">unhelpful, outdated result.</span>
           </p>
           <div className="lg:h-64">
@@ -162,7 +162,7 @@ const SearchAndOtherForLaptop = () => {
                         typewriter
                           .changeDelay(40)
                           .typeString(
-                            "Where is the best sushi restaurant near me? <span>&#x1F363;</span>"
+                            `Where is the best sushi restaurant near me? <img src="/assets/images/sushi.svg" width="50" height="49" style="display: inline-block"/>`
                           )
                           .pauseFor(2000)
                           .callFunction(() => {

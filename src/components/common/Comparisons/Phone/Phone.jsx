@@ -4,12 +4,9 @@ import React, { useState } from "react";
 
 const Phone = ({ title, obj, chatPage }) => {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <div
-      className={`flex flex-col ${!chatPage && "gap-6 md:gap-8"} relative ${title === "OSO" ? "lg:-mr-11" : ""
-        }`}
-    >
+      className={`flex flex-col ${!chatPage && "gap-6 md:gap-8"} relative ${title === "OSO" ? "lg:-mr-11" : ""}`}>
       {!chatPage && (
         <p className="text-center text-[21px] font-medium text-black">
           {title}
@@ -17,8 +14,8 @@ const Phone = ({ title, obj, chatPage }) => {
       )}
 
       <div
-        className={`relative xl:max-w-full max-w-[348px] ${chatPage && "w-[299px]"
-          } xl:h-full mx-auto`}
+        className={`relative xl:max-w-full sm:max-w-[348px] ${chatPage && "w-[299px]"
+          } xl:h-full sm:mx-auto`}
       >
         {pathname === "/search" ?
 

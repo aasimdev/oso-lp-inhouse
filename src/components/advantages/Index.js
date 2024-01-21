@@ -4,7 +4,7 @@ const Advantages = ({ title, children, page, description }) => {
   return (
     <section className="px-6 mx-auto max-w-6xl">
       <div className="pb-16 pt-6 md:pt-0 md:text-center text-start">
-        <h3 className="py-16 md:py-0 text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black mb-2">
+        <h3 className="text-[40px] leading-tight md:text-5xl md:leading-relaxed font-bold text-black mb-2">
           {title}
         </h3>
         {!page && (

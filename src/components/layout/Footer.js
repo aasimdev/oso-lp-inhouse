@@ -118,7 +118,7 @@ const Footer = () => {
     setUserDevice(detectedDevice);
   }, []);
   return (
-    <footer className="bg-black pb-8 pt-44 md:mt-40 mt-40  relative">
+    <footer className={`bg-black pb-8  relative ${pathname === "/pricing" ? "mt-16 md:mt-24 pt-10 md:pt-16" : "mt-40 pt-44"}`}>
       {pathname !== "/thank-you" &&
         pathname !== "/thank-you/1" &&
         pathname !== "/thank-you/2" &&
@@ -206,7 +206,7 @@ const Footer = () => {
                 </p>
               )}
             </form> */}
-            <Link href="https://l.oso.ai/NewUser" className="white-btn !py-[11px] !px-[23.25px] !text-base !w-[137px]" target="_blank">Try OSO</Link>
+            <Link href="https://l.oso.ai/prod" className="white-btn !py-[11px] !px-[23.25px] !text-base !w-[137px]" target="_blank">Try OSO</Link>
           </div>
           <div className="lg:w-[433px] w-full ml-auto">
             <Newsletter formId={"FooterNewsletterForm"} />
@@ -216,7 +216,7 @@ const Footer = () => {
         <hr className="mb-6 mt-11 sm:my-8 -mx-6 sm:mx-0 border-gray-500 border-opacity-20" />
         <div className="flex md:justify-between md:flex-row flex-col-reverse">
           <p className="text-gray-100 text-sm md:mt-0 mt-6">
-            © 2023 W4 Labs Inc.{" "}
+            © 2023-2024 W4 Labs Inc.{" "}
           </p>
           <div className="flex items-center space-x-8">
             <Link href="/dmca-policy" className="text-gray-500 text-sm">

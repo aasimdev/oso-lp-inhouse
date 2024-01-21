@@ -14,8 +14,8 @@ const KnowledgebaseContent = [
     backgroundColor : 'bg-[#d3fcd2] hover:bg-gradient-to-t from-[#9cf89f] to-[#d3fcd2]'
   },
   {
-    title: "OSO: Your AI-Powered Search Engine for Up-to-Date Professional Research",
-    url: "https://learn.oso.ai/en_US/use-cases/research",
+    title: "OSO: Your AI-Powered Search Engine for Efficient Professional Research",
+    url: "https://blog.oso.ai/p/elevate-your-work-with-oso-superior",
     backgroundColor : 'bg-[#fff5cc] hover:bg-gradient-to-t from-[#feea99] to-[#fff5cc]'
   },
 ];
@@ -28,11 +28,11 @@ const Knowledgebase = () => {
         {/* Knowledgebase */}
         <Link href="https://learn.oso.ai/" target="_blank" className="bg-[#f67bf6] p-8 md:p-16 rounded-2xl flex flex-col md:flex-row gap-8 justify-between items-start group">
           <div className="md:max-w-[430px] flex-auto">
-            <h5 className="text-white font-bold text-[32px] sm:text-5xl mb-2">Knowledgebase</h5>
-            <p className="text-2xl font-light text-white md:w-[430px]">Need help with OSO? Search for answers or browse our Knowledgebase.</p>
+            <h5 className="text-black font-bold text-[32px] sm:text-5xl mb-2">Knowledgebase</h5>
+            <p className="text-2xl font-light text-black md:w-[430px]">Need help with OSO? Search for answers or browse our Knowledgebase.</p>
           </div>
           <div className="w-full text-right">
-          <Link href="https://learn.oso.ai/" target="_blank" className="inline-flex items-center justify-end gap-4 text-white text-base transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
+          <Link href="https://learn.oso.ai/" target="_blank" className="inline-flex items-center justify-end gap-4 text-black text-base transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
               <span>Lean more</span>
               <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="16.5" cy="16" r="16" fill="white" />

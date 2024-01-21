@@ -28,7 +28,7 @@ const NewsBanner = ({ title, description, videoId, checklist }) => {
                   variant="newsBanner"
                   className="!w-full"
                 /> */}
-                <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank"/>
+                <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/prod" target="_blank"/>
               </div>
               <div className="pt-6 hidden lg:flex justify-start gap-2 md:flex-nowrap flex-wrap">
                 {checklist.map((v, i) => (

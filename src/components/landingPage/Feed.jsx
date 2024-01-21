@@ -71,7 +71,6 @@ const Feed = () => {
           className="md:hidden"
         />
       </div>
-      {/* {image2 && <Image src={image2} alt='' className='absolute right-7 bottom-0 w-[430px] object-cover'/>} For Second Image */}
 
       <div className="absolute md:top-16 md:right-16 bottom-8 right-8 z-[1]">
         <div

@@ -143,8 +143,8 @@ export const priceContent = [
     unit2:"Annualy",
     currency: "$",
     buttonTitle: "Upgrade to Pro",
-    monthlyUrl: "https://buy.stripe.com/7sIaFA5czcwT5ryfYY",
-    annuallyUrl: "https://buy.stripe.com/28o4hc0WjeF1bPWfYZ",
+    monthlyUrl: "https://l.oso.ai/prod",
+    annuallyUrl: "https://l.oso.ai/prod",
     details: [
       {
         bulletPoint: (

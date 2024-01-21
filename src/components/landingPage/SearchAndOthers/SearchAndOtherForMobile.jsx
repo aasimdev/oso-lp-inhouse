@@ -136,7 +136,7 @@ const SearchAndOtherForMobile = () => {
             <div>
               <p className="text-[32px] md:text-5xl font-bold">Others</p>
               <p className="text-2xl font-light mt-2">
-                Delivers an{" "}
+                Deliver an{" "}
                 <strong className="text-2xl font-medium ">
                   unhelpful, outdated result.
                 </strong>

@@ -108,14 +108,13 @@ const Card = ({ price, isMonthly }) => {
         {type === "pro" ? (
           <Link
             href={isMonthly ? monthlyUrl : annuallyUrl}
-            target="_blank"
             className="text-white text-base font-normal leading-normal h-12 px-6 py-2 bg-purple rounded-lg border border-purple justify-center items-center gap-2 flex"
           >
             {buttonTitle}
           </Link>
         ) : (
           <Link
-            href="https://l.oso.ai/NewUser"
+            href="https://l.oso.ai/prod"
             className="w-full h-12 px-6 py-2 text-purple bg-white rounded-lg border border-purple justify-center items-center gap-2 inline-flex text-base font-normal mt-0.5"
           >
             {buttonTitle}

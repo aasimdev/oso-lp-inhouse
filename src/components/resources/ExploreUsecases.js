@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { shortVideosData } from "@/constant/usecase";
-import UseCaseCard from "../usecaseCard";
+import ShortVideo from "../usecase/ShortVideo";
 
 const ExploreUsecases = () => {
   const [startVideo, setStartVideo] = useState(false);
@@ -41,12 +41,11 @@ const ExploreUsecases = () => {
 
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData.map((v, i) => (
-      <UseCaseCard
-        key={i}
-        videoId={v.videoId}
-        category={v.category}
-        title={v.title}
-      />
+      
+      <ShortVideo  key={i}
+      videoId={v.videoId}
+      category={v.category}
+      title={v.title}/>
     ));
   }, [videoData]);
 

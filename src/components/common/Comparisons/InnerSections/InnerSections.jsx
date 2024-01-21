@@ -2,10 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
-import { Slide } from "react-slideshow-image";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "react-slideshow-image/dist/styles.css";
-import NewsLetter from "@/components/news-letter";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import ComparisonContent from "../ComparisonContent/ComparisonContent";
@@ -52,59 +50,6 @@ const InnerSections = ({
     }
   }, []);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     ScrollTrigger.refresh();
-  //     if (isDesktop) {
-  //       const textBlocks = gsap.utils.toArray(".text-block");
-  //       const rightElements = gsap.utils.toArray(".phoneWrap");
-
-  //       const tl = gsap.timeline({
-  //         scrollTrigger: {
-  //           trigger: "#animation-container",
-  //           start: "top top",
-  //           // start: 'top',
-  //           end: "+=300%",
-  //           pin: true,
-  //           scrub: true,
-  //           // markers: true,
-  //         },
-  //       });
-
-  //       rightElements.forEach((img, i) => {
-  //         if (rightElements[i + 1]) {
-  //           tl.to(
-  //             img,
-  //             {
-  //               opacity: 0,
-  //               // translateY: 40
-  //             },
-  //             "+=0.5"
-  //           )
-  //             .to(rightElements[i + 1], { opacity: 1 }, "<")
-  //             .to(
-  //               textBlocks,
-  //               {
-  //                 yPercent: "-18%",
-  //                 opacity: 0.2,
-  //               },
-  //               "<"
-  //             )
-  //             .to(
-  //               textBlocks[i + 1],
-  //               {
-  //                 yPercent: "18%",
-  //                 opacity: 1,
-  //               },
-  //               "<"
-  //             );
-  //         }
-  //       });
-  //       tl.to({}, {}, "+=0.5");
-  //     }
-  //   }, 500);
-  // }, [isDesktop]);
-
   const toggleHandler = (target) => {
     setDivVisibility((prevVisibility) => ({
       stay: target === "stay" ? !prevVisibility.stay : false,
@@ -113,14 +58,6 @@ const InnerSections = ({
     }));
   };
 
-  const settings = {
-    arrows: false,
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    indicators: true,
-    autoplay: false,
-    infinite: false,
-  };
 
   return (
     <div
@@ -146,13 +83,14 @@ const InnerSections = ({
 
           {/* Stay Updated Mobile */}
           {!isDesktop && (
-            <div className="sm:mx-0">
+            <div className="-mx-6 sm:mx-0">
               <Swiper
                 spaceBetween={-20}
                 slidesPerView={1.15}
                 pagination={{
                   clickable: true,
                 }}
+        
                 modules={[Pagination]}
                 className="!z-auto mobSwiper"
               >
@@ -189,13 +127,14 @@ const InnerSections = ({
           {/* Plan your event mobile*/}
 
           {!isDesktop && (
-            <div className="sm:mx-0">
+            <div className="-mx-6 sm:mx-0">
               <Swiper
                 spaceBetween={-20}
                 slidesPerView={1.15}
                 pagination={{
                   clickable: true,
                 }}
+            
                 modules={[Pagination]}
                 className="!z-auto mobSwiper"
               >
@@ -228,13 +167,14 @@ const InnerSections = ({
             />
           </div>
           {!isDesktop && (
-            <div className="sm:mx-0">
+            <div className="-mx-6 sm:mx-0">
               <Swiper
                 spaceBetween={-20}
                 slidesPerView={1.15}
                 pagination={{
                   clickable: true,
                 }}
+               
                 modules={[Pagination]}
                 className="!z-auto mobSwiper"
               >

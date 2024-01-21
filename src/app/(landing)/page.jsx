@@ -1,5 +1,7 @@
 import React from "react"
-import LandingPage from "../../container/landing"
+// import LandingPage from "../../container/landing"
+import Loader from "@/components/loader";
+import dynamic from "next/dynamic";
 
 export const metadata = {
   title: "OSO",
@@ -7,6 +9,11 @@ export const metadata = {
   keywords: "AI Search, AI Search Engine, web summarizer, website summary tool, Uncensored AI, Unbiased AI, OSO Search, up to date AI",
 }
 
+const DynamicHomePageView = dynamic(() => import('@/container/landing'), {
+  ssr: false
+});
+
+
 export default function Homepage() {
-  return <LandingPage />
+  return <DynamicHomePageView />
 }

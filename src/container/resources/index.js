@@ -32,14 +32,14 @@ const Resources = () => {
       question: "Benefits of OSO?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO introduces an entirely new way to engage with the internet. Packed with three powerful tools – OSO Search, OSO Chat, and OSO News – you can access a wide range of information and engage in conversations without sifting through countless websites and articles. 
       <br /><br />
-      OSO saves you time and offers an entirely new interactive experience, as easy as chatting with a friend. Unlike many competitors whose data is limited to 2021, OSO employs cutting-edge models, ensuring you always have up-to-date, uncensored information.</p>`,
+      OSO saves you time and offers an entirely new interactive experience, as easy as chatting with a friend. Unlike many competitors whose data is limited to 2021 or before, OSO employs cutting-edge models, ensuring you always have up-to-date, uncensored information.</p>`,
     },
     {
       id: 2,
       question: "Why should I choose OSO?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Search is your go-to tool for quick, comprehensive answers. OSO reads through the entire internet to find the latest information and delivers you with results in a visually appealing format. It's your personal research assistant, providing you with real-time, unbiased insights. 
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Search is your go-to tool for quick, comprehensive answers. OSO reads through the entire internet to find the latest information and delivers the results in a visually appealing format. It's your personal research assistant, providing you with real-time, unbiased insights. 
     <br /><br />
-  OSO Chat, on the other hand, is your conversational companion. It engages in interactive, text-based conversations with you. Unlike other chatbots whose data is limited to 2021, OSO Chat was trained up to September 2023 and continuously learns as more questions are asked. Whether you're looking for a friendly chat or need information presented in a conversational format, OSO Chat is your companion of choice.
+  OSO Chat, on the other hand, is your conversational companion. It engages in interactive, text-based conversations with you. Unlike other chatbots whose data is limited to 2021 or before, OSO Chat was trained up to September 2023 and continuously learns as more questions are asked. Whether you're looking for a friendly chat or need information presented in a conversational format, OSO Chat is your companion of choice.
     <br /><br />
   Together, OSO Search and OSO Chat form a powerful combo, quickly giving you the information you need, in the way that suits you best.</p>`,
     },
@@ -55,11 +55,11 @@ const Resources = () => {
     {
       id: 4,
       question: "What is pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will provide great value in productivity and time-savings.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will provide great value in productivity and time-saving.</p>`,
     },
     {
       id: 5,
-      question: "How can I access OSO?",
+      question: "How can I get started?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO AI is available as a Web application, and in the Apple iOS and Google Android app stores.  You can access the latest version of OSO AI from your computer or your mobile device through a single dynamic-link: 
        <a href="https://l.oso.ai/prod" target="_blank" rel="noopener noreferrer">
       <span><strong>https://l.oso.ai/prod</strong></span>
@@ -85,7 +85,7 @@ const Resources = () => {
         </div>
         <div className="flex justify-center items-center py-6 md:py-8">
           <Link
-            href="https://l.oso.ai/NewUser"
+            href="https://l.oso.ai/prod"
             className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
             onClick={handleClick}
           >

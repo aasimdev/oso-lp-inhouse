@@ -2,7 +2,7 @@ import React from "react";
 import NavItem from "./MenuItem";
 
 const navItemsData = [
-  { title: "How People Use OSO", url: "/resource", target: "_self" },
+  // { title: "How People Use OSO", url: "/resource", target: "_self" },
   { title: "Knowledgebase ", url: "https://learn.oso.ai/", target: "_blank" },
   { title: "Search", url: "/search", target: "_self" },
   { title: "Chat", url: "/chat", target: "_self" },
@@ -12,8 +12,8 @@ const navItemsData = [
 ];
 const Menu = ({ isOpen, onClose }) => {
   const sideMenuClasses = isOpen
-    ? "absolute w-screen md:w-[calc(100vw_-_17px)] bg-white z-50 transform translate-y-0 visible opacity-100 transition-all duration-500 overflow-y-auto h-[calc(100vh_-_149px)] custom-scrollbar"
-    : "absolute w-screen md:w-[calc(100vw_-_17px)] bg-white z-50 transform -translate-y-3 invisible opacity-0 transition-all duration-500 overflow-y-auto h-[calc(100vh_-_149px)] custom-scrollbar";
+    ? "absolute w-screen md:w-[calc(100vw_-_17px)] bg-white z-50 transform translate-y-0 visible opacity-100 transition-all duration-500 overflow-y-auto h-[calc(100vh_-_141px)] custom-scrollbar"
+    : "absolute w-screen md:w-[calc(100vw_-_17px)] bg-white z-50 transform -translate-y-3 invisible opacity-0 transition-all duration-500 overflow-y-auto h-[calc(100vh_-_141px)] custom-scrollbar";
   return (
     <div className={sideMenuClasses}>
       <div className="px-6 mx-auto max-w-6xl">

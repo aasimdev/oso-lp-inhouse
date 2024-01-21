@@ -12,8 +12,10 @@ import GoogleAnalytics from "@/utils/google-analytics/anaylics";
 import BrandLogos from "@/components/common/BrandLogos";
 import NewsTestimonials from "@/components/testimonials/News";
 import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding";
+import { useMediaQuery } from "react-responsive";
 
 const NewsView = () => {
+  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
   const accordionData = [
     {
       id: 1,
@@ -28,7 +30,7 @@ const NewsView = () => {
     {
       id: 3,
       question: "What is the pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free for general use. For those who want to customize their news experience based on specific news outlets and topics, OSO costs $20/month.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/month or $16/month when paid annually (17% discount) for a limited time, providing great value in productivity and time-saving.</p>`,
     },
 
     {
@@ -36,19 +38,12 @@ const NewsView = () => {
       question: "How can I request new categories?",
       answer: `<p class="text-2xl leading-9 font-light text-gray-900">Please submit feedback via the OSO mobile app to request an additional news source or category.</p>`,
     },
-     {
-      id: 5,
-      question: "What are the perks of being an OSO Ambassador?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Ambassadors earn passive income each month when anyone they invite to OSO subscribes to OSO Pro.
-       </p>`,
-    },
-
     {
-      id: 6,
+      id: 5,
       question: "How do I get started?",
-        answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is available on Android, iOS, and Web. You can access OSO AI by going to this <span><strong><a href="https://l.oso.ai/newuser" target="_blank">link<a/></strong></span> and completing a quick 2 minute survey.
+        answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is available on Android, iOS, and Web. You can access OSO AI by going to this <span><strong><a href="https://l.oso.ai/prod" target="_blank">link<a/></strong></span> and completing a quick 2 minute survey.
       <br><br>
-      An OSO Pro subscription is required to access all of the Pro features.  With OSO Pro, you get our most advanced Uncensored model with faster search results and unlimited Chats and Searches. </p>`,
+      An OSO Pro subscription is required to access all of the Pro features.  With OSO Pro, you get our most advanced Uncensored model with faster search results, and unlimited Chats and Searches. </p>`,
     },
   ];
   const comparisonContent = [
@@ -74,12 +69,16 @@ const NewsView = () => {
       <Banner
         title="Stay informed effortlessly with OSO's Interactive AI News"
         description="OSO transforms how you consume the news with AI-powered summaries and interactive chat."
-        videoId="gAfKNS92eYM"
+        src="news-video.mp4"
+        poster="news-video-poster.jpg"
         checklist={['Interactive', 'Up-to-date', 'Unbiased']}
       />
 
       <BrandLogos />
-       <OSOUseCaseLanding type="news" />
+
+      {isDesktop &&
+        <OSOUseCaseLanding type="news" />
+      }
 
       <Advantages title="Advantages of OSO News" page="news">
         <AdvantageCard

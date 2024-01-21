@@ -79,7 +79,7 @@ const BenefitFromOSO = () => {
       </div>
       <div className="flex justify-center items-center py-8 w-full px-6">
       <Link
-            href="https://l.oso.ai/NewUser"
+            href="https://l.oso.ai/prod"
             className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
             onClick={handleClick}
           >

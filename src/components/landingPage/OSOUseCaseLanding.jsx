@@ -1,31 +1,28 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation } from "swiper/modules";
 import { useMediaQuery } from "react-responsive";
 import { shortVideosData } from "@/constant/usecase";
-import UseCaseCard from "../usecaseCard";
 import Button from "../common/Button";
 import "swiper/css";
 import "swiper/css/navigation";
 // import "swiper/css/pagination"
 import "swiper/css/free-mode";
+import ShortVideo from "../usecase/ShortVideo";
 
 const OSOUseCaseLanding = ({ type }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
-  // const slidesOffsetBefore = isDesktop ? 100 : 0;
 
   const videoData = useMemo(() => {
     return shortVideosData.filter((v) => v.type.includes(type));
   }, [type]);
-
-  // const videoData = videoData?.slice(0, 6);
 
   return (
     <>
       <section className="px-6 mx-auto max-w-6xl">
         <div className="md:text-center text-satrt pt-16 pb-16 md:pt-16 mx-2">
           <h3 className="text-[40px] md:text-5xl font-extrabold text-black md:leading-[64px] leading-tight">
-            Discover how people are using OSO
+            Discover what people love about OSO
           </h3>
         </div>
 
@@ -42,7 +39,7 @@ const OSOUseCaseLanding = ({ type }) => {
             // }}
             freeMode={true}
             observer={true}
-       
+
             modules={[FreeMode, Navigation]}
             grabCursor={false}
             breakpoints={{
@@ -113,11 +110,7 @@ const OSOUseCaseLanding = ({ type }) => {
             {videoData &&
               videoData.map((v, index) => (
                 <SwiperSlide key={index}>
-                  <UseCaseCard
-                    videoId={v.videoId}
-                    category={v.category}
-                    title={v.title}
-                  />
+                  <ShortVideo videoId={v.videoId} category={v.category} title={v.title}/>
                 </SwiperSlide>
               ))}
           </Swiper>
@@ -127,7 +120,7 @@ const OSOUseCaseLanding = ({ type }) => {
           <Button
             label="Try OSO"
             arrowIcon={true}
-            link="https://l.oso.ai/NewUser"
+            link="https://l.oso.ai/prod"
             target="_blank"
           />
         </div>

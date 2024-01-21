@@ -21,7 +21,7 @@ const Hero = () => {
           </p>
         </div>
           <div className="md:flex justify-center items-center pt-8 md:pt-6">
-            <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank"/>
+            <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/prod" target="_blank"/>
           </div>
 
           <div className="mt-6 md:mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">
@@ -30,7 +30,7 @@ const Hero = () => {
             <CheckListItem title="Up-to-date" />
           </div>
 
-          <Video videoId="v1Z1rmm4SqU" />
+          <Video src="lp-video.mp4" poster="lp-video-poster.jpg"/>
         </div>
       </div>
     </section>

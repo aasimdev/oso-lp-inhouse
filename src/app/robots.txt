@@ -1,0 +1,10 @@
+User-Agent: *
+Disallow: https://www.oso.ai/?via
+Disallow: https://www.oso.ai/?via=dalton
+Disallow: https://www.oso.ai/?via=chrisina
+Disallow: https://learn.oso.ai/
+Disallow: https://friends.oso.ai/
+Disallow: https://www.oso.ai/?via=gerardo
+Disallow: 
+
+Sitemap: https://www.oso.ai/sitemap.xml

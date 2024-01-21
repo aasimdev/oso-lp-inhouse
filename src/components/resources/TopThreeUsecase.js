@@ -1,7 +1,7 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import { shortVideosData } from "@/constant/usecase";
-import UseCaseCard from "../usecaseCard";
 import Link from "next/link";
+import ShortVideo from "../usecase/ShortVideo";
 
 const TopThreeUsecase = () => {
   const [startVideo, setStartVideo] = useState(false);
@@ -46,12 +46,11 @@ const TopThreeUsecase = () => {
 
   const memoizedTikTokEmbedComponents = useMemo(() => {
     return videoData.map((v, i) => (
-      <UseCaseCard
-        key={i}
-        videoId={v.videoId}
-        category={v.category}
-        title={v.title}
-      />
+      <ShortVideo  key={i}
+      videoId={v.videoId}
+      category={v.category}
+      title={v.title}/>
+      
     ));
   }, [videoData]);
 
@@ -70,7 +69,7 @@ const TopThreeUsecase = () => {
       </div>
       <div className="flex justify-center items-center pb-6 md:pt-8 w-full">
         <Link
-          href="https://l.oso.ai/NewUser"
+          href="https://l.oso.ai/prod"
           className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
           onClick={handleClick}
         >

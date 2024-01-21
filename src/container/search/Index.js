@@ -14,8 +14,10 @@ import FAQ from "@/components/FAQ/Index";
 import Comparisons from "@/components/common/Comparisons/Comparisons";
 import InnerSections from "@/components/common/Comparisons/InnerSections/InnerSections";
 import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding";
+import { useMediaQuery } from "react-responsive";
 
 const SearchView = () => {
+  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
   const accordionData = [
     {
       id: 1,
@@ -39,21 +41,14 @@ to traditional search engines. By harnessing the power of advanced AI technology
     {
       id: 3,
       question: "What is the pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Search is free to use with daily usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will provide great value in productivity and time-savings.</p>`,
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/month or $16/month when paid annually (17% discount) for a limited time, providing great value in productivity and time-saving.</p>`,
     },
-     {
-      id: 4,
-      question: "What are the perks of being an OSO Ambassador?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Ambassadors earn passive income each month when anyone they invite to OSO subscribes to OSO Pro. 
-       </p>`,
-    },
-
     {
-      id: 5,
+      id: 4,
       question: "How do I get started?",
-       answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is available on Android, iOS, and Web. You can access OSO AI by going to this <span><strong><a href="https://l.oso.ai/newuser" target="_blank">link<a/></strong></span> and completing a quick 2 minute survey.
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is available on Android, iOS, and Web. You can access OSO AI by going to this <span><strong><a href="https://l.oso.ai/prod" target="_blank">link<a/></strong></span> and completing a quick 2 minute survey.
       <br><br>
-      An OSO Pro subscription is required to access all of the Pro features.  With OSO Pro, you get our most advanced Uncensored model with faster search results and unlimited Chats and Searches. </p>`,
+      An OSO Pro subscription is required to access all of the Pro features.  With OSO Pro, you get our most advanced Uncensored model with faster search results, and unlimited Chats and Searches. </p>`,
     },
   ];
   return (
@@ -61,10 +56,13 @@ to traditional search engines. By harnessing the power of advanced AI technology
       <Banner
         title="Experience the Future of Search"
         description="Find what you’re looking for faster by letting OSO do the searching for you."
-        videoId="7y2r9MrUeQ8"
+        src="search-video.mp4"
+        poster="search-video-poster.jpg"
         checklist={['Uncensored', 'Up-to-date', 'Unbiased']}
       />
-      <OSOUseCaseLanding type="search" />
+      {isDesktop &&
+        <OSOUseCaseLanding type="search" />
+      }
       {/* <Testimonials /> */}
 
       <Advantages title="Advantages of OSO Search">

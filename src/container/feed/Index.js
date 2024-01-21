@@ -12,15 +12,19 @@ import UpdatePhone2 from "../../../public/assets/images/updatephone-2.png"
 
 import FAQ from "@/components/FAQ/Index"
 import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding"
+import { useMediaQuery } from "react-responsive"
 
 const FeedView = () => {
+  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
   return (
     <>
       <Banner
         title='OSO Feed'
         description='Summarize your custom news, then inquire with specific questions.'
       />
-      <OSOUseCaseLanding type="feed" />
+          {isDesktop &&
+        <OSOUseCaseLanding type="feed" />
+      }
       {/* <Testimonials /> */}
 
       <Advantages title='Advantages of OSO Feed'>

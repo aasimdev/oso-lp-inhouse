@@ -18,7 +18,7 @@ const Comparisons = ({ title, children }) => {
             arrowIcon={true}
             formId={"ComparisonFormId"}
           /> */}
-          <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/NewUser" target="_blank"/>
+          <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/prod" target="_blank"/>
         </div>
       </div>
     </section>

@@ -148,11 +148,11 @@ const Header = () => {
     <>
       <div className="bg-black text-center py-4 sm:py-2 px-0 sm:px-6">
         <div className="text-white text-sm sm:text-sm">
-          <strong>OSO Early Access is Live!🔥</strong> {" "}
+          <strong>OSO is Live!🔥</strong> {" "}
           <span>
             <Link
               className="underline"
-              href="https://l.oso.ai/NewUser"
+              href="https://l.oso.ai/prod"
               target="_blank"
             >
               Try OSO Now
@@ -249,7 +249,7 @@ const Header = () => {
                 </button>
               </form> */}
 
-              <Link href="https://l.oso.ai/NewUser" target="_blank" className="!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn !hidden sm:!inline-flex">Try OSO</Link>
+              <Link href="https://l.oso.ai/prod" target="_blank" className="!py-[11px] !px-[23.25px] !text-base !w-[137px] theme-btn !hidden sm:!inline-flex">Try OSO</Link>
 
               {showSidebar ? (
                 <button

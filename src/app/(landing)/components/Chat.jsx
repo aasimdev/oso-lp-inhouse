@@ -64,9 +64,7 @@ const Chat = () => {
         </div>
       </div>
       <div className="absolute md:top-16 md:right-16 bottom-8 right-8 z-[1]">
-        <div
-          className={`inline-flex items-center gap-3 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2 }`}
-        >
+        <div className="inline-flex items-center gap-3 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
           <span>Learn more</span>
 
           <svg

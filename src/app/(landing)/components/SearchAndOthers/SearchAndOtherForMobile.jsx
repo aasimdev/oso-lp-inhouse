@@ -24,16 +24,16 @@ const SearchAndOtherForMobile = () => {
       },
       { threshold: 1 }
     );
-  
-    const currentTargetDiv = targetDivRef.current; 
-  
-    observer.observe(currentTargetDiv); 
-  
+
+    const currentTargetDiv = targetDivRef.current;
+
+    observer.observe(currentTargetDiv);
+
     return () => {
-      observer.unobserve(currentTargetDiv); 
+      observer.unobserve(currentTargetDiv);
     };
-  }, []); 
-  
+  }, []);
+
   return (
     <div
       ref={targetDivRef}
@@ -65,9 +65,7 @@ const SearchAndOtherForMobile = () => {
         className="!z-auto flex"
       >
         <SwiperSlide className=" pb-20 ">
-          <div
-            className={` bg-gradient-to-b from-[#ffffff00] to-[#8CDCD0] hover:from-[#ffffff00] hover:to-[#58C2B1] bg-blue-100 w-full md:w-[532px]  group  p-8 rounded-2xl flex flex-col`}
-          >
+          <div className="bg-gradient-to-b from-[#ffffff00] to-[#8CDCD0] hover:from-[#ffffff00] hover:to-[#58C2B1] bg-blue-100 w-full md:w-[532px]  group  p-8 rounded-2xl flex flex-col">
             <div>
               <p className="text-[32px] md:text-5xl font-bold">OSO Search</p>
               <p className="text-2xl font-light mt-2">
@@ -91,21 +89,19 @@ const SearchAndOtherForMobile = () => {
                   </p>
                 </div>
               ) : (
-                <div
-                  className={`text-[40px] font-normal rounded-[20px] mt-[56px] `}
-                >
+                <div className="text-[40px] font-normal rounded-[20px] mt-[56px]">
                   <Typewriter
                     onInit={(typewriter) => {
-                     typewriter
-                          .changeDelay(40)
-                          .typeString(
-                            "Where is the best sushi restaurant in Prague? 🍣"
-                          )
-                          .pauseFor(2000)
-                          .callFunction(() => {
-                            setStringTypeOut(true);
-                          })
-                          .start();
+                      typewriter
+                        .changeDelay(40)
+                        .typeString(
+                          "Where is the best sushi restaurant in Prague? 🍣"
+                        )
+                        .pauseFor(2000)
+                        .callFunction(() => {
+                          setStringTypeOut(true);
+                        })
+                        .start();
                     }}
                   />
                 </div>
@@ -130,9 +126,7 @@ const SearchAndOtherForMobile = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className=" pb-20">
-          <div
-            className={`bg-blue-100 bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] w-full md:w-[532px]   p-8 rounded-2xl flex flex-col  `}
-          >
+          <div className="bg-blue-100 bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] w-full md:w-[532px]   p-8 rounded-2xl flex flex-col">
             <div>
               <p className="text-[32px] md:text-5xl font-bold">Others</p>
               <p className="text-2xl font-light mt-2">
@@ -145,28 +139,26 @@ const SearchAndOtherForMobile = () => {
             <div className="h-[400px]">
               {isTypingStarted && stringTypeOut ? (
                 <div className="bg-black text-white rounded-[20px] p-4  md:mt-16 mt-[56px]">
-                  <p className="text-xl md:text-2xl font-normal">I 
-                    don&apos;t have access to real-time information or current
+                  <p className="text-xl md:text-2xl font-normal">
+                    I don&apos;t have access to real-time information or current
                     restaurant reviews, as my knowledge was last updated in
                     September 2021.
                   </p>
                 </div>
               ) : (
-                <div
-                  className={`text-[40px] font-normal rounded-[20px] mt-[56px]   `}
-                >
+                <div className="text-[40px] font-normal rounded-[20px] mt-[56px]">
                   <Typewriter
                     onInit={(typewriter) => {
-                        typewriter
-                          .changeDelay(40)
-                          .typeString(
-                            "Where is the best sushi restaurant in Prague? 🍣"
-                          )
-                          .pauseFor(2000)
-                          .callFunction(() => {
-                            setStringTypeOut(true);
-                          })
-                          .start();
+                      typewriter
+                        .changeDelay(40)
+                        .typeString(
+                          "Where is the best sushi restaurant in Prague? 🍣"
+                        )
+                        .pauseFor(2000)
+                        .callFunction(() => {
+                          setStringTypeOut(true);
+                        })
+                        .start();
                     }}
                   />
                 </div>

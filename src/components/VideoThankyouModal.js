@@ -88,12 +88,8 @@ const Video = ({ src, videoId, variant }) => {
   };
 
   return (
-    <div
-      className={`mx-auto max-w-[800px] overflow-hidden text-center h-video relative rounded-lg`}
-    >
-      <div
-        className={`w-full max-w-[800px] absolute left-0 top-0 right-0 bottom-0 overflow-hidden -z-10 transition-all duration-300 rounded-lg`}
-      />
+    <div className="mx-auto max-w-[800px] overflow-hidden text-center h-video relative rounded-lg">
+      <div className="w-full max-w-[800px] absolute left-0 top-0 right-0 bottom-0 overflow-hidden -z-10 transition-all duration-300 rounded-lg" />
       {videoId ? (
         <iframe
           id="ytplayer"

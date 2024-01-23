@@ -44,9 +44,7 @@ const SearchAndOtherForLaptop = () => {
       className="flex flex-col lg:flex-row lg:gap-6 md:gap-14 gap-12 justify-between pt-16 md:pt-0"
       ref={targetDivRef}
     >
-      <div
-        className={`bg-blue-100 w-full px-8 lg:p-16 p-8 rounded-2xl group relative overflow-hidden transition-all duration-300`}
-      >
+      <div className="bg-blue-100 w-full px-8 lg:p-16 p-8 rounded-2xl group relative overflow-hidden transition-all duration-300">
         <div className="bg-gradient-to-b from-[#73b2a800] to-[#8CDCD0] group-hover:from-[#73b2a800] group-hover:to-[#58C2B1] absolute left-0 top-0 right-0 bottom-0 w-full h-full transition-all duration-300 hover:transition-all hover:duration-300" />
         <Link
           href="/search"
@@ -118,9 +116,7 @@ const SearchAndOtherForLaptop = () => {
         </div>
       </div>
 
-      <div
-        className={`bg-blue-100 w-full px-8 lg:p-16 p-8 rounded-2xl group relative overflow-hidden`}
-      >
+      <div className="bg-blue-100 w-full px-8 lg:p-16 p-8 rounded-2xl group relative overflow-hidden">
         <div className="bg-gradient-to-b from-[#F6F9FA] to-[#DEDEDE] absolute left-0 top-0 right-0 bottom-0 w-full h-full" />
         <div className="relative z-10">
           <p className="text-[32px] md:text-5xl font-bold">Others</p>
@@ -136,7 +132,7 @@ const SearchAndOtherForLaptop = () => {
                     <p className="text-2xl font-normal ">
                       I don&apos;t have access to real-time information or
                       current restaurant reviews, as my knowledge was last
-                      updated in September 2021. 
+                      updated in September 2021.
                     </p>
                   </div>
                 ) : (

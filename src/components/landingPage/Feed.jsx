@@ -4,9 +4,7 @@ import React from "react";
 
 const Feed = () => {
   return (
-    <div
-      className={`rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:h-[571px] h-[639px] md:h-full group z-0 md:mt-14 mt-12 lp-feed-box`}
-    >
+    <div className="rounded-2xl lg:p-16 p-8 relative overflow-hidden lg:h-[571px] h-[639px] md:h-full group z-0 md:mt-14 mt-12 lp-feed-box">
       <Link
         href="/news"
         className="absolute left-0 top-0 bottom-0 right-0 w-full h-full z-20"
@@ -49,17 +47,15 @@ const Feed = () => {
         </div>
       </div>
 
-      <div
-        className={`md:absolute bottom-0  mt-4 md:mt-0 -mb-8 lg:mb-0  lg:order-2 right-16`}
-      >
+      <div className="md:absolute bottom-0  mt-4 md:mt-0 -mb-8 lg:mb-0  lg:order-2 right-16">
         <Image
           src="/assets/images/feed-phone.png"
           alt="Example SVG"
           width={250.8}
           height={653.895}
           className="hidden md:block"
-        // title={title}
-        // alt={title}
+          // title={title}
+          // alt={title}
         />
         <Image
           src="/assets/images/Feed.png"
@@ -73,9 +69,7 @@ const Feed = () => {
       </div>
 
       <div className="absolute md:top-16 md:right-16 bottom-8 right-8 z-[1]">
-        <div
-          className={`inline-flex items-center gap-3 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2 }`}
-        >
+        <div className="inline-flex items-center gap-3 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
           <span>Learn more</span>
 
           <svg

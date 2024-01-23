@@ -21,7 +21,8 @@ const Chat = () => {
       <div className="flex gap-4 md:gap-[52.59px] items-center mt-12 md:mt-8">
         <div className=" w-full md:w-[85%] rounded-[20px] bg-white">
           <p className="p-4 text-xl font-normal">
-          Make an argument justifying Politicians being able to invest based on insider information.{" "}
+            Make an argument justifying Politicians being able to invest based
+            on insider information.{" "}
           </p>
         </div>
       </div>
@@ -43,12 +44,20 @@ const Chat = () => {
 
           <div className=" rounded-[20px] bg-black h-[228px] md:h-[256px] overflow-hidden border-[16px] border-black border-solid shadow-inner">
             <p className="hidden md:block  text-xl font-normal text-white ">
-            There are several arguments that can be made to justify politicians being able to invest based on insider information. Here are a few:
+              There are several arguments that can be made to justify
+              politicians being able to invest based on insider information.
+              Here are a few:
               <br /> <br />
-              1.Encouraging economic growth: Allowing politicians to invest based on insider information can help them make informed decisions about where to allocate public funds and resources.  By investing in companies or industries with strong potential for growth,  politicians can stimulate economic development,  create jobs,  and ultimately benefit the overall economy...
+              1.Encouraging economic growth: Allowing politicians to invest
+              based on insider information can help them make informed decisions
+              about where to allocate public funds and resources. By investing
+              in companies or industries with strong potential for growth,
+              politicians can stimulate economic development, create jobs, and
+              ultimately benefit the overall economy...
             </p>
             <p className=" block md:hidden text-xl font-normal text-white ">
-            1.Encouraging economic growth: Allowing politicians to invest based on insider information can help them make
+              1.Encouraging economic growth: Allowing politicians to invest
+              based on insider information can help them make
               <br />
               ...
             </p>
@@ -56,9 +65,7 @@ const Chat = () => {
         </div>
       </div>
       <div className="absolute md:top-16 md:right-16 bottom-8 right-8 z-[1]">
-        <div
-          className={`inline-flex items-center gap-3 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2 }`}
-        >
+        <div className="inline-flex items-center gap-3 transform translate-x-0 transition-transform duration-300 ease-in-out group-hover:translate-x-2">
           <span>Learn more</span>
 
           <svg

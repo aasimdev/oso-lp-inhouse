@@ -141,28 +141,31 @@ const Testimonials = ({ title }) => {
               </div>
             </>
           )}
-          {testimonialData &&
-            testimonialData.map((item, index) => (
-              <SwiperSlide key={index} className="!h-auto">
-                <TestimonialItem
-                  name={item.name}
-                  description={item.description}
-                  image={item.image}
-                />
-              </SwiperSlide>
-            ))}
+          {testimonialData?.map((item, index) => (
+            <SwiperSlide key={index} className="!h-auto">
+              <TestimonialItem
+                name={item?.name}
+                description={item?.description}
+                image={item?.image}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
-     
-        <div className="px-6 mt-12 mb-6 md:mb-8 mx-auto max-w-6xl text-center">
-          {/* <NewsLetter
+
+      <div className="px-6 mt-12 mb-6 md:mb-8 mx-auto max-w-6xl text-center">
+        {/* <NewsLetter
             label={`Join Waitlist`}
             arrowIcon
             formId={"TestimonialFormId"}
           /> */}
-          <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/prod" target="_blank"/>
-        </div>
-      
+        <Button
+          label="Try OSO"
+          arrowIcon={true}
+          link="https://l.oso.ai/prod"
+          target="_blank"
+        />
+      </div>
     </section>
   );
 };

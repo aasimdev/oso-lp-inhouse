@@ -39,7 +39,6 @@ const OSOUseCaseLanding = ({ type }) => {
             // }}
             freeMode={true}
             observer={true}
-
             modules={[FreeMode, Navigation]}
             grabCursor={false}
             breakpoints={{
@@ -98,21 +97,23 @@ const OSOUseCaseLanding = ({ type }) => {
                   />
                 </svg>
               </div>
-              {isDesktop &&
+              {isDesktop && (
                 <>
                   <div className="bg-gradient-slider w-52 h-full absolute left-0 top-0 z-10 rotate-180 l-gr-control"></div>
                   <div className="bg-gradient-slider w-52 h-full absolute right-0 top-0 z-10 r-gr-control"></div>
                 </>
-
-              }
+              )}
             </>
 
-            {videoData &&
-              videoData.map((v, index) => (
-                <SwiperSlide key={index}>
-                  <ShortVideo videoId={v.videoId} category={v.category} title={v.title}/>
-                </SwiperSlide>
-              ))}
+            {videoData?.map((v, index) => (
+              <SwiperSlide key={index}>
+                <ShortVideo
+                  videoId={v?.videoId}
+                  category={v?.category}
+                  title={v?.title}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
 

@@ -189,16 +189,15 @@ function SeenOn({}) {
               </div>
             </>
           )}
-          {testimonialData &&
-            testimonialData.map((item, index) => (
-              <SwiperSlide key={index} className="!h-auto">
-                <TestimonialItem
-                  name={item.name}
-                  description={item.description}
-                  image={item.image}
-                />
-              </SwiperSlide>
-            ))}
+          {testimonialData?.map((item, index) => (
+            <SwiperSlide key={index} className="!h-auto">
+              <TestimonialItem
+                name={item?.name}
+                description={item?.description}
+                image={item?.image}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
       <FAQ accordionData={accordionData} />

@@ -25,15 +25,24 @@ const Banner = ({ title, description, videoId, src, checklist, poster }) => {
               label="Join Waitlist"
               formId={"BannerFormId"}
             /> */}
-            <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/prod" target="_blank"/>
+            <Button
+              label="Try OSO"
+              arrowIcon={true}
+              link="https://l.oso.ai/prod"
+              target="_blank"
+            />
           </div>
 
           <div className="mt-6 md:mt-8 flex md:justify-center justify-start gap-6 sm:gap-8 md:flex-nowrap flex-wrap">
-            {checklist && checklist.map((item, index) => (
-              <CheckListItem title={item} key={index}/>
+            {checklist?.map((item, index) => (
+              <CheckListItem title={item} key={index} />
             ))}
           </div>
-          <Video videoId={videoId || undefined} src={src || undefined} poster={poster}/>
+          <Video
+            videoId={videoId || undefined}
+            src={src || undefined}
+            poster={poster}
+          />
         </div>
       </div>
     </section>

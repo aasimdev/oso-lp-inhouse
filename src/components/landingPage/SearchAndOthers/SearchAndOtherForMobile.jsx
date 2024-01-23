@@ -14,8 +14,8 @@ const SearchAndOtherForMobile = () => {
   const [stringTypeOut, setStringTypeOut] = useState(false);
   const targetDivRef = useRef(null);
   useEffect(() => {
-    const currentTargetDiv = targetDivRef.current; 
-  
+    const currentTargetDiv = targetDivRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -26,14 +26,14 @@ const SearchAndOtherForMobile = () => {
       },
       { threshold: 1 }
     );
-  
-    observer.observe(currentTargetDiv); 
-  
+
+    observer.observe(currentTargetDiv);
+
     return () => {
-      observer.unobserve(currentTargetDiv); 
+      observer.unobserve(currentTargetDiv);
     };
   }, []);
-  
+
   return (
     <div
       ref={targetDivRef}
@@ -96,16 +96,16 @@ const SearchAndOtherForMobile = () => {
                 >
                   <Typewriter
                     onInit={(typewriter) => {
-                     typewriter
-                          .changeDelay(40)
-                          .typeString(
-                            "Where is the best sushi restaurant near me? 🍣"
-                          )
-                          .pauseFor(2000)
-                          .callFunction(() => {
-                            setStringTypeOut(true);
-                          })
-                          .start();
+                      typewriter
+                        .changeDelay(40)
+                        .typeString(
+                          "Where is the best sushi restaurant near me? 🍣"
+                        )
+                        .pauseFor(2000)
+                        .callFunction(() => {
+                          setStringTypeOut(true);
+                        })
+                        .start();
                     }}
                   />
                 </div>
@@ -145,28 +145,26 @@ const SearchAndOtherForMobile = () => {
             <div className="h-[400px]">
               {isTypingStarted && stringTypeOut ? (
                 <div className="bg-black text-white rounded-[20px] p-4  md:mt-16 mt-[56px]">
-                  <p className="text-xl md:text-2xl font-normal">I 
-                    don&apos;t have access to real-time information or current
+                  <p className="text-xl md:text-2xl font-normal">
+                    I don&apos;t have access to real-time information or current
                     restaurant reviews, as my knowledge was last updated in
-                    September 2021. 
+                    September 2021.
                   </p>
                 </div>
               ) : (
-                <div
-                  className={`text-[40px] font-normal rounded-[20px] mt-[56px]   `}
-                >
+                <div className="text-[40px] font-normal rounded-[20px] mt-[56px]">
                   <Typewriter
                     onInit={(typewriter) => {
-                        typewriter
-                          .changeDelay(40)
-                          .typeString(
-                            "Where is the best sushi restaurant near me? 🍣"
-                          )
-                          .pauseFor(2000)
-                          .callFunction(() => {
-                            setStringTypeOut(true);
-                          })
-                          .start();
+                      typewriter
+                        .changeDelay(40)
+                        .typeString(
+                          "Where is the best sushi restaurant near me? 🍣"
+                        )
+                        .pauseFor(2000)
+                        .callFunction(() => {
+                          setStringTypeOut(true);
+                        })
+                        .start();
                     }}
                   />
                 </div>

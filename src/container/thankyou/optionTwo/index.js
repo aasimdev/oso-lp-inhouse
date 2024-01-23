@@ -59,7 +59,7 @@ const ThankYouViewTwo = () => {
               </div>
             </div>
             <div className="flex flex-row gap-1 md:gap-4">
-              <button className={`px-4 py-2`}>
+              <button className="px-4 py-2">
                 {isMobile ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +116,7 @@ const ThankYouViewTwo = () => {
                   </svg>
                 )}
               </button>
-              <button className={`px-4 py-2`}>
+              <button className="px-4 py-2">
                 {isMobile ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -145,7 +145,7 @@ const ThankYouViewTwo = () => {
                   </svg>
                 )}
               </button>
-              <button className={`px-4 py-2`}>
+              <button className="px-4 py-2">
                 {isMobile ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +198,7 @@ const ThankYouViewTwo = () => {
                   </svg>
                 )}
               </button>
-              <button className={`px-4 py-2`}>
+              <button className="px-4 py-2">
                 {isMobile ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -243,7 +243,7 @@ const ThankYouViewTwo = () => {
                   </svg>
                 )}
               </button>
-              <button className={`px-4 py-2`}>
+              <button className="px-4 py-2">
                 {isMobile ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -276,7 +276,7 @@ const ThankYouViewTwo = () => {
                   </svg>
                 )}
               </button>
-              <button className={`px-4 py-2`}>
+              <button className="px-4 py-2">
                 {isMobile ? (
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

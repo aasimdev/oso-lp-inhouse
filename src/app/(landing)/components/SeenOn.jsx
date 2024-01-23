@@ -65,12 +65,12 @@ function SeenOn({}) {
     {
       id: 1,
       question: "Why should I choose OSO?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO offers a more advanced and user-friendly suite of AI tools and services than any competitor and is constantly evolving, putting the needs of its users first.</p>`,
+      answer: `<p class='text-2xl leading-9 font-light text-gray-900'>OSO offers a more advanced and user-friendly suite of AI tools and services than any competitor and is constantly evolving, putting the needs of its users first.</p>`,
     },
     {
       id: 2,
       question: "What is the difference between OSO Search and Chat?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">AI Chatbots are limited in the real-time information they can gather due to how they are created and trained.
+      answer: `<p class='text-2xl leading-9 font-light text-gray-900'>AI Chatbots are limited in the real-time information they can gather due to how they are created and trained.
       <br /><br />
       OSO Search solves this by using AI to scan the internet for the latest information about your question and provides a static answer.
       <br /><br />
@@ -81,18 +81,18 @@ function SeenOn({}) {
     {
       id: 3,
       question: "What does uncensored & unbiased mean?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO believes in unrestricted access to knowledge; therefore, many of the censorship constraints surrounding topics on other AI platforms are lifted with OSO Chat. By creating our own uncensored LLM, we are able to provide users with an AI Chat that is actually useful to them and can give them the answers they need.<br /><br />Unbiased, means that we train OSO models with all available information and always try our best to take a neutral stance, outside of politics or popular opinion. We believe in letting our users make their own decisions on complex subjects.</p>`,
+      answer: `<p class='text-2xl leading-9 font-light text-gray-900'>OSO believes in unrestricted access to knowledge; therefore, many of the censorship constraints surrounding topics on other AI platforms are lifted with OSO Chat. By creating our own uncensored LLM, we are able to provide users with an AI Chat that is actually useful to them and can give them the answers they need.<br /><br />Unbiased, means that we train OSO models with all available information and always try our best to take a neutral stance, outside of politics or popular opinion. We believe in letting our users make their own decisions on complex subjects.</p>`,
     },
 
     {
       id: 4,
       question: "What is the pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/month or $16/month when paid annually (17% discount) for a limited time, providing great value in productivity and time-saving.</p>`,
+      answer: `<p class='text-2xl leading-9 font-light text-gray-900'>OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/month or $16/month when paid annually (17% discount) for a limited time, providing great value in productivity and time-saving.</p>`,
     },
     {
       id: 5,
       question: "How do I get started?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
+      answer: `<p class='text-2xl leading-9 font-light text-gray-900'>OSO currently has a huge demand from people across the world, and we are letting in users from the waitlist as quickly as possible. Once you gain access, you can use OSO from Web, Android, and iOS.</p>`,
     },
   ];
 

@@ -26,52 +26,40 @@ const Resources = () => {
 
     // Your Play Store URL
   }, []);
+
   const accordionData = [
     {
       id: 1,
       question: "Benefits of OSO?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO introduces an entirely new way to engage with the internet. Packed with three powerful tools – OSO Search, OSO Chat, and OSO News – you can access a wide range of information and engage in conversations without sifting through countless websites and articles. 
-      <br /><br />
-      OSO saves you time and offers an entirely new interactive experience, as easy as chatting with a friend. Unlike many competitors whose data is limited to 2021 or before, OSO employs cutting-edge models, ensuring you always have up-to-date, uncensored information.</p>`,
+      answer:
+        '<p class="text-2xl leading-9 font-light text-gray-900">OSO introduces an entirely new way to engage with the internet. Packed with three powerful tools – OSO Search, OSO Chat, and OSO News – you can access a wide range of information and engage in conversations without sifting through countless websites and articles. <br /><br />OSO saves you time and offers an entirely new interactive experience, as easy as chatting with a friend. Unlike many competitors whose data is limited to 2021 or before, OSO employs cutting-edge models, ensuring you always have up-to-date, uncensored information.</p>',
     },
     {
       id: 2,
       question: "Why should I choose OSO?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO Search is your go-to tool for quick, comprehensive answers. OSO reads through the entire internet to find the latest information and delivers the results in a visually appealing format. It's your personal research assistant, providing you with real-time, unbiased insights. 
-    <br /><br />
-  OSO Chat, on the other hand, is your conversational companion. It engages in interactive, text-based conversations with you. Unlike other chatbots whose data is limited to 2021 or before, OSO Chat was trained up to September 2023 and continuously learns as more questions are asked. Whether you're looking for a friendly chat or need information presented in a conversational format, OSO Chat is your companion of choice.
-    <br /><br />
-  Together, OSO Search and OSO Chat form a powerful combo, quickly giving you the information you need, in the way that suits you best.</p>`,
+      answer:
+        "<p class=\"text-2xl leading-9 font-light text-gray-900\">OSO Search is your go-to tool for quick, comprehensive answers. OSO reads through the entire internet to find the latest information and delivers the results in a visually appealing format. It's your personal research assistant, providing you with real-time, unbiased insights. <br /><br />OSO Chat, on the other hand, is your conversational companion. It engages in interactive, text-based conversations with you. Unlike other chatbots whose data is limited to 2021 or before, OSO Chat was trained up to September 2023 and continuously learns as more questions are asked. Whether you're looking for a friendly chat or need information presented in a conversational format, OSO Chat is your companion of choice. <br /><br />Together, OSO Search and OSO Chat form a powerful combo, quickly giving you the information you need, in the way that suits you best.</p>",
     },
     {
       id: 3,
       question: "How is it different than other AI?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">At OSO, we're all about unrestricted and open access to knowledge. With OSO Chat, we've removed many of the censorship constraints you might encounter on other AI platforms. Our own uncensored LLM enables OSO Chat to provide users with useful, straightforward answers.
-  <br /><br />
-  When we say "unbiased," we mean we train OSO models to take a neutral stance, free from political or popular opinion. We believe in empowering users to form their own conclusions on complex subjects by presenting information objectively.</p>`,
+      answer:
+        '<p class="text-2xl leading-9 font-light text-gray-900">At OSO, we\'re all about unrestricted and open access to knowledge. With OSO Chat, we\'ve removed many of the censorship constraints you might encounter on other AI platforms. Our own uncensored LLM enables OSO Chat to provide users with useful, straightforward answers. <br /><br />When we say "unbiased," we mean we train OSO models to take a neutral stance, free from political or popular opinion. We believe in empowering users to form their own conclusions on complex subjects by presenting information objectively.</p>',
     },
-  
-
     {
       id: 4,
       question: "What is pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will provide great value in productivity and time-saving.</p>`,
+      answer:
+        '<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/mo and will provide great value in productivity and time-saving.</p>',
     },
     {
       id: 5,
       question: "How can I get started?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO AI is available as a Web application, and in the Apple iOS and Google Android app stores.  You can access the latest version of OSO AI from your computer or your mobile device through a single dynamic-link: 
-       <a href="https://l.oso.ai/prod" target="_blank" rel="noopener noreferrer">
-      <span><strong>https://l.oso.ai/prod</strong></span>
-    </a>
-      <br/><br/>
-
-      If you click on the link from your computer, you will be taken to the web app, and if you click on the link from your mobile device, it will take you to the correct app store. 
-      
-  
-       </p>`,
+      answer:
+        '<p class="text-2xl leading-9 font-light text-gray-900">OSO AI is available as a Web application, and in the Apple iOS and Google Android app stores. You can access the latest version of OSO AI from your computer or your mobile device through a single dynamic-link: <a href="https://l.oso.ai/prod" target="_blank" rel="noopener noreferrer"><span><strong>https://l.oso.ai/prod</strong></span></a> <br/><br/> If you click on the link from your computer, you will be taken to the web app, and if you click on the link from your mobile device, it will take you to the correct app store.</p>',
     },
   ];
+
   return (
     <>
       <section className="px-6 mx-auto max-w-6xl pt-16">

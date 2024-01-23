@@ -58,7 +58,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
       <Script
         id="Meta-conversion-tracking"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: `fbq('track', 'Lead');` }}
+        dangerouslySetInnerHTML={{ __html: "fbq('track', 'Lead');" }}
       />
       {/* <!-- Twitter conversion tracking event code -->  */}
 

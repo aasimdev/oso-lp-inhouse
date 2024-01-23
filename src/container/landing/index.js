@@ -1,23 +1,23 @@
-"use client"
-import React from "react"
-import { useMediaQuery } from "react-responsive"
-import Jason from "../../../public/assets/images/jason.png"
-import Jan from "../../../public/assets/images/jan.png"
-import Ciaran from "../../../public/assets/images/man.jpeg"
-import Michael from "../../../public/assets/images/face.png"
-import Steve from "../../../public/assets/images/steveA.png"
-import Manu from "../../../public/assets/images/manu.jpg"
+"use client";
+import React from "react";
+import { useMediaQuery } from "react-responsive";
+import Jason from "../../../public/assets/images/jason.png";
+import Jan from "../../../public/assets/images/jan.png";
+import Ciaran from "../../../public/assets/images/man.jpeg";
+import Michael from "../../../public/assets/images/face.png";
+import Steve from "../../../public/assets/images/steveA.png";
+import Manu from "../../../public/assets/images/manu.jpg";
 // import NewsLetter from "@/components/news-letter"
-import FAQ from "@/components/FAQ/Index"
-import GoogleAnalytics from "@/utils/google-analytics/anaylics"
+import FAQ from "@/components/FAQ/Index";
+import GoogleAnalytics from "@/utils/google-analytics/anaylics";
 // import Banner from "@/components/common/banner/Index"
-import Hero from "@/components/landingPage/Hero"
-import Chat from "@/components/landingPage/Chat"
-import Feed from "@/components/landingPage/Feed"
-import SearchAndOtherForLaptop from "@/components/landingPage/SearchAndOthers/SearchAndOtherForLaptop"
-import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding"
-import Knowledgebase from "@/components/landingPage/knowledgebase"
-import Button from "@/components/common/Button"
+import Hero from "@/components/landingPage/Hero";
+import Chat from "@/components/landingPage/Chat";
+import Feed from "@/components/landingPage/Feed";
+import SearchAndOtherForLaptop from "@/components/landingPage/SearchAndOthers/SearchAndOtherForLaptop";
+import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding";
+import Knowledgebase from "@/components/landingPage/knowledgebase";
+import Button from "@/components/common/Button";
 
 const testimonialData = [
   {
@@ -52,9 +52,9 @@ const testimonialData = [
     description: "Really powerful tool! Can see this being used for so much.",
     image: Ciaran,
   },
-]
-function LandingPage({ }) {
-  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
+];
+function LandingPage({}) {
+  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
 
   const accordionData = [
     {
@@ -87,13 +87,13 @@ While our Uncensored model provides unfiltered information, the internet, which 
 </p>`,
     },
 
-
     {
       id: 4,
       question: "What is the pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/month or $16/month when paid annually (17% discount) for a limited time, providing great value in productivity and time-saving.</p>`,
+      answer:
+        '<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/month or $16/month when paid annually (17% discount) for a limited time, providing great value in productivity and time-saving.</p>',
     },
-   
+
     {
       id: 5,
       question: "How do I get started?",
@@ -101,28 +101,29 @@ While our Uncensored model provides unfiltered information, the internet, which 
       <br><br>
       An OSO Pro subscription is required to access all of the Pro features.  With OSO Pro, you get our most advanced Uncensored model with faster search results, and unlimited Chats and Searches. </p>`,
     },
-  ]
+  ];
 
   return (
     <>
-      <GoogleAnalytics gaTrackingID='G-2N2XN2FQX1' />
+      <GoogleAnalytics gaTrackingID="G-2N2XN2FQX1" />
 
       {/* Banner */}
       <Hero />
 
       {/* Usecases */}
-      {isDesktop &&
-        <OSOUseCaseLanding type="landing" />
-      }
+      {isDesktop && <OSOUseCaseLanding type="landing" />}
 
-
-
-      <div className='px-6 mx-auto max-w-6xl'>
+      <div className="px-6 mx-auto max-w-6xl">
         <SearchAndOtherForLaptop />
         <Chat />
         <Feed />
-        <div className='md:flex justify-center items-center pt-12 md:pt-[60px] pb-16 md:pb-24'>
-          <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/prod" target="_blank" />
+        <div className="md:flex justify-center items-center pt-12 md:pt-[60px] pb-16 md:pb-24">
+          <Button
+            label="Try OSO"
+            arrowIcon={true}
+            link="https://l.oso.ai/prod"
+            target="_blank"
+          />
         </div>
       </div>
 
@@ -132,7 +133,7 @@ While our Uncensored model provides unfiltered information, the internet, which 
       {/* FAQs */}
       <FAQ accordionData={accordionData} />
     </>
-  )
+  );
 }
 
-export default LandingPage
+export default LandingPage;

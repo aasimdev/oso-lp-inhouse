@@ -57,7 +57,7 @@ const ThankYouViewFour = ({ email, checkoutSessionId }) => {
       <Script
         id="Meta-conversion-tracking"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: `fbq('track', 'Conversion');` }}
+        dangerouslySetInnerHTML={{ __html: "fbq('track', 'Conversion');" }}
       />
       <Script
         strategy="lazyOnload"

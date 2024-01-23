@@ -17,7 +17,7 @@ import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding";
 import { useMediaQuery } from "react-responsive";
 
 const SearchView = () => {
-  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
+  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
   const accordionData = [
     {
       id: 1,
@@ -41,7 +41,8 @@ to traditional search engines. By harnessing the power of advanced AI technology
     {
       id: 3,
       question: "What is the pricing?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/month or $16/month when paid annually (17% discount) for a limited time, providing great value in productivity and time-saving.</p>`,
+      answer:
+        '<p class="text-2xl leading-9 font-light text-gray-900">OSO is free to use with certain usage limitations. If you want to unlock the full power of OSO, it only costs $20/month or $16/month when paid annually (17% discount) for a limited time, providing great value in productivity and time-saving.</p>',
     },
     {
       id: 4,
@@ -58,11 +59,9 @@ to traditional search engines. By harnessing the power of advanced AI technology
         description="Find what you’re looking for faster by letting OSO do the searching for you."
         src="search-video.mp4"
         poster="search-video-poster.jpg"
-        checklist={['Uncensored', 'Up-to-date', 'Unbiased']}
+        checklist={["Uncensored", "Up-to-date", "Unbiased"]}
       />
-      {isDesktop &&
-        <OSOUseCaseLanding type="search" />
-      }
+      {isDesktop && <OSOUseCaseLanding type="search" />}
       {/* <Testimonials /> */}
 
       <Advantages title="Advantages of OSO Search">

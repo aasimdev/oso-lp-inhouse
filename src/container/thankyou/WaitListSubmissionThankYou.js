@@ -10,8 +10,6 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
   const [previousPageUrl, setPreviousPageUrl] = useState("/");
   const [isOpen, setIsOpen] = useState(true);
 
-
-
   const openModal = () => {
     setIsOpen(true);
   };
@@ -40,13 +38,12 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
           method: "POST",
           body: JSON.stringify({
             event: "Viewed Annual Sales Page",
-            email
+            email,
           }),
         });
       }
     })();
   }, [email]);
-
 
   return (
     <>
@@ -61,7 +58,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
       <Script
         id="Meta-conversion-tracking"
         strategy="lazyOnload"
-        dangerouslySetInnerHTML={{ __html: `fbq('track', 'Lead');` }}
+        dangerouslySetInnerHTML={{ __html: "fbq('track', 'Lead');" }}
       />
       {/* <!-- Twitter conversion tracking event code -->  */}
 
@@ -97,7 +94,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
             gtag('event', 'Lead')`,
         }}
       />
-       <Script
+      <Script
         type="text/javascript"
         id="waitlist-submission-script"
         dangerouslySetInnerHTML={{
@@ -122,7 +119,7 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
           `,
         }}
       />
-       <Script
+      <Script
         strategy="lazyOnload"
         id="hotjar-tracking-script"
         dangerouslySetInnerHTML={{
@@ -164,8 +161,11 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
                 </span>
               </p>
               <div className="flex flex-col-reverse gap-2">
-                <Link href="https://buy.stripe.com/28o4hc0WjeF1bPWfYZ" className="theme-btn2 mx-auto !bg-white !text-purple !border-2">
-                 <span> Claim Offer</span>
+                <Link
+                  href="https://buy.stripe.com/28o4hc0WjeF1bPWfYZ"
+                  className="theme-btn2 mx-auto !bg-white !text-purple !border-2"
+                >
+                  <span> Claim Offer</span>
                   <svg
                     width="24"
                     height="24"

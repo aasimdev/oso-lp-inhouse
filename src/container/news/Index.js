@@ -15,7 +15,7 @@ import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding";
 import { useMediaQuery } from "react-responsive";
 
 const NewsView = () => {
-  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" })
+  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
   const accordionData = [
     {
       id: 1,
@@ -25,7 +25,8 @@ const NewsView = () => {
     {
       id: 2,
       question: "Which news sources are supported?",
-      answer: `<p class="text-2xl leading-9 font-light text-gray-900">Over 150,000 news sources are supported by OSO including major outlets such as Techcrunch, BBC, Yahoo! Finance, and countless others.</p>`,
+      answer:
+        '<p class="text-2xl leading-9 font-light text-gray-900">Over 150,000 news sources are supported by OSO, including major outlets such as Techcrunch, BBC, Yahoo! Finance, and countless others.</p>',
     },
     {
       id: 3,
@@ -41,7 +42,7 @@ const NewsView = () => {
     {
       id: 5,
       question: "How do I get started?",
-        answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is available on Android, iOS, and Web. You can access OSO AI by going to this <span><strong><a href="https://l.oso.ai/prod" target="_blank">link<a/></strong></span> and completing a quick 2 minute survey.
+      answer: `<p class="text-2xl leading-9 font-light text-gray-900">OSO is available on Android, iOS, and Web. You can access OSO AI by going to this <span><strong><a href="https://l.oso.ai/prod" target="_blank">link<a/></strong></span> and completing a quick 2 minute survey.
       <br><br>
       An OSO Pro subscription is required to access all of the Pro features.  With OSO Pro, you get our most advanced Uncensored model with faster search results, and unlimited Chats and Searches. </p>`,
     },
@@ -71,14 +72,12 @@ const NewsView = () => {
         description="OSO transforms how you consume the news with AI-powered summaries and interactive chat."
         src="news-video.mp4"
         poster="news-video-poster.jpg"
-        checklist={['Interactive', 'Up-to-date', 'Unbiased']}
+        checklist={["Interactive", "Up-to-date", "Unbiased"]}
       />
 
       <BrandLogos />
 
-      {isDesktop &&
-        <OSOUseCaseLanding type="news" />
-      }
+      {isDesktop && <OSOUseCaseLanding type="news" />}
 
       <Advantages title="Advantages of OSO News" page="news">
         <AdvantageCard
@@ -108,9 +107,7 @@ const NewsView = () => {
           imageHeight="507"
           color="yellow"
         />
-
       </Advantages>
-
 
       <Comparisons
         title={"How OSO is transforming the way people consume the News"}
@@ -118,7 +115,7 @@ const NewsView = () => {
         <InnerChatSection comparisonContent={comparisonContent} />
       </Comparisons>
       {/* <NewsTestimonials title="Testimonials" /> */}
-   
+
       <FAQ accordionData={accordionData} />
     </>
   );

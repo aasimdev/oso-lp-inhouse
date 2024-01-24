@@ -1,9 +1,7 @@
-import { useEffect, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { FreeMode, Navigation, Pagination } from "swiper/modules";
 import { useMediaQuery } from "react-responsive";
-import Button from "../common/Button";
-import TestimonialItem from "./Item";
+// import TestimonialItem from "./Item";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,53 +10,52 @@ import "swiper/css/free-mode";
 
 // Images
 
-import Jason from "../../../public/assets/images/jason.png";
-import Jan from "../../../public/assets/images/jan.png";
-import Ciaran from "../../../public/assets/images/man.jpeg";
-import Michael from "../../../public/assets/images/face.png";
-import Steve from "../../../public/assets/images/steveA.png";
-import Manu from "../../../public/assets/images/manu.jpg";
-import NewsLetter from "../news-letter";
-import OSOUseCaseLanding from "../landingPage/OSOUseCaseLanding";
+// import Jason from "../../../public/assets/images/jason.png";
+// import Jan from "../../../public/assets/images/jan.png";
+// import Ciaran from "../../../public/assets/images/man.jpeg";
+// import Michael from "../../../public/assets/images/face.png";
+// import Steve from "../../../public/assets/images/steveA.png";
+// import Manu from "../../../public/assets/images/manu.jpg";
+// import NewsLetter from "../news-letter";
 
-const testimonialData = [
-  {
-    name: "Jason K.",
-    description:
-      "OSO News has completely changed my news-reading routine. Instead of sifting through articles, I just chat with OSO to get the key points. It's like having a personal news reporter!",
-    image: Jason,
-  },
-  {
-    name: "Jan Gerych",
-    description:
-      "I'm always on the go, and OSO News is my go-to for staying updated. The interactive chat feature lets me ask specific questions, saving hours of reading. Brilliant!",
-    image: Jan,
-  },
-  {
-    name: "Michael S.",
-    description:
-      "OSO News is a game changer in the world of news apps. It's like having a conversation with that friend who can give you quick updates on what’s going on in the world on any topic. I seriously can't imagine going back to traditional news.",
-    image: Michael,
-  },
-  {
-    name: "Steve A.",
-    description:
-      "I was skeptical at first, but now I am addicted! OSO keeps me informed without overwhelming me. The AI-powered summaries are spot-on, and the chat feature is a game changer for news junkies like me!",
-    image: Steve,
-  },
-  {
-    name: "Manu A.",
-    description:
-      "OSO News has totally simplified my life. I just ask OSO what I need to know, and it delivers. It's smart, fast, and intuitive. Amazing.",
-    image: Manu,
-  },
-  {
-    name: "Ciaran",
-    description:
-      "OSO News simplifies my mornings. Quick summaries and interactive chat – it's genius!",
-    image: Ciaran,
-  },
-];
+// const testimonialData = [
+//   {
+//     name: "Jason K.",
+//     description:
+//       "OSO News has completely changed my news-reading routine. Instead of sifting through articles, I just chat with OSO to get the key points. It's like having a personal news reporter!",
+//     image: Jason,
+//   },
+//   {
+//     name: "Jan Gerych",
+//     description:
+//       "I'm always on the go, and OSO News is my go-to for staying updated. The interactive chat feature lets me ask specific questions, saving hours of reading. Brilliant!",
+//     image: Jan,
+//   },
+//   {
+//     name: "Michael S.",
+//     description:
+//       "OSO News is a game changer in the world of news apps. It's like having a conversation with that friend who can give you quick updates on what’s going on in the world on any topic. I seriously can't imagine going back to traditional news.",
+//     image: Michael,
+//   },
+//   {
+//     name: "Steve A.",
+//     description:
+//       "I was skeptical at first, but now I am addicted! OSO keeps me informed without overwhelming me. The AI-powered summaries are spot-on, and the chat feature is a game changer for news junkies like me!",
+//     image: Steve,
+//   },
+//   {
+//     name: "Manu A.",
+//     description:
+//       "OSO News has totally simplified my life. I just ask OSO what I need to know, and it delivers. It's smart, fast, and intuitive. Amazing.",
+//     image: Manu,
+//   },
+//   {
+//     name: "Ciaran",
+//     description:
+//       "OSO News simplifies my mornings. Quick summaries and interactive chat – it's genius!",
+//     image: Ciaran,
+//   },
+// ];
 
 const NewsTestimonials = ({ title }) => {
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });

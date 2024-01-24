@@ -1,11 +1,8 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
 import AdvantageCard from "@/components/advantages/AdvantageCard";
 import Advantages from "@/components/advantages/Index";
 import Banner from "@/components/common/banner/Index";
-import Testimonials from "@/components/testimonials/Index";
-import webImage from "../../../public/assets/images/updated.png";
-import SecondPhone from "../../../public/assets/images/mobilephone.png";
+// import Testimonials from "@/components/testimonials/Index";
 import PhoneUncensored from "../../../public/assets/images/chat-uncensored.png";
 import PhoneUnbiased from "../../../public/assets/images/chat-unbiased.png";
 import PhonePersonalized from "../../../public/assets/images/chat-personlized.png";

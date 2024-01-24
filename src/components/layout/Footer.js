@@ -10,10 +10,10 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { detectDevice } from "../DeviceDetector/DeviceDetector";
 
 const Footer = () => {
-  const [showInput, setShowInput] = useState(false);
-  const [showMessage, setShowMessage] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(false);
+  // const [showInput, setShowInput] = useState(false);
+  // const [showMessage, setShowMessage] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [errorMessage, setErrorMessage] = useState(false);
   const { executeRecaptcha } = useGoogleReCaptcha();
   const [userDevice, setUserDevice] = useState("Unknown");
   const router = useRouter();
@@ -69,7 +69,7 @@ const Footer = () => {
     userDevice,
     referral
   ) {
-    setIsLoading(true);
+    // setIsLoading(true);
     const res = await fetch("/api/create-contact", {
       method: "POST",
       body: JSON.stringify({
@@ -87,33 +87,33 @@ const Footer = () => {
     const resData = await res.json();
 
     if (res.status === 200) {
-      setIsLoading(false);
+      // setIsLoading(false);
       form.setValues({ email: "" });
-      setShowInput(false);
+      // setShowInput(false);
       router.push(`${resData.redirect}?email=` + email);
       localStorage.removeItem("submitedURL");
       localStorage.setItem("submitedURL", pathname);
     } else if (res.status === 422) {
-      setIsLoading(false);
-      setShowInput(false);
-      setShowMessage(true);
+      // setIsLoading(false);
+      // setShowInput(false);
+      // setShowMessage(true);
       form.setValues({ email: "" });
     } else {
-      setIsLoading(false);
-      setShowInput(false);
-      setErrorMessage(false);
+      // setIsLoading(false);
+      // setShowInput(false);
+      // setErrorMessage(false);
       form.setValues({ email: "" });
     }
   }
-  function handleJoinWaitlistClick() {
-    if (!showInput) {
-      setShowMessage(false);
-      setErrorMessage(false);
-      setShowInput(true);
-      return;
-    }
-    // handleCreateContact(form.values.email);
-  }
+  // function handleJoinWaitlistClick() {
+  //   if (!showInput) {
+  //     setShowMessage(false);
+  //     setErrorMessage(false);
+  //     setShowInput(true);
+  //     return;
+  //   }
+  //   // handleCreateContact(form.values.email);
+  // }
   useEffect(() => {
     const detectedDevice = detectDevice();
     setUserDevice(detectedDevice);

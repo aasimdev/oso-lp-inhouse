@@ -1,4 +1,4 @@
-import  { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import ShortVideo from "./ShortVideo";
 
 const AllUsecases = ({ videoData }) => {
@@ -17,10 +17,12 @@ const AllUsecases = ({ videoData }) => {
               {videoData.slice(0, videosToShow).map((v, i) => {
                 return (
                   <div key={i}>
-                    <ShortVideo key={i}
+                    <ShortVideo
+                      key={i}
                       videoId={v.videoId}
                       category={v.category}
-                      title={v.title} />
+                      title={v.title}
+                    />
                   </div>
                 );
               })}

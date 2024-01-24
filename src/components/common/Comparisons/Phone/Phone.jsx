@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Phone = ({ title, obj, chatPage }) => {
   const pathname = usePathname();

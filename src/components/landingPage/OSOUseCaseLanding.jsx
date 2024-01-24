@@ -1,4 +1,4 @@
-import  { useMemo, useState } from "react";
+import  { useMemo, } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation } from "swiper/modules";
 import { useMediaQuery } from "react-responsive";

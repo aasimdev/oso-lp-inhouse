@@ -57,7 +57,7 @@ const testimonialData = [
     image: Ciaran,
   },
 ];
-function SeenOn({}) {
+function SeenOn() {
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
   const slidesOffsetBefore = isDesktop ? 100 : 0;
 

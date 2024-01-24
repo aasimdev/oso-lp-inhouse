@@ -66,7 +66,7 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
     referral
   ) {
     setIsLoading(true);
-   
+
     const res = await fetch("/api/create-contact", {
       method: "POST",
       body: JSON.stringify({
@@ -83,12 +83,12 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
 
     const resData = await res.json();
 
-    if (res.status == 200) {
+    if (res.status === 200) {
       setIsLoading(false);
       router.push(`${resData.redirect}?email=` + email);
       localStorage.removeItem("submitedURL");
       localStorage.setItem("submitedURL", pathname);
-    } else if (res.status == 422) {
+    } else if (res.status === 422) {
       setIsLoading(false);
       setShowMessage(true);
       form.values.email = "";

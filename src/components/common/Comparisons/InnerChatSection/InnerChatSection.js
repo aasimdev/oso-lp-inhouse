@@ -7,7 +7,7 @@ import Phone from "../Phone/Phone";
 const InnerSections = ({ comparisonContent }) => {
   const [selected, setSelected] = useState("stay");
   const getImagePath = () => {
-    const foundObject = comparisonContent.find((obj) => obj["id"] === selected);
+    const foundObject = comparisonContent?.find((obj) => obj?.id === selected);
     return foundObject.image;
   };
   return (
@@ -17,23 +17,23 @@ const InnerSections = ({ comparisonContent }) => {
     >
       <div className="md:flex md:flex-nowrap flex-wrap justify-between items-center">
         <div className="contentWrap w-full md:w-[370px] md:mt-[52px] flex flex-col gap-12 md:gap-8 flex-grow-0 flex-shrink-0 basis-auto md:mb-12 mb-8 sm:mb-0">
-          {comparisonContent.map((item) => (
+          {comparisonContent?.map((item) => (
             <>
               <div
-                key={item.id}
+                key={item?.id}
                 className={`text-block opacity-100 md:cursor-pointer ${
-                  selected === item.id ? "md:opacity-100" : "md:opacity-20"
+                  selected === item?.id ? "md:opacity-100" : "md:opacity-20"
                 }`}
-                onClick={() => setSelected(item.id)}
+                onClick={() => setSelected(item?.id)}
               >
                 <ComparisonContent
-                  title={item.title}
-                  description={item.description}
+                  title={item?.title}
+                  description={item?.description}
                 />
               </div>
               <div className="right-elemetns relative overflow-hidden w-full md:hidden flex  ">
                 <div className="w-full h-full relative overflow-hidden">
-                  <Phone obj={item.image} chatPage />
+                  <Phone obj={item?.image} chatPage />
                 </div>
               </div>
             </>

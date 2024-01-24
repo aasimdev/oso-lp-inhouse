@@ -53,7 +53,7 @@ const testimonialData = [
     image: Ciaran,
   },
 ];
-function LandingPage({}) {
+function LandingPage() {
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
 
   const accordionData = [

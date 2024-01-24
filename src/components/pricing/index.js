@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import  { useState } from "react";
 import Card from "./card";
 import { priceContent } from "@/constant/pricing";
 import ToggleButton from "./ToogleButton";

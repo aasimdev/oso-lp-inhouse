@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AdvantageCard from "@/components/advantages/AdvantageCard";
 import Advantages from "@/components/advantages/Index";
 import Banner from "@/components/common/banner/Index";

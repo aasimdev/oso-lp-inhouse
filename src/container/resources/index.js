@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import ExploreUsecases from "@/components/resources/ExploreUsecases";
 import OSOWork from "@/components/resources/OSOWork";
 import TopThreeUsecase from "@/components/resources/TopThreeUsecase";

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Typewriter from "typewriter-effect";
 
 const SearchAndOtherForLaptop = () => {

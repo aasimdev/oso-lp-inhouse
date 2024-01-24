@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Video from "@/components/VideoThankyou";
 import ModalComponent from "@/components/modal/Modal";
 import VideoThankyouModal from "@/components/VideoThankyouModal";

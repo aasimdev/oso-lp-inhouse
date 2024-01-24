@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import Video from "@/components/VideoThankyou";
 import ModalComponent from "@/components/modal/Modal";
 import VideoThankyouModal from "@/components/VideoThankyouModal";
@@ -26,9 +26,10 @@ const ThankYouViewThree = () => {
                 We&apos;re thrilled to have you onboard!
               </h1>
               <p className="text-2xl mt-4 mb-8 font-light text-gray-800">
-                You&apos;ve joined us early, before the buzz and the viral explosion.
-                To show our appreciation for your trust in us, we&apos;re offering
-                early supporters the chance to get <span className="font-medium">pre-release access</span> to OSO
+                You&apos;ve joined us early, before the buzz and the viral
+                explosion. To show our appreciation for your trust in us,
+                we&apos;re offering early supporters the chance to get{" "}
+                <span className="font-medium">pre-release access</span> to OSO
                 Uncensored Chat.
                 <br /> <br />
                 <span className="text-gray-800 text-base font-semibold">
@@ -45,8 +46,11 @@ const ThankYouViewThree = () => {
                 </span>
               </p>
               <div className="flex flex-col-reverse gap-2">
-                <Link href="https://buy.stripe.com/5kA5l36oP3wH2OY146" className="theme-btn2 mx-auto !bg-white !text-purple !border-2">
-                 <span> Claim Offer</span>
+                <Link
+                  href="https://buy.stripe.com/5kA5l36oP3wH2OY146"
+                  className="theme-btn2 mx-auto !bg-white !text-purple !border-2"
+                >
+                  <span> Claim Offer</span>
                   <svg
                     width="24"
                     height="24"

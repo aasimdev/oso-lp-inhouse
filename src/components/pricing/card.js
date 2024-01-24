@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { Tooltip } from "react-tooltip";
 import Link from "next/link";
 

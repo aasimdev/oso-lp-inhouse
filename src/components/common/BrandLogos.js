@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import NewsLetter from "../news-letter";
 import { brandImages, mobileBrandImages } from "@/constant/news";
 import Button from "./Button";
@@ -52,7 +52,12 @@ const BrandLogos = () => {
           arrowIcon
           formId={"TestimonialFormId"}
         /> */}
-        <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/prod" target="_blank"/>
+        <Button
+          label="Try OSO"
+          arrowIcon={true}
+          link="https://l.oso.ai/prod"
+          target="_blank"
+        />
       </div>
     </section>
   );

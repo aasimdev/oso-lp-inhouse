@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CallToAction from "../CallToAction";
 import Image from "next/image";
 import SocialIcons from "../common/SocialIcons";
@@ -119,7 +119,13 @@ const Footer = () => {
     setUserDevice(detectedDevice);
   }, []);
   return (
-    <footer className={`bg-black pb-8  relative ${pathname === "/pricing" ? "mt-16 md:mt-24 pt-10 md:pt-16" : "mt-40 pt-44"}`}>
+    <footer
+      className={`bg-black pb-8  relative ${
+        pathname === "/pricing"
+          ? "mt-16 md:mt-24 pt-10 md:pt-16"
+          : "mt-40 pt-44"
+      }`}
+    >
       {pathname !== "/thank-you" &&
         pathname !== "/thank-you/1" &&
         pathname !== "/thank-you/2" &&
@@ -207,7 +213,13 @@ const Footer = () => {
                 </p>
               )}
             </form> */}
-            <Link href="https://l.oso.ai/prod" className="white-btn !py-[11px] !px-[23.25px] !text-base !w-[137px]" target="_blank">Try OSO</Link>
+            <Link
+              href="https://l.oso.ai/prod"
+              className="white-btn !py-[11px] !px-[23.25px] !text-base !w-[137px]"
+              target="_blank"
+            >
+              Try OSO
+            </Link>
           </div>
           <div className="lg:w-[433px] w-full ml-auto">
             <Newsletter formId={"FooterNewsletterForm"} />

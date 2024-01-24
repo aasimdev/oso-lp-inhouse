@@ -3,7 +3,7 @@ import Video from "@/components/VideoThankyou";
 import ModalComponent from "@/components/modal/Modal";
 import Link from "next/link";
 import Script from "next/script";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import VideoThankyouModal from "@/components/VideoThankyouModal";
 
 const ThankYouView = ({ email, checkoutSessionId }) => {

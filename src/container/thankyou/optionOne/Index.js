@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState } from "react";
 import Video from "@/components/VideoThankyou";
 import ModalComponent from "@/components/modal/Modal";
 import VideoThankyouModal from "@/components/VideoThankyouModal";
@@ -20,7 +20,7 @@ const ThankYouViewOne = () => {
     <>
       <section className="bg-gradient-to-b from-purple-400">
         <div className="px-6 mx-auto max-w-6xl pt-20">
-      {/* <button className="absolute z-50 right-[-200px]">test</button> */}
+          {/* <button className="absolute z-50 right-[-200px]">test</button> */}
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div>
@@ -38,10 +38,7 @@ const ThankYouViewOne = () => {
                 that subscribes to OSO Pro after launch.
               </p>
               <div className="flex flex-col-reverse md:flex-row gap-2 md:gap-6">
-                <Link
-                  href="/"
-                  className="mx-auto outline-theme-btn"
-                >
+                <Link href="/" className="mx-auto outline-theme-btn">
                   No thanks
                 </Link>
                 <Link

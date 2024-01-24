@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Menu from "../common/navigation/Menu";
 import { useMenu } from "@/context/MenuContext";
 import { useFormik } from "formik";
 import {
   usePathname,
   useRouter,
-  useParams,
+  // useParams,
   useSearchParams,
 } from "next/navigation";
 import Link from "next/link";
@@ -16,11 +16,11 @@ import { detectDevice } from "../DeviceDetector/DeviceDetector";
 
 const Header = () => {
   const { showSidebar, navigationHandler } = useMenu("");
-  const [showMessage, setShowMessage] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const [hform, setHForm] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(false);
+  // const [showMessage, setShowMessage] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [hform, setHForm] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
+  // const [errorMessage, setErrorMessage] = useState(false);
   const [userDevice, setUserDevice] = useState("Unknown");
   const honeypotRef = useRef(null);
   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -32,11 +32,11 @@ const Header = () => {
   const header = useRef();
   const formId = "headerFormId";
   const userLang = "eng";
-  const openFormHandler = () => {
-    setShowMessage(false);
-    setErrorMessage(false);
-    setHForm(true);
-  };
+  // const openFormHandler = () => {
+  //   setShowMessage(false);
+  //   setErrorMessage(false);
+  //   setHForm(true);
+  // };
 
   const form = useFormik({
     initialValues: {
@@ -85,7 +85,7 @@ const Header = () => {
     userDevice,
     referral
   ) {
-    setIsLoading(true);
+    // setIsLoading(true);
 
     const res = await fetch("/api/create-contact", {
       method: "POST",
@@ -105,23 +105,23 @@ const Header = () => {
 
     if (res.status === 200) {
       // setShowMessage(true);
-      setIsLoading(false);
-      setHForm(false);
+      // setIsLoading(false);
+      // setHForm(false);
       form.setValues({ email: "" });
       router.push(`${resData.redirect}?email=` + email);
       localStorage.removeItem("submitedURL");
       localStorage.setItem("submitedURL", pathname);
     } else if (res.status === 422) {
-      setIsLoading(false);
-      setHForm(false);
-      setShowMessage(true);
+      // setIsLoading(false);
+      // setHForm(false);
+      // setShowMessage(true);
       // id: '3550',
 
       form.setValues({ email: "" });
     } else {
-      setIsLoading(false);
-      setHForm(false);
-      setErrorMessage(true);
+      // setIsLoading(false);
+      // setHForm(false);
+      // setErrorMessage(true);
       form.values.email = "";
     }
   }
@@ -130,9 +130,9 @@ const Header = () => {
     const height = header.current.clientHeight;
     const handleScroll = () => {
       if (window.scrollY > height) {
-        setIsScrolled(true);
+        // setIsScrolled(true);
       } else {
-        setIsScrolled(false);
+        // setIsScrolled(false);
       }
     };
     window.addEventListener("scroll", handleScroll);

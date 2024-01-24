@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Pagination } from "swiper/modules";
 import { useMediaQuery } from "react-responsive";
@@ -30,7 +30,8 @@ const testimonialData = [
   },
   {
     name: "Jan Gerych",
-    description: "I'm always on the go, and OSO News is my go-to for staying updated. The interactive chat feature lets me ask specific questions, saving hours of reading. Brilliant!",
+    description:
+      "I'm always on the go, and OSO News is my go-to for staying updated. The interactive chat feature lets me ask specific questions, saving hours of reading. Brilliant!",
     image: Jan,
   },
   {
@@ -41,17 +42,20 @@ const testimonialData = [
   },
   {
     name: "Steve A.",
-    description: "I was skeptical at first, but now I am addicted! OSO keeps me informed without overwhelming me. The AI-powered summaries are spot-on, and the chat feature is a game changer for news junkies like me!",
+    description:
+      "I was skeptical at first, but now I am addicted! OSO keeps me informed without overwhelming me. The AI-powered summaries are spot-on, and the chat feature is a game changer for news junkies like me!",
     image: Steve,
   },
   {
     name: "Manu A.",
-    description: "OSO News has totally simplified my life. I just ask OSO what I need to know, and it delivers. It's smart, fast, and intuitive. Amazing.",
+    description:
+      "OSO News has totally simplified my life. I just ask OSO what I need to know, and it delivers. It's smart, fast, and intuitive. Amazing.",
     image: Manu,
   },
   {
     name: "Ciaran",
-    description: "OSO News simplifies my mornings. Quick summaries and interactive chat – it's genius!",
+    description:
+      "OSO News simplifies my mornings. Quick summaries and interactive chat – it's genius!",
     image: Ciaran,
   },
 ];
@@ -154,17 +158,14 @@ const NewsTestimonials = ({ title }) => {
             ))}
         </Swiper>
       </div> */}
-      
-      
-        <div className="px-6 mt-12 mb-6 md:mb-8 mx-auto max-w-6xl text-center">
-          {/* <NewsLetter
+
+      <div className="px-6 mt-12 mb-6 md:mb-8 mx-auto max-w-6xl text-center">
+        {/* <NewsLetter
             label={`Join Waitlist`}
             arrowIcon
             formId={"TestimonialFormId"}
           /> */}
-          
-        </div>
-      
+      </div>
     </section>
   );
 };

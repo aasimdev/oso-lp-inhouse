@@ -1,12 +1,15 @@
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Phone = ({ title, obj, chatPage }) => {
   const pathname = usePathname();
   return (
     <div
-      className={`flex flex-col ${!chatPage && "gap-6 md:gap-8"} relative ${title === "OSO" ? "lg:-mr-11" : ""}`}>
+      className={`flex flex-col ${!chatPage && "gap-6 md:gap-8"} relative ${
+        title === "OSO" ? "lg:-mr-11" : ""
+      }`}
+    >
       {!chatPage && (
         <p className="text-center text-[21px] font-medium text-black">
           {title}
@@ -14,11 +17,11 @@ const Phone = ({ title, obj, chatPage }) => {
       )}
 
       <div
-        className={`relative xl:max-w-full sm:max-w-[348px] ${chatPage && "w-[299px]"
-          } xl:h-full sm:mx-auto`}
+        className={`relative xl:max-w-full sm:max-w-[348px] ${
+          chatPage && "w-[299px]"
+        } xl:h-full sm:mx-auto`}
       >
-        {pathname === "/search" ?
-
+        {pathname === "/search" ? (
           <Image
             src={`/assets/gif/${obj}.gif`}
             alt=""
@@ -27,7 +30,7 @@ const Phone = ({ title, obj, chatPage }) => {
             loading="eager"
             className="lg:h-[95%] w-full h-full"
           />
-          :
+        ) : (
           <Image
             src={`/assets/images/${obj}.png`}
             alt=""
@@ -36,9 +39,7 @@ const Phone = ({ title, obj, chatPage }) => {
             loading="eager"
             className="lg:h-[95%] w-full h-full"
           />
-
-        }
-
+        )}
       </div>
     </div>
   );

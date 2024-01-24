@@ -2,7 +2,7 @@
 
 import { useFormik } from "formik";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { detectDevice } from "../DeviceDetector/DeviceDetector";
 

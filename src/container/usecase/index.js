@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Category from "@/components/usecase/Category";
 import Link from "next/link";
 import AllUsecases from "@/components/usecase/AllUsecases";

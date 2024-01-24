@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Typewriter from "typewriter-effect";
 export const SeenOnCard = ({
   className,

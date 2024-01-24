@@ -7,7 +7,8 @@ import { useEffect, useState } from "react";
 import VideoThankyouModal from "@/components/VideoThankyouModal";
 
 const ThankYouView = ({ email, checkoutSessionId }) => {
-  const [previousPageUrl, setPreviousPageUrl] = useState("/");
+  console.log("checkoutSessionId", checkoutSessionId);
+  // const [previousPageUrl, setPreviousPageUrl] = useState("/");
   const [isOpen, setIsOpen] = useState(true);
 
   const openModal = () => {
@@ -20,11 +21,11 @@ const ThankYouView = ({ email, checkoutSessionId }) => {
   useEffect(() => {
     const storedPreviousPageUrl = localStorage.getItem("submitedURL");
     if (storedPreviousPageUrl) {
-      setPreviousPageUrl(storedPreviousPageUrl);
+      // setPreviousPageUrl(storedPreviousPageUrl);
 
       const timeoutId = setTimeout(() => {
         localStorage.removeItem("submitedURL");
-        setPreviousPageUrl("/");
+        // setPreviousPageUrl("/");
       }, 120000);
 
       return () => clearTimeout(timeoutId);

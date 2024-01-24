@@ -58,8 +58,9 @@ import "swiper/css/free-mode";
 // ];
 
 const NewsTestimonials = ({ title }) => {
-  const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
-  const slidesOffsetBefore = isDesktop ? 100 : 0;
+  console.log("title", title);
+  // const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
+  // const slidesOffsetBefore = isDesktop ? 100 : 0;
 
   return (
     <section className="pt-12 sm:pt-[120px]">

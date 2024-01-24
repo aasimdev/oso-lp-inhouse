@@ -6,12 +6,13 @@ import VideoThankyouModal from "@/components/VideoThankyouModal";
 import Script from "next/script";
 
 const ThankYouViewFour = ({ email, checkoutSessionId }) => {
+  console.log("email", email);
   const [isOpen, setIsOpen] = useState(true);
   const [userEmail, setUserEmail] = useState();
 
-  const openModal = () => {
-    setIsOpen(true);
-  };
+  // const openModal = () => {
+  //   setIsOpen(true);
+  // };
 
   const closeModal = () => {
     setIsOpen(false);

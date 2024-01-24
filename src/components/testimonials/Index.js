@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Pagination } from "swiper/modules";
 import { useMediaQuery } from "react-responsive";
@@ -11,14 +10,13 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 
 // Images
-
 import Jason from "../../../public/assets/images/jason.png";
 import Jan from "../../../public/assets/images/jan.png";
 import Ciaran from "../../../public/assets/images/man.jpeg";
 import Michael from "../../../public/assets/images/face.png";
 import Steve from "../../../public/assets/images/steveA.png";
 import Manu from "../../../public/assets/images/manu.jpg";
-import NewsLetter from "../news-letter";
+// import NewsLetter from "../news-letter";
 
 const testimonialData = [
   {

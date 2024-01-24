@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import ExploreUsecases from "@/components/resources/ExploreUsecases";
 import OSOWork from "@/components/resources/OSOWork";
 import TopThreeUsecase from "@/components/resources/TopThreeUsecase";
@@ -10,9 +10,9 @@ import FAQ from "@/components/FAQ/Index";
 import Link from "next/link";
 
 const Resources = () => {
-  const [isMobile, setIsMobile] = useState(false);
-  const playStoreUrl =
-    "https://play.google.com/store/apps/details?id=your_app_package_name";
+  // const [isMobile, setIsMobile] = useState(false);
+  // const playStoreUrl =
+  //   "https://play.google.com/store/apps/details?id=your_app_package_name";
   const handleClick = () => {};
   useEffect(() => {
     // Check if the user is on a mobile device
@@ -21,7 +21,7 @@ const Resources = () => {
         navigator.userAgent
       );
     if (mobileView) {
-      setIsMobile(true);
+      // setIsMobile(true);
     }
 
     // Your Play Store URL

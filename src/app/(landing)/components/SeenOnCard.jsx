@@ -7,6 +7,7 @@ export const SeenOnCard = ({
   answerForOso,
   bgColor,
 }) => {
+  console.log("bgColor", bgColor);
   const [stringTypeOut, setStringTypeOut] = useState(false);
 
   return (

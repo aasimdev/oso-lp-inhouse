@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 const Video = ({ src, videoId, variant, openModal, isOpen, modalValue }) => {
+  console.log("isOpen", isOpen);
   const [handler, setHandler] = useState(true);
   const videoRef = useRef(null);
   const [preLoad, setPreLoad] = useState(false);
@@ -26,32 +27,32 @@ const Video = ({ src, videoId, variant, openModal, isOpen, modalValue }) => {
     }, 300);
   }, []);
 
-  const handleFullScreen = () => {
-    const iframe = iframeRef.current;
-    if (iframe) {
-      if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-      } else if (iframe.mozRequestFullScreen) {
-        iframe.mozRequestFullScreen();
-      } else if (iframe.webkitRequestFullscreen) {
-        iframe.webkitRequestFullscreen();
-      } else if (iframe.msRequestFullscreen) {
-        iframe.msRequestFullscreen();
-      }
+  // const handleFullScreen = () => {
+  //   const iframe = iframeRef.current;
+  //   if (iframe) {
+  //     if (iframe.requestFullscreen) {
+  //       iframe.requestFullscreen();
+  //     } else if (iframe.mozRequestFullScreen) {
+  //       iframe.mozRequestFullScreen();
+  //     } else if (iframe.webkitRequestFullscreen) {
+  //       iframe.webkitRequestFullscreen();
+  //     } else if (iframe.msRequestFullscreen) {
+  //       iframe.msRequestFullscreen();
+  //     }
 
-      // Add an event listener to listen for the fullscreen change event
-      if (variant === "newsBanner") {
-        document.addEventListener("fullscreenchange", exitFullScreenHandler);
-        document.addEventListener(
-          "webkitfullscreenchange",
-          exitFullScreenHandler
-        );
-        document.addEventListener("mozfullscreenchange", exitFullScreenHandler);
-        document.addEventListener("MSFullscreenChange", exitFullScreenHandler);
-        setHandler(false);
-      }
-    }
-  };
+  //     // Add an event listener to listen for the fullscreen change event
+  //     if (variant === "newsBanner") {
+  //       document.addEventListener("fullscreenchange", exitFullScreenHandler);
+  //       document.addEventListener(
+  //         "webkitfullscreenchange",
+  //         exitFullScreenHandler
+  //       );
+  //       document.addEventListener("mozfullscreenchange", exitFullScreenHandler);
+  //       document.addEventListener("MSFullscreenChange", exitFullScreenHandler);
+  //       setHandler(false);
+  //     }
+  //   }
+  // };
 
   const exitFullScreenHandler = () => {
     const iframe = iframeRef.current;

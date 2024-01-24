@@ -1,4 +1,3 @@
-import React from "react";
 import ThankYouView from "@/container/thankyou/Index";
 
 export const metadata = {

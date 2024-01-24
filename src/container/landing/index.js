@@ -1,12 +1,11 @@
 "use client";
-import React from "react";
 import { useMediaQuery } from "react-responsive";
-import Jason from "../../../public/assets/images/jason.png";
-import Jan from "../../../public/assets/images/jan.png";
-import Ciaran from "../../../public/assets/images/man.jpeg";
-import Michael from "../../../public/assets/images/face.png";
-import Steve from "../../../public/assets/images/steveA.png";
-import Manu from "../../../public/assets/images/manu.jpg";
+// import Jason from "../../../public/assets/images/jason.png";
+// import Jan from "../../../public/assets/images/jan.png";
+// import Ciaran from "../../../public/assets/images/man.jpeg";
+// import Michael from "../../../public/assets/images/face.png";
+// import Steve from "../../../public/assets/images/steveA.png";
+// import Manu from "../../../public/assets/images/manu.jpg";
 // import NewsLetter from "@/components/news-letter"
 import FAQ from "@/components/FAQ/Index";
 import GoogleAnalytics from "@/utils/google-analytics/anaylics";
@@ -19,40 +18,41 @@ import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding";
 import Knowledgebase from "@/components/landingPage/knowledgebase";
 import Button from "@/components/common/Button";
 
-const testimonialData = [
-  {
-    name: "Jason K.",
-    description:
-      "I stopped using chatGPT because it never gives me answers I want. I use OSO daily because it's real-time and uncensored giving me exactly what I need.",
-    image: Jason,
-  },
-  {
-    name: "Jan Gerych",
-    description: "Amazing, this changes the world.",
-    image: Jan,
-  },
-  {
-    name: "Michael S.",
-    description:
-      "It's next level from chatGPT bc you can pull data about real time trends, sentiment and analytics. Content creators are going to make a lot of money with OSO.",
-    image: Michael,
-  },
-  {
-    name: "Steve A.",
-    description: "Most useful AI I've ever seen.",
-    image: Steve,
-  },
-  {
-    name: "Manu A.",
-    description: "This is power like I've never seen before.",
-    image: Manu,
-  },
-  {
-    name: "Ciaran",
-    description: "Really powerful tool! Can see this being used for so much.",
-    image: Ciaran,
-  },
-];
+// const testimonialData = [
+//   {
+//     name: "Jason K.",
+//     description:
+//       "I stopped using chatGPT because it never gives me answers I want. I use OSO daily because it's real-time and uncensored giving me exactly what I need.",
+//     image: Jason,
+//   },
+//   {
+//     name: "Jan Gerych",
+//     description: "Amazing, this changes the world.",
+//     image: Jan,
+//   },
+//   {
+//     name: "Michael S.",
+//     description:
+//       "It's next level from chatGPT bc you can pull data about real time trends, sentiment and analytics. Content creators are going to make a lot of money with OSO.",
+//     image: Michael,
+//   },
+//   {
+//     name: "Steve A.",
+//     description: "Most useful AI I've ever seen.",
+//     image: Steve,
+//   },
+//   {
+//     name: "Manu A.",
+//     description: "This is power like I've never seen before.",
+//     image: Manu,
+//   },
+//   {
+//     name: "Ciaran",
+//     description: "Really powerful tool! Can see this being used for so much.",
+//     image: Ciaran,
+//   },
+// ];
+
 function LandingPage() {
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
 

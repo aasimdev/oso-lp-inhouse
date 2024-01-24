@@ -1,5 +1,5 @@
 import Image from "next/image";
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Tooltip } from "react-tooltip";
 import Link from "next/link";
 
@@ -11,13 +11,10 @@ const Card = ({ price, isMonthly }) => {
     amount,
     annuallyAmount,
     unit,
-    unit2,
-    billedType,
     currency,
     buttonTitle,
     monthlyUrl,
     annuallyUrl,
-    freeUrl,
     details,
   } = price;
   const [isMobile, setIsMobile] = useState(false);
@@ -39,10 +36,11 @@ const Card = ({ price, isMonthly }) => {
   return (
     <>
       <div
-        className={`w-full p-8 rounded-2xl ${type === "pro"
+        className={`w-full p-8 rounded-2xl ${
+          type === "pro"
             ? "border-4 border-purple"
             : "border-2 border-gray-400 "
-          }`}
+        }`}
       >
         {type === "pro" && !isMonthly ? (
           <div className="flex-col gap-2 flex">
@@ -73,7 +71,6 @@ const Card = ({ price, isMonthly }) => {
             </div>
           ) : (
             <div className="flex justify-between items-center md:flex-row sm:flex-col">
-
               {isMonthly ? (
                 <span className="text-black text-5xl font-extrabold leading-normal">
                   {currency}
@@ -102,7 +99,6 @@ const Card = ({ price, isMonthly }) => {
                 </div>
               )}
             </div>
-
           )}
         </div>
         {type === "pro" ? (
@@ -129,8 +125,9 @@ const Card = ({ price, isMonthly }) => {
               >
                 <div className="self-stretch flex-col justify-start items-start flex">
                   <div
-                    className={`self-stretch text-base font-normal leading-normal flex gap-1 items-center ${!v.isEnable && "text-gray-400 line-through"
-                      }`}
+                    className={`self-stretch text-base font-normal leading-normal flex gap-1 items-center ${
+                      !v.isEnable && "text-gray-400 line-through"
+                    }`}
                   >
                     {v.bulletPoint}
                     {v.isIcon && (

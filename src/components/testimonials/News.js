@@ -1,6 +1,6 @@
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import { FreeMode, Navigation, Pagination } from "swiper/modules";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 // import TestimonialItem from "./Item";
 
 import "swiper/css";

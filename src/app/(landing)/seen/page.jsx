@@ -1,8 +1,7 @@
-import React from "react"
-import SeenOn from "../components/SeenOn"
+import SeenOn from "../components/SeenOn";
 
 const SeeOnPage = () => {
-  return <SeenOn />
-}
+  return <SeenOn />;
+};
 
-export default SeeOnPage
+export default SeeOnPage;

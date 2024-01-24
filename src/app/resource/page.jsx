@@ -1,5 +1,4 @@
 import ResourcesView from "@/container/resources/index";
-import React from "react";
 
 export const metadata = {
   title: "OSO Resources",

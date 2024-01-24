@@ -1,5 +1,3 @@
-import React from "react";
-
 function Page() {
   return (
     <div className="flex flex-col space-y-6 text-[#212B36] py-24 max-w-6xl px-6 mx-auto">
@@ -79,8 +77,8 @@ function Page() {
         the user is between sixteen (16) and eighteen (18) years of age, he/she
         must have the permission and consent of a parent or legal guardian to
         use the Service. The parent or legal guardian will be responsible for
-        the user&apos;s compliance with these Terms, as well as any liability arising
-        from the user&apos;s use of the Service.
+        the user&apos;s compliance with these Terms, as well as any liability
+        arising from the user&apos;s use of the Service.
       </span>
       <span className="font-light text-2xl leading-8 pl-8">
         2.2.2. The user agrees not to impersonate any person or entity, or
@@ -104,8 +102,8 @@ function Page() {
         2.4. The user may incur charges from his/her telecommunication service
         provider for using internet data to access the Service. Such charges are
         the sole responsibility of the user, and the W4 Labs is not responsible
-        for any costs associated with the user&apos;s use of internet data or any
-        other service in connection with his/her telecommunication service.{" "}
+        for any costs associated with the user&apos;s use of internet data or
+        any other service in connection with his/her telecommunication service.{" "}
       </p>
 
       <h2 className="pl-1 font-semibold text-2xl leading-8">
@@ -134,22 +132,22 @@ function Page() {
         access to the Service.{" "}
       </p>
       <p className="font-light text-2xl leading-8">
-        3.4. User&apos;s subscription to the Service shall be for the period paid for
-        by the user and shall be automatically renewed at the end of that period
-        for the same period, unless the subscription is terminated by either
-        party. The user or W4 Labs may terminate the subscription at any time in
-        accordance with the procedures set out in these Terms. Each renewal of
-        the subscription will be subject to the subscription fees in effect at
-        the time of renewal.{" "}
+        3.4. User&apos;s subscription to the Service shall be for the period
+        paid for by the user and shall be automatically renewed at the end of
+        that period for the same period, unless the subscription is terminated
+        by either party. The user or W4 Labs may terminate the subscription at
+        any time in accordance with the procedures set out in these Terms. Each
+        renewal of the subscription will be subject to the subscription fees in
+        effect at the time of renewal.{" "}
       </p>
 
       <p className="font-light text-2xl leading-8">
         3.6. The W4 Labs may offer a trial period during which the user can
         access and use the Service free of charge with limitations, as specified
-        by the W4 Labs. The user&apos;s eligibility for the trial period is subject
-        to the W4 Labs&apos; sole discretion, and the W4 Labs reserves the right to
-        revoke the user&apos;s eligibility for the trial period at any time and for
-        any reason.
+        by the W4 Labs. The user&apos;s eligibility for the trial period is
+        subject to the W4 Labs&apos; sole discretion, and the W4 Labs reserves
+        the right to revoke the user&apos;s eligibility for the trial period at
+        any time and for any reason.
       </p>
       <p className="font-light text-2xl leading-8">
         3.7. W4 Labs may offer free or discounted subscription plans that
@@ -157,8 +155,8 @@ function Page() {
         By subscribing to these subscription plans, the user agrees to be served
         the advertisements and gives consent to W4 Labs to serve the
         advertisements through the relevant interface service the user is using,
-        which may include the use of the user&apos;s telephone number, email address
-        or other electronic contact information.
+        which may include the use of the user&apos;s telephone number, email
+        address or other electronic contact information.
       </p>
       <p className="font-light text-2xl leading-8">
         3.8. User shall be solely and fully responsible for all taxes and fees
@@ -574,8 +572,9 @@ function Page() {
         large language models, and messaging and communication apps, and other
         services. The user is responsible for reviewing and understanding the
         terms and policies of the Third-Party Services before using the Service.
-        Continued use of the Service constitutes the user&apos;s acceptance of and
-        compliance with the terms and conditions of these Third-Party Services.
+        Continued use of the Service constitutes the user&apos;s acceptance of
+        and compliance with the terms and conditions of these Third-Party
+        Services.
       </p>
 
       <p className="font-light text-2xl leading-8">
@@ -609,8 +608,8 @@ function Page() {
       <p className="font-light text-2xl leading-8">
         9.5. In the event of unavailability or disruption of the Third-Party
         Services, the W4 LABS disclaims any liability arising from or related to
-        the user&apos;s use of or interaction with these Third-Party Services, as
-        well as any inability to access or use the Service due to such
+        the user&apos;s use of or interaction with these Third-Party Services,
+        as well as any inability to access or use the Service due to such
         unavailability or disruption. The user agrees that the W4 LABS is not
         responsible for any damages, losses, or inconveniences that may occur as
         a result of the unavailability or disruption of the Third-Party
@@ -647,8 +646,8 @@ function Page() {
       </p>
       <h2 className="pl-1 font-semibold text-2xl leading-8">11. License</h2>
       <p className="font-light text-2xl leading-8">
-        11.1. Subject to the user&apos;s compliance with these Terms, the W4 LABS
-        hereby grants the user a limited, non-exclusive, non-transferable,
+        11.1. Subject to the user&apos;s compliance with these Terms, the W4
+        LABS hereby grants the user a limited, non-exclusive, non-transferable,
         non-sublicensable, and revocable license to access and use the Service
         including the API fairly for personal purposes and for plug-in
         development in accordance with these Terms for the duration of the
@@ -735,9 +734,31 @@ function Page() {
       </p>
 
       <p className="font-light text-2xl leading-8">
-      13.4. W4 LABS aims to use artificial intelligence to promote a free interchange of free speech and ideas to the fullest extent permitted by law. To promote that end, W4 LABS offers Uncensored Search and Chat Services to select paid subscribers. W4 LABS does not moderate the viewpoints or content generated by its Uncensored Search and Chat Services, except as may be required by law, or as necessary for W4 LABS to comply with its own commercial obligations.  This means that some users may opine some of the content generated by our Uncensored Services to be offensive, inaccurate, or harmful. If you are under the age of 18 or under the age of majority in the jurisdiction in which you reside or from which you are accessing the Website, you may not use our Uncensored Search and Chat Services. Otherwise, by accessing our Uncensored Search and Chat Services, you are certifying and warranting to W4 LABS that (a) you are at least 18 years of age or otherwise the age of majority under the laws of your state, province or country; and (b) you understand that some of the Content generated by the Uncensored Services may include Content that some people deem to be offensive, inaccurate, or harmful; (c) that you are familiar with materials of this kind; (d) that you are not offended by such content; (e) that you accessing the Uncensored Services and the resulting content intentionally; (f) that you are expressly waiving any claim you might assert as a consequence of your having accessed our Uncensored Services; and (g) that you will not download, copy or distribute any content generated by our Uncensored Services for any unlawful purpose.
+        13.4. W4 LABS aims to use artificial intelligence to promote a free
+        interchange of free speech and ideas to the fullest extent permitted by
+        law. To promote that end, W4 LABS offers Uncensored Search and Chat
+        Services to select paid subscribers. W4 LABS does not moderate the
+        viewpoints or content generated by its Uncensored Search and Chat
+        Services, except as may be required by law, or as necessary for W4 LABS
+        to comply with its own commercial obligations. This means that some
+        users may opine some of the content generated by our Uncensored Services
+        to be offensive, inaccurate, or harmful. If you are under the age of 18
+        or under the age of majority in the jurisdiction in which you reside or
+        from which you are accessing the Website, you may not use our Uncensored
+        Search and Chat Services. Otherwise, by accessing our Uncensored Search
+        and Chat Services, you are certifying and warranting to W4 LABS that (a)
+        you are at least 18 years of age or otherwise the age of majority under
+        the laws of your state, province or country; and (b) you understand that
+        some of the Content generated by the Uncensored Services may include
+        Content that some people deem to be offensive, inaccurate, or harmful;
+        (c) that you are familiar with materials of this kind; (d) that you are
+        not offended by such content; (e) that you accessing the Uncensored
+        Services and the resulting content intentionally; (f) that you are
+        expressly waiving any claim you might assert as a consequence of your
+        having accessed our Uncensored Services; and (g) that you will not
+        download, copy or distribute any content generated by our Uncensored
+        Services for any unlawful purpose.
       </p>
-
 
       <h2 className="pl-1 font-semibold text-2xl leading-8">
         14. Response to DMCA Requests
@@ -773,13 +794,14 @@ function Page() {
       </p>
 
       <p className="font-light text-2xl leading-8">
-        15.2. The user acknowledges and agrees that the Service is provided &quot;as
-        is&quot; and &quot;as available,&quot; without any warranties, express or implied,
-        including but not limited to warranties of merchantability, fitness for
-        a particular purpose, or non-infringement. W4 LABS does not warrant that
-        the Service will be error-free, uninterrupted, secure, or available at
-        all times, or that the results obtained from the use of the Service will
-        be accurate, reliable, or meet the user&apos;s expectations.{" "}
+        15.2. The user acknowledges and agrees that the Service is provided
+        &quot;as is&quot; and &quot;as available,&quot; without any warranties,
+        express or implied, including but not limited to warranties of
+        merchantability, fitness for a particular purpose, or non-infringement.
+        W4 LABS does not warrant that the Service will be error-free,
+        uninterrupted, secure, or available at all times, or that the results
+        obtained from the use of the Service will be accurate, reliable, or meet
+        the user&apos;s expectations.{" "}
       </p>
 
       <p className="font-light text-2xl leading-8">
@@ -788,16 +810,17 @@ function Page() {
         shall not be liable for any direct, indirect, incidental, special,
         consequential, punitive, or exemplary damages, including but not limited
         to damages for loss of profits, goodwill, data, or other intangible
-        losses, resulting from the user&apos;s access to or use of the Service, or
-        inability to access or use the Service, even if the W4 LABS has been
+        losses, resulting from the user&apos;s access to or use of the Service,
+        or inability to access or use the Service, even if the W4 LABS has been
         advised of the possibility of such damages.{" "}
       </p>
 
       <p className="font-light text-2xl leading-8">
-        15.4. W4 LABS&apos;s total liability to the user, whether based on warranty,
-        contract, tort (including negligence), or any other legal theory, shall
-        not exceed the amount paid by the user for accessing the Service during
-        the six (6) months immediately preceding the date of the claim.{" "}
+        15.4. W4 LABS&apos;s total liability to the user, whether based on
+        warranty, contract, tort (including negligence), or any other legal
+        theory, shall not exceed the amount paid by the user for accessing the
+        Service during the six (6) months immediately preceding the date of the
+        claim.{" "}
       </p>
 
       <p className="font-light text-2xl leading-8">
@@ -836,10 +859,10 @@ function Page() {
 
       <p className="font-light text-2xl leading-8">
         17.1. The W4 LABS reserves the right, at its sole discretion, to suspend
-        or terminate the user&apos;s access to the Service, or any part thereof, at
-        any time and for any reason, including but not limited to the user&apos;s
-        breach of these Terms, violation of applicable laws, or misuse of the
-        Service.
+        or terminate the user&apos;s access to the Service, or any part thereof,
+        at any time and for any reason, including but not limited to the
+        user&apos;s breach of these Terms, violation of applicable laws, or
+        misuse of the Service.
       </p>
       <p className="font-light text-2xl leading-8">
         17.2. The user may terminate his/her use of the Service at any time by
@@ -848,12 +871,12 @@ function Page() {
         interface.{" "}
       </p>
       <p className="font-light text-2xl leading-8">
-        17.3. Termination of the user&apos;s access to the Service shall not relieve
-        the user of any obligations arising prior to the termination, or affect
-        any rights, remedies, or liabilities accrued under these Terms. The
-        user&apos;s obligations and the W4 LABS&apos;s rights and remedies under these
-        Terms shall survive the termination of the user&apos;s access to the Service,
-        to the extent permitted by applicable law.{" "}
+        17.3. Termination of the user&apos;s access to the Service shall not
+        relieve the user of any obligations arising prior to the termination, or
+        affect any rights, remedies, or liabilities accrued under these Terms.
+        The user&apos;s obligations and the W4 LABS&apos;s rights and remedies
+        under these Terms shall survive the termination of the user&apos;s
+        access to the Service, to the extent permitted by applicable law.{" "}
       </p>
       <p className="font-light text-2xl leading-8">
         17.4. The user shall not be entitled to any refund or credit, and the
@@ -869,8 +892,9 @@ function Page() {
       </span>
       <span className="font-light text-2xl leading-8 pl-8">
         However, in the case of termination based on W4 LABS’s decision without
-        the user&apos;s breach, the user shall receive a proportionate refund of any
-        prepaid fees or charges relating to the unused portion of the Service.{" "}
+        the user&apos;s breach, the user shall receive a proportionate refund of
+        any prepaid fees or charges relating to the unused portion of the
+        Service.{" "}
       </span>
 
       <h2 className="pl-1 font-semibold text-2xl leading-8">
@@ -909,10 +933,11 @@ function Page() {
         periodically to stay informed of any changes.
       </p>
       <p className="font-light text-2xl leading-8">
-        19.2. The user&apos;s continued use of the Service following the posting of
-        the updated Terms constitutes the user&apos;s acceptance of and agreement to
-        be bound by the modified Terms. If the user does not agree with the
-        updated Terms, he/she must discontinue his/her use of the Service.{" "}
+        19.2. The user&apos;s continued use of the Service following the posting
+        of the updated Terms constitutes the user&apos;s acceptance of and
+        agreement to be bound by the modified Terms. If the user does not agree
+        with the updated Terms, he/she must discontinue his/her use of the
+        Service.{" "}
       </p>
 
       <h2 className="pl-1 font-semibold text-2xl leading-8">

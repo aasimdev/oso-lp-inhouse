@@ -1,17 +1,15 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
-import { Slide } from "react-slideshow-image";
-import { FreeMode, Navigation, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import "react-slideshow-image/dist/styles.css";
-import NewsLetter from "@/components/news-letter";
 import Phone from "./Phone";
 import ComparisonContent from "./ComparisonContent";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const InnerSection = () => {
-  const container = useRef();
+  // const container = useRef();
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
   const [isMobile, setIsMobile] = useState(false);
   const [divVisibility, setDivVisibility] = useState({
@@ -44,14 +42,14 @@ const InnerSection = () => {
     }));
   };
 
-  const settings = {
-    arrows: false,
-    slidesToScroll: 1,
-    slidesToShow: 1,
-    indicators: true,
-    autoplay: false,
-    infinite: false,
-  };
+  // const settings = {
+  //   arrows: false,
+  //   slidesToScroll: 1,
+  //   slidesToShow: 1,
+  //   indicators: true,
+  //   autoplay: false,
+  //   infinite: false,
+  // };
 
   return (
     <div

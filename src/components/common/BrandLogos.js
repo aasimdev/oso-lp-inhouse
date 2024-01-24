@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import NewsLetter from "../news-letter";
+// import NewsLetter from "../news-letter";
 import { brandImages, mobileBrandImages } from "@/constant/news";
 import Button from "./Button";
 

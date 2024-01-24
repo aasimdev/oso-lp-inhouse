@@ -1,9 +1,7 @@
 "use client";
 import Video from "@/components/Video";
 import CheckListItem from "@/components/common/banner/CheckListItem";
-import Banner from "@/components/common/banner/Index";
-import NewsLetter from "@/components/news-letter";
-import React from "react";
+// import NewsLetter from "@/components/news-letter";
 
 const Hero = () => {
   return (
@@ -15,8 +13,6 @@ const Hero = () => {
           </h1>
           <p className="text-gray-800 md:text-center text-left md:text-[32px] text-2xl font-light leading-10">
             Real-time AI Search. Uncensored Chat. Interactive News.
-
-
             <br /> Everything You Need in One App with OSO.
           </p>
         </div>

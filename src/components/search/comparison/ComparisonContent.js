@@ -1,5 +1,3 @@
-import React from "react";
-
 const ComparisonContent = ({ isMobile, title, description }) => {
   console.log("isMobile", isMobile);
   return (

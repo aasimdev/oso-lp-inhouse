@@ -3,14 +3,12 @@ import AdvantageCard from "@/components/advantages/AdvantageCard";
 import Advantages from "@/components/advantages/Index";
 import Banner from "@/components/common/banner/Index";
 
-import React from "react";
-
 import FAQ from "@/components/FAQ/Index";
 import Comparisons from "@/components/common/Comparisons/Comparisons";
 import InnerChatSection from "@/components/common/Comparisons/InnerChatSection/InnerChatSection";
 import GoogleAnalytics from "@/utils/google-analytics/anaylics";
 import BrandLogos from "@/components/common/BrandLogos";
-import NewsTestimonials from "@/components/testimonials/News";
+// import NewsTestimonials from "@/components/testimonials/News";
 import OSOUseCaseLanding from "@/components/landingPage/OSOUseCaseLanding";
 import { useMediaQuery } from "react-responsive";
 

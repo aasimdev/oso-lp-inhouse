@@ -1,9 +1,8 @@
-import React from "react";
 import OSOWorkCard from "./OSOWorkCard";
 import Link from "next/link";
 
 const OSOWork = () => {
-  const handleClick = () => { };
+  const handleClick = () => {};
 
   return (
     <section className="py-6 md:pt-16 mx-auto max-w-6xl ">
@@ -17,19 +16,22 @@ const OSOWork = () => {
               bgColor={"bg-[#61F3F3]"}
               title={"Search"}
               desc="OSO's AI Search Engine reads through the internet for you and provides a detailed summary."
-              videoID="7y2r9MrUeQ8" />
+              videoID="7y2r9MrUeQ8"
+            />
 
             <OSOWorkCard
               bgColor={"bg-[#77ED8B]"}
               desc="Uncensored and unbiased AI Chat."
               title={"Chat"}
-              videoID="FpWF0i0vxGs" />
+              videoID="FpWF0i0vxGs"
+            />
 
             <OSOWorkCard
               bgColor={"bg-[#FFD666]"}
               desc="Interactive AI News with your personal AI news correspondent. "
               title={"News"}
-              videoID="gAfKNS92eYM" />
+              videoID="gAfKNS92eYM"
+            />
           </div>
         </div>
       </div>

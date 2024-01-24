@@ -1,5 +1,4 @@
-import NewsLetter from "@/components/news-letter";
-import React from "react";
+// import NewsLetter from "@/components/news-letter";
 import Button from "../Button";
 
 const Comparisons = ({ title, children }) => {
@@ -18,7 +17,12 @@ const Comparisons = ({ title, children }) => {
             arrowIcon={true}
             formId={"ComparisonFormId"}
           /> */}
-          <Button label="Try OSO" arrowIcon={true} link="https://l.oso.ai/prod" target="_blank"/>
+          <Button
+            label="Try OSO"
+            arrowIcon={true}
+            link="https://l.oso.ai/prod"
+            target="_blank"
+          />
         </div>
       </div>
     </section>

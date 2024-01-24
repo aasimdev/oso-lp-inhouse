@@ -1,5 +1,3 @@
-import React from "react";
-
 const EmbeddedTiktok2 = ({ userName, videoId, category }) => {
   return (
     <>
@@ -9,7 +7,7 @@ const EmbeddedTiktok2 = ({ userName, videoId, category }) => {
         data-video-id={videoId}
         style={{ maxWidth: "605px", minWidth: "325px" }}
         // data-is-dynamic="false"
-        // data-autoplay="true" 
+        // data-autoplay="true"
       >
         {" "}
         <section>

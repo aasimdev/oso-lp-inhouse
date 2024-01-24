@@ -1,5 +1,3 @@
-import React from "react";
-
 const Category = ({ category, active, handleFilter }) => {
   const { name, value } = category;
   return (

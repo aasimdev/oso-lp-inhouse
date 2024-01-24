@@ -2,8 +2,7 @@
 import AdvantageCard from "@/components/advantages/AdvantageCard";
 import Advantages from "@/components/advantages/Index";
 import Banner from "@/components/common/banner/Index";
-import Testimonials from "@/components/testimonials/Index";
-import React from "react";
+// import Testimonials from "@/components/testimonials/Index";
 
 import webImage from "../../../public/assets/images/updated.png";
 import SecondPhone from "../../../public/assets/images/mobilephone.png";

@@ -1,8 +1,7 @@
-import React from "react";
 import CheckListItem from "./CheckListItem";
 import Button from "../Button";
 import Video from "@/components/Video";
-import NewsLetter from "@/components/news-letter";
+// import NewsLetter from "@/components/news-letter";
 
 const Banner = ({ title, description, videoId, src, checklist, poster }) => {
   return (

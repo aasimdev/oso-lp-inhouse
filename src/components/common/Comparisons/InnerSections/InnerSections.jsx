@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { useMediaQuery } from "react-responsive";
@@ -25,7 +25,7 @@ const InnerSections = ({
   phoneThreeOso,
   phoneThreeChatGPT,
 }) => {
-  const container = useRef();
+  // const container = useRef();
   const isDesktop = useMediaQuery({ query: "(min-width: 720px)" });
   const [isMobile, setIsMobile] = useState(false);
   const [divVisibility, setDivVisibility] = useState({
@@ -58,7 +58,6 @@ const InnerSections = ({
     }));
   };
 
-
   return (
     <div
       id="animation-container"
@@ -90,7 +89,6 @@ const InnerSections = ({
                 pagination={{
                   clickable: true,
                 }}
-        
                 modules={[Pagination]}
                 className="!z-auto mobSwiper"
               >
@@ -134,7 +132,6 @@ const InnerSections = ({
                 pagination={{
                   clickable: true,
                 }}
-            
                 modules={[Pagination]}
                 className="!z-auto mobSwiper"
               >
@@ -174,7 +171,6 @@ const InnerSections = ({
                 pagination={{
                   clickable: true,
                 }}
-               
                 modules={[Pagination]}
                 className="!z-auto mobSwiper"
               >

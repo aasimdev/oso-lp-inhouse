@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import GoogleAnalytics from "@/utils/google-analytics/anaylics";
 import Pricing from "@/components/pricing/index";
 

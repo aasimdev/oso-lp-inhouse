@@ -1,5 +1,4 @@
 import UsecaseView from "@/container/usecase/index";
-import React from "react";
 
 export const metadata = {
   title: "OSO Use Case",

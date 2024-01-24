@@ -1,4 +1,3 @@
-import React from "react";
 import Avt1 from "../../../public/assets/avatars/avt1.png";
 import Avt2 from "../../../public/assets/avatars/avt2.png";
 import Avt3 from "../../../public/assets/avatars/avt3.png";
@@ -78,25 +77,25 @@ const BenefitFromOSO = () => {
         </div>
       </div>
       <div className="flex justify-center items-center py-8 w-full px-6">
-      <Link
-            href="https://l.oso.ai/prod"
-            className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
-            onClick={handleClick}
+        <Link
+          href="https://l.oso.ai/prod"
+          className="tryOSOButton bg-purple text-white text-2xl font-normal rounded-lg"
+          onClick={handleClick}
+        >
+          Try OSO
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            Try OSO
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
-                fill="white"
-              />
-            </svg>
-          </Link>
+            <path
+              d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z"
+              fill="white"
+            />
+          </svg>
+        </Link>
       </div>
     </section>
   );

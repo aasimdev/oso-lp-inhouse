@@ -1,6 +1,4 @@
-import React from "react";
 import VideoResource from "../VideoResourceCard";
-
 
 const OSOWorkCard = ({ bgColor, title, itemCenter, videoID, desc }) => {
   return (
@@ -36,7 +34,6 @@ const OSOWorkCard = ({ bgColor, title, itemCenter, videoID, desc }) => {
           </svg>
           1 min
         </div>
-
       </div>
     </div>
   );

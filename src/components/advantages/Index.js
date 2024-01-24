@@ -1,5 +1,3 @@
-import React from "react";
-
 const Advantages = ({ title, children, page, description }) => {
   return (
     <section className="px-6 mx-auto max-w-6xl">
@@ -9,7 +7,7 @@ const Advantages = ({ title, children, page, description }) => {
         </h3>
         {!page && (
           <p className="text-2xl leading-9 font-light text-gray-900 py-0">
-         {description}
+            {description}
           </p>
         )}
       </div>

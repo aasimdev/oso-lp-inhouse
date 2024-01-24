@@ -1,4 +1,3 @@
-import React from "react";
 import ThankYouViewFour from "@/container/thankyou/optionFour";
 
 export const metadata = {

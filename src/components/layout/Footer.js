@@ -37,8 +37,8 @@ const Footer = () => {
 
       let referralData;
       window.rewardful("ready", () => {
-        if (Rewardful.referral) {
-          referralData = Rewardful.referral;
+        if (window.Rewardful.referral) {
+          referralData = window.Rewardful.referral;
         }
       });
 

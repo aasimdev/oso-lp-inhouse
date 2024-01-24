@@ -33,8 +33,8 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
 
       let referralData;
       window.rewardful("ready", () => {
-        if (Rewardful.referral) {
-          referralData = Rewardful.referral;
+        if (window.Rewardful.referral) {
+          referralData = window.Rewardful.referral;
         }
       });
 

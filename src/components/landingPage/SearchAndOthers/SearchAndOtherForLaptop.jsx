@@ -158,7 +158,7 @@ const SearchAndOtherForLaptop = () => {
                         typewriter
                           .changeDelay(40)
                           .typeString(
-                            `Where is the best sushi restaurant near me? <img src="/assets/images/sushi.svg" width="50" height="49" style="display: inline-block"/>`
+                            'Where is the best sushi restaurant near me? <img src="/assets/images/sushi.svg" width="50" height="49" style="display: inline-block"/>'
                           )
                           .pauseFor(2000)
                           .callFunction(() => {

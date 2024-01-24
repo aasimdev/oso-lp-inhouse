@@ -21,6 +21,7 @@ const NewsLetter = ({ className, label, arrowIcon, formId, variant }) => {
   const form = useFormik({
     initialValues: {
       email: "",
+      referral: "",
     },
     onSubmit: async (values) => {
       if (honeypotRef.current.value) {

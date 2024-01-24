@@ -19,6 +19,7 @@ const Newsletter = ({ formId }) => {
   const form = useFormik({
     initialValues: {
       email: "",
+      referral: "",
     },
     onSubmit: async (data) => {
       if (honeypotRef.current.value) {
@@ -77,7 +78,6 @@ const Newsletter = ({ formId }) => {
     });
 
     const resData = await res.json();
-
 
     if (res.status === 200) {
       form.setValues({ email: "" });

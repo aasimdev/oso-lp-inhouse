@@ -26,6 +26,7 @@ const Footer = () => {
   const form = useFormik({
     initialValues: {
       email: "",
+      referral: "",
     },
     onSubmit: async (data) => {
       if (honeypotRef.current.value) {
